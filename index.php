@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>BISWAS</title>
+    <title>ATMABISWAS</title>
 </head>
 <body>
     <div class="slider-container">
