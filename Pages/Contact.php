@@ -269,12 +269,39 @@
     </div>
 
     <div class="select-container">
+        <p>Contact Us..</p>
+        <select>
+            <option value="option1">ATMABISWAS HQ</option>
+
+        </select>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Branch:</strong> ATMABISWAS, Main Office</p>
+            <p><strong>Address:</strong> 123 Main Street, Dhaka, Bangladesh</p>
+            <p><strong>Phone:</strong> +880-123-456-789</p>
+            <p><strong>Email:</strong> contact@atmabiswas.org</p>
+            <button class="contact-btn">Send Us a Message</button>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.1218845770115!2d90.38619631536396!3d23.807097992000845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b908896c17%3A0xa04f51e926d2f5a3!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1615917324239!5m2!1sen!2sbd" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="select-container">
         <p>Select a branch...</p>
         <select>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-            <option value="option4">Option 4</option>
+            <option value="option1">ATMABISWAS HQ</option>
+
         </select>
     </div>
 
