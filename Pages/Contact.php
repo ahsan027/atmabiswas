@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar with Active Page</title>
+    <title>Responsive Navbar with Active Page and Stylish Select</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +11,9 @@
             background-color: #e6f2ff; /* Light blue background */
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .navbar {
             display: flex;
@@ -18,6 +21,7 @@
             padding: 20px;
             background-color: #ffffff; /* White background for navbar */
             border-bottom: 2px solid #0073e6; /* Blue border at the bottom */
+            width: 100%; /* Full width navbar */
         }
         .navbar .top-row {
             display: flex;
@@ -55,7 +59,6 @@
             background-color: #0073e6;
             color: #ffffff;
         }
-
         .navbar .bottom-row a.active {
             background-color: #005bb5; /* Darker blue for active page */
             color: #ffffff;
@@ -72,12 +75,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 30px;
+            padding: 40px;
             background-color: #ffffff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             border-radius: 10px;
-            width: 300px;
+            width: 400px;
             max-width: 90%;
             opacity: 0;
             transition: opacity 0.3s, transform 0.3s;
@@ -91,21 +94,21 @@
             display: block;
             text-align: right;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: #0073e6;
         }
         .popup form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
         .popup form input {
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #0073e6;
             border-radius: 5px;
         }
         .popup form button {
-            padding: 10px;
+            padding: 15px;
             border: none;
             background-color: #0073e6;
             color: #ffffff;
@@ -115,6 +118,36 @@
         }
         .popup form button:hover {
             background-color: #005bb5;
+        }
+
+        .select-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* 80% width of the page */
+            margin: 20px 0;
+        }
+        .select-container p {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #0073e6;
+        }
+        .select-container select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #0073e6;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            color: #0073e6;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .select-container select:focus {
+            border-color: #005bb5;
+            box-shadow: 0 0 10px rgba(0, 115, 230, 0.5);
+            outline: none;
         }
 
         /* Responsive Styles */
@@ -170,6 +203,16 @@
             <a href="#">What we do</a>
             <a href="#" id="login-btn">Login</a>
         </div>
+    </div>
+
+    <div class="select-container">
+        <p>Select a branch...</p>
+        <select>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
     </div>
 
     <div class="popup" id="login-popup">

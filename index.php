@@ -155,7 +155,7 @@
     <div class="navbar">
         <div class="top-row">
             <div class="menu-toggle">&#9776;</div>
-            <div class="logo">ATMABISWAS</div>
+            <div class="logo">ATMA BISWAS</div>
             <div>
                 <a href="#">Notice</a>
                 <a href="#">Career</a>
