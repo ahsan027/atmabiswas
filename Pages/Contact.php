@@ -65,6 +65,7 @@
         }
         .logo {
             font-size: 1.5rem;
+            margin-left: 1rem;
             color: #0073e6;
             font-weight: bold;
         }
@@ -250,7 +251,7 @@
     <div class="navbar">
         <div class="top-row">
             <div class="menu-toggle">&#9776;</div>
-            <div class="logo">ATMABISWAS</div>
+            <div class="logo">ATMA BISWAS</div>
             <div>
                 <a href="#">Notice</a>
                 <a href="#">Career</a>
@@ -322,4 +323,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
