@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar with Side Toggle</title>
+    <title>Responsive Navbar with Active Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,10 +56,65 @@
             color: #ffffff;
         }
 
+        .navbar .bottom-row a.active {
+            background-color: #005bb5; /* Darker blue for active page */
+            color: #ffffff;
+        }
         .logo {
             font-size: 1.5rem;
             color: #0073e6;
             font-weight: bold;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 10px;
+            width: 300px;
+            max-width: 90%;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .popup.active {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .popup .close-btn {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #0073e6;
+        }
+        .popup form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .popup form input {
+            padding: 10px;
+            border: 1px solid #0073e6;
+            border-radius: 5px;
+        }
+        .popup form button {
+            padding: 10px;
+            border: none;
+            background-color: #0073e6;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .popup form button:hover {
+            background-color: #005bb5;
         }
 
         /* Responsive Styles */
@@ -109,18 +164,35 @@
             </div>
         </div>
         <div class="bottom-row">
-
-            <a href="#">Who we are</a>
+            <a href="#" class="active">Who we are</a>
             <a href="#">Our team</a>
-            <a href="#">Contact</a>
+            <a href="Pages/Contact.php">Contact</a>
             <a href="#">What we do</a>
-            <a href="#">Login</a>
+            <a href="#" id="login-btn">Login</a>
         </div>
+    </div>
+
+    <div class="popup" id="login-popup">
+        <div class="close-btn" id="close-popup">&times;</div>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.bottom-row').classList.toggle('active');
+        });
+
+        document.getElementById('login-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('login-popup').classList.add('active');
+        });
+
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('login-popup').classList.remove('active');
         });
     </script>
 </body>

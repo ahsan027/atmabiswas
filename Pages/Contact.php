@@ -164,9 +164,9 @@
             </div>
         </div>
         <div class="bottom-row">
-            <a class="active" href="/">Who we are</a>
+            <a href="../index.php">Who we are</a>
             <a href="#">Our team</a>
-            <a href="Pages/Contact.php">Contact</a>
+            <a class="active" href="Pages/Contact.php">Contact</a>
             <a href="#">What we do</a>
             <a href="#" id="login-btn">Login</a>
         </div>
@@ -179,10 +179,6 @@
             <input type="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-    </div>
-
-    <div>
-        <?php include 'imageSlider.php' ?>
     </div>
 
     <script>
