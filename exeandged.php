@@ -147,12 +147,9 @@
         <form method="POST" action="../Action/filter.php">
         <select name="divison" id="">
             <option value="">Select Division</option>
-            <option value="Khulna">Khulna</option><option value="rajshahi">Rajshahi</option>
-            </select>
-
-                <!-- <select name="dist" id="">
-                    <option value="">Select District</option>
-                </select> -->
+            <option value="Khulna">Khulna</option>
+            <option value="Rajshahi">Rajshahi</option>
+        </select>
             <button type="submit">Submit</button>
         </form>
     </div>
