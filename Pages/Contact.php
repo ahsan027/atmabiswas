@@ -117,6 +117,16 @@
             background-color: #005bb5;
         }
 
+        .secondaryContainer{
+            width: 100vw;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .navbar .top-row {
@@ -183,7 +193,7 @@
     </div>
 
     <?php include '../exeandged.php' ?>
-
+    
 
 
     <script>

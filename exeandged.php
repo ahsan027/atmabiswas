@@ -87,6 +87,36 @@
             align-items: center;
             flex-direction: column;
         }
+        /* Contact Card and Select Fields */
+
+
+.filterbars {
+    display: flex;
+
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.filterbars select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        width: 90%;
+    }
+
+    .filterbars select {
+        width: 90%;
+    }
+}
+
     </style>
 </head>
 
@@ -113,26 +143,61 @@
             </iframe>
         </div>
     </div>
+    <div class="filterbars">
+        <select name="" id="">
+            <option value="">Select Division</option>
+    <option value="khulna">Khulna</option><option value="rajshahi">Rajshahi</option>
+</select>
+                <select name="" id=""><option value="">Select District</option></select>
+                                <select name="" id=""><option value="">Select branch</option></select>
+    </div>
 </div>
     <script>
-        const toggleBtn = document.getElementById('toggle-btn');
-        const contactCard = document.getElementById('contact-card');
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('toggle-btn');
+    const contactCard = document.getElementById('contact-card');
+    const divisionSelect = document.querySelector('.filterbars select:nth-child(1)');
+    const districtSelect = document.querySelector('.filterbars select:nth-child(2)');
+    const branchSelect = document.querySelector('.filterbars select:nth-child(3)');
 
-        toggleBtn.addEventListener('click', () => {
-            if (contactCard.classList.contains('active')) {
-                contactCard.style.opacity = '0';
-                contactCard.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    contactCard.classList.remove('active');
-                }, 500); // Matches the transition duration
-            } else {
-                contactCard.classList.add('active');
-                setTimeout(() => {
-                    contactCard.style.opacity = '1';
-                    contactCard.style.transform = 'translateY(0)';
-                }, 0);
-            }
-        });
+    toggleBtn.addEventListener('click', () => {
+        if (contactCard.classList.contains('active')) {
+            contactCard.style.opacity = '0';
+            contactCard.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                contactCard.classList.remove('active');
+            }, 500); // Matches the transition duration
+        } else {
+            contactCard.classList.add('active');
+            setTimeout(() => {
+                contactCard.style.opacity = '1';
+                contactCard.style.transform = 'translateY(0)';
+            }, 0);
+        }
+    });
+
+    divisionSelect.addEventListener('change', function () {
+        if (divisionSelect.value) {
+            districtSelect.style.display = 'block';
+        } else {
+            districtSelect.style.display = 'none';
+            branchSelect.style.display = 'none';
+        }
+    });
+
+    districtSelect.addEventListener('change', function () {
+        if (districtSelect.value) {
+            branchSelect.style.display = 'block';
+        } else {
+            branchSelect.style.display = 'none';
+        }
+    });
+
+    // Initially hide district and branch selects
+    districtSelect.style.display = 'none';
+    branchSelect.style.display = 'none';
+});
+
     </script>
 </body>
 
