@@ -139,7 +139,7 @@
         <div class="logo">ATMA BISWAS</div>
         <div class="links">
             <a href="../index.php">Who We Are</a>
-            <a href="#">Our Team</a>
+            <a href="Pages/OurTeam.php">Our Team</a>
             <a class="active" href="Pages/Contact.php">Contact</a>
             <a href="#">What We Do</a>
             <a href="#">Login</a>

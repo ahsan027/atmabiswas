@@ -165,9 +165,10 @@
         </div>
         <div class="bottom-row">
             <a class="active" href="/">Who we are</a>
-            <a href="#">Our team</a>
-            <a href="Pages/Contact.php">Contact</a>
             <a href="#">What we do</a>
+
+            <a href="Pages/OurTeam.php">Our team</a>
+            <a href="Pages/Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
     </div>
