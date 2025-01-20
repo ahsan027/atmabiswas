@@ -165,11 +165,17 @@
         </div>
         <div class="bottom-row">
             <a href="../index.php">Who we are</a>
-            <a href="OurTeam.php">Our team</a>
-            <a class="active" href="Contact.php">Contact</a>
             <a href="#">What we do</a>
+
+            <a class="active" href="Pages/OurTeam.php">Our team</a>
+            <a href="Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
+    </div>
+    <div>
+    <?php include 'founder.php' ?>
+    <?php include '../generalbody.php' ?>
+
     </div>
 
     <div class="popup" id="login-popup">
@@ -181,6 +187,9 @@
         </form>
     </div>
 
+    <div>
+        <!-- <?php include 'imageSlider.php' ?> -->
+    </div>
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
