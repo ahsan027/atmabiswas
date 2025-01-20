@@ -92,3 +92,7 @@ SET branchLoc = CASE
     WHEN branchId = 33 THEN 'Piarpur Upazila Road, Piarpur, Ishardi, Pabna'
     ELSE branchLoc -- Keep original value if no match
 END;
+
+
+
+SELECT count(*) FROM branch GROUP BY division;
