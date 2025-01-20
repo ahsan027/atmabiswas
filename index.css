@@ -95,3 +95,65 @@ button:focus {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .slider-container .action-buttons button {
+        left: 40%;
+    }
+
+    .left-slide {
+        width: 40%;
+    }
+
+    .right-slide {
+        left: 40%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container .action-buttons button {
+        left: 45%;
+    }
+
+    .left-slide {
+        width: 45%;
+    }
+
+    .right-slide {
+        left: 45%;
+        width: 55%;
+    }
+
+    .left-slide h1 {
+        font-size: 30px;
+    }
+
+    .left-slide>div {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container .action-buttons button {
+        left: 50%;
+    }
+
+    .left-slide {
+        width: 50%;
+    }
+
+    .right-slide {
+        left: 50%;
+        width: 50%;
+    }
+
+    .left-slide h1 {
+        font-size: 24px;
+    }
+
+    .left-slide>div {
+        padding: 5px;
+    }
+}

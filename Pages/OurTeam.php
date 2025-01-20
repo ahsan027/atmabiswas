@@ -167,7 +167,7 @@
             <a href="../index.php">Who we are</a>
             <a href="#">What we do</a>
 
-            <a class="active" href="Pages/OurTeam.php">Our team</a>
+            <a class="active" href="OurTeam.php">Our team</a>
             <a href="Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
