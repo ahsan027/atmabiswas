@@ -95,4 +95,4 @@ END;
 
 
 
-SELECT count(*) FROM branch GROUP BY division;
+SELECT DISTINCT count(dist) FROM branch GROUP BY division; 

@@ -149,6 +149,53 @@
                 display: inline;
             }
         }
+        @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .number-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+        
+.container {
+    /* margin-left: 1rem; */
+    padding: 1rem;
+    
+    display: flex;
+    gap: 20px;
+}
+
+.number-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.number-card h2 {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.number-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0 0;
+}
+
+.number-card:hover h2 {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -185,7 +232,28 @@
     <div>
         <?php include 'imageSlider.php' ?>
     </div>
+<div>
+        <div class="container">
+        <div class="number-card">
+            <h2 id="number1">0</h2>
+            <p>Projects Completed</p>
+        </div>
+        <div class="number-card">
+            <h2 id="number2">0</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="number-card">
+            <h2 id="number3">0</h2>
+            <p>Awards Won</p>
+        </div>
+        <div class="number-card">
+            <h2 id="number4">0</h2>
+            <p>Cups of Coffee</p>
+        </div>
+    </div>
 
+
+</div>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.bottom-row').classList.toggle('active');
@@ -199,6 +267,35 @@
         document.getElementById('close-popup').addEventListener('click', function() {
             document.getElementById('login-popup').classList.remove('active');
         });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+  const counters = [
+    { id: "number1", end: 100, duration: 5000 },
+    { id: "number2", end: 200, duration: 5500 },
+    { id: "number3", end: 50, duration: 4000 },
+    { id: "number4", end: 300, duration: 4500 },
+  ];
+
+  counters.forEach((counter) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min(
+        (timestamp - startTimestamp) / counter.duration,
+        1
+      );
+      document.getElementById(counter.id).innerText = Math.floor(
+        progress * counter.end
+      );
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  });
+});
+
     </script>
 </body>
 </html>

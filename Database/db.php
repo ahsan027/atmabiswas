@@ -11,9 +11,10 @@ class Db{
         $this->pdo=null;
         
 try{
-    $this->pdo = new PDO("mysql:host=$this->hostname;dbname=$this->dbname",$this->user,"");
+    $this->pdo = new PDO("mysql:host=$this->hostname;dbname=$this->dbname",$this->user,$this->pswd);
 
     $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    
 }catch(PDOException $e){
     print_r($e);
 

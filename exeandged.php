@@ -144,12 +144,17 @@
         </div>
     </div>
     <div class="filterbars">
-        <select name="" id="">
+        <form method="POST" action="../Action/filter.php">
+        <select name="divison" id="">
             <option value="">Select Division</option>
-    <option value="khulna">Khulna</option><option value="rajshahi">Rajshahi</option>
-</select>
-                <select name="" id=""><option value="">Select District</option></select>
-                                <select name="" id=""><option value="">Select branch</option></select>
+            <option value="Khulna">Khulna</option><option value="rajshahi">Rajshahi</option>
+            </select>
+
+                <!-- <select name="dist" id="">
+                    <option value="">Select District</option>
+                </select> -->
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </div>
     <script>
