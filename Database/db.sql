@@ -95,4 +95,4 @@ END;
 
 
 
-SELECT DISTINCT count(dist) FROM branch GROUP BY division; 
+SELECT DISTINCT dist FROM branch WHERE division = "khulna"; 
