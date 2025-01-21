@@ -35,8 +35,8 @@
     }
     .profile img {
       border-radius: 15px; /* Adjust the radius value for more or less rounded corners */
-      width: 150px;
-      height: 150px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
     }
     .profile h2 {
