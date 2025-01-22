@@ -3,46 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>ATMABISWAS</title>
+    <title>Image Slider</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80vw;
+            height: 80vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        } */
+
+
+.slider {
+    margin: 1rem auto; /* Center the slider horizontally */
+    position: relative;
+    width: 90%;
+    max-width: 100%; /* Maximum width for larger screens */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.list {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dots li.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .slider {
+        width: 100%; /* Full width on small screens */
+        /* height: 80%; */
+    }
+
+    .buttons button {
+        padding: 5px; /* Smaller buttons on small screens */
+    }
+
+    .dots li {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+}
+
+    </style>
 </head>
 <body>
-    <div class="slider-container">
-        <div class="left-slide">
-            <div style="background-color: #fde">
-                <h1>Pink Cherrish</h1>
-                <p>to evolve into care</p>
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 1">
             </div>
-            <div style="background-color: rgb(254,160,0)">
-                <h1>Yellow color</h1>
-                <p>Shinning the clouds</p>
+            <div class="item">
+                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 2">
             </div>
-            <div style="background-color: rgb(231, 58, 95)">
-                <h1>Redness Lust</h1>
-                <p>in the wilderness</p>
+            <div class="item">
+                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 3">
             </div>
-            <div style="background-color: rgb(16, 68, 73)">
-                <h1>Lavanda Love</h1>
-                <p>in the sunset</p>
+            <div class="item">
+                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 4">
+            </div>
+            <div class="item">
+                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 5">
             </div>
         </div>
-        <div class="right-slide">
-            <div style="background-image: url('https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg');"></div>
-            <div style="background-image: url('https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg');"></div>
-            <div style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2Vyc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');"></div>
-            <div style="background-image: url('https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');"></div>
+        <div class="buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
         </div>
-        <div class="action-buttons">
-            <button class="down-button">
-                <i class="fas fa-arrow-down"></i>
-            </button>
-            <button class="up-button">
-                <i class="fas fa-arrow-up"></i>
-            </button>
-        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-<script src="index.js" > </script>
+    <script>
+        let slider = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.slider .dots li');
+
+        let lengthItems = items.length - 1;
+        let active = 0;
+
+        function reloadSlider() {
+            slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+            document.querySelector('.slider .dots li.active').classList.remove('active');
+            dots[active].classList.add('active');
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => next.click(), 3000);
+        }
+
+        next.onclick = () => {
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadSlider();
+        };
+
+        prev.onclick = () => {
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        };
+
+        let refreshInterval = setInterval(() => next.click(), 3000);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                active = index;
+                reloadSlider();
+            });
+        });
+
+        window.onresize = reloadSlider;
+    </script>
 </body>
 </html>

@@ -95,4 +95,4 @@ END;
 
 
 
-SELECT DISTINCT dist FROM branch WHERE division = "khulna"; 
+SELECT DISTINCT dist FROM branch WHERE division = "khulna";
