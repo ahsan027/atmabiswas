@@ -1,26 +1,30 @@
 <?php
-include '../Database/db.php';
 
-$db = new Db();
-$conn = $db->connect();
+// print_r($_POST['division']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
+    $division = $_POST['division'];
 
-try{
-    $division = $_POST['divison'];
-    $query = "SELECT DISTINCT dist FROM branch WHERE division=:division";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam(":division",$division);
-    $stmt->execute();
+    function getResult($conn, $division) {
+        $query = "SELECT DISTINCT dist FROM branch WHERE division = :division";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":division", $division);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($conn);
-    var_dump($division);
+    include '../Database/db.php';
+    $db = new Db();
+    $conn = $db->connect();
+    $result = getResult($conn, $division);
+    // print_r($result);
 
-    var_dump($result);
 
-    echo "ConnectionSuccessful";
-
-}catch(PDOException $e){
-    print_r($e);
+    if ($result) {
+        foreach ($result as $row) {
+            echo "<button>" . htmlspecialchars($row['dist']) . "</button>";
+        }
+    } else {
+        echo "<p>No results found for the selected division.</p>";
+    }
 }
-
-?>

@@ -7,12 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             overflow-x: hidden;
             background-color: #e6f2ff; /* Light blue background */
             margin: 0;
             padding: 0;
         }
         .navbar {
+            width: 100%;
+            height: 20%;
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -64,6 +70,7 @@
             font-size: 1.5rem;
             color: #0073e6;
             font-weight: bold;
+            margin-left: 2.5rem;
         }
 
         .popup {
@@ -165,10 +172,11 @@
         
 .container {
     /* margin-left: 1rem; */
-    padding: 1rem;
-    
+  
+    width: 95vw;
     display: flex;
     gap: 20px;
+    /* margin-left: 1rem; */
 }
 
 .number-card {

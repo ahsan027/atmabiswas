@@ -1,3 +1,9 @@
+<?php
+include 'Database/db.php';
+$db = new Db();
+$pdo = $db->connect();
+$conn = $db->connect();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +14,6 @@
     <style>
 
 
-        /* Toggle button */
-        body{
-            /* background-color: red; */
-        }
         .toggle-btn {
             width: 80%;
             background-color: #ffffff;
@@ -46,6 +48,24 @@
 
         .contact-card.active {
             display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .filterbars {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            transform: translateY(20px);
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filterbars.active {
+            display: flex;
             opacity: 1;
             transform: translateY(0);
         }
@@ -89,15 +109,56 @@
         }
         /* Contact Card and Select Fields */
 
+   
+        .branches {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px; /* Space between buttons */
+        }
 
+        .branches button {
+            border-radius: 15px;
+            background-color: #0073e6; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Add some padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Increase font size */
+            transition-duration: 0.4s; /* Animation duration */
+            cursor: pointer; /* Add a pointer cursor on hover */
+        }
+
+        .branches button:hover {
+            background-color: white; /* White background */
+            color: black; /* Black text */
+            border: 2px solid #4CAF50; /* Green border */
+        }
+
+        @media (max-width: 600px) {
+            .branches {
+                grid-template-columns: repeat(2, 1fr); /* Two buttons per row on mobile devices */
+            }
+        }
+                @media (max-width: 480px) {
+            .branches {
+                grid-template-columns: repeat(1, 1fr); /* Two buttons per row on mobile devices */
+            }
+        }
 .filterbars {
     display: flex;
-
+flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
+.filterbars form {
+    display: flex;
+    gap:1rem;
+    margin-bottom: 1rem;
 
+
+}
 .filterbars select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -143,64 +204,100 @@
             </iframe>
         </div>
     </div>
-    <div class="filterbars">
-        <form method="POST" action="../Action/filter.php">
-        <select name="divison" id="">
+        <button class="toggle-btn" id="filterbutton">ATMABISWAS Branches</button>
+    <div class="filterbars" id="filterbars">
+      
+        <select name="division" id="divisionSelect">
             <option value="">Select Division</option>
-            <option value="Khulna">Khulna</option>
-            <option value="Rajshahi">Rajshahi</option>
+            <?php
+            
+            $stmt = $pdo->prepare("SELECT DISTINCT division FROM branch");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // var_dump($result);
+            foreach($result as $r){
+                echo "<option value="."$r[division]".">".$r['division']."</option>";
+            }
+            ?>
+
         </select>
-            <button type="submit">Submit</button>
-        </form>
+           
+      
+            <div id="branchButtons" class="branches">
+               
+
+    
+        </div>
     </div>
+
 </div>
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.getElementById('toggle-btn');
-    const contactCard = document.getElementById('contact-card');
-    const divisionSelect = document.querySelector('.filterbars select:nth-child(1)');
-    const districtSelect = document.querySelector('.filterbars select:nth-child(2)');
-    const branchSelect = document.querySelector('.filterbars select:nth-child(3)');
 
-    toggleBtn.addEventListener('click', () => {
-        if (contactCard.classList.contains('active')) {
-            contactCard.style.opacity = '0';
-            contactCard.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                contactCard.classList.remove('active');
-            }, 500); // Matches the transition duration
-        } else {
-            contactCard.classList.add('active');
-            setTimeout(() => {
-                contactCard.style.opacity = '1';
-                contactCard.style.transform = 'translateY(0)';
-            }, 0);
+    document.getElementById("divisionSelect").addEventListener("change", function() {
+    const division = this.value;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../Action/filter.php", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.getElementById('branchButtons').innerHTML = xhr.responseText;
+
         }
-    });
+    };
 
-    divisionSelect.addEventListener('change', function () {
-        if (divisionSelect.value) {
-            districtSelect.style.display = 'block';
-        } else {
-            districtSelect.style.display = 'none';
-            branchSelect.style.display = 'none';
-        }
-    });
-
-    districtSelect.addEventListener('change', function () {
-        if (districtSelect.value) {
-            branchSelect.style.display = 'block';
-        } else {
-            branchSelect.style.display = 'none';
-        }
-    });
-
-    // Initially hide district and branch selects
-    districtSelect.style.display = 'none';
-    branchSelect.style.display = 'none';
+    xhr.send('division=' + encodeURIComponent(division));
 });
 
-    </script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const contactCard = document.getElementById('contact-card');
+
+    const filterbtn = document.getElementById("filterbutton");
+    const filterField = document.getElementById("filterbars");
+
+    // Ensure the elements are available before adding event listeners
+    if (toggleBtn && contactCard) {
+        toggleBtn.addEventListener('click', () => {
+            if (contactCard.classList.contains('active')) {
+                contactCard.style.opacity = '0';
+                contactCard.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    contactCard.classList.remove('active');
+                }, 500); // Matches the transition duration
+            } else {
+                contactCard.classList.add('active');
+                setTimeout(() => {
+                    contactCard.style.opacity = '1';
+                    contactCard.style.transform = 'translateY(0)';
+                }, 0);
+            }
+        });
+    }
+
+    if (filterbtn && filterField) {
+        filterbtn.addEventListener('click', () => {
+            if (filterField.classList.contains('active')) {
+                filterField.style.opacity = '0';
+                filterField.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    filterField.classList.remove('active');
+                }, 500); // Matches the transition duration
+            } else {
+                filterField.classList.add('active');
+                setTimeout(() => {
+                    filterField.style.opacity = '1';
+                    filterField.style.transform = 'translateY(0)';
+                }, 0);
+            }
+        });
+    }
+});
+
+
+</script>
+
 </body>
 
 </html>
