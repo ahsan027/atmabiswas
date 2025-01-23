@@ -7,14 +7,17 @@
     <style>
 
         .navbar {
-            width: 100%;
-            height: 20%;
+            width: 100vw;
+            height: 15vh;
             display: flex;
             flex-direction: column;
             padding: 10px;
             background-color: #ffffff; /* White background for navbar */
-            border-bottom: 2px solid #0073e6;        }
+            border-bottom: 2px solid #0073e6;      
+            /* margin-top: 2rem;   */
+        }
         .navbar .top-row {
+            /* margin-top: 2rem; */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,6 +62,7 @@
             font-size: 1.5rem;
             color: #0073e6;
             font-weight: bold;
+            margin-left:1.5rem ;
 
         }
 
@@ -125,6 +129,16 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            .navbar{
+                margin-top:-1rem ;
+                height: 15%;
+            }
+            .menu-toggle{
+                margin-left: 1rem;
+            }
+            .logo{
+                margin-left: -1.5rem;
+            }
             .navbar .top-row {
                 justify-content: space-between;
             }
@@ -272,7 +286,7 @@
             </div>
         </div>
         <div class="bottom-row">
-            <a class="active" href="/">Who we are</a>
+            <a href="/dashboard/atmabiswas">Who we are</a>
             <div class="dropdown">
                 <a class="maindrop" href="#">What we do<span class="arrow">&#9662;</span></a>
                 <div class="dropdown-content">
@@ -290,7 +304,7 @@
                     <a href="Pages/ExecutiveGeneralBody.php">Executive and General Body</a>
                 </div>
             </div>            
-            <a href="Pages/Contact.php">Contact</a>
+            <a href="Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
     </div>
@@ -305,6 +319,7 @@
     </div>
 
     <script>
+        console.log(window.location.href)
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav .bottom-row').classList.toggle('active');
         });
@@ -320,6 +335,7 @@
 
    document.addEventListener("DOMContentLoaded", function () {
     const currentLocation = location.href;
+    console.log(location.href);
     const menuItems = document.querySelectorAll('.navbar .bottom-row a');
     
     menuItems.forEach(item => {
