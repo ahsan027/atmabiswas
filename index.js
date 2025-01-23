@@ -1,35 +1,50 @@
-const sliderContainer = document.querySelector(".slider-container");
-const slideRight = document.querySelector(".right-slide");
-const slideLeft = document.querySelector(".left-slide");
-const upButton = document.querySelector(".up-button");
-const downButton = document.querySelector(".down-button");
-const slidesLength = slideRight.querySelectorAll("div").length;
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+  document.querySelector(".bottom-row").classList.toggle("active");
+});
 
-let activeSlideIndex = 0;
+document
+  .getElementById("login-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("login-popup").classList.add("active");
+  });
 
-slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
+document.getElementById("close-popup").addEventListener("click", function () {
+  document.getElementById("login-popup").classList.remove("active");
+});
 
-upButton.addEventListener("click", () => changeSlide("up"));
-downButton.addEventListener("click", () => changeSlide("down"));
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = [
+    { id: "number1", end: 100, duration: 5000 },
+    { id: "number2", end: 200, duration: 5500 },
+    { id: "number3", end: 50, duration: 4000 },
+    { id: "number4", end: 300, duration: 4500 },
+  ];
 
-const changeSlide = (direction) => {
-  const sliderHeight = sliderContainer.clientHeight;
-  if (direction === "up") {
-    activeSlideIndex++;
-    if (activeSlideIndex > slidesLength - 1) {
-      activeSlideIndex = 0;
-    }
-  } else if (direction === "down") {
-    activeSlideIndex--;
-    if (activeSlideIndex < 0) {
-      activeSlideIndex = slidesLength - 1;
-    }
+  counters.forEach((counter) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min(
+        (timestamp - startTimestamp) / counter.duration,
+        1
+      );
+      document.getElementById(counter.id).innerText = Math.floor(
+        progress * counter.end
+      );
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  });
+});
+
+window.addEventListener("scroll", () => {
+  const container = document.querySelector(".container_aboutus");
+  const scrollPosition = window.scrollY + window.innerHeight;
+  // console.log(window.scrollY + window.innerHeight);
+  if (scrollPosition > container.offsetTop) {
+    container.classList.add("show");
   }
-
-  slideRight.style.transform = `translateY(-${
-    activeSlideIndex * sliderHeight
-  }px)`;
-  slideLeft.style.transform = `translateY(${
-    activeSlideIndex * sliderHeight
-  }px)`;
-};
+});

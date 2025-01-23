@@ -147,6 +147,108 @@
                 gap: 1rem;
             }
         }
+        /* Add this to your existing CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    min-width: 160px;
+    margin-top: 0.3rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #0073e6; /* Blue color for links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1; /* Light border between items */
+}
+
+.dropdown-content a:hover {
+    background-color: #0073e6; /* Blue hover effect */
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Ensure dropdown is hidden on desktop */
+.dropdown-content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown .maindrop{
+        display: none;
+    }
+    /* Always display dropdown on mobile */
+    .dropdown-content {
+        margin-top: -1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        min-width: 100%;
+        background-color: #ffffff; /* White background for dropdown */
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown .arrow {
+        display: none; /* Hide arrow on mobile */
+    }
+}
+
+
+/* Responsive Styles for Dropdown */
+@media (max-width: 768px) {
+    .navbar .top-row {
+        justify-content: space-between;
+    }
+    .navbar .top-row .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #0073e6;
+    }
+    .navbar .top-row a {
+        display: none;
+    }
+    .navbar .bottom-row {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar .bottom-row.active {
+        display: flex;
+        gap: 1rem;
+    }
+    .dropdown-content {
+        position: relative;
+        min-width: 100%;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar .top-row .menu-toggle {
+        display: none;
+    }
+    .navbar .top-row a {
+        display: inline;
+    }
+}
+
 
         @media (min-width: 769px) {
             .navbar .top-row .menu-toggle {
@@ -204,6 +306,30 @@
 .number-card:hover h2 {
     transform: scale(1.1);
 }
+
+        .container_aboutus {
+            width: 90%;
+            margin: 2% auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            opacity:0;
+            transition: opacity 2s;
+        }
+        .container_aboutus.show {
+            opacity: 1;
+        }
+        h1, h2 {
+            color: #0073e6;
+        }
+        p {
+            margin: 1em 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -220,9 +346,23 @@
         </div>
         <div class="bottom-row">
             <a class="active" href="/">Who we are</a>
-            <a href="#">What we do</a>
+            <div class="dropdown">
+                <a class="maindrop" href="#">What we do<span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="Pages/Founder.php">Green Energy</a>
+                    <a href="SeniorManagement.php">Enterprise Development</a>
+                    <a href="Pages/ExecutiveGeneralBody.php">Food and Agriculture</a>
+                </div>
+            </div>
 
-            <a href="Pages/OurTeam.php">Our team</a>
+            <div class="dropdown">
+                <a class="maindrop" href="#">Our Team <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="Pages/Founder.php">Founder</a>
+                    <a href="SeniorManagement.php">Senior Management</a>
+                    <a href="Pages/ExecutiveGeneralBody.php">Executive and General Body</a>
+                </div>
+            </div>            
             <a href="Pages/Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
@@ -259,50 +399,48 @@
             <p>Cups of Coffee</p>
         </div>
     </div>
+</div>
 
+<div>
+    <div class="container_aboutus fade-in">
+        <h1>About Us</h1>
+        <div class="fade">
+            <h2>Welcome to Atmabiswas!</h2>
+            <p>We are dedicated to empowering individuals and fostering self-belief. Our mission is to create a positive impact on society by providing support, resources, and opportunities for personal growth and development.</p>
+            
+            <h2>Our Vision</h2>
+            <p>To build a world where everyone believes in their potential and has the tools to achieve their dreams.</p>
+            
+            <h2>Our Mission</h2>
+            <ul>
+                <li>Empowerment: Providing resources and opportunities for personal and professional growth.</li>
+                <li>Support: Offering guidance and assistance to individuals in need.</li>
+                <li>Community: Creating a supportive network that fosters collaboration and mutual growth.</li>
+            </ul>
+            
+            <h2>Our Values</h2>
+            <ul>
+                <li>Integrity: We uphold the highest standards of integrity in all our actions.</li>
+                <li>Respect: We value each individual and treat everyone with respect and dignity.</li>
+                <li>Innovation: We embrace change and constantly seek new ways to achieve our mission.</li>
+            </ul>
+            
+            <h2>Our Team</h2>
+            <p>Our team is composed of dedicated professionals who are passionate about making a difference. We work together to create a positive impact and support each other in our journey.</p>
+            
+            <h2>Get Involved</h2>
+            <p>Join us in our mission to empower and support individuals. There are many ways to get involved:</p>
+            <ul>
+                <li>Volunteer: Share your skills and time to make a difference.</li>
+                <li>Donate: Support our initiatives with your generous contributions.</li>
+                <li>Partner: Collaborate with us to create impactful programs and events.</li>
+            </ul>
+        </div>
+    </div>
 
 </div>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.bottom-row').classList.toggle('active');
-        });
-
-        document.getElementById('login-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('login-popup').classList.add('active');
-        });
-
-        document.getElementById('close-popup').addEventListener('click', function() {
-            document.getElementById('login-popup').classList.remove('active');
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-  const counters = [
-    { id: "number1", end: 100, duration: 5000 },
-    { id: "number2", end: 200, duration: 5500 },
-    { id: "number3", end: 50, duration: 4000 },
-    { id: "number4", end: 300, duration: 4500 },
-  ];
-
-  counters.forEach((counter) => {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min(
-        (timestamp - startTimestamp) / counter.duration,
-        1
-      );
-      document.getElementById(counter.id).innerText = Math.floor(
-        progress * counter.end
-      );
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  });
-});
+    <script src="index.js">
+       
 
     </script>
 </body>
