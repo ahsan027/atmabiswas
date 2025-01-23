@@ -162,37 +162,13 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="top-row">
-            <div class="menu-toggle">&#9776;</div>
-            <div class="logo">ATMA BISWAS</div>
-            <div>
-                <a href="#">Notice</a>
-                <a href="#">Career</a>
-                <a href="#">Press</a>
-                <a href="#">Event</a>
-            </div>
-        </div>
-        <div class="bottom-row">
-            <a href="../index.php">Who we are</a>
-            <a href="#">What we do</a>
+<div>
+    <?php include 'Navbar.php' ?>
+</div>
+<div>
+    <?php include 'exeandged.php' ?>
 
-            <a href="OurTeam.php">Our team</a>
-            <a class="active" href="Contact.php">Contact</a>
-            <a href="#" id="login-btn">Login</a>
-        </div>
-    </div>
-
-    <div class="popup" id="login-popup">
-        <div class="close-btn" id="close-popup">&times;</div>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
-    <?php include '../exeandged.php' ?>
+</div>
     
 
 

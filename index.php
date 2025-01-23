@@ -17,10 +17,6 @@
             padding: 0;
         }
 
-        .navbar{
-            width: 100%;
-
-        }
 
         @media (max-width: 768px) {
     .container {
@@ -131,8 +127,8 @@ ul {
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <?php include 'Contents/Navbar.php'?>
+    <div>
+        <?php include 'Navbar.php'?>
     </div>
 
     <div>
