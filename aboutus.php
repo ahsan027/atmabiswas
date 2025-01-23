@@ -3,41 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #e6f2ff; /* Light blue background */
-            overflow-x: hidden;
-        }
-        .container_aboutus {
-            width: 90%;
-            margin: 2% auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            opacity: 0;
-            transition: opacity 2s;
-        }
-        .container_aboutus.show {
-            opacity: 1;
-        }
-        h1, h2 {
-            color: blueviolet;
-        }
-        p {
-            margin: 1em 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+    <title>ATMABISWAS - About us</title>
 </head>
+<style>
+
+    body{
+        background-color:rgb(218, 237, 255);
+    }
+    .container_aboutus {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.container_aboutus.show {
+    opacity: 1;
+}
+
+h1, h2 {
+    color: #0073e6;
+}
+
+p {
+    margin: 1em 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body{
+        padding: 1rem;
+    }
+   
+
+    .container_aboutus {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        margin-right: 1rem;
+        border-radius: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    p, ul {
+        font-size: 1rem;
+    }
+}
+
+        @media (min-width:768px) {
+            .container_aboutus{
+                padding: 1rem;
+            }
+            
+        }
+</style>
 <body>
     <div class="container_aboutus fade-in">
         <h1>About Us</h1>
@@ -74,9 +106,18 @@
             </ul>
         </div>
     </div>
-
     <script>
-        
+        window.addEventListener("scroll", () => {
+  const container = document.querySelector(".container_aboutus");
+  const scrollPosition = window.scrollY + window.innerHeight;
+  // console.log(window.scrollY + window.innerHeight);
+  if (scrollPosition > container.offsetTop) {
+    container.classList.add("show");
+  }
+});
+
+
     </script>
+    
 </body>
 </html>
