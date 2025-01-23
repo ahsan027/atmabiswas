@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar with Active Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: #e6f2ff; /* Light blue background */
-            margin: 0;
-            padding: 0;
-        }
+
         .navbar {
+            width: 100%;
+            height: 20%;
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            padding: 10px;
             background-color: #ffffff; /* White background for navbar */
-            border-bottom: 2px solid #0073e6; /* Blue border at the bottom */
-        }
+            border-bottom: 2px solid #0073e6;        }
         .navbar .top-row {
             display: flex;
             justify-content: space-between;
@@ -64,6 +59,17 @@
             font-size: 1.5rem;
             color: #0073e6;
             font-weight: bold;
+
+        }
+
+        @media (min-width){
+            .logo{
+            font-size: 1.5rem;
+            color: #0073e6;
+            font-weight: bold;
+            margin-left: 1rem;
+
+            }
         }
 
         .popup {
@@ -140,6 +146,108 @@
                 gap: 1rem;
             }
         }
+        /* Add this to your existing CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    min-width: 160px;
+    margin-top: 0.3rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #0073e6; /* Blue color for links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1; /* Light border between items */
+}
+
+.dropdown-content a:hover {
+    background-color: #0073e6; /* Blue hover effect */
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Ensure dropdown is hidden on desktop */
+.dropdown-content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown .maindrop{
+        display: none;
+    }
+    /* Always display dropdown on mobile */
+    .dropdown-content {
+        margin-top: -1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        min-width: 100%;
+        background-color: #ffffff; /* White background for dropdown */
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown .arrow {
+        display: none; /* Hide arrow on mobile */
+    }
+}
+
+
+/* Responsive Styles for Dropdown */
+@media (max-width: 768px) {
+    .navbar .top-row {
+        justify-content: space-between;
+    }
+    .navbar .top-row .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #0073e6;
+    }
+    .navbar .top-row a {
+        display: none;
+    }
+    .navbar .bottom-row {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar .bottom-row.active {
+        display: flex;
+        gap: 1rem;
+    }
+    .dropdown-content {
+        position: relative;
+        min-width: 100%;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar .top-row .menu-toggle {
+        display: none;
+    }
+    .navbar .top-row a {
+        display: inline;
+    }
+}
+
 
         @media (min-width: 769px) {
             .navbar .top-row .menu-toggle {
@@ -152,7 +260,7 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
+<div class="navbar">
         <div class="top-row">
             <div class="menu-toggle">&#9776;</div>
             <div class="logo">ATMA BISWAS</div>
@@ -160,14 +268,29 @@
                 <a href="#">Notice</a>
                 <a href="#">Career</a>
                 <a href="#">Press</a>
-                <a href="#">Event</a>
+                <a href="aboutus.php">About Us</a>
             </div>
         </div>
         <div class="bottom-row">
-            <a href="../index.php">Who we are</a>
-            <a href="OurTeam.php">Our team</a>
-            <a class="active" href="Contact.php">Contact</a>
-            <a href="#">What we do</a>
+            <a class="active" href="/">Who we are</a>
+            <div class="dropdown">
+                <a class="maindrop" href="#">What we do<span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="Pages/Founder.php">Green Energy</a>
+                    <a href="SeniorManagement.php">Enterprise Development</a>
+                    <a href="Pages/ExecutiveGeneralBody.php">Food and Agriculture</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a class="maindrop" href="#">Our Team <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="Pages/Founder.php">Founder</a>
+                    <a href="SeniorManagement.php">Senior Management</a>
+                    <a href="Pages/ExecutiveGeneralBody.php">Executive and General Body</a>
+                </div>
+            </div>            
+            <a href="Pages/Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
     </div>
@@ -181,10 +304,9 @@
         </form>
     </div>
 
-
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.bottom-row').classList.toggle('active');
+            document.querySelector('.nav .bottom-row').classList.toggle('active');
         });
 
         document.getElementById('login-btn').addEventListener('click', function(event) {
@@ -195,6 +317,19 @@
         document.getElementById('close-popup').addEventListener('click', function() {
             document.getElementById('login-popup').classList.remove('active');
         });
+
+   document.addEventListener("DOMContentLoaded", function () {
+    const currentLocation = location.href;
+    const menuItems = document.querySelectorAll('.navbar .bottom-row a');
+    
+    menuItems.forEach(item => {
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+        }
+    });
+});
+
+
     </script>
 </body>
 </html>
