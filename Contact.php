@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar with Active Page</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
     body{
          font-family: Arial, sans-serif;     
@@ -25,7 +26,7 @@
     <?php include 'footer.php'?>
 </div>  
 
-
+<script src="script.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.bottom-row').classList.toggle('active');
