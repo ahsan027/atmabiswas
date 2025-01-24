@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const division = this.value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../Action/filter.php", true);
+    xhr.open("POST", "Action/filter.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function() {
