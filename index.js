@@ -40,11 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener("scroll", () => {
-  const container = document.querySelector(".container_aboutus");
-  const scrollPosition = window.scrollY + window.innerHeight;
-  // console.log(window.scrollY + window.innerHeight);
-  if (scrollPosition > container.offsetTop) {
-    container.classList.add("show");
+const moreid = document.getElementById("moreidbtn");
+
+moreid.addEventListener("click", () => {
+  console.log("Clicked");
+  const btns = document.querySelector(".secbtns");
+  if (btns.classList.contains("moreactive")) {
+    btns.classList.remove("moreactive");
+  } else {
+    btns.classList.add("moreactive");
   }
 });

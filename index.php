@@ -165,7 +165,8 @@ ul {
 
 .sectionalparts:hover {
     transform: scale(1.02);
-    background-color: #e6f2ff;
+    background-color: #ffffff;
+    border-bottom: #0073e6 2px solid;
 }
 
 /* Responsive Design */
@@ -205,12 +206,51 @@ ul {
 .foot{
     width: 100vw;
 }
+.secbtns{
+    transform: translateY(20px);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+
+    justify-content: center;
+    align-items: center;
+}
+.secbtns.moreactive{
+    display: flex;
+ opacity: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(0);
+}
+
+@media(max-width:768px){
+.secbtns{
+    transform: translateY(20px);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+
+    justify-content: center;
+    align-items: center;
+}
+.secbtns.moreactive{
+    display: flex;
+    flex-direction: column;
+ opacity: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(0);
+}
+
+}
 .secbtn{
     font-family: Arial, Helvetica, sans-serif;
     font:bold;
     background-color: #0073e6;
     color: #ffffff;
-    margin-left: 0.5rem;
+
     padding: 0.7rem;
     cursor: pointer;
     border: 0;
@@ -249,7 +289,8 @@ ul {
 <div class="sectionalparts">
     <h1>Our Goals</h1>
     <p>Our mission is to work for progressive social transformation with the aim of institutionalizing a society that place <strong>harmony, peace, justice and ecological balance together</strong></p>
-    <div>
+    <button id="moreidbtn" style="font-family: Arial, Helvetica, sans-serif;font:bold;background-color: #0073e6;color: #ffffff;padding: 0.7rem;cursor:pointer;border: 0;margin-bottom:0.7rem">More..</button>
+    <div class="secbtns">
         <button class="secbtn">Achievements</button>
         <button class="secbtn">Vision, Mission</button>
         <button class="secbtn">OrganoGram</button>
