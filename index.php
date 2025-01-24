@@ -17,53 +17,68 @@
             padding: 0;
         }
 
-
-        @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .number-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-}
-
-
-        
-.container {
-
-    width: 95vw;
+        .numbers {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .number-card {
-    background: white;
+    background-color: #ffffff;
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1;
-}
-
-.number-card h2 {
-    font-size: 2.5rem;
-    color: #0073e6;
-    margin: 0;
     transition: transform 0.3s ease;
 }
 
-.number-card p {
-    font-size: 1rem;
-    color: #666;
-    margin: 10px 0 0;
+.number-card:hover {
+    transform: scale(1.05);
 }
 
-.number-card:hover h2 {
-    transform: scale(1.1);
+h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
 }
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .number-card {
+        min-width: 150px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .number-card {
+        min-width: 100px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+}
+
+
 
 .container_aboutus {
     width: 90%;
@@ -124,6 +139,82 @@ ul {
             }
             
         }
+
+
+.sectionalparts {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sectionalparts h1 {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+.sectionalparts p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sectionalparts:hover {
+    transform: scale(1.02);
+    background-color: #e6f2ff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sectionalparts h1 {
+        font-size: 2rem;
+    }
+    .sectionalparts p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionalparts {
+        padding: 30px 15px;
+    }
+    .sectionalparts h1 {
+        font-size: 1.8rem;
+    }
+    .sectionalparts p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionalparts {
+        padding: 20px 10px;
+    }
+    .sectionalparts h1 {
+        font-size: 1.5rem;
+    }
+    .sectionalparts p {
+        font-size: 0.85rem;
+    }
+}
+
+.foot{
+    width: 100vw;
+}
+.secbtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font:bold;
+    background-color: #0073e6;
+    color: #ffffff;
+    margin-left: 0.5rem;
+    padding: 0.7rem;
+    cursor: pointer;
+    border: 0;
+}
     </style>
 </head>
 <body>
@@ -134,8 +225,8 @@ ul {
     <div>
         <?php include 'imageSlider.php' ?>
     </div>
-<div>
-        <div class="container">
+<div class="container">
+            <div class="numbers">
         <div class="number-card">
             <h2 id="number1">0</h2>
             <p>Projects Completed</p>
@@ -154,8 +245,40 @@ ul {
         </div>
     </div>
 </div>
+<div>
+<div class="sectionalparts">
+    <h1>Our Goals</h1>
+    <p>Our mission is to work for progressive social transformation with the aim of institutionalizing a society that place <strong>harmony, peace, justice and ecological balance together</strong></p>
+    <div>
+        <button class="secbtn">Achievements</button>
+        <button class="secbtn">Vision, Mission</button>
+        <button class="secbtn">OrganoGram</button>
+        <button class="secbtn">Our Partners</button>
 
 
+
+    </div>
+
+</div>
+<div class="sectionalparts">
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
+</div>
+<div class="sectionalparts">
+    <h1>Latest</h1>
+    <p><strong>Find the latest news of ATMABISWAS here.</strong></p>
+</div>
+<div class="sectionalparts">
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
+</div>
+<div class="sectionalparts">
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
+    </div>
+
+</div>
+
+<div class="foot">
+<?php include 'footer.php'?>    
+</div>
     <script src="index.js">
        
 

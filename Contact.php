@@ -4,162 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar with Active Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: #e6f2ff; /* Light blue background */
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            background-color: #ffffff; /* White background for navbar */
-            border-bottom: 2px solid #0073e6; /* Blue border at the bottom */
-        }
-        .navbar .top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 0;
-        }
-        .navbar .top-row a {
-            color: #0073e6; /* Blue color for links */
-            text-decoration: none;
-            margin: 0 10px;
-            padding: 7px 10px;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 15px;
-        }
-        .navbar .top-row a:hover {
-            background-color: #0073e6; /* Blue hover effect */
-            color: #ffffff;
-        }
-        .navbar .bottom-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 10px;
-        }
-        .navbar .bottom-row a {
-            color: #0073e6;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 15px;
-        }
-        .navbar .bottom-row a:hover {
-            background-color: #0073e6;
-            color: #ffffff;
-        }
-
-        .navbar .bottom-row a.active {
-            background-color: #005bb5; /* Darker blue for active page */
-            color: #ffffff;
-        }
-        .logo {
-            font-size: 1.5rem;
-            color: #0073e6;
-            font-weight: bold;
-        }
-
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 30px;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-radius: 10px;
-            width: 300px;
-            max-width: 90%;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-        }
-        .popup.active {
-            display: block;
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        .popup .close-btn {
-            display: block;
-            text-align: right;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: #0073e6;
-        }
-        .popup form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .popup form input {
-            padding: 10px;
-            border: 1px solid #0073e6;
-            border-radius: 5px;
-        }
-        .popup form button {
-            padding: 10px;
-            border: none;
-            background-color: #0073e6;
-            color: #ffffff;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .popup form button:hover {
-            background-color: #005bb5;
-        }
-
-        .secondaryContainer{
-            width: 100vw;
-            background-color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .navbar .top-row {
-                justify-content: space-between;
-            }
-            .navbar .top-row .menu-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 1.5rem;
-                color: #0073e6;
-            }
-            .navbar .top-row a {
-                display: none;
-            }
-            .navbar .bottom-row {
-                display: none;
-                flex-direction: column;
-            }
-            .navbar .bottom-row.active {
-                display: flex;
-                gap: 1rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .navbar .top-row .menu-toggle {
-                display: none;
-            }
-            .navbar .top-row a {
-                display: inline;
-            }
-        }
-    </style>
+<style>
+    body{
+         font-family: Arial, sans-serif;     
+        background-color: #e6f2ff;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 </head>
 <body>
 <div>
@@ -169,7 +21,9 @@
     <?php include 'exeandged.php' ?>
 
 </div>
-    
+<div>
+    <?php include 'footer.php'?>
+</div>  
 
 
     <script>

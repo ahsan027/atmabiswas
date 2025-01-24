@@ -137,7 +137,7 @@
                 margin-left: 1rem;
             }
             .logo{
-                margin-left: -1.5rem;
+                margin-left: 2rem;
             }
             .navbar .top-row {
                 justify-content: space-between;
@@ -293,6 +293,7 @@
                     <a href="Pages/Founder.php">Green Energy</a>
                     <a href="SeniorManagement.php">Enterprise Development</a>
                     <a href="Pages/ExecutiveGeneralBody.php">Food and Agriculture</a>
+                    <a href="Pages/ExecutiveGeneralBody.php">Ready to eat</a>
                 </div>
             </div>
 
@@ -304,6 +305,7 @@
                     <a href="Pages/ExecutiveGeneralBody.php">Executive and General Body</a>
                 </div>
             </div>            
+            <a href="Contact.php">Events</a>
             <a href="Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
         </div>
