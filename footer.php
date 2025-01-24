@@ -8,11 +8,10 @@
         
         <div class="social-media">
             <h4>Join the conversation</h4>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             
         </div>
     </div>
@@ -83,11 +82,14 @@
     text-decoration: underline;
 }
 
-.social-media a img {
+.social-media a i {
+    font-size: 2rem;
     width: 40px;
     margin-right: 10px;
 }
-
+.social-media a {
+color: #9ca6af;
+}
 .download-btn {
     background-color: #ff007f;
     color: white;

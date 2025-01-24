@@ -207,50 +207,43 @@ ul {
     width: 100vw;
 }
 .secbtns{
-    transform: translateY(20px);
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
 
+    display: flex; 
+    gap:1rem;
     justify-content: center;
     align-items: center;
-}
-.secbtns.moreactive{
-    display: flex;
- opacity: 1;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    transform: translateY(0);
-}
-
-@media(max-width:768px){
-.secbtns{
-    transform: translateY(20px);
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
-
-    justify-content: center;
-    align-items: center;
-}
-.secbtns.moreactive{
-    display: flex;
-    flex-direction: column;
- opacity: 1;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    transform: translateY(0);
-}
-
 }
 .secbtn{
+    border-radius: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font:bold;
     background-color: #0073e6;
     color: #ffffff;
+    padding: 0.7rem;
+    cursor: pointer;
+    border: 0;
+}
 
+
+@media(max-width:768px){
+.secbtns{
+
+    display: flex;
+   
+    gap:1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+}
+.secbtn{
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font:bold;
+    background-color: #0073e6;
+    color: #ffffff;
     padding: 0.7rem;
     cursor: pointer;
     border: 0;
@@ -289,31 +282,27 @@ ul {
 <div class="sectionalparts">
     <h1>Our Goals</h1>
     <p>Our mission is to work for progressive social transformation with the aim of institutionalizing a society that place <strong>harmony, peace, justice and ecological balance together</strong></p>
-    <button id="moreidbtn" style="font-family: Arial, Helvetica, sans-serif;font:bold;background-color: #0073e6;color: #ffffff;padding: 0.7rem;cursor:pointer;border: 0;margin-bottom:0.7rem">More..</button>
     <div class="secbtns">
         <button class="secbtn">Achievements</button>
         <button class="secbtn">Vision, Mission</button>
         <button class="secbtn">OrganoGram</button>
         <button class="secbtn">Our Partners</button>
-
+</div>
 
 
     </div>
 
-</div>
-<div class="sectionalparts">
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
 </div>
 <div class="sectionalparts">
     <h1>Latest</h1>
     <p><strong>Find the latest news of ATMABISWAS here.</strong></p>
 </div>
 <div class="sectionalparts">
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
+    <?php include 'test.php'?>
+
 </div>
 <div class="sectionalparts">
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis, veniam a cumque dolorem in ut odit saepe quasi. Laudantium vero delectus consequuntur fuga dolore, temporibus assumenda dicta possimus incidunt.</h1>
-    </div>
+    <?php include 'joinwithus.php' ?>
 
 </div>
 
