@@ -11,6 +11,14 @@
         background-color: #e6f2ff;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+    }
+    .navbar .top-row {
+        margin-left: -1.2rem;
+
+    }
+    .navbar .top-row .bars{
+        margin-left: -1rem;
     }
 </style>
 </head>
