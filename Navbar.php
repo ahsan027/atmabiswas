@@ -278,7 +278,7 @@
         <div class="top-row">
             <div class="menu-toggle">&#9776;</div>
             <div class="logo">ATMA BISWAS</div>
-            <div>
+            <div class="bars">
                 <a href="#">Notice</a>
                 <a href="#">Career</a>
                 <a href="#">Press</a>
