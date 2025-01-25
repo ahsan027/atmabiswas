@@ -68,6 +68,13 @@
     border-radius: 0.3rem;
     /* Rounded corners for a tags */
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    border-bottom: 1px solid #ffffff;
+        /* Add white border below a tags */
+        padding-bottom: 0.5rem;
+        /* Adjust padding to accommodate the border */
+        margin-bottom: 0.5rem;
+        /* Space below each a tag */
 }
 
 .sidenav a:hover {
