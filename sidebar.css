@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 .sidenav {
+
+    z-index: 100;
     overflow-y: auto;
     font-family: 'Montserrat', Arial, sans-serif;
     gap: 1rem;
     display: flex;
     flex-direction: column;
     background-color: #0073e6;
-    /* Blue background */
+  
     backdrop-filter: blur(5px);
     width: 50vw;
-    height: 100vh;
+    height: 100%;
     /* Ensure the sidenav takes up the full viewport height */
     position: fixed;
     top: 0;
-    left: -60vw;
+    left:0;
     justify-content: start;
-    align-items: start;
-    transition: left 0.5s ease;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
     filter: drop-shadow(5px);
     border-right: rgba(39, 107, 255, 0.7);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
@@ -25,7 +28,7 @@
 }
 
 .sidenav.active {
-    left: 0;
+    transform: translateX(0);
     backdrop-filter: blur(5px);
 }
 
@@ -53,28 +56,38 @@
 .sidenav .sidelogo img {
     margin-left: 1rem;
 }
-
+.sidenav .loginbtn{
+    margin-bottom: 3rem;
+}
 .sidenav a {
+
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
-    /* Lighter font weight */
+
     text-decoration: none;
     color: #ffffff;
     font-size: 1.4rem;
     margin-left: 1rem;
     width: 80%;
     padding: 0.5rem;
-    /* Padding inside a tags */
+
     border-radius: 0.3rem;
-    /* Rounded corners for a tags */
+
     transition: background-color 0.3s ease, color 0.3s ease;
 
     border-bottom: 1px solid #ffffff;
-        /* Add white border below a tags */
-        padding-bottom: 0.5rem;
-        /* Adjust padding to accommodate the border */
-        margin-bottom: 0.5rem;
-        /* Space below each a tag */
+        
+    padding-bottom: 0.5rem;
+    
+    margin-bottom: 0.5rem;
+    
+}
+
+.sidenav .sidedrop .sidedropContent a{
+    border-bottom: none;
+    background-color: rgba(7, 85, 255, 0.5);
+    border: 1px solid white;
+
 }
 
 .sidenav a:hover {
@@ -122,4 +135,11 @@
 body.blur {
     filter: blur(5px);
     transition: filter 0.5s ease;
+}
+
+@media (min-width:768px) {
+    .sidenav{
+        display: none;
+    }
+    
 }
