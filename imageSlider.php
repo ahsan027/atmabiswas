@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="imageSlider.css">
     <div class="slider">
         <div class="list">
             <div class="item">

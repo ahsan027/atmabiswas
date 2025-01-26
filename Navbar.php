@@ -1,3 +1,9 @@
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="menutoggle.css">
+<link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <div class="navbar">
         <div class="top-row">
@@ -37,12 +43,12 @@
     </div>
     
     <div class="dropdown-content">
-        <a href="Pages/Founder.php">Founder</a>
+        <a href="founder.php">Founder</a>
         <a href="SeniorManagement.php">Senior Management</a>
         <a href="Pages/ExecutiveGeneralBody.php">Executive and General Body</a>
     </div>
 </div>
- <a href="Contact.php">Events</a>
+ <a href="Events.php">Events</a>
             <a href="Contact.php">Contact</a>
             <a href="#" id="login-btn">Login</a>
             </div>
@@ -100,11 +106,7 @@
     </div>
     <script src="prac.js"></script>
 
-    <script src="navbar.js">
-       
-
-
-    </script>
+    <script src="navbar.js"></script>
 <script src="menutoggle.js"></script>
 </body>
 

@@ -1,0 +1,184 @@
+ .toggle-btn {
+     width: 80%;
+     background-color: #ffffff;
+     color: #0073e6;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     margin: 20px;
+     font-size: 1rem;
+     transition: background-color 0.3s;
+ }
+
+ .toggle-btn:hover {
+     background-color: rgb(230, 230, 230);
+     color: #005bb5;
+ }
+
+ /* Contact card styles */
+ .contact-card {
+     display: none;
+     opacity: 0;
+     transition: opacity 0.5s, transform 0.5s;
+     transform: translateY(20px);
+     width: 80%;
+     margin: 20px auto;
+     background-color: #ffffff;
+     border: 1px solid #0073e6;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .contact-card.active {
+     display: block;
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .filterbars {
+     display: none;
+     opacity: 0;
+     transition: opacity 0.5s, transform 0.5s;
+     transform: translateY(20px);
+     width: 80%;
+     margin: 20px auto;
+     background-color: #ffffff;
+     padding: 1rem;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .filterbars.active {
+     display: flex;
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .contact-info {
+     padding: 20px;
+     color: #0073e6;
+ }
+
+ .contact-info h2 {
+     margin: 0;
+     color: #005bb5;
+ }
+
+ .contact-info p {
+     margin: 5px 0;
+ }
+
+ .map-container {
+     height: 300px;
+ }
+
+ .map-container iframe {
+     width: 100%;
+     height: 100%;
+     border: 0;
+ }
+
+ @media (max-width: 768px) {
+     .navbar .bottom-row {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+
+ .mainbody {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ /* Contact Card and Select Fields */
+
+
+ .branches {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 8px;
+     /* Space between buttons */
+ }
+
+ .branches button {
+     border-radius: 15px;
+     background-color: #0073e6;
+     /* Green background */
+     border: none;
+     /* Remove borders */
+     color: white;
+     /* White text */
+     padding: 15px 32px;
+     /* Add some padding */
+     text-align: center;
+     /* Center text */
+     text-decoration: none;
+     /* Remove underline */
+     font-size: 16px;
+     /* Increase font size */
+     transition-duration: 0.4s;
+     /* Animation duration */
+     cursor: pointer;
+     /* Add a pointer cursor on hover */
+ }
+
+ .branches button:hover {
+     background-color: white;
+     /* White background */
+     color: black;
+     /* Black text */
+     border: 2px solid #4CAF50;
+     /* Green border */
+ }
+
+ @media (max-width: 600px) {
+     .branches {
+         grid-template-columns: repeat(2, 1fr);
+         /* Two buttons per row on mobile devices */
+     }
+ }
+
+ @media (max-width: 480px) {
+     .branches {
+         grid-template-columns: repeat(1, 1fr);
+         /* Two buttons per row on mobile devices */
+     }
+ }
+
+ .filterbars {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+     margin-top: 1rem;
+ }
+
+ .filterbars form {
+     display: flex;
+     gap: 1rem;
+     margin-bottom: 1rem;
+
+
+ }
+
+ .filterbars select {
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     width: 80%;
+     max-width: 300px;
+     font-size: 1rem;
+ }
+
+ @media (max-width: 768px) {
+     .contact-card {
+         width: 90%;
+     }
+
+     .filterbars select {
+         width: 90%;
+     }
+ }

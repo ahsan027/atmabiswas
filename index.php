@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar with Active Page</title>
     
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="navbar.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="menutoggle.css">
-    <link rel="stylesheet" href="imageSlider.css">
+
+
 
 
 <link rel="stylesheet" href="index.css">
@@ -23,11 +22,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 
 </style>
 <body>
 
-<?php include 'prac.php'?>
+<?php include 'Navbar.php'?>
 <!-- <br> -->
 <?php include 'imageSlider.php' ?>
 

@@ -10,29 +10,15 @@
     <title>Event Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
+        background-color: #e6f2ff;
+        overflow-x:hidden ; 
         }
 
-        header {
-            background-color: #0078d7;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
 
         .container {
             max-width: 1200px;
@@ -92,19 +78,11 @@
             font-size: 0.9rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #0078d7;
-            color: white;
-        }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Event Page</h1>
-        <p>Explore the exciting events hosted by us!</p>
-    </header>
+<?php include 'Navbar.php'?>
 
     <div class="container">
         <!-- Scholarship Segment -->
@@ -351,8 +329,6 @@
         </div>        
     </div>
 
-    <footer>
-        <p>&copy; ATMABISWAS-2025 </p>
-    </footer>
+<?php include 'footer.php'?>
 </body>
 </html>
