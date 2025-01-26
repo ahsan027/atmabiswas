@@ -1,4 +1,11 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
 .footer {
+    width: 100%;
     background-color: #00262b;
     color: white;
     font-family: Arial, sans-serif;
@@ -37,7 +44,7 @@
 
 .social-media a img {
     width: 40px;
-    margin-right: 10px;
+
 }
 
 .download-btn {
