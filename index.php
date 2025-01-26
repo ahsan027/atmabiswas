@@ -28,6 +28,7 @@
 <body>
 
 <?php include 'prac.php'?>
+<!-- <br> -->
 <?php include 'imageSlider.php' ?>
 
 <div class="container">
