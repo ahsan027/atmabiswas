@@ -1,5 +1,6 @@
 
 .navbar {
+
     width: 100vw;
     height: 20vh;
     display: flex;
@@ -19,10 +20,7 @@
     padding: 5px 0;
 }
 
-.navbar .top-row .bars{
-    margin-right: 0.7rem;
 
-}
 
 .navbar .top-row a {
     color: #0073e6;
