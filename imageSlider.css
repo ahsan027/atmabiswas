@@ -50,7 +50,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
-    margin-right: 3rem;
+    
 }
 
 .slider .buttons button:hover {
@@ -89,6 +89,4 @@
         height: 500px;
         margin-left: 0.5rem;
     }
-        .slider .buttons button {
-        }
 }
