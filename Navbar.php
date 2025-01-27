@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="menutoggle.css">
 <link rel="stylesheet" href="sidebar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -11,9 +11,9 @@
         <div class="logo"><a href="/dashboard/atmabiswas/"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
             <a href="#">Notice</a>
-            <a href="career.php">Career</a>
+            <a target="_blank" href="career.php">Career</a>
             <a href="#">Press</a>
-            <a href="aboutus.php">About Us</a>
+            <a target="_blank" href="aboutus.php">About Us</a>
         </div>
 
         <div class="menu-toggle" id="menu-toggleId">
@@ -30,10 +30,10 @@
             </div>
 
             <div class="dropdown-content">
-                <a href="Pages/Founder.php">Green Energy</a>
-                <a href="SeniorManagement.php">Enterprise Development</a>
-                <a href="Pages/ExecutiveGeneralBody.php">Food and Agriculture</a>
-                <a href="Pages/ExecutiveGeneralBody.php">Ready to eat</a>
+                <a target="_blank" href="Green_Energy.php">Green Energy</a>
+                <a target="_blank" href="enterprice.php">Enterprise Development</a>
+                <a target="_blank" href="Agritural.php">Food and Agriculture</a>
+                <a target="_blank" href="readytoeat.php">Ready to eat</a>
             </div>
         </div>
 
@@ -43,9 +43,9 @@
             </div>
 
             <div class="dropdown-content">
-                <a href="founder.php">Founder</a>
-                <a href="SeniorManagement.php">Senior Management</a>
-                <a href="generalbody.php">Executive and General Body</a>
+                <a target="_blank" href="founder.php">Founder</a>
+                <a target="_blank" href="SeniorManagement.php">Senior Management</a>
+                <a target="_blank" href="generalbody.php">Executive and General Body</a>
             </div>
         </div>
         <a href="Events.php">Events</a>

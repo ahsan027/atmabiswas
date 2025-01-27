@@ -1,7 +1,8 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
 .navbar {
     width: 100%;
 
@@ -34,16 +35,18 @@
     border-radius: 15px;
 }
 
-.navbar .top-row a:hover {
+.navbar .top-row .bars a:hover {
     background-color: #0073e6;
     /* Blue hover effect */
     color: #ffffff;
 }
-.navbar .top-row .logo a img{
-    height: 70px;
-    width: 300px;
-    background-color: red;
+
+.navbar .top-row .logo a img {
+    height: 50px;
+    width: 250px;
+
 }
+
 .navbar .bottom-row {
     display: flex;
     justify-content: center;
@@ -134,13 +137,13 @@
 /* Style for the dropdown container */
 .dropdown {
     position: relative;
-   
+
 }
 
 /* Style for the maindrop link */
 .maindrop {
-display: flex;
-gap: 0.7rem;
+    display: flex;
+    gap: 0.7rem;
 }
 
 
@@ -154,6 +157,7 @@ gap: 0.7rem;
     border-radius: 15px;
     cursor: pointer;
 }
+
 /* Add hover effect for the maindrop */
 
 
@@ -206,8 +210,14 @@ gap: 0.7rem;
 
 /* Responsive Styles for Dropdown */
 @media (max-width: 768px) {
+
+    .navbar .top-row .logo img {
+        height: 20px;
+        width: 50px;
+    }
+
     .navbar .top-row {
-        
+
         justify-content: space-between;
     }
 
@@ -219,7 +229,7 @@ gap: 0.7rem;
         margin-right: 1rem;
     }
 
-    .navbar .top-row a {
+    .navbar .top-row .bars a {
         display: none;
     }
 
@@ -228,7 +238,7 @@ gap: 0.7rem;
         flex-direction: column;
     }
 
-    
+
 
 
 }

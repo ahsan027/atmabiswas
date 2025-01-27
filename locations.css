@@ -8,9 +8,10 @@
  .toggle-btn {
             width: 80%;
             background-color: #ffffff;
+            border: 2px solid #0073e6;
             color: #0073e6;
             padding: 10px 20px;
-            border: none;
+            
             border-radius: 5px;
             cursor: pointer;
             margin: 20px;
@@ -62,9 +63,29 @@
         }
 
         .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
             padding: 20px;
             color: #0073e6;
         }
+
+        .contact-info .btn button{
+            padding: 1rem;
+            color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            background-color: #0073e6;
+            cursor: pointer;
+
+        }
+    .contact-info .btn a:hover button {
+        scale: (1.1);
+        background-color: #005bb5;
+       
+
+    }
 
         .contact-info h2 {
             margin: 0;
