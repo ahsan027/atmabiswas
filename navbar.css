@@ -211,9 +211,10 @@
 /* Responsive Styles for Dropdown */
 @media (max-width: 768px) {
 
-    .navbar .top-row .logo img {
-        height: 20px;
-        width: 50px;
+    .navbar .top-row .logo a img {
+        margin-left: -1rem;
+        height: 40px;
+        width: 160px;
     }
 
     .navbar .top-row {

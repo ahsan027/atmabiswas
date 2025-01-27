@@ -43,12 +43,6 @@
 <div class="sectionalparts">
     <h1>Our Goals</h1>
     <p>Our mission is to work for progressive social transformation with the aim of institutionalizing a society that place <strong>harmony, peace, justice and ecological balance together</strong></p>
-    <div class="secbtns">
-        <button class="secbtn">Achievements</button>
-        <button class="secbtn">Vision, Mission</button>
-        <button class="secbtn">OrganoGram</button>
-        <button class="secbtn">Our Partners</button>
-</div>
 
 
     </div>
