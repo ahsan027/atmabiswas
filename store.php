@@ -116,19 +116,19 @@
         // Initialize the map
         const map = L.map('map').setView([22.7115673, 89.0605441], 10);
 
-        // Add OpenStreetMap tiles
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Add a marker at the initial location
+
         const marker = L.marker([22.7115673, 89.0605441]).addTo(map);
 
         // Function to move to a specific location
         function moveToLocation(lat, lng) {
             const target = L.latLng(lat, lng);
-            map.flyTo(target, 12); // Animate the map movement
-            marker.setLatLng(target); // Move the marker
+            map.flyTo(target, 11); 
+            marker.setLatLng(target); 
         }
 
         // Attach event listeners to list items
