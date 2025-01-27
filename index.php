@@ -10,23 +10,9 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-
-
 <link rel="stylesheet" href="index.css">
 </head>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    overflow-x: hidden;
-}
 
-</style>
 <body>
 
 <?php include 'Navbar.php'?>
@@ -79,10 +65,9 @@ body{
 
     <?php include 'joinwithus.php' ?>
 
+<?php include 'footer.php'?>
 
 
-
-<?php include 'footer.php'?>    
 
     <script src="index.js">
        
