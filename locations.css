@@ -62,30 +62,51 @@
             transform: translateY(0);
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            color: #0073e6;
-        }
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    color: #0073e6;
+}
 
-        .contact-info .btn button{
-            padding: 1rem;
-            color: #ffffff;
-            border: none;
-            border-radius: 15px;
-            background-color: #0073e6;
-            cursor: pointer;
+.contact-info .btn button {
+    padding: 1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    background-color: #0073e6;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
 
-        }
-    .contact-info .btn a:hover button {
-        scale: (1.1);
-        background-color: #005bb5;
-       
+.contact-info .btn a:hover button {
+    transform: scale(1.1);
+    background-color: #005bb5;
+}
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-info .btn button {
+        padding: 0.8rem;
     }
+}
+
+@media (max-width: 576px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .contact-info .btn button {
+        padding: 0.6rem;
+        width: 100%;
+        /* Make the button take the full width */
+        margin-top: 10px;
+    }
+}
 
         .contact-info h2 {
             margin: 0;
