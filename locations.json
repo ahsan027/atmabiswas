@@ -1,4 +1,13 @@
-[
+[  {
+    "code": "0000",
+    "branch_name": "ATMABISWAS-Head Office Branch",
+    "mobile": "+8801714812943",
+    "address": "Asma Place, Chuadanga",
+    "district": "Chuadanga",
+    "division": "Khulna",
+    "latitude": 23.640763,
+    "longitude": 88.8439262
+  },
   {
     "code": "0038",
     "branch_name": "ATMABISWAS-Bakura Branch",
@@ -138,15 +147,5 @@
     "division": "Khulna",
     "latitude": 23.7767715,
     "longitude": 88.728692
-  },
-  {
-    "code": "0000",
-    "branch_name": "ATMABISWAS-Head Office Branch",
-    "mobile": "+8801714812943",
-    "address": "Asma Place, Chuadanga",
-    "district": "Chuadanga",
-    "division": "Khulna",
-    "latitude": 23.640763,
-    "longitude": 88.8439262
   }
 ]
