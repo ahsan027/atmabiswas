@@ -49,7 +49,7 @@ body{
             <p><strong>Email:</strong> contact@atmabiswas.org</p>
             </div>
             <div class="btn">
-                        <a href="store.php"><button id="">ATMABISWAS Locations</button></a>
+                        <a href="loc.html"><button id="">ATMABISWAS Locations</button></a>
         </div>
 
         </div>
