@@ -10,19 +10,19 @@
                 consectetur adipisicing elit.</p>
         </div>
         <div class="footer-links">
-            <h5>LINKS</h5>
+            <h5>Important links</h5>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Notice</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Press</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h5>LINKS</h5>
+            <h5>Other links</h5>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
+                <li><a href="#">IT Developers</a></li>
+                <li><a href="#">H:Q google map location</a></li>
                 <li><a href="#">Link 3</a></li>
                 <li><a href="#">Link 4</a></li>
             </ul>
