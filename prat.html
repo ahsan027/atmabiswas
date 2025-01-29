@@ -26,12 +26,14 @@
                 <img src="https://via.placeholder.com/150" alt="Selected Club Logo" id="club-logo">
             </div>
             <div class="info-section">
-                <h2 id="club-title">ULAB Computer Society</h2>
-                <p id="club-description">ULAB Computer Society is a club of IT-savvy students. It hopes to be a club
-                    where students interested in technologies can share their knowledge and be benefited from each other
-                    by collaboration. ULAB ComSoc is also keen to provide a platform for developing leadership skills.
-                </p>
-                <button class="explore-button">Explore</button>
+                <h2 id="club-title">BRAC NGO</h2>
+                <p id="club-description">BRAC NGO is dedicated to empowering communities and fostering sustainable development. It aims to create a collaborative
+                environment where individuals can share their knowledge and experiences, enabling them to improve their quality of life
+                through collective efforts. <strong><mark style="background-color: rgb(66, 255, 66);">BRAC is committed to providing a platform for developing leadership skills, promoting
+                education, healthcare, and economic opportunities.</mark></strong>By working together, BRAC strives to build resilient communities and
+                drive positive change.
+                +</p>
+        
             </div>
         </div>
     </div>
@@ -47,52 +49,63 @@
         const logo = document.getElementById('club-logo');
 
         const activities = [
-            {
-                title: "ULAB Computer Society",
-                description: "ULAB Computer Society is a club of IT-savvy students. It hopes to be a club where students interested in technologies can share their knowledge and be benefited from each other by collaboration. ULAB ComSoc is also keen to provide a platform for developing leadership skills.",
-                logo: "https://via.placeholder.com/150"
-            },
-            {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-                        {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-                        {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-                        {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-                        {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-                        {
-                title: "ULAB Debating Club",
-                description: "ULAB Debating Club helps students develop their oratory and reasoning skills through debate competitions and practice sessions.",
-                logo: "https://via.placeholder.com/150"
-            },
-            {
-                title: "ULAB Robotics Club",
-                description: "ULAB Robotics Club focuses on innovation and hands-on learning in the field of robotics and automation.",
-                logo: "https://via.placeholder.com/150"
-            },
-            {
-                title: "ULAB Sports Club",
-                description: "ULAB Sports Club promotes physical fitness and teamwork through various sports activities and tournaments.",
-                logo: "https://via.placeholder.com/150"
-            }
-        ];
+                {
+                    "title": "Tech Enthusiasts Guild",
+                    "description": "Tech Enthusiasts Guild is a group of passionate students dedicated to exploring the latest technological trends and innovations. It aims to foster a community where members can learn, share, and collaborate on tech projects.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Code Masters Club",
+                    "description": "Code Masters Club is a place for students who love coding and programming. Members can work on coding challenges, hackathons, and collaborative projects to enhance their skills.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Digital Creators Society",
+                    "description": "Digital Creators Society encourages students to express their creativity through digital arts, multimedia projects, and design. It's a hub for those who want to blend technology and art.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Robotics Innovators Hub",
+                    "description": "Robotics Innovators Hub is for students interested in robotics and automation. Members can participate in building robots, participating in competitions, and exploring the future of robotics.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Cyber Security Watch",
+                    "description": "Cyber Security Watch is a club focused on cybersecurity and ethical hacking. It aims to educate students about online security threats and ways to protect against them.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "AI Explorers Group",
+                    "description": "AI Explorers Group is a community for students fascinated by artificial intelligence and machine learning. It provides opportunities to work on AI projects and stay updated with the latest advancements.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Gamer's Haven",
+                    "description": "Gamer's Haven is a club for video game enthusiasts. Members can discuss game development, participate in gaming tournaments, and explore the gaming industry's future.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Web Developers Alliance",
+                    "description": "Web Developers Alliance is dedicated to students who are passionate about web development. It offers workshops, projects, and resources to build and enhance web development skills.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Tech Innovators Forum",
+                    "description": "Tech Innovators Forum is a platform for students who want to innovate and create tech solutions. It provides resources, mentorship, and collaboration opportunities for tech startups.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Digital Marketing Crew",
+                    "description": "Digital Marketing Crew is a club for students interested in digital marketing strategies, social media, and online branding. It offers hands-on experiences and networking opportunities.",
+                    "logo": "https://via.placeholder.com/150"
+                },
+                {
+                    "title": "Cloud Computing Circle",
+                    "description": "Cloud Computing Circle is a group for students eager to learn about cloud technologies, services, and infrastructure. It offers projects and workshops to understand cloud computing better.",
+                    "logo": "https://via.placeholder.com/150"
+                }
+            ]
+
 
         let currentIndex = 0;
 
@@ -137,7 +150,7 @@
             updateCarousel();
         }
 
-        setInterval(autoChange, 2000);
+        setInterval(autoChange, 3000);
 
         updateCarousel();
 
