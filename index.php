@@ -19,7 +19,7 @@
 <!-- <br> -->
 <?php include 'imageSlider.php' ?>
 
-<div class="container">
+<div class="Numbercontainer">
             <div class="numbers">
         <div class="number-card">
             <h2 id="number1">0</h2>
