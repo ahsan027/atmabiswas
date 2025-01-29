@@ -58,7 +58,7 @@
 
 
     <?php include 'joinwithus.php' ?>
-    <?php include 'prat.php'?>
+    <?php include 'prat.html'?>
 
 <?php include 'footer.php'?>
 
