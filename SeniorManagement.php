@@ -129,7 +129,7 @@
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/MST.NARGIS PARVIN-ACCOUNTANT, pin-010.jpg" alt="Mst.Nargis Parvin "> <h2>Mst. Nargis Parvin </h2> <p>Accounts Officer , ATMABISWAS </p></div>
 
-       <div class="profile"> <img src="photos/Rita PP.jpg" alt="Rita PP-ACCOUNTANT"> <h2>MST. Sharmin Sultana (Rita) </h2> <p>Accounts Officer , ATMABISWAS </p> </div> 
+       <div class="profile"> <img src="photos/Rita PP.jpg" alt="Rita PP-ACCOUNTANT"> <h2>Mst. Sharmin Sultana (Rita) </h2> <p>Accounts Officer , ATMABISWAS </p> </div> 
        
        <div class="profile"> <img src="photos/MST.JESMIN ARA HENA-ACCOUNTANT, PIN-004.jpg" alt="Rimu Sir PP"> <h2>Mst. Jesmin Ara Hena</h2> <p>Accounts Officer , ATMABISWAS </p> </div> </section>
        
