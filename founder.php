@@ -170,7 +170,7 @@
 
     <div class="founder-section">
         <div class="founder-card">
-            <img src="https://replicate.delivery/pbxt/JF3foGR90vm9BXSEXNaYkaeVKHYbJPinmpbMFvRtlDpH4MMk/out-0-1.png" alt="Akramul Haque Biswas">
+            <img src="photos/ED sir.jpg" alt="Akramul Haque Biswas">
             <div class="founder-details">
                 <h2>Akramul Haque Biswas</h2>
                 <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas, has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
