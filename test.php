@@ -18,6 +18,7 @@
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
+
 }
 
 .card {
@@ -35,9 +36,11 @@
 }
 
 .card img {
+
     width: 100%;
     height: auto;
     border-radius: 10px;
+
 }
 
 .card-content {
@@ -47,12 +50,14 @@
 }
 
 .card h3 {
+    
     margin: 0;
     color: #0073e6;
     font-size: 1.5em;
 }
 
 .card-text {
+
     position: absolute;
     top:0;
     bottom: 0;
@@ -66,11 +71,12 @@
     font-size: 1.2em;
     opacity: 0;
     transition: opacity 0.3s ease;
-   
     text-align: center;
+
 }
 
 .card:hover .card-text {
+
     opacity: 1;
 }
 
@@ -84,6 +90,7 @@
 
 <script>
 document.querySelectorAll('.card').forEach(card => {
+
     card.addEventListener('mouseenter', () => {
         card.querySelector('.card-text').style.opacity = '1';
     });
@@ -91,5 +98,7 @@ document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('mouseleave', () => {
         card.querySelector('.card-text').style.opacity = '0';
     });
+
 });
+
 </script>
