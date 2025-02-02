@@ -99,17 +99,17 @@
     <h1>Senior Management</h1>
     <div class="profile-row">
       <div class="profile">
-        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Syed Ferhat Anwar">
+        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Akramul Haque Biswas">
         <div>
-          <h2>Professor Syed Ferhat Anwar, PhD</h2>
-          <p>Vice-Chancellor, BRAC University</p>
+          <h2>Akramul Haque Biswas</h2>
+          <p>Enforcement Directorate,ATMABISWAS</p>
         </div>
       </div>
       <div class="profile">
-        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Syed Mahfuzul Aziz">
+        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Rafiqul Hasan Joarder">
         <div class="text">
-          <h2>Professor Syed Mahfuzul Aziz, PhD</h2>
-          <p>Pro Vice-Chancellor, BRAC University</p>
+          <h2>Rafiqul Hasan Joarder,</h2>
+          <p>Deputy Director,ATMABISWAS</p>
         </div>
       </div>
     </div>
