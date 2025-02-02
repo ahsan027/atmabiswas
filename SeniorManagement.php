@@ -120,9 +120,9 @@
     <h1>Assistant Director (Microfinance)</h1>
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Akkas PP.jpg" alt="Akkas Ali"> <h2>Akkas Ali </h2> <p>Assistant Director , ATMABISWAS </p></div>
-       <div class="profile"> <img src="photos/Hasan PP.jpg" alt="MD. Hassanur Jamman"> <h2>MD. Hassanur Jamman , ATMABISWAS</h2> <p>Assistant Director , ATMABISWAS </p> </div> 
+       <div class="profile"> <img src="photos/Hasan PP.jpg" alt="MD. Hassanur Jamman"> <h2>MD. Hassanur Jamman </h2> <p>Assistant Director , ATMABISWAS </p> </div> 
        
-       <div class="profile"> <img src="photos/Rimu Sir PP.jpg" alt="Rimu Sir PP"> <h2>MD: Abu Sadat Rimu, ATMABISWAS</h2> <p>Assistant Director , ATMABISWAS </p> </div> </section>
+       <div class="profile"> <img src="photos/Rimu Sir PP.jpg" alt="Rimu Sir PP"> <h2>MD: Abu Sadat Rimu </h2> <p>Assistant Director , ATMABISWAS </p> </div> </section>
 
       
 <h1>Accounts Officer</h1>
