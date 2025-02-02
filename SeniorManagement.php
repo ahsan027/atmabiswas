@@ -99,24 +99,55 @@
     <h1>Senior Management</h1>
     <div class="profile-row">
       <div class="profile">
-        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Akramul Haque Biswas">
+        <img src="photos/ED sir.jpg" alt="Akramul Haque Biswas">
         <div>
           <h2>Akramul Haque Biswas</h2>
-          <p>Enforcement Directorate,ATMABISWAS</p>
+          <p>Enforcement Directorate, ATMABISWAS </p>
+
         </div>
+
       </div>
       <div class="profile">
-        <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Rafiqul Hasan Joarder">
+        <img src="photos/DD New PP.jpg" alt="Rafiqul Hasan Joarder">
         <div class="text">
-          <h2>Rafiqul Hasan Joarder,</h2>
-          <p>Deputy Director,ATMABISWAS</p>
+          <h2>Rafiqul Hasan Joarder </h2>
+          <p>Director, ATMABISWAS </p>
         </div>
       </div>
     </div>
 
-    <section class="profile-grid"> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Mohammad Mujibul Haque"> <h2>Professor Mohammad Mujibul Haque, PhD</h2> <p>Acting Dean, BRAC Business School, BRAC University</p> </div> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Mahbubul Alam Majumdar"> <h2>Professor Mahbubul Alam Majumdar, PhD</h2> <p>Dean, School of Data and Sciences, BRAC University</p> </div> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Samia Huq"> <h2>Professor Samia Huq, PhD</h2> <p>Dean, School of General Education, BRAC University</p> </div> </section>
-<h1>Head of Schools</h1> <!-- Add this title --> <section class="profile-grid"> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Mohammad Mujibul Haque"> <h2>Professor Mohammad Mujibul Haque, PhD</h2> <p>Acting Dean, BRAC Business School, BRAC University</p> </div> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Mahbubul Alam Majumdar"> <h2>Professor Mahbubul Alam Majumdar, PhD</h2> <p>Dean, School of Data and Sciences, BRAC University</p> </div> <div class="profile"> <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Samia Huq"> <h2>Professor Samia Huq, PhD</h2> <p>Dean, School of General Education, BRAC University</p> </div> </section>
+    
+    <h1>Assistant Director (Microfinance)</h1>
+    <section class="profile-grid"> 
+      <div class="profile"> <img src="photos/Akkas PP.jpg" alt="Akkas Ali"> <h2>Akkas Ali </h2> <p>Assistant Director , ATMABISWAS </p></div>
+       <div class="profile"> <img src="photos/Hasan PP.jpg" alt="MD. Hassanur Jamman"> <h2>MD. Hassanur Jamman , ATMABISWAS</h2> <p>Assistant Director , ATMABISWAS </p> </div> 
+       
+       <div class="profile"> <img src="photos/Rimu Sir PP.jpg" alt="Rimu Sir PP"> <h2>MD: Abu Sadat Rimu, ATMABISWAS</h2> <p>Assistant Director , ATMABISWAS </p> </div> </section>
+
+      
+<h1>Accounts Officer</h1>
+    <section class="profile-grid"> 
+      <div class="profile"> <img src="photos/MST.NARGIS PARVIN-ACCOUNTANT, pin-010.jpg" alt="Mst.Nargis Parvin "> <h2>Mst. Nargis Parvin </h2> <p>Accounts Officer , ATMABISWAS </p></div>
+
+       <div class="profile"> <img src="photos/Rita PP.jpg" alt="Rita PP-ACCOUNTANT"> <h2>MST. Sharmin Sultana (Rita) </h2> <p>Accounts Officer , ATMABISWAS </p> </div> 
+       
+       <div class="profile"> <img src="photos/MST.JESMIN ARA HENA-ACCOUNTANT, PIN-004.jpg" alt="Rimu Sir PP"> <h2>Mst. Jesmin Ara Hena</h2> <p>Accounts Officer , ATMABISWAS </p> </div> </section>
+       
+       <h1>Manager/Officer</h1>
+    <section class="profile-grid"> 
+      <div class="profile"> <img src="photos/Zahangir.JPG" alt="Zahangir"> <h2>Md.Zahangir Alom </h2> <p> Manager(MIS) </p></div>
+       <div class="profile"> <img src="photos/Abu Mohammad Jinnah-CO(Automation), Pin-0167.jpg" alt="Abu Mohammad Jinnah-CO(Automation), Pin-0167"> <h2>Abu Mohammad Jinnah</h2> <p>Co-Manager(MIS) , ATMABISWAS </p> </div> 
+       
+       <div class="profile"> <img src="photos/MST.SHARMIN AKTAR-CO, PIN-466.jpg" alt="MST.SHARMIN AKTAR-CO"> <h2>Mst. Sharmin Aktar</h2> <p>Officer(MIS) , ATMABISWAS </p> </div> </section>      
+ 
+       <h1>Manager/Officer</h1>
+    <section class="profile-grid"> 
+      <div class="profile"> <img src="photos/Zahangir.JPG" alt="Zahangir"> <h2>Md.Zahangir Alom </h2> <p> Manager(MIS) </p></div>
+       <div class="profile"> <img src="photos/Abu Mohammad Jinnah-CO(Automation), Pin-0167.jpg" alt="Abu Mohammad Jinnah-CO(Automation), Pin-0167"> <h2>Abu Mohammad Jinnah</h2> <p>Co-Manager(MIS) , ATMABISWAS </p> </div> 
+       
+       <div class="profile"> <img src="photos/MST.SHARMIN AKTAR-CO, PIN-466.jpg" alt="MST.SHARMIN AKTAR-CO"> <h2>Mst. Sharmin Aktar</h2> <p>Officer(MIS) , ATMABISWAS </p> </div> </section>      
+  
   </div>
-  <?php include 'footer.php'?>
+  <?php include 'ATMABISWAS'?>
 </body>
 </html>
