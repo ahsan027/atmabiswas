@@ -161,12 +161,12 @@
             <p>Our collaborations with partners like PKSF enable us to bring practical solutions to fish farmers, small business owners, and other vital community members. Discover the impact of our work in building resilience and fostering growth across all levels of society.</p>
         </section>
 
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/9tw0s0Xm7gE" 
-                allowfullscreen>
-            </iframe>
-        </div>
+        <section class="section">
+            <h2>Watch Our Impact</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/9tw0s0Xm7gE" allowfullscreen></iframe>
+            </div>
+        </section>
         
         <style>
             .video-container {
@@ -189,21 +189,21 @@
             <h2 class="center-text">Our Services</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/128756/pexels-photo-128756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Training">
+                    <img src="fish&redy/14.jpg" alt="Training">
                     <div class="card-content">
                         <h3>Training and Empowerment for Fishermen</h3>
                         <p>We provide comprehensive support to fishermen and entrepreneurs, offering tailored training, business guidance, and market development strategies.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://static.toiimg.com/thumb/msid-107889124,imgsize-159528,width-400,resizemode-4/107889124.jpg" alt="Entrepreneurship">
+                    <img src="fish&redy/ABS_04.JPG" alt="Entrepreneurship">
                     <div class="card-content">
                         <h3>Building Future Entrepreneurs</h3>
                         <p>We empower new entrepreneurs in the fishery industry by providing hands-on training, mentorship, and business development strategies.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/128756/pexels-photo-128756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Market Expansion">
+                    <img src="fish&redy/ABS_06.jpeg" alt="Market Expansion">
                     <div class="card-content">
                         <h3>Market Expansion Opportunities</h3>
                         <p>We support entrepreneurs in creating retail outlets and shops dedicated to selling ready-to-eat fish products.</p>
@@ -223,28 +223,28 @@
             <p>Our pathway to success empowers fishermen and entrepreneurs through training, support, and market access, driving sustainable growth in the fishery sector.</p>
             <div class="card-grid">
                 <div class="card">
-                    <img src="https://www.aikoufoil.com/wp-content/uploads/2024/03/Premade-meal-is-a-trend.jpg" alt="Training">
+                    <img src="fish&redy/ABS_7.JPG" alt="Training">
                     <div class="card-content">
                         <h3>Training for Fishermen</h3>
                         <p>Our program begins with comprehensive training sessions designed to enhance the skills and knowledge of fishermen.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://www.aikoufoil.com/wp-content/uploads/2024/03/Premade-meal-is-a-trend.jpg" alt="Implementation">
+                    <img src="fish&redy/BS_10.jpg" alt="Implementation">
                     <div class="card-content">
                         <h3>Fishermen Apply the Training</h3>
                         <p>After completing the training, fishermen implement the techniques learned, focusing on sustainable practices and product quality.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://www.aikoufoil.com/wp-content/uploads/2024/03/Premade-meal-is-a-trend.jpg" alt="Entrepreneurs">
+                    <img src="fish&redy/ABS_01.jpg" alt="Entrepreneurs">
                     <div class="card-content">
                         <h3>Nurturing New Entrepreneurs</h3>
                         <p>We support aspiring entrepreneurs in processing fish products, providing essential resources, mentorship, and business development strategies.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://www.aikoufoil.com/wp-content/uploads/2024/03/Premade-meal-is-a-trend.jpg" alt="Market Opportunities">
+                    <img src="fish&redy/ABS_07.JPG" alt="Market Opportunities">
                     <div class="card-content">
                         <h3>Sales and Market Opportunities</h3>
                         <p>Finally, we help entrepreneurs create retail channels and connect with new markets to successfully sell their ready-to-eat fish products.</p>
