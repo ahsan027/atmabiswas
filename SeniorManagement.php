@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ATMABISWAS Management</title>
   <style>
-    body {
-      margin: 0;
+    *{
+            margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+
       background-color: #f4f9ff;
-      font-family: Arial, sans-serif;
+
     }
 
     .container {
@@ -116,7 +120,7 @@
   </style>
 </head>
 <body>
-
+<?php include 'Navbar.php'?>
   <div class="container">
     
     <h1>Senior Management</h1>
@@ -158,6 +162,7 @@
       <div class="profile"> <img src="photos/Sharmin Aktar.jpg" alt="Sharmin Aktar"> <h2>Mst. Sharmin Aktar</h2> <p>Officer (MIS)</p> </div>
     </section>      
     <h1>Other Officers</h1>
+    
     <section class="profile-grid"> 
       <div class="profile"> <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Md. Firoze Biswas"> <h2>Md. Firoze Biswas</h2> <p>Branch Manager</p> </div>
       <div class="profile"> <img src="photos/MD.SHAH ALAM ALO-IT OFFICER, PIN-481.jpg" alt="Shah Alam Alo"> <h2>Md. Shah Alam Alo</h2> <p>Assistant HR Officer</p> </div>
@@ -167,7 +172,8 @@
       <div class="profile"> <img src="photos/10. MST.SHAHIN AKTER-CO, PIN-044.jpg" alt="Shahin Akter"> <h2>Mst. Shahin Akter</h2> <p>Receptionist</p> </div>
     </section>
 
-  </div>
 
+  </div>
+<?php include 'footer.php'?>
 </body>
 </html>
