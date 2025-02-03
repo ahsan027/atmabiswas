@@ -256,3 +256,10 @@
 }
 
 
+@media (min-width) {
+    .logo {
+        font-size: 1.5rem;
+        color: #0073e6;
+
+    }
+}

@@ -14,21 +14,23 @@
         }
 
         header {
-            background: url('https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg') no-repeat center/cover;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             text-align: center;
-            padding: 4em 0;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
         }
 
         header h1 {
-            font-size: 3em;
             margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
 
-        header h2 {
-            font-size: 1.8em;
-            margin: 10px 0 0;
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .content {
@@ -163,9 +165,9 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Green Energy, Beautiful Earth</h1>
-        <h2>How Renewables Redefine Our Future</h2>
+<header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
 
     <div class="content">

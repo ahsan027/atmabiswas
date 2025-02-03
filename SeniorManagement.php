@@ -6,7 +6,7 @@
   <title>ATMABISWAS Management</title>
   <style>
     *{
-            margin: 0;
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
@@ -17,14 +17,34 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 100vw;
       margin: 40px auto;
       padding: 20px;
     }
+            header {
+            text-align: center;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
     h1 {
       color: #005B96;
-      font-size: 1.8em;
+      font-size: 3em;
       text-align: center;
       margin-bottom: 20px;
     }
@@ -121,11 +141,14 @@
 </head>
 <body>
 <?php include 'Navbar.php'?>
-  <div class="container">
-    
-    <h1>Senior Management</h1>
+    <header>
 
-    <section class="executive-section">
+        <h1>Empowering Communities And Driving Sustainable Development </h1>
+    </header>
+
+  <div class="container">
+        <h1>Senior Management</h1>
+  <section class="executive-section">
       <div class="executive-card">
         <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
         <h2>Akramul Haque Biswas</h2>
@@ -140,13 +163,15 @@
         <p>Rafiqul Hasan Joarder plays a key role in strategic planning, operational management, and policy implementation at ATMABISWAS. His dedication to sustainable development and financial inclusion has helped countless individuals and communities thrive.</p>
       </div>
     </section>
-
     <h1>Assistant Director (Microfinance)</h1>
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Akkas_PP.jpg" alt="Akkas Ali"> <h2>Akkas Ali</h2> <p>Assistant Director</p> </div>
       <div class="profile"> <img src="photos/Hasan_PP.jpg" alt="MD. Hassanur Jamman"> <h2>MD. Hassanur Jamman</h2> <p>Assistant Director</p> </div>
       <div class="profile"> <img src="photos/Rimu_Sir_PP.jpg" alt="Rimu Sir"> <h2>MD: Abu Sadat Rimu</h2> <p>Assistant Director</p> </div>
     </section>
+<br>
+<br>
+
 
     <h1>Accounts Officers</h1>
     <section class="profile-grid"> 
@@ -154,6 +179,9 @@
       <div class="profile"> <img src="photos/Rita_PP.jpg" alt="Rita"> <h2>Mst. Sharmin Sultana (Rita)</h2> <p>Accounts Officer</p> </div>
       <div class="profile"> <img src="photos/MST.JESMIN_ARA.jpg" alt="Jesmin Ara Hena"> <h2>Mst. Jesmin Ara Hena</h2> <p>Accounts Officer</p> </div>
     </section>
+<br>
+<br>
+
 
     <h1>Managers / Officers</h1>
     <section class="profile-grid"> 
@@ -163,6 +191,9 @@
       <div class="profile"> <img src="photos/Sharmin Aktar.jpg" alt="Sharmin Aktar"> <h2>Mst. Sharmin Aktar</h2> <p>Officer (MIS)</p> </div>
     
     </section>      
+<br>
+<br>
+
     <h1>Other Officers</h1>
 
     <section class="profile-grid"> 
