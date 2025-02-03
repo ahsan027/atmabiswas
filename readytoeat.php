@@ -17,7 +17,7 @@
             color: #333;
             overflow-x: hidden;
         }
-                header {
+            header {
             text-align: center;
             background: linear-gradient(90deg, #0a58ca, #176cc6);
             color: white;
