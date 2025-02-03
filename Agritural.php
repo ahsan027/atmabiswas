@@ -12,11 +12,24 @@
             background-color: #f9f9f9;
         }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
+                header {
             text-align: center;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
@@ -95,10 +108,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Supporting Food and Agricultural Development</h1>
+<header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
-
     <div class="container">
         <div class="card">
             <h3>Sustainable Growth: Empowering Communities Through Food and Agriculture</h3>

@@ -73,7 +73,7 @@
 <body>
     <div class="container-fluid">
         <a href="Contact.php" class="btn btn-secondary">Go back to Home</a>
-        <h2 class="text-center mb-4 mt-2">ATMA Biswas Branches</h2>
+        <h2 class="text-center mb-4 mt-2">ATMABISWAS Branchs</h2>
         <div class="row">
             <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
                 <div class="store-list bg-light text-dark p-3">
