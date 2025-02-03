@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supporting Food and Agricultural Development</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow-x: hidden;
             background-color: #f9f9f9;
         }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
+                header {
             text-align: center;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
@@ -95,10 +111,11 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Supporting Food and Agricultural Development</h1>
+    <?php include 'Navbar.php'?>
+<header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
-
     <div class="container">
         <div class="card">
             <h3>Sustainable Growth: Empowering Communities Through Food and Agriculture</h3>
@@ -130,5 +147,7 @@
             <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Picture 6">
         </div>
     </div>
+
+    <?php include 'footer.php'?>
 </body>
 </html>

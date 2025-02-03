@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="bottom-row">
-        <a href="/dashboard/atmabiswas/">Who we are</a>
+        <a href="/">Who we are</a>
         <div class="dropdown">
             <div class="maindrop">
                 <a href="#">What we do <span> </span> <i id="arrow" class="fa-solid fa-caret-down"></i></a>

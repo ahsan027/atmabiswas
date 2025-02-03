@@ -1,10 +1,4 @@
- body{
-    overflow-x: hidden;
- }
- *{
-    margin: 0;
-    padding: 0;
- }
+
  .toggle-btn {
             width: 80%;
             background-color: #ffffff;
@@ -72,7 +66,9 @@
 }
 
 .contact-info .btn button {
-    padding: 1rem;
+    font-family: 'monoserrat';
+    font-size: 1rem;
+    padding: 0.5rem;
     color: #ffffff;
     border: none;
     border-radius: 15px;
@@ -90,6 +86,7 @@
 @media (max-width: 768px) {
     .contact-info .btn button {
         padding: 0.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -102,6 +99,7 @@
 
     .contact-info .btn button {
         padding: 0.6rem;
+        font-size: 1rem;
         width: 100%;
         /* Make the button take the full width */
         margin-top: 10px;
@@ -152,14 +150,14 @@
         .branches button {
             border-radius: 15px;
             background-color: #0073e6; /* Green background */
-            border: none; /* Remove borders */
-            color: white; /* White text */
-            padding: 15px 32px; /* Add some padding */
-            text-align: center; /* Center text */
-            text-decoration: none; /* Remove underline */
-            font-size: 16px; /* Increase font size */
+            border: none; 
+            color: white; 
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none; 
+            font-size: 16px;
             transition-duration: 0.4s; /* Animation duration */
-            cursor: pointer; /* Add a pointer cursor on hover */
+            cursor: pointer;
         }
 
         .branches button:hover {

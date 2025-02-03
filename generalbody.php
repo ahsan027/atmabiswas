@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATMABISWAS NGO Executive Committee</title>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             background-color: #eef5ff;
             color: #333;
         }
@@ -18,12 +20,12 @@
             background: linear-gradient(90deg, #0a58ca, #176cc6);
             color: white;
             padding: 50px 20px;
-            border-radius: 0 0 30px 30px;
+
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
         }
 
@@ -56,13 +58,13 @@
         }
 
         .card img {
-    width: 100%;
-    height: auto;
-    max-height: 300px; 
-    object-fit: contain; 
-    background-color: #fff; 
-    padding: 10px;
-    border-bottom: 3px solid #0a58ca;
+        width: 100%;
+        height: auto;
+        max-height: 300px; 
+        object-fit: contain; 
+        background-color: #fff; 
+        padding: 10px;
+        border-bottom: 3px solid #0a58ca;
 }
 
 
@@ -105,6 +107,7 @@
     </style>
 </head>
 <body>
+    <?php include 'Navbar.php'?>
     <header>
         <h1>Executive Committee of ATMABISWAS NGO</h1>
         <p>Empowering communities and driving sustainable development </p>
@@ -174,5 +177,6 @@
             </div>
         </div>
     </div>
+    <?php include 'footer.php'?>
 </body>
 </html>

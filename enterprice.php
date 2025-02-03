@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprise Development</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body {
+
             background: #f9f9f9;
             color: #333;
         }
-
         header {
-            background: #00796b;
-            color: white;
             text-align: center;
-            padding: 2em 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
@@ -96,8 +105,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Enterprise Development</h1>
+    <?php include 'Navbar.php'?>
+<header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
 
     <div class="container">
@@ -153,5 +164,6 @@
             </div>
         </div>
     </div>
+    <?php include 'footer.php'?>
 </body>
 </html>

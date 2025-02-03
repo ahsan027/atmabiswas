@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ready to Eat</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+
+        *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            
             background-color: #f3f4f6;
             color: #333;
+            overflow-x: hidden;
+        }
+                header {
+            text-align: center;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
         .center-text {
     text-align: center;
@@ -149,12 +173,12 @@
     </style>
 </head>
 <body>
+    <?php include 'Navbar.php'?>
+    <header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
+    </header>
     <div class="container">
-        <header class="header">
-            <h1>Ready to Eat</h1>
-            <p>In partnership with PFSF, we connect fishermen with local entrepreneurs to ensure access to fresh pond and river fish while empowering communities and promoting sustainable livelihoods.</p>
-        </header>
-
         <section class="section">
             <h2>Enhancing Resilience Among Fish Farmers and Entrepreneurs</h2>
             <p>ATMABISWAS is committed to empowering communities by providing essential tools, training, and resources for sustainable development. Through our renewable energy projects, agricultural support, and microfinance initiatives, we’re helping individuals and families create better futures.</p>
@@ -256,5 +280,7 @@
 
 
     </div>
+
+    <?php include 'footer.php'?>
 </body>
 </html>

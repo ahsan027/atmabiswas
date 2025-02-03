@@ -5,30 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Energy, Beautiful Earth: How Renewables Redefine Our Future</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+        *{
             padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+overflow-x:hidden ;
             background: #f0f8ff;
             color: #333;
         }
 
         header {
-            background: url('https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg') no-repeat center/cover;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             text-align: center;
-            padding: 4em 0;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+
         }
 
         header h1 {
-            font-size: 3em;
             margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
 
-        header h2 {
-            font-size: 1.8em;
-            margin: 10px 0 0;
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .content {
@@ -163,9 +168,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Green Energy, Beautiful Earth</h1>
-        <h2>How Renewables Redefine Our Future</h2>
+    <?php include 'Navbar.php'?>
+<header>
+        <h1>Founder of ATMABISWAS</h1>
+        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
 
     <div class="content">
@@ -202,8 +208,6 @@
         <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Picture 6">
     </div>
 
-    <footer>
-        <p>© ATMABISWAS </p>
-    </footer>
+<?php include 'footer.php'?>
 </body>
 </html>

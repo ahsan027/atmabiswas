@@ -64,10 +64,12 @@
         }
 
         .card-content {
+            text-align: center;
             padding: 15px;
         }
 
         .card-content h3 {
+
             margin: 0 0 10px;
             font-size: 1.2rem;
             color: #333;
