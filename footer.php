@@ -23,8 +23,7 @@
             <ul>
                 <li><a href="#">IT Developers</a></li>
                 <li><a href="#">H:Q google map location</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+
             </ul>
         </div>
         
