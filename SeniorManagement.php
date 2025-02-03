@@ -158,11 +158,13 @@
     <h1>Managers / Officers</h1>
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Zahangir.JPG" alt="Zahangir"> <h2>Md.Zahangir Alom</h2> <p>Manager (MIS)</p> </div>
+     
       <div class="profile"> <img src="photos/Abu_Jinnah.jpg" alt="Abu Mohammad Jinnah"> <h2>Abu Mohammad Jinnah</h2> <p>Co-Manager (MIS)</p> </div>
       <div class="profile"> <img src="photos/Sharmin Aktar.jpg" alt="Sharmin Aktar"> <h2>Mst. Sharmin Aktar</h2> <p>Officer (MIS)</p> </div>
+    
     </section>      
     <h1>Other Officers</h1>
-    
+
     <section class="profile-grid"> 
       <div class="profile"> <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Md. Firoze Biswas"> <h2>Md. Firoze Biswas</h2> <p>Branch Manager</p> </div>
       <div class="profile"> <img src="photos/MD.SHAH ALAM ALO-IT OFFICER, PIN-481.jpg" alt="Shah Alam Alo"> <h2>Md. Shah Alam Alo</h2> <p>Assistant HR Officer</p> </div>
