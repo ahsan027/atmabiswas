@@ -22,7 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
 
     if ($result) {
         foreach ($result as $row) {
-            echo "<button>" . htmlspecialchars($row['dist']) . "</button>";
+echo '
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Order ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        
+        </tbody>
+    </table>
+</div>';
+
         }
     } else {
         echo "<p>No results found for the selected division.</p>";

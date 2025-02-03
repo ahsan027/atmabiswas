@@ -62,7 +62,7 @@ body{
 
         <button class="toggle-btn" id="filterbutton">ATMABISWAS Branches</button>
     <div class="filterbars" id="filterbars">
-      
+      <form action="">
         <select name="division" id="divisionSelect">
             <option value="">Select Division</option>
             <?php
@@ -77,7 +77,7 @@ body{
             ?>
 
         </select>
-           
+           </form>
       
             <div id="branchButtons" class="branches">
                
