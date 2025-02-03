@@ -1,10 +1,4 @@
- body{
-    overflow-x: hidden;
- }
- *{
-    margin: 0;
-    padding: 0;
- }
+
  .toggle-btn {
             width: 80%;
             background-color: #ffffff;
@@ -72,7 +66,8 @@
 }
 
 .contact-info .btn button {
-    font-size: 2rem;
+    font-family: 'monoserrat';
+    font-size: 1rem;
     padding: 0.5rem;
     color: #ffffff;
     border: none;

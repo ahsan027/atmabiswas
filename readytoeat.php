@@ -15,6 +15,7 @@
             
             background-color: #f3f4f6;
             color: #333;
+            overflow-x: hidden;
         }
                 header {
             text-align: center;
@@ -178,11 +179,6 @@
         <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
     </header>
     <div class="container">
-        <header class="header">
-            <h1>Ready to Eat</h1>
-            <p>In partnership with PFSF, we connect fishermen with local entrepreneurs to ensure access to fresh pond and river fish while empowering communities and promoting sustainable livelihoods.</p>
-        </header>
-
         <section class="section">
             <h2>Enhancing Resilience Among Fish Farmers and Entrepreneurs</h2>
             <p>ATMABISWAS is committed to empowering communities by providing essential tools, training, and resources for sustainable development. Through our renewable energy projects, agricultural support, and microfinance initiatives, we’re helping individuals and families create better futures.</p>

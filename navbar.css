@@ -60,7 +60,8 @@
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
-    border-radius: 15px;
+    border-radius: 10px;
+
 }
 
 .navbar .bottom-row a:hover {
@@ -69,9 +70,8 @@
 }
 
 .navbar .bottom-row a.active {
-    background-color: #005bb5;
-    /* Darker blue for active page */
-    color: #ffffff;
+background-color: #1c8eff;
+    color: white;
 }
 
 
