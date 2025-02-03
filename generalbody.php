@@ -115,16 +115,16 @@
 
     <div class="container">
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Mises Salma Asif">
+        <img src="photos/Salma_Asif.png" alt="Mises Salma Asif">
             <div class="card-body">
-                <h2>Mises Salma Asif</h2>
+                <h2>Miss Salma Asif</h2>
                 <h3>President</h3>
                 <p>A visionary leader since 1991, guiding ATMABISWAS with commitment to social empowerment.</p>
             </div>
         </div>
 
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Mst. Afroza Begum">
+        <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
             <div class="card-body">
                 <h2>Mst. Afroza Begum</h2>
                 <h3>Vice President</h3>
@@ -142,7 +142,7 @@
         </div>
 
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Md. Iktiar Uddin">
+        <img src="photos/ranabiswas.png" alt="Md. Iktiar Uddin">
             <div class="card-body">
                 <h2>Md. Iktiar Uddin</h2>
                 <h3>Treasurer</h3>
@@ -151,7 +151,7 @@
         </div>
 
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Nazma Shaheen">
+        <img src="photos/nazma.png" alt="Nazma Shaheen">
             <div class="card-body">
                 <h2>Nazma Shaheen</h2>
                 <h3>Executive Member</h3>
@@ -160,7 +160,7 @@
         </div>
 
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp"alt="Mst. Shahana Pervin">
+        <img src="photos/Shahana.png"alt="Mst. Shahana Pervin">
             <div class="card-body">
                 <h2>Mst. Shahana Pervin</h2>
                 <h3>Executive Member</h3>
@@ -169,7 +169,7 @@
         </div>
 
         <div class="card">
-        <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Md. Nazrul Islam">
+        <img src="photos/alo.png" alt="Md. Nazrul Islam">
             <div class="card-body">
                 <h2>Md. Nazrul Islam</h2>
                 <h3>Executive Member</h3>
