@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprise Development</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body {
+
             background: #f9f9f9;
             color: #333;
         }
@@ -102,6 +105,7 @@
     </style>
 </head>
 <body>
+    <?php include 'Navbar.php'?>
 <header>
         <h1>Founder of ATMABISWAS</h1>
         <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
@@ -160,5 +164,6 @@
             </div>
         </div>
     </div>
+    <?php include 'footer.php'?>
 </body>
 </html>

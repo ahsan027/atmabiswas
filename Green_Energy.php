@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Energy, Beautiful Earth: How Renewables Redefine Our Future</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+        *{
             padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+overflow-x:hidden ;
             background: #f0f8ff;
             color: #333;
         }
@@ -165,6 +168,7 @@
     </style>
 </head>
 <body>
+    <?php include 'Navbar.php'?>
 <header>
         <h1>Founder of ATMABISWAS</h1>
         <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
@@ -204,8 +208,6 @@
         <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Picture 6">
     </div>
 
-    <footer>
-        <p>© ATMABISWAS </p>
-    </footer>
+<?php include 'footer.php'?>
 </body>
 </html>
