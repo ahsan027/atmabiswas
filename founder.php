@@ -16,18 +16,19 @@
         body {
             background-color: #e3f2fd;
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
             text-align: center;
             background: linear-gradient(90deg, #0d47a1, #1976d2);
             color: white;
-            padding: 80px 20px;
+            padding: 20px 20px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 10px;
         }
 
