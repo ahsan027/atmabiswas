@@ -2,10 +2,11 @@
 
 // print_r($_POST['division']);
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
+    header("Content-Type: application/json");
     $division = $_POST['division'];
 
     function getResult($conn, $division) {
-        $query = "SELECT DISTINCT dist FROM branch WHERE division = :division";
+        $query = "SELECT * FROM branch WHERE division = :division ORDER BY dist ASC";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":division", $division);
         $stmt->execute();
@@ -17,31 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
     $db = new Db();
     $conn = $db->connect();
     $result = getResult($conn, $division);
-    // print_r($result);
-
 
     if ($result) {
-        foreach ($result as $row) {
-echo '
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Order ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-        
-        </tbody>
-    </table>
-</div>';
+        echo json_encode($result);
 
-        }
     } else {
         echo "<p>No results found for the selected division.</p>";
     }

@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       xhr.onload = function () {
         if (xhr.status === 200) {
-          document.getElementById("branchButtons").innerHTML = xhr.responseText;
+          const obj = JSON.parse(xhr.responseText);
+          for (let i = 0; i < obj.length; i++) {
+            if (i < 5) {
+            }
+          }
         }
       };
 

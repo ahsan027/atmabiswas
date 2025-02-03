@@ -43,28 +43,54 @@
         }
 
         @media (max-width: 768px) {
-            table {
-                width: 100%;
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
                 display: block;
-                overflow-x: auto;
             }
 
-            thead {
-                display: block;
-                width: 100%;
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
             }
 
-            tbody {
-                display: block;
-                width: 100%;
-                overflow-x: auto;
+            tr {
+                margin: 0 0 1rem 0;
+            }
+
+            tr:nth-child(odd) {
+                background: #ccc;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                white-space: nowrap;
+            }
+
+            td:before {
+                position: absolute;
+                top: 12px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                font-weight: bold;
+                text-align: left;
             }
         }
     </style>
 </head>
 
 <body>
-
     <div class="table-container">
         <table>
             <thead>
@@ -78,7 +104,6 @@
                 </tr>
             </thead>
             <tbody id="table-body">
-          
             </tbody>
         </table>
     </div>
@@ -100,17 +125,16 @@
         orders.forEach(order => {
             const row = document.createElement("tr");
             row.innerHTML = `
-            <td>${order.date}</td>
-            <td>${order.orderId}</td>
-            <td>${order.name}</td>
-            <td>$${order.price.toFixed(2)}</td>
-            <td>${order.quantity}</td>
-            <td>$${(order.price * order.quantity).toFixed(2)}</td>
-        `;
+                <td data-label="Date">${order.date}</td>
+                <td data-label="Order ID">${order.orderId}</td>
+                <td data-label="Name">${order.name}</td>
+                <td data-label="Price">$${order.price.toFixed(2)}</td>
+                <td data-label="Quantity">${order.quantity}</td>
+                <td data-label="Total">$${(order.price * order.quantity).toFixed(2)}</td>
+            `;
             tableBody.appendChild(row);
         });
     </script>
-
 </body>
 
 </html>

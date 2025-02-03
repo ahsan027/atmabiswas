@@ -62,7 +62,7 @@ body{
 
         <button class="toggle-btn" id="filterbutton">ATMABISWAS Branches</button>
     <div class="filterbars" id="filterbars">
-      <form action="">
+
         <select name="division" id="divisionSelect">
             <option value="">Select Division</option>
             <?php
@@ -77,10 +77,23 @@ body{
             ?>
 
         </select>
-           </form>
+
       
-            <div id="branchButtons" class="branches">
-               
+            <div class="branches">
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch Name</th>
+                    <th>Address</th>
+                    <th>District</th>
+                    <th>Division</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>               
 
     
         </div>
@@ -91,11 +104,10 @@ body{
 
 
     <?php include 'footer.php'?>
-<script src="locations.js">
+<script src="locations.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script> 
 
-
-
-</script>
 
 
 </body>
