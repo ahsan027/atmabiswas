@@ -1,9 +1,8 @@
-
+6
     <style>
         *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
 
         }
         body {
@@ -166,14 +165,10 @@
 
     <div class="founder-section">
         <div class="founder-card">
-            <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
+            <img src="photos/ED sir.jpg" alt="Akramul Haque Biswas">
             <div class="founder-details">
                 <h2>Akramul Haque Biswas</h2>
-                <p>Founder & President</p>
-                <br>
-                <p>Akramul Haque Biswas is the founder and Executive Director of ATMABISWAS. He has been actively working to address poverty, inequality and environmental sustainability, focusing on solutions that create long-term impact. His efforts center around sustainable development, gender justice and green energy, ensuring that communities have the resources and opportunities to grow while maintaining ecological balance. <br>
-                
-                Through ATMABISWAS, he has led various initiatives that promote renewable energy, economic empowerment, and social justice, aiming to build a society where everyone has equal access to opportunities. His work emphasizes collaboration and community-driven solutions, believing that progress comes from collective effort and sustainable practices. With a commitment to equity, environmental protection and progressive social transformation, he continues to advocate for a more just and sustainable future.</p>
+                <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas, has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
             </div>
         </div>
     </div>
