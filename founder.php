@@ -1,12 +1,14 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATMABISWAS Founders</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-<<<<<<< HEAD
-            font-family: 'Poppins', sans-serif;
-=======
 
 >>>>>>> 361072c06cfd2013274435de1dd8f5b65187e4a1
         }
@@ -113,10 +115,11 @@
             <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
             <div class="founder-details">
                 <h2>Akramul Haque Biswas</h2>
-                <p><strong>Founder & President</strong></p>
-                <p>Akramul Haque Biswas is the founder and Executive Director of ATMABISWAS. He has been actively working to address poverty, inequality, and environmental sustainability, focusing on solutions that create long-term impact.</p>
-                <p>Through ATMABISWAS, he has led various initiatives promoting renewable energy, economic empowerment, and social justice. His vision is to build a society where everyone has equal access to opportunities while maintaining ecological balance. </p>
-
+                <p>Founder & President</p>
+                <br>
+                <p>Akramul Haque Biswas is the founder and Executive Director of ATMABISWAS. He has been actively working to address poverty, inequality and environmental sustainability, focusing on solutions that create long-term impact. His efforts center around sustainable development, gender justice and green energy, ensuring that communities have the resources and opportunities to grow while maintaining ecological balance.
+                
+                Through ATMABISWAS, he has led various initiatives that promote renewable energy, economic empowerment, and social justice, aiming to build a society where everyone has equal access to opportunities. His work emphasizes collaboration and community-driven solutions, believing that progress comes from collective effort and sustainable practices. With a commitment to equity, environmental protection and progressive social transformation, he continues to advocate for a more just and sustainable future.</p>
             </div>
         </div>
     </div>
