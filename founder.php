@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
 
->>>>>>> 361072c06cfd2013274435de1dd8f5b65187e4a1
+
         }
 
         body {
