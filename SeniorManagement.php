@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ATMABISWAS Management</title>
   <style>
-    body {
-      margin: 0;
+    *{
+            margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+
       background-color: #f4f9ff;
-      font-family: Arial, sans-serif;
+
     }
 
     .container {
@@ -116,7 +120,7 @@
   </style>
 </head>
 <body>
-
+<?php include 'Navbar.php'?>
   <div class="container">
     
     <h1>Senior Management</h1>
@@ -168,6 +172,6 @@
     </section>
 
   </div>
-
+<?php include 'footer.php'?>
 </body>
 </html>
