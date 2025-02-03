@@ -94,19 +94,24 @@
         }
 
         .section h2 {
-            margin-top: 0;
+            margin-bottom: 1rem;
             color: #007BFF;
+        }
+    .section p {
+            margin-bottom: 1.2rem;
+         
         }
 
         .video-container {
             display: flex;
             justify-content: center;
             margin: 20px 0;
+            background-color: #007BFF;
         }
 
         iframe {
             width: 100%;
-            max-width: 800px;
+
             height: 450px;
             border: none;
             border-radius: 15px;
@@ -154,22 +159,11 @@
         }
 
         .card-content h3 {
-            margin-top: 0;
+            margin-bottom: 0.5rem;
             color: #007BFF;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 15px;
-            margin-top: 30px;
-        }
 
-        footer p {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
