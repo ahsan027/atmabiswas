@@ -157,7 +157,7 @@
       </div>
 
       <div class="executive-card">
-        <img src="photos/DD_New_PP.jpg" alt="Rafiqul Hasan Joarder">
+        <img src="photos/ddsir.png" alt="Rafiqul Hasan Joarder">
         <h2>Rafiqul Hasan Joarder</h2>
         <p><strong>Director, ATMABISWAS</strong></p>
         <p>Rafiqul Hasan Joarder plays a key role in strategic planning, operational management, and policy implementation at ATMABISWAS. His dedication to sustainable development and financial inclusion has helped countless individuals and communities thrive.</p>
@@ -167,7 +167,7 @@
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Akkas_PP.jpg" alt="Akkas Ali"> <h2>Akkas Ali</h2> <p>Assistant Director</p> </div>
       <div class="profile"> <img src="photos/Hasan_PP.jpg" alt="MD. Hassanur Jamman"> <h2>MD. Hassanur Jamman</h2> <p>Assistant Director</p> </div>
-      <div class="profile"> <img src="photos/Rimu_Sir_PP.jpg" alt="Rimu Sir"> <h2>MD: Abu Sadat Rimu</h2> <p>Assistant Director</p> </div>
+      <div class="profile"> <img src="photos/rimusir.png" alt="Rimu Sir"> <h2>MD: Abu Sadat Rimu</h2> <p>Assistant Director</p> </div>
     </section>
 <br>
 <br>
@@ -175,9 +175,9 @@
 
     <h1>Accounts Officers</h1>
     <section class="profile-grid"> 
-      <div class="profile"> <img src="photos/MST.NARGIS_PARVIN.jpg" alt="Mst.Nargis Parvin"> <h2>Mst. Nargis Parvin</h2> <p>Accounts Officer</p> </div>
-      <div class="profile"> <img src="photos/Rita_PP.jpg" alt="Rita"> <h2>Mst. Sharmin Sultana (Rita)</h2> <p>Accounts Officer</p> </div>
-      <div class="profile"> <img src="photos/MST.JESMIN_ARA.jpg" alt="Jesmin Ara Hena"> <h2>Mst. Jesmin Ara Hena</h2> <p>Accounts Officer</p> </div>
+      <div class="profile"> <img src="photos/kumkum.png" alt="Mst.Nargis Parvin"> <h2>Mst. Nargis Parvin</h2> <p>Accounts Officer</p> </div>
+      <div class="profile"> <img src="photos/rita.png" alt="Rita"> <h2>Mst. Sharmin Sultana (Rita)</h2> <p>Accounts Officer</p> </div>
+      <div class="profile"> <img src="photos/hena.png" alt="Jesmin Ara Hena"> <h2>Mst. Jesmin Ara Hena</h2> <p>Accounts Officer</p> </div>
     </section>
 <br>
 <br>
@@ -187,8 +187,8 @@
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Zahangir.JPG" alt="Zahangir"> <h2>Md.Zahangir Alom</h2> <p>Manager (MIS)</p> </div>
      
-      <div class="profile"> <img src="photos/Abu_Jinnah.jpg" alt="Abu Mohammad Jinnah"> <h2>Abu Mohammad Jinnah</h2> <p>Co-Manager (MIS)</p> </div>
-      <div class="profile"> <img src="photos/Sharmin Aktar.jpg" alt="Sharmin Aktar"> <h2>Mst. Sharmin Aktar</h2> <p>Officer (MIS)</p> </div>
+      <div class="profile"> <img src="photos/Jinnah.png" alt="Abu Mohammad Jinnah"> <h2>Abu Mohammad Jinnah</h2> <p>Co-Manager (MIS)</p> </div>
+      <div class="profile"> <img src="photos/Sharmin.png" alt="Sharmin Aktar"> <h2>Mst. Sharmin Aktar</h2> <p>Officer (MIS)</p> </div>
     
     </section>      
 <br>
@@ -199,10 +199,10 @@
     <section class="profile-grid"> 
       <div class="profile"> <img src="photos/Firoze.png" alt="Md. Firoze Biswas"> <h2>Md. Firoze Biswas</h2> <p>Branch Manager</p> </div>
       <div class="profile"> <img src="photos/MD.SHAH ALAM ALO-IT OFFICER, PIN-481.jpg" alt="Shah Alam Alo"> <h2>Md. Shah Alam Alo</h2> <p>Assistant HR Officer</p> </div>
-      <div class="profile"> <img src="photos/MST.ROKSANA PARVIN-CO, PIN-521.jpg" alt="Roksana Parvin"> <h2>Mst. Roksana Parvin</h2> <p>Computer Operator</p> </div>
-      <div class="profile"> <img src="photos/MD.YATAB ALI RANA-PROJECT OFFICER, PIN-280.jpg" alt="Yatab Ali Rana"> <h2>Md. Yatab Ali Rana</h2> <p>Assistant Legal Coordinator</p> </div>
+      <div class="profile"> <img src="photos/roksona.png" alt="Roksana Parvin"> <h2>Mst. Roksana Parvin</h2> <p>Computer Operator</p> </div>
+      <div class="profile"> <img src="photos/rana.png" alt="Yatab Ali Rana"> <h2>Md. Yatab Ali Rana</h2> <p>Assistant Legal Coordinator</p> </div>
       <div class="profile"> <img src="photos/arongo.png" alt="Arongo Biswas"> <h2>Md. Arongo Biswas</h2> <p>Assistant Administrative Officer</p> </div>
-      <div class="profile"> <img src="photos/10. MST.SHAHIN AKTER-CO, PIN-044.jpg" alt="Shahin Akter"> <h2>Mst. Shahin Akter</h2> <p>Receptionist</p> </div>
+      <div class="profile"> <img src="photos/shanin.png" alt="Shahin Akter"> <h2>Mst. Shahin Akter</h2> <p>Receptionist</p> </div>
     </section>
 
 
