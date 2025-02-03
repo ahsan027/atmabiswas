@@ -197,11 +197,11 @@
     <h1>Other Officers</h1>
 
     <section class="profile-grid"> 
-      <div class="profile"> <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Md. Firoze Biswas"> <h2>Md. Firoze Biswas</h2> <p>Branch Manager</p> </div>
+      <div class="profile"> <img src="photos/Firoze.png" alt="Md. Firoze Biswas"> <h2>Md. Firoze Biswas</h2> <p>Branch Manager</p> </div>
       <div class="profile"> <img src="photos/MD.SHAH ALAM ALO-IT OFFICER, PIN-481.jpg" alt="Shah Alam Alo"> <h2>Md. Shah Alam Alo</h2> <p>Assistant HR Officer</p> </div>
       <div class="profile"> <img src="photos/MST.ROKSANA PARVIN-CO, PIN-521.jpg" alt="Roksana Parvin"> <h2>Mst. Roksana Parvin</h2> <p>Computer Operator</p> </div>
       <div class="profile"> <img src="photos/MD.YATAB ALI RANA-PROJECT OFFICER, PIN-280.jpg" alt="Yatab Ali Rana"> <h2>Md. Yatab Ali Rana</h2> <p>Assistant Legal Coordinator</p> </div>
-      <div class="profile"> <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Arongo Biswas"> <h2>Md. Arongo Biswas</h2> <p>Assistant Administrative Officer</p> </div>
+      <div class="profile"> <img src="photos/arongo.png" alt="Arongo Biswas"> <h2>Md. Arongo Biswas</h2> <p>Assistant Administrative Officer</p> </div>
       <div class="profile"> <img src="photos/10. MST.SHAHIN AKTER-CO, PIN-044.jpg" alt="Shahin Akter"> <h2>Mst. Shahin Akter</h2> <p>Receptionist</p> </div>
     </section>
 
