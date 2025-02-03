@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATMABISWAS Founders</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+<<<<<<< HEAD
             font-family: 'Poppins', sans-serif;
+=======
+
+>>>>>>> 361072c06cfd2013274435de1dd8f5b65187e4a1
         }
 
         body {
@@ -116,7 +115,8 @@
                 <h2>Akramul Haque Biswas</h2>
                 <p><strong>Founder & President</strong></p>
                 <p>Akramul Haque Biswas is the founder and Executive Director of ATMABISWAS. He has been actively working to address poverty, inequality, and environmental sustainability, focusing on solutions that create long-term impact.</p>
-                <p>Through ATMABISWAS, he has led various initiatives promoting renewable energy, economic empowerment, and social justice. His vision is to build a society where everyone has equal access to opportunities while maintaining ecological balance.</p>
+                <p>Through ATMABISWAS, he has led various initiatives promoting renewable energy, economic empowerment, and social justice. His vision is to build a society where everyone has equal access to opportunities while maintaining ecological balance. </p>
+
             </div>
         </div>
     </div>
