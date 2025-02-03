@@ -93,7 +93,15 @@
             }
         }
 
-        .section h2 {
+    .section h2 {
+font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #007BFF;
+        }
+        .section h1 {
+            font-size: 2rem;
+            text-align: center;
             margin-bottom: 1rem;
             color: #007BFF;
         }
@@ -155,6 +163,7 @@
         }
 
         .card-content {
+            text-align: center;
             padding: 15px;
         }
 
@@ -237,8 +246,8 @@
         
 
         <section class="section">
-            <h2>Our Journey: From Training to Market</h2>
-            <p>Our pathway to success empowers fishermen and entrepreneurs through training, support, and market access, driving sustainable growth in the fishery sector.</p>
+            <h1>Our Journey: From Training to Market</h1>
+            
             <div class="card-grid">
                 <div class="card">
                     <img src="fish&redy/ABS_7.JPG" alt="Training">
