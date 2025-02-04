@@ -10,14 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       xhr.onload = function () {
         if (xhr.status === 200) {
+          const tablebody = document.getElementById("table-body");
           const obj = JSON.parse(xhr.responseText);
-          for (let i = 0; i < obj.length; i++) {
-            if (i < 5) {
-            }
-          }
+          tablebody.innerHTML = "";
+
+          obj.forEach((element, idx) => {
+            const row = document.createElement("tr");
+            console.log(element.branchName);
+            row.innerHTML = `<td data-label="Date">${element.branchName}</td>
+                <td data-label="Order ID">${element.branchLoc}</td>
+                <td data-label="Name">${element.division}</td>
+                <td data-label="Price">${element.dist}</td>
+                `;
+            tablebody.appendChild(row);
+          });
         }
       };
-
       xhr.send("division=" + encodeURIComponent(division));
     });
 
