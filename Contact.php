@@ -24,6 +24,7 @@ $conn = $db->connect();
     }
 body{
     background-color: #e6f2ff;
+    overflow-x: hidden;
 }
 </style>
     

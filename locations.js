@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
           obj.forEach((element, idx) => {
             const row = document.createElement("tr");
             console.log(element.branchName);
-            row.innerHTML = `<td data-label="Date">${element.branchName}</td>
-                <td data-label="Order ID">${element.branchLoc}</td>
-                <td data-label="Name">${element.division}</td>
-                <td data-label="Price">${element.dist}</td>
+            row.innerHTML = `<td data-label="Branch Name">${element.branchName}</td>
+                <td data-label="Branch Location">${element.branchLoc}</td>
+                <td data-label="Division">${element.division}</td>
+                <td data-label="District">${element.dist}</td>
                 `;
             tablebody.appendChild(row);
           });
