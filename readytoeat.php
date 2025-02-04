@@ -178,8 +178,8 @@ font-size: 2rem;
 <body>
     <?php include 'Navbar.php'?>
     <header>
-        <h1>Founder of ATMABISWAS</h1>
-        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
+        <h1>Ready To Eat - ATMABISWAS</h1>
+        <p>In partnership with PKSF, we connect fishermen with local entrepreneurs to ensure access to fresh pond and river fish while empowering communities and promoting sustainable livelihoods.</p>
     </header>
     <div class="container">
         <section class="section">
