@@ -16,6 +16,7 @@ $conn = $db->connect();
 
     <link rel="stylesheet" href="locations.css">
 
+    
 <style>
     *{
         margin: 0;
