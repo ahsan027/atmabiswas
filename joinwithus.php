@@ -11,6 +11,7 @@
             <a href="#">
             <i class="fa-solid fa-suitcase"></i>
             <p>CAREER</p></a>
+            
         </div>
         <div class="option">
             <a href="#">
