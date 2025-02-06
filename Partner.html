@@ -1,53 +1,69 @@
-<link rel="stylesheet" href="prat.css">
+<link rel="stylesheet" href="partCopy.css">
     <div class="container">
         <h1>ATMABISWAS - Partners</h1>
 
         <div class="carousel-container">
-            <div class="navigation prev">&#8249;</div>
+          
             <div class="carousel">
-            <img src="https://pksf.org.bd/wp-content/uploads/2020/09/PKSF-Master-Logo-small.png" alt="Nature 1">
-            <img src="https://tfe-bd.sgp1.digitaloceanspaces.com/posts/29844/sonali-bank.jpg" alt="Nature 2">
-            <img src="https://play-lh.googleusercontent.com/NtXVkctUvU_WG8NlLdg5BRSJsAMOpliK0uOJGjo15_QYVcLDGUq_Vwt-UIbb9BunOK4" alt="Nature 3">
-            <img src="https://play-lh.googleusercontent.com/vEZNi3YvUZE0CkAxiAsnjNWeKPvcrt7n7KQ3qqL8ORONmSS47ijPyJdjOWtF9ig3W92u=w600-h300-pc0xffffff-pd" alt="Nature 4">
-            <img src="https://www.smc-bd.org/upload_images/menu/343_SMC-Logo-new-JPG.jpg" alt="Nature 5">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/SBAC_Bank_Ltd.png" alt="Nature 6">
-            <img src="https://www.mblbd.com/style/images/mbl_logo.jpg" alt="Nature 7">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Logo_of_Midland_Bank.svg/1200px-Logo_of_Midland_Bank.svg.png" alt="Nature 8">
-            <img src="https://fsibplc.com/firstcash/en/img/fsibl%20logo.png" alt="Nature 9">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDYIi5S0rQs8P7tL45I87rthUonJNs1XKY0w&s" alt="Nature 10">
-            <img src="https://media.licdn.com/dms/image/v2/D560BAQEw_TwNmjeFsA/company-logo_200_200/company-logo_200_200/0/1702228450782?e=2147483647&v=beta&t=0CFeQi-zApUBHWmnFHYNYYEVzZt9HX1Y22DFTHVF6es" alt="Nature 11">
-            <img src="https://play-lh.googleusercontent.com/-jqyw68wb0Twl7W0bmW2YUpsNke4HskdkmJr11iTNEkfoEizJjGPE9MQ00detReqHPU" alt="Nature 12">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuIko36_iqIzjO1HS5Ra1Xe-dIfYo-uep2CA&s" alt="Nature 13">
-            <img src="https://www.tbsnews.net/sites/default/files/styles/author/public/organization/logo/sebl_logo.png" alt="Nature 14">
-            <img src="https://baplc.org/upload/Uttara%20Bank.jpg" alt="Nature 15">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe70egmE3OMCwtcYmBsDqnda3l7s3PlovJNg&s" alt="Nature 16">
-            </div>
+            <div class="navigation prev">&#8249;</div>
+            <img src="https://pksf.org.bd/wp-content/uploads/2020/09/PKSF-Master-Logo-small.png" alt="Nature 1" data-index="0">
+            <img src="https://tfe-bd.sgp1.digitaloceanspaces.com/posts/29844/sonali-bank.jpg" alt="Nature 2" data-index="1">
+            <img src="https://play-lh.googleusercontent.com/NtXVkctUvU_WG8NlLdg5BRSJsAMOpliK0uOJGjo15_QYVcLDGUq_Vwt-UIbb9BunOK4" alt="Nature 3" data-index="2">
+            <img src="https://play-lh.googleusercontent.com/vEZNi3YvUZE0CkAxiAsnjNWeKPvcrt7n7KQ3qqL8ORONmSS47ijPyJdjOWtF9ig3W92u=w600-h300-pc0xffffff-pd" alt="Nature 4" data-index="3">
+            <img src="https://www.smc-bd.org/upload_images/menu/343_SMC-Logo-new-JPG.jpg" alt="Nature 5" data-index="4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/SBAC_Bank_Ltd.png" alt="Nature 6" data-index="5">
+            <img src="https://www.mblbd.com/style/images/mbl_logo.jpg" alt="Nature 7" data-index="6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Logo_of_Midland_Bank.svg/1200px-Logo_of_Midland_Bank.svg.png" alt="Nature 8" data-index="7">
+            <img src="https://fsibplc.com/firstcash/en/img/fsibl%20logo.png" alt="Nature 9" data-index="8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDYIi5S0rQs8P7tL45I87rthUonJNs1XKY0w&s" alt="Nature 10" data-index="9">
+
             <div class="navigation next">&#8250;</div>
         </div>
 
         <div class="content">
+            <div class="logo-section">
+            
+            </div>
+            <div class="info-section">
+                <h2 id="club-title"></h2>
+                <p id="club-description"></p>
+            
+            </div>
         </div>
+    </div>
     </div>
 
     <script>
+        
        
-            document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelector(".carousel");
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        if (!carousel) return;
 
+        const imgContent = carousel.getElementsByTagName("img");
 
-    const imgContent = images.getElementsByTagName("img");
+        axios.get("./partners.json").then(res=>console.log(res))
 
-    Array.from(imgContent).forEach(img => {
-        console.log(img.getAttribute("src"));
+        
+
+        Array.from(imgContent).forEach((img) => {
+            img.addEventListener("click", function () {
+
+                Array.from(imgContent).forEach(image => image.classList.remove("Selected"));
+
+                this.classList.add("Selected");
+
+                console.log(this.getAttribute("data-index"));
+            });
+        });
     });
-});
 
 
 
     
         
     </script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 </html>
