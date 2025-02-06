@@ -30,13 +30,21 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded",function(){
-            const images = document.querySelector(".carousel")
-            const imgContent = images.getElementsByTagName("img")
-            console.log(imgContent)
+       
+            document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelector(".carousel");
 
 
-        })
+    const imgContent = images.getElementsByTagName("img");
+
+    Array.from(imgContent).forEach(img => {
+        console.log(img.getAttribute("src"));
+    });
+});
+
+
+
+    
         
     </script>
 
