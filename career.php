@@ -13,7 +13,7 @@
         <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Logo">
       </div>
       <ul class="menu">
-        <li><a href="/dashboard/atmabiswas/">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">Available Jobs</a></li>
         <li><a href="#">Login</a></li>
       </ul>
