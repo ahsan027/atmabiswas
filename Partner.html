@@ -42,9 +42,7 @@
 
         const imgContent = carousel.getElementsByTagName("img");
 
-        axios.get("./partners.json").then(res=>console.log(res))
-
-        
+        axios.get("./partners.json").then(res=>console.log(res));
 
         Array.from(imgContent).forEach((img) => {
             img.addEventListener("click", function () {
