@@ -37,12 +37,24 @@
         
        
     document.addEventListener("DOMContentLoaded", function () {
+
+        let partnersArray = [];
+
         const carousel = document.querySelector(".carousel");
         if (!carousel) return;
 
         const imgContent = carousel.getElementsByTagName("img");
 
-        axios.get("./partners.json").then(res=>console.log(res));
+        function fetchPartners() {
+            return axios.get("partners.json").then(res => {
+                partnersArray = [...res.data];
+                return partnersArray; 
+            });
+        }
+
+        fetchPartners().then(data => {
+            data.forEach((partner,i) => console.log(partner,i));
+        });
 
         Array.from(imgContent).forEach((img) => {
             img.addEventListener("click", function () {
