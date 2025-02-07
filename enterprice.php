@@ -107,8 +107,8 @@ body {
 <body>
     <?php include 'Navbar.php'?>
 <header>
-        <h1>Founder of ATMABISWAS</h1>
-        <p>Guiding ATMABISWAS Towards Harmony and Hope</p>
+        <h1>Empowering Enterprises with Digital Innovation</h1>
+        <p>ATMABISWAS drives sustainable growth by equipping small businesses with digital tools, strategic guidance, and financial support for long-term success.</p>
     </header>
 
     <div class="container">
