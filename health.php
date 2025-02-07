@@ -140,7 +140,7 @@
     /* Gallery Section */
     .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
 
