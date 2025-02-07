@@ -247,7 +247,8 @@
                     <iframe src="https://www.youtube.com/embed/i0UxCHapj40" allowfullscreen></iframe>
                 </div>
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/i0UxCHapj40" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/6xb-rN_9j24" allowfullscreen></iframe>
+
                 </div>
             </div>
         </div>
