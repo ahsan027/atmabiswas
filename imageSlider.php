@@ -2,19 +2,19 @@
     <div class="slider">
         <div class="list">
             <div class="item">
-                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 1">
+                <img src="toilet/toiletpic4.jpeg" alt="Slide 1">
             </div>
             <div class="item">
-                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 2">
+                <img src="FISH/fish_pic6.jpg" alt="Slide 2">
             </div>
             <div class="item">
-                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 3">
+                <img src="Awarness/awarness_pic6.jpeg" alt="Slide 3">
             </div>
             <div class="item">
-                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 4">
+                <img src="Awarness/awarness_pic7.jpeg" alt="Slide 4">
             </div>
             <div class="item">
-                <img src="https://venture.com.bd/wp-content/uploads/2021/01/Healthtech.jpg" alt="Slide 5">
+                <img src="Scholarship/pic1.jpeg" alt="Slide 5">
             </div>
         </div>
         <div class="buttons">
