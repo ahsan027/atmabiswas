@@ -13,7 +13,6 @@ body {
     align-items: center;
 }
 
-/* Header */
 header {
     text-align: center;
     background: linear-gradient(90deg, #0a58ca, #176cc6);
@@ -32,7 +31,6 @@ header p {
     opacity: 0.9;
 }
 
-/* Content Wrapper */
 .content {
     padding: 20px;
     max-width: 1200px;
@@ -40,7 +38,6 @@ header p {
     text-align: center;
 }
 
-/* Card Container */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +48,6 @@ header p {
     margin: auto;
 }
 
-/* Individual Cards */
 .card {
     background: white;
     border-radius: 15px;
@@ -91,7 +87,6 @@ header p {
     color: #555;
 }
 
-/* Latest Pictures Section */
 .latest-pictures {
     width: 100%;
     display: flex;
@@ -103,7 +98,6 @@ header p {
     margin-left: 2rem;
 }
 
-/* Image Grid */
 .latest-pictures .pic {
 
     gap: 1.5rem;
@@ -134,7 +128,6 @@ header p {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
