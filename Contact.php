@@ -44,10 +44,10 @@ body{
     <div class="contact-card" id="contact-card">
         <div class="contact-info">
             <div class="cinfos">
-                            <h2>ATMABISWAS HQ</h2>
+                            <h2>ATMABISWAS Head Office </h2>
             <p><strong>Branch:</strong> ATMABISWAS, Main Office</p>
-            <p><strong>Address:</strong> 123 Main Street, Dhaka, Bangladesh</p>
-            <p><strong>Phone:</strong> +880-123-456-789</p>
+            <p><strong>Address:</strong> Asma Palace,Court Para,Chuadanga-7200 </p>
+            <p><strong>Phone:</strong> +8801713302930</p>
             <p><strong>Email:</strong> contact@atmabiswas.org</p>
             </div>
             <div class="btn">

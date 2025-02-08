@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Development</title>
+    <title>Enterprise Development - ATMABISWAS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
     * {
@@ -209,7 +209,7 @@
             <h2>Our Services</h2>
             <div class="services">
                 <div class="service-card">
-                    <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
+                    <img src="enterprise_development/enterprice_pic1.jpeg"
                         alt="Micro Finance">
                     <h3>Short-Term Loan <br>(Weekly Repayment)</h3>
                     <p>
@@ -217,7 +217,7 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
+                    <img src="enterprise_development/enterprice_pic2.jpeg"
                         alt="Training Camp">
                     <h3>Medium-Term Loan <br>(Monthly Repayment)</h3>
                     <p>
@@ -225,7 +225,7 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
+                    <img src="enterprise_development/enterprice_pic5.jpeg"
                         alt="Long-term Loans">
                     <h3>Long-Term Loan <br> (6-Month Repayment)</h3>
                     <p>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATMABISWAS Careers</title>
+    <title>Careers - ATMABISWAS</title>
     <link rel="stylesheet" href="career.css">
 </head>
 
