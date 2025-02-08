@@ -73,6 +73,8 @@
 
     .card h2,
     .card h3 {
+        text-align: center;
+        font-size: 2rem;
         margin-bottom: 15px;
         color: #0a58ca;
     }
@@ -156,6 +158,7 @@
 
     /* Gallery Section */
     .gallery {
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
@@ -185,10 +188,23 @@
     /* Responsive Adjustments */
     @media (max-width: 768px) {
 
+        .video-card iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 12px;
+        }
+
         .services,
         .two-col,
         .video-section {
             flex-direction: column;
+        }
+
+        .gallery {
+
+            grid-template-columns: repeat(1, 1fr);
+
         }
 
         .two-col>div {
