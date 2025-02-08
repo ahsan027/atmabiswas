@@ -1,293 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Health and Nutrition | ATMABISWAS NGO</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS (Optional: if you need additional grid support) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS Animation CSS (Optional) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <style>
-    /* Global Reset & Font */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health and Nutrition | ATMABISWAS NGO</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
+
+        background: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
     }
+
     /* Header Styling */
     header {
-      text-align: center;
-      background: linear-gradient(90deg, #0a58ca, #176cc6);
-      color: white;
-      padding: 50px 20px;
+        text-align: center;
+        background: linear-gradient(90deg, #0a58ca, #176cc6);
+        color: white;
+        padding: 50px 20px;
     }
+
     header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
+        font-size: 2.8rem;
+        font-weight: 700;
     }
+
     header p {
-      margin: 10px 0;
-      font-size: 1.2rem;
-      opacity: 0.9;
+        margin: 10px 0;
+        font-size: 1.2rem;
+        opacity: 0.9;
     }
+
     /* Container */
     .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
     }
+
     /* Card Styling */
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      padding: 40px;
-      margin-bottom: 40px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 40px;
+        margin-bottom: 40px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
     }
+
     .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 20px;
     }
-    .card h2, .card h3 {
-      margin-bottom: 15px;
-      color: #0a58ca;
+
+    .card h2,
+    .card h3 {
+        margin-bottom: 15px;
+        color: #0a58ca;
     }
+
     /* Services Section */
     .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
     }
+
     .service-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      flex: 1 1 calc(33.333% - 30px);
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        flex: 1 1 calc(33.333% - 30px);
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
     }
+
     .service-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 20px;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
     }
-    /* Two-Column Layout for Campaigning & Volunteer Sections */
+
+
     .two-col {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
     }
-    .two-col > div {
-      flex: 1 1 45%;
+
+    .two-col>div {
+        flex: 1 1 45%;
     }
+
     .two-col img {
-      width: 100%;
-      border-radius: 12px;
+        width: 100%;
+        border-radius: 12px;
     }
-    /* Video Section */
+
     .video-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 40px;
     }
+
     .video-card {
-      flex: 1 1 45%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex: 1 1 45%;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .video-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
     }
+
     .video-card iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 12px;
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-radius: 12px;
     }
+
     /* Gallery Section */
     .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;
-}
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 
     .gallery img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
     }
+
     .gallery img:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
+
     /* Extra Info Paragraph */
     .extra-info {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-      text-align: justify;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        text-align: justify;
     }
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .services, .two-col, .video-section {
-        flex-direction: column;
-      }
-      .two-col > div {
-        flex: 1 1 100%;
-      }
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
+
+        .services,
+        .two-col,
+        .video-section {
+            flex-direction: column;
+        }
+
+        .two-col>div {
+            flex: 1 1 100%;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
     }
-  </style>
+    </style>
 </head>
+
 <body>
-  <!-- Header Section -->
-  <header data-aos="fade-down" data-aos-duration="1000">
-    <h1>ATMABISWAS: Empowering Health & Nutrition</h1>
-    <p>Championing community wellness through innovative healthcare and nutritional education.</p>
-  </header>
-  
-  <!-- Main Content Container -->
-  <div class="container">
-    <!-- Our Services Section -->
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Our Services</h2>
-      <div class="services">
-        <!-- Service Card 1: Household Sanitation Facilities -->
-        <div class="service-card" data-aos="zoom-in" data-aos-duration="800">
-          <img src="toilet/toiletpic1.jpeg" alt="Household Sanitation Facilities">
-          <h3>Household Sanitation Facilities</h3>
-          <p>
-            We construct modern toilets and provide safe sanitation facilities. We also distribute sanitary napkins and offer practical training on proper hygiene.
-          </p>
-        </div>
-        <!-- Service Card 2: Free Medicine -->
-        <div class="service-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-          <img src="Health/health_pic2.jpeg" alt="Free Medicine">
-          <h3>Free Medicine</h3>
-          <p>
-            Essential medicines are provided free of charge, ensuring every community member receives timely and quality care.
-          </p>
-        </div>
-        <!-- Service Card 3: Awareness Campaign & Training -->
-        <div class="service-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-          <img src="Health/health_pic1.jpeg" alt="Awareness Campaign & Training">
-          <h3>Awareness Campaign & Training</h3>
-          <p>
-            Our outreach programs educate villagers on nutrition, hygiene, and the correct usage of sanitary products—empowering them with vital health knowledge.
-          </p>
-        </div>
-      </div>
-    </div>
+    <?php include 'Navbar.php'?>
 
-    <!-- Health Care Campaigning Section -->
-    <div class="card" data-aos="fade-right" data-aos-duration="1000">
-      <h2>Health Care Campaigning</h2>
-      <div class="two-col">
-        <div data-aos="fade-right" data-aos-duration="800">
-          <img src="Health/health_pic4.jpeg" alt="Health Care Campaign">
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800">
-          <h3>Supporting Rural Communities During the Pandemic</h3>
-          <p>
-            Throughout the pandemic, our dedicated teams provided essential healthcare services and raised awareness about health protocols. We empowered rural communities to stay safe and healthy.
-          </p>
-        </div>
-      </div>
-    </div>
+    <header data-aos="fade-down" data-aos-duration="1000">
+        <h1>ATMABISWAS: Empowering Health & Nutrition</h1>
+        <p>Championing community wellness through innovative healthcare and nutritional education.</p>
+    </header>
 
-    <!-- Volunteer Section -->
-    <div class="card" data-aos="fade-left" data-aos-duration="1000">
-      <h2>Become a Volunteer</h2>
-      <div class="two-col">
-        <div data-aos="fade-right" data-aos-duration="800">
-          <img src="Health/health_pic5.jpg" alt="Become a Volunteer">
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800">
-          <h3>Make a Lasting Impact</h3>
-          <p>
-            Join our 1-2 week training program to equip yourself with the skills to support rural communities. Your contribution will create a positive, lasting impact.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- ATMABISWAS Hospital Section -->
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-      <h2>About ATMABISWAS Hospital</h2>
-      <p>
-        ATMABISWAS Hospital is a beacon of hope—offering comprehensive healthcare services with modern facilities, a dedicated team, and free medical care for rural areas.
-      </p>
-      <div class="video-section">
-        <div class="video-card" data-aos="zoom-in" data-aos-duration="800">
-          <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L" allowfullscreen></iframe>
+    <div class="container">
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Our Services</h2>
+            <div class="services">
+                <!-- Service Card 1: Household Sanitation Facilities -->
+                <div class="service-card" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="toilet/toiletpic1.jpeg" alt="Household Sanitation Facilities">
+                    <h3>Household Sanitation Facilities</h3>
+                    <p>
+                        We construct modern toilets and provide safe sanitation facilities. We also distribute sanitary
+                        napkins and offer practical training on proper hygiene.
+                    </p>
+                </div>
+                <!-- Service Card 2: Free Medicine -->
+                <div class="service-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <img src="Health/health_pic2.jpeg" alt="Free Medicine">
+                    <h3>Free Medicine</h3>
+                    <p>
+                        Essential medicines are provided free of charge, ensuring every community member receives timely
+                        and quality care.
+                    </p>
+                </div>
+                <!-- Service Card 3: Awareness Campaign & Training -->
+                <div class="service-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                    <img src="Health/health_pic1.jpeg" alt="Awareness Campaign & Training">
+                    <h3>Awareness Campaign & Training</h3>
+                    <p>
+                        Our outreach programs educate villagers on nutrition, hygiene, and the correct usage of sanitary
+                        products—empowering them with vital health knowledge.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Extra Information Paragraph -->
-      <p class="extra-info">
-        Our hospital goes beyond treatments by engaging in community outreach, preventive care initiatives, and educational seminars. We strive to build a healthier future through compassion, innovation, and excellence in healthcare.
-      </p>
-    </div>
 
-    <!-- Gallery Section -->
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="rmpt/rmpt_pic1.jpeg" alt="Gallery Image 1">
-        <img src="Health/helath_pic7.jpeg" alt="Gallery Image 2">
-        <img src="wash/wash_pic1.jpeg" alt="Gallery Image 3">
-        <img src="toilet/toiletpic2.jpeg" alt="Gallery Image 4">
-        <img src="toilet/toiletpic3.jpeg" alt="Gallery Image 5">
-        <img src="awarness/awarness_pic6.jpeg" alt="Gallery Image 6">
-      </div>
-    </div>
-  </div>
+        <!-- Health Care Campaigning Section -->
+        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+            <h2>Health Care Campaigning</h2>
+            <div class="two-col">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <img src="Health/health_pic4.jpeg" alt="Health Care Campaign">
+                </div>
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h3>Supporting Rural Communities During the Pandemic</h3>
+                    <p>
+                        Throughout the pandemic, our dedicated teams provided essential healthcare services and raised
+                        awareness about health protocols. We empowered rural communities to stay safe and healthy.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-  <!-- Optional: Bootstrap JS, jQuery, and AOS JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
+        <!-- Volunteer Section -->
+        <div class="card" data-aos="fade-left" data-aos-duration="1000">
+            <h2>Become a Volunteer</h2>
+            <div class="two-col">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <img src="Health/health_pic5.jpg" alt="Become a Volunteer">
+                </div>
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h3>Make a Lasting Impact</h3>
+                    <p>
+                        Join our 1-2 week training program to equip yourself with the skills to support rural
+                        communities. Your contribution will create a positive, lasting impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ATMABISWAS Hospital Section -->
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
+            <h2>About ATMABISWAS Hospital</h2>
+            <p>
+                ATMABISWAS Hospital is a beacon of hope—offering comprehensive healthcare services with modern
+                facilities, a dedicated team, and free medical care for rural areas.
+            </p>
+            <div class="video-section">
+                <div class="video-card" data-aos="zoom-in" data-aos-duration="800">
+                    <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Extra Information Paragraph -->
+            <p class="extra-info">
+                Our hospital goes beyond treatments by engaging in community outreach, preventive care initiatives, and
+                educational seminars. We strive to build a healthier future through compassion, innovation, and
+                excellence in healthcare.
+            </p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="rmpt/rmpt_pic1.jpeg" alt="Gallery Image 1">
+                <img src="Health/helath_pic7.jpeg" alt="Gallery Image 2">
+                <img src="wash/wash_pic1.jpeg" alt="Gallery Image 3">
+                <img src="toilet/toiletpic2.jpeg" alt="Gallery Image 4">
+                <img src="toilet/toiletpic3.jpeg" alt="Gallery Image 5">
+                <img src="awarness/awarness_pic6.jpeg" alt="Gallery Image 6">
+            </div>
+        </div>
+    </div>
+    <?php include 'footer.php'?>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
     AOS.init();
-  </script>
+    </script>
 </body>
+
 </html>
