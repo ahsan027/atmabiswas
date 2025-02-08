@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATMABISWAS NGO Executive Committee</title>
+    <title>Executive Committee - ATMABISWAS </title>
     <style>
         *{
             margin: 0;

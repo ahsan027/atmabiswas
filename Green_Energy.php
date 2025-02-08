@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Energy, Beautiful Earth</title>
+    <title>Green Energy - ATMABISWAS </title>
     <link rel="stylesheet" href="green.css">
 </head>
 
