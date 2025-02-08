@@ -211,37 +211,31 @@
                 <div class="service-card">
                     <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
                         alt="Micro Finance">
-                    <h3>Short-Term Loan Provide (Weekly)</h3>
+                    <h3>Short-Term Loan <br>(Weekly Repayment)</h3>
                     <p>
-                        ATMABISWAS offers a short-term loan option on a weekly basis to assist employees with urgent
-                        financial needs. This quick solution helps cover immediate expenses, with a repayment plan that
-                        fits short-term requirements.
+                    ATMABISWAS offers short-term loans with <strong> weekly repayment plans </strong>, designed for small businesses and individuals facing immediate financial needs. This option provides <strong>quick access to capital,</strong> helping cover daily operational costs, emergency expenses, or short-term investments.
                     </p>
                 </div>
                 <div class="service-card">
                     <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
                         alt="Training Camp">
-                    <h3>Medium-Term Loan Provide (Monthly)</h3>
+                    <h3>Medium-Term Loan <br>(Monthly Repayment)</h3>
                     <p>
-                        For longer-term financial support, ATMABISWAS provides a medium-term loan with monthly repayment
-                        options. This program allows employees to manage larger expenses with a more flexible,
-                        manageable repayment schedule.
+                    For entrepreneurs and businesses looking for a more flexible financing option, our <strong> monthly repayment loan</strong>  helps manage <strong> moderate financial needs </strong> such as inventory restocking, equipment purchases, or working capital. This structured plan ensures smoother cash flow while maintaining business stability.
                     </p>
                 </div>
                 <div class="service-card">
                     <img src="https://www.investopedia.com/thmb/-yLsQoDgUtq0C50NOSWV6QqLx_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microfinance-v2-1306daf1c34c41119198bbc504886140.jpg"
                         alt="Long-term Loans">
-                    <h3>Long-Term Loan Provide (6-Month)</h3>
+                    <h3>Long-Term Loan <br> (6-Month Repayment)</h3>
                     <p>
-                        ATMABISWAS offers a long-term loan option for those with significant financial needs. With a
-                        6-month repayment plan, employees can borrow a higher amount, paying it back in equal
-                        installments over six months, ideal for major financial goals or emergencies.
+                    Businesses planning for <strong>expansion, large-scale investments, or significant operational growth </strong>can benefit from our <strong>long-term loan with a 6-month repayment schedule.</strong> This option provides <strong> higher loan amounts</strong> with structured installment payments, making it easier to fund long-term business goals without financial strain.
                     </p>
                 </div>
             </div>
         </div>
         <div class="card">
-            <h2>Success Stories</h2>
+            <h2>Real-Life Transformations</h2>
             <div class="video-section">
                 <div class="video-card">
                     <iframe src="https://www.youtube.com/embed/i0UxCHapj40" allowfullscreen></iframe>
