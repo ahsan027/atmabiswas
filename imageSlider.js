@@ -9,6 +9,7 @@ let active = 0;
 
 function reloadSlider() {
   slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+
   document.querySelector(".slider .dots li.active").classList.remove("active");
   dots[active].classList.add("active");
   clearInterval(refreshInterval);

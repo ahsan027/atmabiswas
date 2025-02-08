@@ -32,8 +32,8 @@
             <div class="dropdown-content">
                 <a target="_blank" href="Green_Energy.php">Green Energy</a>
                 <a target="_blank" href="enterprice.php">Enterprise Development</a>
-                <a target="_blank" href="Agritural.php">Food and Agriculture</a>
-                <a target="_blank" href="readytoeat.php">Ready to eat</a>
+                <a target="_blank" href="Agritural.php">Food & Agriculture</a>
+                <a target="_blank" href="readytoeat.php">Ready To Eat</a>
                 <a target="_blank" href="health.php">Health & Nutrition</a>
             </div>
         </div>
