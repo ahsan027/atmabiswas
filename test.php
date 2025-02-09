@@ -1,34 +1,73 @@
 <div class="card-container">
-    <?php for ($i = 0; $i < 6; $i++): ?>
-        <div class="card">
-            <img src="pic.png" alt="Card Image">
-            <div class="card-content">
-                <h3>Card Title <?= $i + 1; ?></h3>
-                <p class="card-text">More details about the content displayed on hover effect.</p>
-            </div>
+
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
         </div>
-    <?php endfor; ?>
+    </div>
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="pic.png" alt="Card Image">
+        <div class="card-content">
+            <h3>Card Title </h3>
+            <p class="card-text">More details about the content displayed on hover effect.</p>
+        </div>
+    </div>
+
 </div>
 
 <style>
     .card-container {
-
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(500px, 1fr));
         gap: 20px;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+        max-width: 1200px;
+        margin: auto;
         padding: 20px;
-
     }
 
     .card {
         position: relative;
-        width: 300px;
+        width: 100%;
+        max-width: 500px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         transition: transform 0.3s ease;
+        background: #fff;
     }
 
     .card:hover {
@@ -36,31 +75,27 @@
     }
 
     .card img {
-
         width: 100%;
         height: auto;
         border-radius: 10px;
-
     }
 
     .card-content {
-
         text-align: center;
+        padding: 15px;
         background-color: #ffffff;
     }
 
     .card h3 {
-
         margin: 0;
         color: #0073e6;
         font-size: 1.5em;
     }
 
     .card-text {
-
         position: absolute;
         top: 0;
-        bottom: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -72,18 +107,28 @@
         opacity: 0;
         transition: opacity 0.3s ease;
         text-align: center;
-
     }
 
     .card:hover .card-text {
-
         opacity: 1;
     }
 
     /* Responsive Design */
+    @media (max-width: 1024px) {
+        .card-container {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
     @media (max-width: 768px) {
-        .card {
-            width: 90%;
+        .card-container {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card-container {
+            grid-template-columns: repeat(1, minmax(250px, 1fr));
         }
     }
 </style>
