@@ -10,9 +10,9 @@
 
         <div class="logo"><a href="/dashboard/atmabiswas/"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
-            <a href="#">Notice</a>
+            <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
-            <a href="#">Press</a>
+            <a href="press.php">Press</a>
             <a target="_blank" href="aboutus.php">About Us</a>
         </div>
 
@@ -24,19 +24,6 @@
     </div>
     <div class="bottom-row">
         <a href="/">Who we are</a>
-        <div class="dropdown">
-            <div class="maindrop">
-                <a href="#">What we do <span> </span> <i id="arrow" class="fa-solid fa-caret-down"></i></a>
-            </div>
-
-            <div class="dropdown-content">
-                <a target="_blank" href="Green_Energy.php">Green Energy</a>
-                <a target="_blank" href="enterprice.php">Enterprise Development</a>
-                <a target="_blank" href="Agritural.php">Food & Agriculture</a>
-                <a target="_blank" href="readytoeat.php">Ready To Eat</a>
-                <a target="_blank" href="health.php">Health & Nutrition</a>
-            </div>
-        </div>
 
         <div class="dropdown">
             <div class="maindrop">
@@ -51,6 +38,20 @@
 
             </div>
         </div>
+        <div class="dropdown">
+            <div class="maindrop">
+                <a href="#">What we do <span> </span> <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+            </div>
+
+            <div class="dropdown-content">
+                <a target="_blank" href="Green_Energy.php">Green Energy</a>
+                <a target="_blank" href="enterprice.php">Enterprise Development</a>
+                <a target="_blank" href="Agritural.php">Food & Agriculture</a>
+                <a target="_blank" href="readytoeat.php">Ready To Eat</a>
+                <a target="_blank" href="health.php">Health & Nutrition</a>
+            </div>
+        </div>
+
         <a href="Events.php">Events</a>
         <a href="Contact.php">Contact</a>
         <a href="#" id="login-btn">Login</a>

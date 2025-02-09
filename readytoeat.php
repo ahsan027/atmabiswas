@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ready To Eat - ATMABISWAS </title>
     <style>
-
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            
+
             background-color: #f3f4f6;
             color: #333;
             overflow-x: hidden;
         }
-            header {
+
+        header {
             text-align: center;
             background: linear-gradient(90deg, #0a58ca, #176cc6);
             color: white;
@@ -36,9 +38,11 @@
             font-size: 1.2rem;
             opacity: 0.9;
         }
+
         .center-text {
-    text-align: center;
+            text-align: center;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -69,6 +73,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -88,26 +93,29 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
 
-    .section h2 {
-font-size: 2rem;
+        .section h2 {
+            font-size: 2rem;
             text-align: center;
             margin-bottom: 1rem;
             color: #007BFF;
         }
+
         .section h1 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 1rem;
             color: #007BFF;
         }
-    .section p {
+
+        .section p {
             margin-bottom: 1.2rem;
-         
+
         }
 
         .video-container {
@@ -137,6 +145,7 @@ font-size: 2rem;
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -171,12 +180,11 @@ font-size: 2rem;
             margin-bottom: 0.5rem;
             color: #007BFF;
         }
-
-
     </style>
 </head>
+
 <body>
-    <?php include 'Navbar.php'?>
+    <?php include 'Navbar.php' ?>
     <header>
         <h1>Ready To Eat - ATMABISWAS</h1>
         <p>In partnership with PKSF, we connect fishermen with local entrepreneurs to ensure access to fresh pond and river fish while empowering communities and promoting sustainable livelihoods.</p>
@@ -189,12 +197,12 @@ font-size: 2rem;
         </section>
 
         <section class="section">
-            <h2>Watch Our Impact</h2>
+            <h2>A glimps of ATMABISWAS RMTP project</h2>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9tw0s0Xm7gE" allowfullscreen></iframe>
             </div>
         </section>
-        
+
         <style>
             .video-container {
                 position: relative;
@@ -202,6 +210,7 @@ font-size: 2rem;
                 height: 0;
                 overflow: hidden;
             }
+
             .video-container iframe {
                 position: absolute;
                 top: 0;
@@ -210,7 +219,7 @@ font-size: 2rem;
                 height: 100%;
             }
         </style>
-        
+
 
         <section class="section">
             <h2 class="center-text">Our Services</h2>
@@ -243,11 +252,11 @@ font-size: 2rem;
             <h2 class="center-text">Building Connections, Creating Opportunities</h2>
             <p>Our “Ready to Eat- PKSF Initiative” initiative bridges the gap between fishermen and budding entrepreneurs in the fish industry. We offer expert guidance, training, and open doors to new market opportunities, creating a sustainable ecosystem where both fishermen and entrepreneurs thrive. Through ATMABISWAS, we aim to empower communities with knowledge and the resources needed for success in the B2B landscape.</p>
         </section>
-        
+
 
         <section class="section">
             <h1>Our Journey: From Training to Market</h1>
-            
+
             <div class="card-grid">
                 <div class="card">
                     <img src="fish&redy/ABS_7.JPG" alt="Training">
@@ -277,13 +286,14 @@ font-size: 2rem;
                         <p>Finally, we help entrepreneurs create retail channels and connect with new markets to successfully sell their ready-to-eat fish products.</p>
                     </div>
                 </div>
-                </div>
             </div>
-        </section>
+    </div>
+    </section>
 
 
     </div>
 
-    <?php include 'footer.php'?>
+    <?php include 'footer.php' ?>
 </body>
+
 </html>

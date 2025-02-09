@@ -8,296 +8,309 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-/* Reset default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-    height: 0;
-    overflow: hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Ensure body takes full width without gaps */
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
 
-/* Remove unwanted margin from specific sections */
-.container, .services, .video-section {
-    margin: 0 auto;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-}
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-/* Ensure images and videos fit within their containers */
-img, iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+        /* Ensure body takes full width without gaps */
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
 
-/* Flexbox fix for unwanted spacing */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+        /* Remove unwanted margin from specific sections */
+        .container,
+        .services,
+        .video-section {
+            margin: 0 auto;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-/* Remove margin from headings or sections causing gaps */
-h1, h2, h3, p, section {
-    margin: 0;
-}
+        /* Ensure images and videos fit within their containers */
+        img,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-/* Fix header spacing issue */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
+        /* Flexbox fix for unwanted spacing */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
 
-/* Fix spacing around buttons, menus, and cards */
-.button, .menu, .card {
-    margin: 0 auto;
-}
+        /* Remove margin from headings or sections causing gaps */
+        h1,
+        h2,
+        h3,
+        p,
+        section {
+            margin: 0;
+        }
 
-/* Fix any extra spacing in sections */
-section {
-    padding: 20px 0;
-}
+        /* Fix header spacing issue */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
 
-    body {
+        /* Fix spacing around buttons, menus, and cards */
+        .button,
+        .menu,
+        .card {
+            margin: 0 auto;
+        }
 
-        background: #f5f7fa;
-        color: #333;
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
+        /* Fix any extra spacing in sections */
+        section {
+            padding: 20px 0;
+        }
 
-    /* Header Styling */
-    header {
-        text-align: center;
-        background: linear-gradient(90deg, #0a58ca, #176cc6);
-        color: white;
-        padding: 50px 20px;
-    }
+        body {
 
-    header h1 {
-        font-size: 2.8rem;
-        font-weight: 700;
-    }
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    header p {
-        margin: 10px 0;
-        font-size: 1.2rem;
-        opacity: 0.9;
-    }
+        /* Header Styling */
+        header {
+            text-align: center;
+            background: linear-gradient(90deg, #0a58ca, #176cc6);
+            color: white;
+            padding: 50px 20px;
+        }
 
-    /* Container */
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 50px auto;
-        padding: 20px;
-    }
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
 
-    /* Card Styling */
-    .card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        padding: 40px;
-        margin-bottom: 40px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        header p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
 
-    .card img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
+        /* Card Styling */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .card h2,
-    .card h3 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 15px;
-        color: #0a58ca;
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
 
-    /* Services Section */
-    .services {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: space-between;
-    }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
 
-    .service-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        flex: 1 1 calc(33.333% - 30px);
-        padding: 30px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .card h2,
+        .card h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #0a58ca;
+        }
 
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
+        /* Services Section */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
 
-    .service-card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
+        .service-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            flex: 1 1 calc(33.333% - 30px);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
 
 
-    .two-col {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        align-items: center;
-    }
+        .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
 
-    .two-col>div {
-        flex: 1 1 45%;
-    }
+        .two-col>div {
+            flex: 1 1 45%;
+        }
 
-    .two-col img {
-        width: 100%;
-        border-radius: 12px;
-    }
+        .two-col img {
+            width: 100%;
+            border-radius: 12px;
+        }
 
-    .video-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        margin-top: 40px;
-    }
+        .video-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
 
-    .video-card {
-        flex: 1 1 45%;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        padding: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .video-card {
+            flex: 1 1 45%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .video-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .video-card iframe {
-        width: 100%;
-        height: 500px;
-        border: none;
-        border-radius: 12px;
-    }
-
-    /* Gallery Section */
-    .gallery {
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 12px;
-        transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-        transform: scale(1.05);
-    }
-
-    /* Extra Info Paragraph */
-    .extra-info {
-        margin-top: 20px;
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
-        text-align: justify;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
 
         .video-card iframe {
             width: 100%;
-            height: 300px;
+            height: 500px;
             border: none;
             border-radius: 12px;
         }
 
-        .services,
-        .two-col,
-        .video-section {
-            flex-direction: column;
-        }
-
+        /* Gallery Section */
         .gallery {
 
-            grid-template-columns: repeat(1, 1fr);
-
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .two-col>div {
-            flex: 1 1 100%;
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
         }
 
-        header h1 {
-            font-size: 2.2rem;
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
-        header p {
+        /* Extra Info Paragraph */
+        .extra-info {
+            margin-top: 20px;
             font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
         }
-    }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+
+            .video-card iframe {
+                width: 100%;
+                height: 300px;
+                border: none;
+                border-radius: 12px;
+            }
+
+            .services,
+            .two-col,
+            .video-section {
+                flex-direction: column;
+            }
+
+            .gallery {
+
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+
+            .two-col>div {
+                flex: 1 1 100%;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <?php include 'Navbar.php'?>
+    <?php include 'Navbar.php' ?>
 
     <header data-aos="fade-down" data-aos-duration="1000">
         <h1>ATMABISWAS: Empowering Health & Nutrition</h1>
@@ -376,17 +389,17 @@ section {
 
         <!-- ATMABISWAS Hospital Section -->
         <div class="card" data-aos="fade-up" data-aos-duration="1000">
-            <h2>About ATMABISWAS Hospital</h2>
+            <h2>Contribution of ATMABISWAS Hospital</h2>
             <p>
                 ATMABISWAS Hospital is a beacon of hope—offering comprehensive healthcare services with modern
                 facilities, a dedicated team, and free medical care for rural areas.
             </p>
             <div class="video-section">
-    <div class="video-card video-responsive" data-aos="zoom-in" data-aos-duration="800">
-        <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L"
-            allowfullscreen></iframe>
-    </div>
-</div>
+                <div class="video-card video-responsive" data-aos="zoom-in" data-aos-duration="800">
+                    <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
 
             <!-- Extra Information Paragraph -->
             <p class="extra-info">
@@ -409,12 +422,12 @@ section {
             </div>
         </div>
     </div>
-    <?php include 'footer.php'?>
+    <?php include 'footer.php' ?>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
 </body>
 
