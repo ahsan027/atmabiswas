@@ -14,6 +14,7 @@
             <img src="Awarness/awarness_pic7.jpeg" alt="Slide 4">
         </div>
         <div class="item">
+
             <img src="Scholarship/pic1.jpeg" alt="Slide 5">
         </div>
     </div>
