@@ -13,6 +13,80 @@
         padding: 0;
         box-sizing: border-box;
     }
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ensure body takes full width without gaps */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove unwanted margin from specific sections */
+.container, .services, .video-section {
+    margin: 0 auto;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Ensure images and videos fit within their containers */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Flexbox fix for unwanted spacing */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove margin from headings or sections causing gaps */
+h1, h2, h3, p, section {
+    margin: 0;
+}
+
+/* Fix header spacing issue */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Fix spacing around buttons, menus, and cards */
+.button, .menu, .card {
+    margin: 0 auto;
+}
+
+/* Fix any extra spacing in sections */
+section {
+    padding: 20px 0;
+}
 
     body {
 
@@ -308,11 +382,12 @@
                 facilities, a dedicated team, and free medical care for rural areas.
             </p>
             <div class="video-section">
-                <div class="video-card" data-aos="zoom-in" data-aos-duration="800">
-                    <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
+    <div class="video-card video-responsive" data-aos="zoom-in" data-aos-duration="800">
+        <iframe src="https://www.youtube.com/embed/nxDIwvOqTVg?si=1dpKSHrijinmh8_L"
+            allowfullscreen></iframe>
+    </div>
+</div>
+
             <!-- Extra Information Paragraph -->
             <p class="extra-info">
                 Our hospital goes beyond treatments by engaging in community outreach, preventive care initiatives, and
