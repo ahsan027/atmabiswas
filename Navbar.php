@@ -44,9 +44,11 @@
             </div>
 
             <div class="dropdown-content">
-                <a target="_blank" href="founder.php">Founder</a>
-                <a target="_blank" href="SeniorManagement.php">Senior Management</a>
                 <a target="_blank" href="generalbody.php">Executive and General Body</a>
+                <a target="_blank" href="SeniorManagement.php">Senior Management</a>
+
+                <a target="_blank" href="founder.php">Founder</a>
+
             </div>
         </div>
         <a href="Events.php">Events</a>
