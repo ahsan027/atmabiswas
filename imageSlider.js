@@ -1,38 +1,46 @@
-let slider = document.querySelector(".slider .list");
+let list = document.querySelector(".slider .list");
 let items = document.querySelectorAll(".slider .list .item");
-let next = document.getElementById("next");
-let prev = document.getElementById("prev");
 let dots = document.querySelectorAll(".slider .dots li");
+let prev = document.getElementById("prev");
+let next = document.getElementById("next");
 
-let lengthItems = items.length - 1;
 let active = 0;
+let lengthitems = items.length - 1;
 
-function reloadSlider() {
-  slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+next.onclick = function () {
+  if (active + 1 > lengthitems) {
+    active = 0;
+  } else {
+    active = active + 1;
+  }
+  reloadslider();
+};
 
-  document.querySelector(".slider .dots li.active").classList.remove("active");
+prev.onclick = function () {
+  if (active - 1 < 0) {
+    active = lengthitems;
+  } else {
+    active = active - 1;
+  }
+  reloadslider();
+};
+
+let autoslide = setInterval(() => {
+  next.click();
+}, 3000);
+
+function reloadslider() {
+  let checkleft = items[active].offsetLeft;
+  list.style.left = -checkleft + "px";
+
+  let lastactiveDot = document.querySelector(".slider .dots li.active");
+  if (lastactiveDot) lastactiveDot.classList.remove("active");
   dots[active].classList.add("active");
-  clearInterval(refreshInterval);
-  refreshInterval = setInterval(() => next.click(), 3000);
 }
 
-next.onclick = () => {
-  active = active + 1 <= lengthItems ? active + 1 : 0;
-  reloadSlider();
-};
-
-prev.onclick = () => {
-  active = active - 1 >= 0 ? active - 1 : lengthItems;
-  reloadSlider();
-};
-
-let refreshInterval = setInterval(() => next.click(), 3000);
-
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    active = index;
-    reloadSlider();
+dots.forEach((li, key) => {
+  li.addEventListener("click", function () {
+    active = key;
+    reloadslider();
   });
 });
-
-window.onresize = reloadSlider;
