@@ -2,7 +2,7 @@
 <div class="slider">
     <div class="list">
         <div class="item">
-            <img src="toilet/toiletpic4.jpeg" alt="Slide 1">
+            <img src="toilet/toiletpic1.jpeg" alt="Slide 1">
         </div>
         <div class="item">
             <img src="FISH/fish_pic6.jpg" alt="Slide 2">
@@ -14,7 +14,7 @@
             <img src="Awarness/awarness_pic7.jpeg" alt="Slide 4">
         </div>
         <div class="item">
-            <img src="Scholarship/pic1.jpeg" alt="Slide 5">
+            <img src="fish/fish_pic4.jpg" alt="Slide 5">
         </div>
     </div>
     <div class="buttons">

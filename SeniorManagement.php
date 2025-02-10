@@ -168,7 +168,7 @@
     <section class="executive-section">
       <div class="mdsir">
         <div class="executive-card">
-          <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
+          <img src="photos/A.jpg" alt="Akramul Haque Biswas">
           <h2>Akramul Haque Biswas</h2>
           <p><strong>Executive Director, ATMABISWAS</strong></p>
           <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
@@ -179,8 +179,8 @@
 
       <div class="oth">
         <div class="executive-card">
-          <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
-          <h2>Akramul Haque Biswas</h2>
+          <img src="photos/c.jpg" alt="Akramul Haque Biswas">
+          <h2>Malaka Parvin </h2>
           <p><strong>Executive Director, ATMABISWAS</strong></p>
           <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
         </div>
@@ -215,7 +215,7 @@
     <br>
 
 
-    <h1>Accounts Officers</h1>
+    <!-- <h1>Accounts Officers</h1>
     <section class="profile-grid">
       <div class="profile"> <img src="photos/kumkum.png" alt="Mst.Nargis Parvin">
         <h2>Mst. Nargis Parvin</h2>
@@ -248,14 +248,14 @@
       <div class="profile"> <img src="photos/Sharmin.png" alt="Sharmin Aktar">
         <h2>Mst. Sharmin Aktar</h2>
         <p>Officer (MIS)</p>
-      </div>
+      </div> -->
 
-    </section>
+    <!-- </section>
     <br>
     <br>
 
-    <h1>Other Officers</h1>
-
+    <h1>Other Officers</h1> -->
+<!-- 
     <section class="profile-grid">
       <div class="profile"> <img src="photos/Firoze.png" alt="Md. Firoze Biswas">
         <h2>Md. Firoze Biswas</h2>
@@ -281,10 +281,10 @@
         <h2>Mst. Shahin Akter</h2>
         <p>Receptionist</p>
       </div>
-    </section>
+    </section> -->
 
 
-  </div>
+  <!-- </div> -->
   <?php include 'footer.php' ?>
 </body>
 
