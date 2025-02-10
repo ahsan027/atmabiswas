@@ -8,35 +8,35 @@
         </div>
     </div>
     <div class="card">
-        <img src="pic.png" alt="Card Image">
+        <img src="fish&redy/15.jpg" alt="Card Image">
         <div class="card-content">
             <h3>Card Title </h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
         </div>
     </div>
     <div class="card">
-        <img src="pic.png" alt="Card Image">
+        <img src="rmpt/rmpt_pic2.jpeg" alt="Card Image">
         <div class="card-content">
             <h3>Card Title </h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
         </div>
     </div>
     <div class="card">
-        <img src="pic.png" alt="Card Image">
+        <img src="Health/health_pic1.jpeg" alt="Card Image">
         <div class="card-content">
             <h3>Card Title </h3>
+            <p class="card-text">Free health checkup for all.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="fish/fish_pic1.jpeg" alt="Card Image">
+        <div class="card-content">
+            <h3>Health and Nutrition Faire</h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
         </div>
     </div>
     <div class="card">
-        <img src="pic.png" alt="Card Image">
-        <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="pic.png" alt="Card Image">
+        <img src="enterprise_development/enterprice_pic5.jpeg" alt="Card Image">
         <div class="card-content">
             <h3>Card Title </h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
