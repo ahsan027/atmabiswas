@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           obj.forEach((element, idx) => {
             const row = document.createElement("tr");
-            console.log(element.branchName);
+
             row.innerHTML = `<td data-label="Branch Name">${element.branchName}</td>
                 <td data-label="Branch Location">${element.branchLoc}</td>
                 <td data-label="Division">${element.division}</td>
@@ -71,4 +71,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const newcard = document.getElementById("newcard");
+  const newbody = document.getElementById("reg");
+
+  const newtablebody = document.getElementById("newtable");
+  newcard.addEventListener("click", () => {
+    newbody.classList.toggle("active");
+
+    axios.get("regional.json").then((elem) => {
+      const object = elem.data;
+      console.log(object);
+      object.forEach((element, idx) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `<td data-label="Branch Name">${element.region}</td>
+                  <td data-label="Branch Location">${element.address}</td>
+                  <td data-label="Division">${element.designation}</td>
+                  <td data-label="District">${element.mobile}</td>
+                  `;
+        newtablebody.appendChild(row);
+      });
+    });
+  });
 });
