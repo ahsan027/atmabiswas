@@ -248,14 +248,13 @@
       <div class="profile"> <img src="photos/Sharmin.png" alt="Sharmin Aktar">
         <h2>Mst. Sharmin Aktar</h2>
         <p>Officer (MIS)</p>
-      </div> -->
+      </div>
 
-    <!-- </section>
+    </section>
     <br>
     <br>
 
-    <h1>Other Officers</h1> -->
-<!-- 
+    <h1>Other Officers</h1>
     <section class="profile-grid">
       <div class="profile"> <img src="photos/Firoze.png" alt="Md. Firoze Biswas">
         <h2>Md. Firoze Biswas</h2>
@@ -284,7 +283,7 @@
     </section> -->
 
 
-  <!-- </div> -->
+  </div>
   <?php include 'footer.php' ?>
 </body>
 

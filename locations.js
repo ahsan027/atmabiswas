@@ -74,22 +74,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const newcard = document.getElementById("newcard");
   const newbody = document.getElementById("reg");
-
   const newtablebody = document.getElementById("newtable");
+
   newcard.addEventListener("click", () => {
     newbody.classList.toggle("active");
+
+    // Check if the toggle is NOT active, then remove all child elements
+    if (!newbody.classList.contains("active")) {
+      newtablebody.innerHTML = "";
+      return;
+    }
 
     axios.get("regional.json").then((elem) => {
       const object = elem.data;
       console.log(object);
+
       object.forEach((element, idx) => {
         const row = document.createElement("tr");
 
         row.innerHTML = `<td data-label="Branch Name">${element.region}</td>
-                  <td data-label="Branch Location">${element.address}</td>
-                  <td data-label="Division">${element.designation}</td>
-                  <td data-label="District">${element.mobile}</td>
-                  `;
+                <td data-label="Branch Location">${element.address}</td>
+                <td data-label="Division">${element.designation}</td>
+                <td data-label="District">${element.mobile}</td>
+                `;
         newtablebody.appendChild(row);
       });
     });

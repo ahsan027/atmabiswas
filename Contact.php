@@ -19,17 +19,17 @@ $conn = $db->connect();
 
 
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        background-color: #e6f2ff;
-        overflow-x: hidden;
-        height: auto;
-    }
+        body {
+            background-color: #e6f2ff;
+            overflow-x: hidden;
+            height: auto;
+        }
     </style>
 
 
@@ -96,15 +96,15 @@ $conn = $db->connect();
             <select name="division" id="divisionSelect">
                 <option value="">Select Division</option>
                 <?php
-            
-            $stmt = $pdo->prepare("SELECT DISTINCT division FROM branch");
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            // var_dump($result);
-            foreach($result as $r){
-                echo "<option value="."$r[division]".">".$r['division']."</option>";
-            }
-            ?>
+
+                $stmt = $pdo->prepare("SELECT DISTINCT division FROM branch");
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                // var_dump($result);
+                foreach ($result as $r) {
+                    echo "<option value=" . "$r[division]" . ">" . $r['division'] . "</option>";
+                }
+                ?>
 
             </select>
 
@@ -138,7 +138,7 @@ $conn = $db->connect();
 
 
 
-    <?php include 'footer.php'?>
+    <?php include 'footer.php' ?>
     <script src="locations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
