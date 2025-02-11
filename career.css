@@ -300,11 +300,15 @@ body {
 
     .hero .overlay {
         flex-direction: column;
+        top: 20%;
     }
 
     .hero .overlay .leftside {
         flex-direction: row;
         align-items: center;
+    }
+    select{
+        margin-bottom: 7px;
     }
 
     .hero .overlay .rightSide {
