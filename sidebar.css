@@ -9,14 +9,14 @@
     display: flex;
     flex-direction: column;
     background-color: #0073e6;
-  
+
     backdrop-filter: blur(5px);
-    width: 50vw;
+    width: 56vw;
     height: 100%;
     /* Ensure the sidenav takes up the full viewport height */
     position: fixed;
     top: 0;
-    left:-60vw;
+    left: -60vw;
     justify-content: start;
     align-items: flex-start;
 
@@ -29,7 +29,7 @@
 
 .sidenav.active {
 
-    left:0;
+    left: 0;
     backdrop-filter: blur(5px);
 }
 
@@ -57,9 +57,11 @@
 .sidenav .sidelogo img {
     margin-left: 1rem;
 }
-.sidenav .loginbtn{
+
+.sidenav .loginbtn {
     margin-bottom: 3rem;
 }
+
 .sidenav a {
 
     font-family: 'Montserrat', Arial, sans-serif;
@@ -77,15 +79,16 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 
     border-bottom: 1px solid #ffffff;
-        
+
     padding-bottom: 0.5rem;
-    
+
     margin-bottom: 0.5rem;
-    
+
 }
 
-.sidenav .sidedrop .sidedropContent a{
-    border-bottom: none;
+.sidenav .sidedrop .sidedropContent a {
+    width: 12rem;
+    /* background-color: #ffffff; */
     background-color: rgba(7, 85, 255, 0.5);
     border: 1px solid white;
 
@@ -115,6 +118,8 @@
     display: flex;
     max-height: 500px;
     opacity: 1;
+
+    width: auto;
 }
 
 .sidenav .mainsidedrop {
@@ -139,8 +144,8 @@ body.blur {
 }
 
 @media (min-width:768px) {
-    .sidenav{
+    .sidenav {
         display: none;
     }
-    
+
 }

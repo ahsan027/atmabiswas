@@ -65,36 +65,37 @@
 
         <i id="close-btn" class="fa-solid fa-x"></i>
     </div>
-    <a href="">Who we are</a>
+    <a href="/">Who we are</a>
+    <div class="sidedrop">
+        <div class="mainsidedrop">
+            <a href="#">Our Team <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+        </div>
+        <div class="sidedropContent">
+
+            <a href="generalbody.php">Executive & General Body</a>
+            <a href="SeniorManagement.php">Senior Management</a>
+            <a href="founder.php">Founder</a>
+
+        </div>
+
+
+    </div>
     <div class="sidedrop">
         <div class="mainsidedrop">
             <a href="#">What we do <i id="arrow" class="fa-solid fa-caret-down"></i></a>
         </div>
         <div class="sidedropContent">
-            <a href="">Green Energy</a>
-            <a href="">Enterprise Developement</a>
-            <a href="">Food and Agriculture</a>
-            <a href="">Ready To Eat</a>
+            <a href="Green_Energy.php">Green Energy</a>
+            <a href="enterprice.php">Enterprise Developement</a>
+            <a href="Agritural.php">Food & Agriculture</a>
+            <a href="readytoeat.php">Ready To Eat</a>
+            <a href="health.php">Health & Nutrition</a>
         </div>
 
     </div>
-    <div class="sidedrop">
-        <div class="mainsidedrop">
-            <a href="#">Our Projects <i id="arrow" class="fa-solid fa-caret-down"></i></a>
-        </div>
-        <div class="sidedropContent">
 
-            <a href="">Green Energy</a>
-            <a href="">Enterprise Developement</a>
-            <a href="">Food and Agriculture</a>
-            <a href="">Ready To Eat</a>
-
-        </div>
-
-
-    </div>
-    <a href="">Event</a>
-    <a href="">Contact & Locations</a>
+    <a href="Events.php">Events</a>
+    <a href="Contact.php">Contact & Locations</a>
     <a class="loginbtn" href="">Login</a>
 
 
