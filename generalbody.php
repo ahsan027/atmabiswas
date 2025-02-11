@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Committee - ATMABISWAS </title>
+    <title>Management - ATMABISWAS </title>
     <style>
         * {
             margin: 0;
@@ -13,35 +13,139 @@
         }
 
         body {
-            background-color: #eef5ff;
-            color: #333;
+
+            background-color: #f4f9ff;
             overflow-x: hidden;
+
+        }
+
+        .container {
+            max-width: 100vw;
+            margin: 40px auto;
+            padding: 20px;
         }
 
         header {
             text-align: center;
             background: linear-gradient(90deg, #0a58ca, #176cc6);
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
+
         }
 
         header h1 {
+            margin: 0;
             font-size: 1.8rem;
             font-weight: 700;
+            color: white;
         }
 
         header p {
+            margin: 10px 0;
             font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        .container {
-            width: 100%;
+        h1 {
+            color: #005B96;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Unique Styling for Top Management */
+        .executive-section {
             display: flex;
             flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 30px;
-            padding: 40px 20px;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .oth {
+            display: flex;
+            gap: 20px;
+        }
+
+        .executive-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .executive-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #005B96;
+            object-fit: cover;
+        }
+
+        .executive-card h2 {
+            font-size: 1.5em;
+            color: #005B96;
+            margin: 15px 0 5px;
+        }
+
+        .executive-card p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Standard Grid for Other Staff */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .profile {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile img {
+            width: 140px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid #005B96;
+        }
+
+        .profile h2 {
+            font-size: 1.2em;
+            color: #005B96;
+            margin: 10px 0 5px;
+        }
+
+        .profile p {
+            font-size: 1em;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .othermembers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
         }
 
         .card {
@@ -115,36 +219,17 @@
             line-height: 1.6;
         }
 
-        .mainchar {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            gap: 1rem;
-        }
-
-        .othermembers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            width: 100%;
-        }
-
         @media (max-width: 768px) {
-            header {
-                padding: 30px 15px;
+            .executive-card {
+                width: 100%;
             }
 
-            header h1 {
-                font-size: 1.5rem;
+            .profile-grid {
+                grid-template-columns: repeat(1, minmax(200px, 1fr));
             }
 
-            header p {
-                font-size: 1rem;
-            }
-
-            .container {
-                padding: 20px;
+            .oth {
+                flex-direction: column;
             }
 
             .card {
@@ -171,37 +256,37 @@
     </header>
 
     <div class="container">
-        <div class="mainchar">
-            <div class="cardhead1">
-                <img src="photos/Salma_Asif.png" alt="Mises Salma Asif">
-                <div class="card-body1">
+        <section class="executive-section">
+            <div class="mdsir">
+                <div class="executive-card">
+                    <img src="photos/Salma_Asif.png" alt="Mises Salma Asif">
                     <h2>Miss Salma Asif</h2>
-                    <h3>President</h3>
+                    <p><strong>President</strong></p>
                     <p>A visionary leader since 1991, guiding ATMABISWAS with commitment to social empowerment.</p>
                 </div>
+
             </div>
 
-            <div class="cardhead2">
-                <div class="card-body2">
+
+            <div class="oth">
+                <div class="executive-card">
+                    <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
                     <h2>Mst. Afroza Begum</h2>
-                    <h3>Vice President</h3>
+                    <p><strong>Vice President</strong></p>
                     <p>Bringing extensive experience in social work to support strategic growth since 1991.</p>
                 </div>
-                <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
+
+                <div class="executive-card">
+                    <img src="photos/Ed_sir.jpg" alt="Md. Akramul Haque Biswas">
+                    <h2>Md. Akramul Haque Biswas</h2>
+                    <p><strong>Secretary / Executive Director</strong></p>
+                    <p>Ensuring effective project implementation and leadership at ATMABISWAS.</p>
+                </div>
 
             </div>
 
-        </div>
 
-
-        <div class="card">
-            <img src="photos/Ed_sir.jpg" alt="Md. Akramul Haque Biswas">
-            <div class="card-body">
-                <h2>Md. Akramul Haque Biswas</h2>
-                <h3>Secretary / Executive Director</h3>
-                <p>Ensuring effective project implementation and leadership at ATMABISWAS.</p>
-            </div>
-        </div>
+        </section>
 
         <div class="othermembers">
             <div class="card">
@@ -240,7 +325,10 @@
                 </div>
             </div>
 
+
         </div>
+
+
 
 
     </div>

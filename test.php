@@ -48,20 +48,20 @@
 <style>
     .card-container {
         display: grid;
-        grid-template-columns: repeat(3, minmax(400px, 1fr));
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
         gap: 20px;
         justify-content: center;
         align-items: center;
         place-items: center;
-        max-width: 1200px;
+        width: 100%;
         margin: auto;
         padding: 20px;
     }
 
     .card {
         position: relative;
-        width: 100%;
-        max-width: 500px;
+        width: 80%;
+
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,7 +76,7 @@
 
     .card img {
         width: 100%;
-        height: auto;
+        height: 10rem;
         border-radius: 10px;
     }
 
