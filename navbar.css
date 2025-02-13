@@ -231,7 +231,7 @@ background-color: #1c8eff;
 .navLogo::after{
     content: "";
     display: block;
-    width: 50rem;
+    width: 18rem;
     height: 3px;
     background-color: white;
     position: absolute;

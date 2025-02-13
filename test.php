@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="card">
-        <img src="fish&redy/15.jpg" alt="Card Image">
+        <img src="fishredy/15.jpg" alt="Card Image">
         <div class="card-content">
             <h3>Card Title </h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
