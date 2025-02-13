@@ -14,7 +14,7 @@
             <img src="Awarness/awarness_pic7.jpeg" alt="Slide 4">
         </div>
         <div class="item">
-            <img src="fish/fish_pic4.jpg" alt="Slide 5">
+            <img src="FISH/fish_pic4.jpg" alt="Slide 5">
         </div>
     </div>
     <div class="buttons">

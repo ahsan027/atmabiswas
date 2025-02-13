@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="card">
-        <img src="fish/fish_pic1.jpeg" alt="Card Image">
+        <img src="FISH/fish_pic1.jpeg" alt="Card Image">
         <div class="card-content">
             <h3>Health and Nutrition Faire</h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
