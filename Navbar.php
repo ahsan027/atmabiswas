@@ -8,7 +8,7 @@
 <div class="navbar">
     <div class="top-row">
 
-        <div class="logo"><a href="/dashboard/atmabiswas/"><img src="logoBg.png" alt=""></a></div>
+        <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="bottom-row">
-        <a href="/">Who we are</a>
+        <a href="/index.php">Who we are</a>
 
         <div class="dropdown">
             <div class="maindrop">
@@ -65,10 +65,12 @@
 <!-- SideNavbar custome design by AHSAN-->
 <div class="sidenav">
     <div class="sidelogo">
-
+        <div class="navLogo">
+            <a href="/index.php"><img src="LOGO/NGO_logo_monogram.png" alt=""></a>
+        </div>
         <i id="close-btn" class="fa-solid fa-x"></i>
     </div>
-    <a href="/">Who we are</a>
+    <a href="/index.php">Who we are</a>
     <div class="sidedrop">
         <div class="mainsidedrop">
             <a href="#">Our Team <i id="arrow" class="fa-solid fa-caret-down"></i></a>

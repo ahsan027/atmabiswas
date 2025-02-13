@@ -1,5 +1,7 @@
 <?php
-
+// day care
+// Women's Empowerment
+// 
 
 ?>
 <!DOCTYPE html>
@@ -91,7 +93,7 @@
   <div class="container">
     <!-- Scholarship Segment -->
     <div class="segment">
-      <h2>Scholarship Events</h2>
+      <h2>ATMABISWAS Pathshala</h2>
       <div class="card-grid">
         <div class="card">
           <img src="Scholarship/pic1.jpeg" alt="Scholarship Event">
