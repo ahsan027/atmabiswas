@@ -71,8 +71,8 @@
         }
 
         .press-card img {
-            width: 100%;
-            height: 200px;
+            width: 75%;
+            height: 300px;
             object-fit: cover;
             border-radius: 5px;
         }
@@ -124,14 +124,15 @@
     </header>
 
     <div class="year-filter">
-        <button class="year-btn active" data-year="2024">2024</button>
+        <button class="year-btn active" data-year="2025">2025</button>
+        <button class="year-btn" data-year="2024">2024</button>
         <button class="year-btn" data-year="2023">2023</button>
         <button class="year-btn" data-year="2022">2022</button>
     </div>
 
     <div class="press-container">
-        <!-- 2024 Section -->
-        <div class="year-section active" id="2024">
+        <!-- 2025 Section -->
+        <div class="year-section active" id="2025">
             <div class="press-card">
                 <img src="scholarship-news.jpg" alt="Scholarship News">
                 <div class="press-content">
@@ -143,23 +144,78 @@
                     </a>
                 </div>
             </div>
+            
+            <div class="press-card">
+    <div class="press-content">
+        <h3 class="press-title">পুষ্টি সচেতনতা ও শিখন মেলা ২০২৫</h3>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/Sx5rm6aEoAs?si=djN9Nvnf6TZsbRR_" 
+            title="পুষ্টি সচেতনতা ও শিখন মেলা ২০২৫ - YouTube Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p class="press-date">January 29, 2025</p>
+        <p>YouTube coverage by SS PLUS TV</p>
+    </div>
+</div>
 
             <div class="press-card">
                 <div class="press-content">
-                    <h3 class="press-title">Women Rights Campaign</h3>
-                    <p class="press-date">March 8, 2024</p>
-                    <p>TV coverage by National News Channel...</p>
-                    <a href="https://example.com/news-video" class="download-btn tv-news">
-                        <i class="fas fa-tv"></i> Watch News
+                    <h3 class="press-title">পুকুরে গলদা চিংড়ি চাষে সফলতা | Shrimp | Fish Farming</h3>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/jBkJgWpjLW0?si=rwe1bItZ8ieq6nsW" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <p class="press-date">Jan 8, 2025</p>
+                    <p>TV coverage by News24 | Special</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2024 Section -->
+        <div class="year-section" id="2024">
+            <div class="press-card">
+                <img src="winter/winter_pic2.png" alt="Scholarship News">
+                <div class="press-content">
+                    <h3 class="press-title">Scholarship Distribution Event</h3>
+                    <p class="press-date">January 15, 2024</p>
+                    <p>Covered by The Daily News about our scholarship program...</p>
+                    <a href="pdf/Akash-Khabar-15.12.24.pdf" class="download-btn">
+                        <i class="fas fa-file-pdf"></i> Download PDF
                     </a>
                 </div>
             </div>
-            <!-- Add more 2024 entries -->
+
+            <div class="press-card">
+                <div class="press-content">
+                    <h3 class="press-title">SA তেলাপিয়া চাষে সফল || চুয়াডাঙ্গা জেলায় মনোসেক্স তেলাপিয়া চাষে সফলতা || Shakib AGRO</h3>
+                    <iframe width="100%" height="300" 
+                        src="https://www.youtube.com/embed/RCKAb8VBJuY" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <p class="press-date">Oct 11, 2024</p>
+                    <p>YouTube coverage by Shakib Agrotech Ltd</p>
+                </div>
+                
+            </div>
         </div>
 
         <!-- 2023 Section -->
         <div class="year-section" id="2023">
-            <!-- Similar structure for 2023 entries -->
+        <div class="press-card">
+                <img src="winter/winter_pic1.jpeg" alt="Scholarship News">
+                <div class="press-content">
+                    <h3 class="press-title">Shitbostro Bitoron</h3>
+                    <p class="press-date">January 08, 2023</p>
+                    <p>Shitbostrobitaron: A Collection of Newspaper Coverage</p>
+                    <a href="pdf/Winter Proggram-08.01.23.pdf" class="download-btn">
+                        <i class="fas fa-file-pdf"></i> Read PDF
+                    </a>
+                </div>
+            </div>
+
         </div>
 
         <!-- 2022 Section -->
