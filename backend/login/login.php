@@ -40,8 +40,8 @@
                         <button type="submit">Login</button>
                     </div>
                     <div class="form-group">
-                        <a href="signup.php">Sign Up</a>
-                        <a href="index.php">| Home</a>
+
+                        <a href="../../frontend/index.php">Home Page</a>
                     </div>
                 </form>
             </div>
