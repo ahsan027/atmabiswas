@@ -31,10 +31,11 @@
             </div>
 
             <div class="dropdown-content">
-                <a target="_blank" href="generalbody.php">Executive and General Body</a>
-                <a target="_blank" href="SeniorManagement.php">Senior Management</a>
+                <a href="eve.php">Executive</a>
+                <a href="generalbody.php">General Body</a>
+                <a href="SeniorManagement.php">Senior Management</a>
 
-                <a target="_blank" href="founder.php">Founder</a>
+                <a href="founder.php">Founder</a>
 
             </div>
         </div>
