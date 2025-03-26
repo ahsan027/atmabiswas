@@ -8,18 +8,9 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9fafb;
-<<<<<<< HEAD
 }
 
 /* Navbar */
-=======
-    width: 100vw;
-    height: 100vh;
-    overflow-x:hidden;
-}
-
-
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -54,11 +45,7 @@ body {
     color: #facc15;
 }
 
-<<<<<<< HEAD
 /* Hero Section */
-=======
-
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 .hero {
     position: relative;
     width: 100%;
@@ -80,11 +67,7 @@ body {
 
 .hero .overlay {
     position: absolute;
-<<<<<<< HEAD
     top: 20%;
-=======
-    top: 40%;
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     left: 10%;
 
     width: 80%;
@@ -191,32 +174,15 @@ body {
 
 
 
-<<<<<<< HEAD
-
-=======
-.main{
-    width: 100%;
-    height: 100%;
-
-}
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 /* Sector Section */
 .Sector {
     padding: 40px 20px;
     text-align: center;
-<<<<<<< HEAD
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin: 20px auto;
     max-width: 1200px;
-=======
-    background-color: #faf9f6;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    margin: 20px auto;
-    width: 100%;
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 }
 
 .Sector h2 {
@@ -260,11 +226,7 @@ body {
 .available-jobs {
     padding: 40px 20px;
     text-align: center;
-<<<<<<< HEAD
     max-width: 1200px;
-=======
-    width: 100%;
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     margin: auto;
 }
 
@@ -330,22 +292,12 @@ body {
 
     .hero .overlay {
         flex-direction: column;
-<<<<<<< HEAD
-=======
-        top: 20%;
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     }
 
     .hero .overlay .leftside {
         flex-direction: row;
         align-items: center;
     }
-<<<<<<< HEAD
-=======
-    select{
-        margin-bottom: 7px;
-    }
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
     .hero .overlay .rightSide {
 

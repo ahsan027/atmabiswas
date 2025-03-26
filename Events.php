@@ -1,118 +1,88 @@
-<<<<<<< HEAD
-<?php 
-=======
-<?php
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-=======
 
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Page - ATMABISWAS </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-<<<<<<< HEAD
-        *{
-=======
-        * {
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-<<<<<<< HEAD
-        body {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
         background-color: #e6f2ff;
-        overflow-x:hidden ; 
-=======
-
-        body {
-            background-color: #e6f2ff;
-            overflow-x: hidden;
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
-        }
+        overflow-x: hidden;
+    }
 
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .segment {
-            margin-bottom: 40px;
-        }
+    .segment {
+        margin-bottom: 40px;
+    }
 
-        .segment h2 {
-            color: #0078d7;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
+    .segment h2 {
+        color: #0078d7;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+    }
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
 
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
 
-        .card-content {
-            text-align: center;
-            padding: 15px;
-        }
+    .card-content {
+        text-align: center;
+        padding: 15px;
+    }
 
-        .card-content h3 {
+    .card-content h3 {
 
-            margin: 0 0 10px;
-            font-size: 1.2rem;
-            color: #333;
-        }
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        color: #333;
+    }
 
-        .card-content p {
-            margin: 0;
-            color: #555;
-            font-size: 0.9rem;
-        }
-<<<<<<< HEAD
-
-
-    </style>
-</head>
-<body>
-<?php include 'Navbar.php'?>
-=======
+    .card-content p {
+        margin: 0;
+        color: #555;
+        font-size: 0.9rem;
+    }
     </style>
 </head>
 
 <body>
-    <?php include 'Navbar.php' ?>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
+    <?php include 'Navbar.php'?>
 
     <div class="container">
         <!-- Scholarship Segment -->
@@ -146,11 +116,7 @@
                         <h3>Scholarship </h3>
                         <p>Providing opportunities for bright minds.</p>
                     </div>
-<<<<<<< HEAD
-                </div>                                
-=======
                 </div>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                 <!-- <div class="card">
                     <img src="https://www.aisct.org/wp-content/uploads/2023/06/1418_0I9A0942_1920px.jpg" alt="Scholarship Event">
                     <div class="card-content">
@@ -161,11 +127,7 @@
             </div>
         </div>
 
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <!-- Women Rights Segment -->
         <div class="segment">
             <h2>Women Rights Events </h2>
@@ -206,11 +168,7 @@
                     </div>
                 </div> -->
 
-<<<<<<< HEAD
-            <!-- <div class="card">
-=======
                 <!-- <div class="card">
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <img src="https://images.theconversation.com/files/209024/original/file-20180306-146671-haxeo6.jpg" alt="Women Rights Event">
                     <div class="card-content">
                         <h3>Rights Awareness</h3>
@@ -222,11 +180,7 @@
 
 
 
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <!-- Employee Conference Segment -->
         <div class="segment">
             <h2>Employee Conference </h2>
@@ -235,7 +189,8 @@
                     <img src="meeting/meeting_pic2.jpeg" alt="Conference Event">
                     <div class="card-content">
                         <h3>Best Employee Award</h3>
-                        <p>We are proud to present the Best Employee Award, recognizing outstanding performance and dedication to excellence.</p>
+                        <p>We are proud to present the Best Employee Award, recognizing outstanding performance and
+                            dedication to excellence.</p>
                     </div>
                 </div>
 
@@ -243,7 +198,8 @@
                     <img src="exam_hall/exam_hall_pic1.jpeg" alt="Conference Event">
                     <div class="card-content">
                         <h3>Bi-Monthly Meetings with Managers for Guidance and Improvement</h3>
-                        <p>We hold bi-monthly meetings with one or two managers to provide guidance on how we can support their branches and discuss strategies for improving their areas.</p>
+                        <p>We hold bi-monthly meetings with one or two managers to provide guidance on how we can
+                            support their branches and discuss strategies for improving their areas.</p>
                     </div>
                 </div>
 
@@ -251,19 +207,15 @@
                     <img src="meeting/meeting_pic1.jpeg" alt="Conference Event">
                     <div class="card-content">
                         <h3>Annual Conference with Managers at Head Office</h3>
-                        <p>Our team conducts an annual conference at the head office, where we meet with each manager to gather feedback on the past year’s progress.</p>
+                        <p>Our team conducts an annual conference at the head office, where we meet with each manager to
+                            gather feedback on the past year’s progress.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-<<<<<<< HEAD
-       <!-- Winterfest Segment -->
-       <div class="segment">
-=======
         <!-- Winterfest Segment -->
         <div class="segment">
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
             <h2>Winter Fest Events </h2>
             <div class="card-grid">
                 <div class="card">
@@ -337,11 +289,7 @@
                         <h3>Fire Safety Awareness for Students</h3>
                         <p>Know the steps to stay safe when fire strikes, stay calm, exit quickly and call for help.</p>
                     </div>
-<<<<<<< HEAD
-                </div>                              
-=======
                 </div>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                 <div class="card">
                     <img src="awarness/awarness_pic4.jpeg" alt="Awareness Event">
                     <div class="card-content">
@@ -366,7 +314,8 @@
                     <img src="rmpt/rmpt_pic1.jpeg" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Village BD Rural WASH Camp for HCD Project</h3>
-                        <p>We are conducting a rural WASH (Water, Sanitation, and Hygiene) camp in a village in Bangladesh as part of the HCD project.</p>
+                        <p>We are conducting a rural WASH (Water, Sanitation, and Hygiene) camp in a village in
+                            Bangladesh as part of the HCD project.</p>
                     </div>
                 </div>
 
@@ -374,30 +323,25 @@
                     <img src="rmpt/rmpt_pic2.jpeg" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Free Fertilizer Distribution for Farmers</h3>
-                        <p>We are providing free fertilizer to farmers to support agricultural growth and sustainability.</p>
+                        <p>We are providing free fertilizer to farmers to support agricultural growth and
+                            sustainability.</p>
                     </div>
                 </div>
                 <div class="card">
-<<<<<<< HEAD
                     <img src="Fish/fish_pic2.jpeg" alt="Winterfest Event">
-=======
-                    <img src="FISH/fish_pic2.jpeg" alt="Winterfest Event">
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Field Day Celebration to Support Farmers</h3>
-                        <p>We celebrated Field Day to educate farmers about sustainable fish farming, crop management, and agricultural best practices.</p>
+                        <p>We celebrated Field Day to educate farmers about sustainable fish farming, crop management,
+                            and agricultural best practices.</p>
                     </div>
                 </div>
 
                 <div class="card">
-<<<<<<< HEAD
                     <img src="Fish/fish_pic1.jpeg" alt="Winterfest Event">
-=======
-                    <img src="FISH/fish_pic1.jpeg" alt="Winterfest Event">
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Celebrating Nutrition Day with Village Communities</h3>
-                        <p>We are celebrating Nutrition Day with the village community, promoting healthy eating and well being for all.</p>
+                        <p>We are celebrating Nutrition Day with the village community, promoting healthy eating and
+                            well being for all.</p>
                     </div>
                 </div>
 
@@ -405,23 +349,15 @@
                     <img src="Health/health_pic1.jpeg" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Free Health Camp for Village Communities</h3>
-                        <p>We are organizing a free health camp for village residents, providing essential medical care and health services.</p>
+                        <p>We are organizing a free health camp for village residents, providing essential medical care
+                            and health services.</p>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>        
-    </div>
-
-<?php include 'footer.php'?>
-</body>
-</html>
-=======
         </div>
     </div>
 
-    <?php include 'footer.php' ?>
+    <?php include 'footer.php'?>
 </body>
 
 </html>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513

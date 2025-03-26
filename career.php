@@ -128,7 +128,6 @@
     </main>
 
     <script>
-<<<<<<< HEAD
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slider img');
     const indicators = document.querySelectorAll('.slider-indicators button');
@@ -154,33 +153,6 @@
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }, 5000);
-=======
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider img');
-        const indicators = document.querySelectorAll('.slider-indicators button');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === index);
-            });
-        }
-
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
-        });
-
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }, 10000);
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     </script>
 </body>
 
