@@ -53,8 +53,8 @@
         </div>
 
         <a href="Events.php">Events</a>
+        <a href="social.php">Social</a>
         <a href="Contact.php">Contact</a>
-        <a href="#" id="login-btn">Login</a>
     </div>
 
 </div>
