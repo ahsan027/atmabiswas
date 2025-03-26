@@ -41,6 +41,11 @@
     color: #ffffff;
 }
 
+.navbar .top-row .bars a.active {
+    background-color: #1c8eff;
+    color: white;
+}
+
 .navbar .top-row .logo a img {
     height: 50px;
     width: 250px;
@@ -70,6 +75,11 @@
 }
 
 .navbar .bottom-row a.active {
+    background-color: #1c8eff;
+    color: white;
+}
+
+.navbar .top-row a.active {
     background-color: #1c8eff;
     color: white;
 }
