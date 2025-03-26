@@ -102,14 +102,7 @@
 
 </div>
 <!-- END sideNavBar-->
-<div class="popup" id="login-popup">
-    <div class="close-btn" id="close-popup">&times;</div>
-    <form>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-</div>
+
 <script src="prac.js"></script>
 
 <script src="navbar.js"></script>
