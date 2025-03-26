@@ -8,11 +8,7 @@
 <div class="navbar">
     <div class="top-row">
 
-<<<<<<< HEAD
         <div class="logo"><a href="/dashboard/atmabiswas/"><img src="logoBg.png" alt=""></a></div>
-=======
-        <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <div class="bars">
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
@@ -27,11 +23,7 @@
         </div>
     </div>
     <div class="bottom-row">
-<<<<<<< HEAD
         <a href="/">Who we are</a>
-=======
-        <a href="/index.php">Who we are</a>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
         <div class="dropdown">
             <div class="maindrop">
@@ -57,12 +49,6 @@
                 <a target="_blank" href="Agritural.php">Food & Agriculture</a>
                 <a target="_blank" href="readytoeat.php">Ready To Eat</a>
                 <a target="_blank" href="health.php">Health & Nutrition</a>
-<<<<<<< HEAD
-=======
-
-                <a target="_blank" href="social.php">Social Development
-                </a>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
             </div>
         </div>
 
@@ -76,19 +62,10 @@
 <!-- SideNavbar custome design by AHSAN-->
 <div class="sidenav">
     <div class="sidelogo">
-<<<<<<< HEAD
 
         <i id="close-btn" class="fa-solid fa-x"></i>
     </div>
     <a href="/">Who we are</a>
-=======
-        <div class="navLogo">
-            <a href="/index.php"><img src="LOGO/NGO_logo_monogram.png" alt=""></a>
-        </div>
-        <i id="close-btn" class="fa-solid fa-x"></i>
-    </div>
-    <a href="/index.php">Who we are</a>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     <div class="sidedrop">
         <div class="mainsidedrop">
             <a href="#">Our Team <i id="arrow" class="fa-solid fa-caret-down"></i></a>
@@ -113,10 +90,6 @@
             <a href="Agritural.php">Food & Agriculture</a>
             <a href="readytoeat.php">Ready To Eat</a>
             <a href="health.php">Health & Nutrition</a>
-<<<<<<< HEAD
-=======
-            <a href="social.php">Social Developement</a>
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         </div>
 
     </div>
