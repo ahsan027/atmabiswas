@@ -124,7 +124,7 @@
 
     .othermembers {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
         gap: 20px;
         justify-content: center;
         width: 100%;
@@ -166,43 +166,11 @@
 <body>
     <?php include 'Navbar.php' ?>
     <header>
-        <h1>Executive Committee of ATMABISWAS NGO</h1>
+        <h1>General Body of ATMABISWAS NGO</h1>
         <p>Empowering communities and driving sustainable development </p>
     </header>
 
     <div class="container">
-        <div class="mainchar">
-            <div class="cardhead1">
-                <img src="photos/Salma_Asif.png" alt="Mises Salma Asif">
-                <div class="card-body1">
-                    <h2>Miss Salma Asif</h2>
-                    <h3>President</h3>
-                    <p>A visionary leader since 1991, guiding ATMABISWAS with commitment to social empowerment.</p>
-                </div>
-            </div>
-
-            <div class="cardhead2">
-                <div class="card-body2">
-                    <h2>Mst. Afroza Begum</h2>
-                    <h3>Vice President</h3>
-                    <p>Bringing extensive experience in social work to support strategic growth since 1991.</p>
-                </div>
-                <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
-
-            </div>
-
-        </div>
-
-
-        <div class="card">
-            <img src="photos/Ed_sir.jpg" alt="Md. Akramul Haque Biswas">
-            <div class="card-body">
-                <h2>Md. Akramul Haque Biswas</h2>
-                <h3>Secretary / Executive Director</h3>
-                <p>Ensuring effective project implementation and leadership at ATMABISWAS.</p>
-            </div>
-        </div>
-
         <div class="othermembers">
             <div class="card">
                 <img src="photos/ranabiswas.png" alt="Md. Iktiar Uddin">
@@ -237,6 +205,31 @@
                     <h2>Md. Nazrul Islam</h2>
                     <h3>Executive Member</h3>
                     <p>Strengthe.ning social advocacy and expanding ATMABISWAS’s reach.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photos/ranabiswas.png" alt="Md. Iktiar Uddin">
+                <div class="card-body">
+                    <h2>Md. Iktiar Uddin</h2>
+                    <h3>Treasurer</h3>
+                    <p>Overseeing financial management with transparency and accountability.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photos/ranabiswas.png" alt="Md. Iktiar Uddin">
+                <div class="card-body">
+                    <h2>Md. Iktiar Uddin</h2>
+                    <h3>Treasurer</h3>
+                    <p>Overseeing financial management with transparency and accountability.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photos/ranabiswas.png" alt="Md. Iktiar Uddin">
+                <div class="card-body">
+                    <h2>Md. Iktiar Uddin</h2>
+                    <h3>Treasurer</h3>
+                    <p>Overseeing financial management with transparency and accountability.</p>
                 </div>
             </div>
 
