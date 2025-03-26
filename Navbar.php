@@ -73,7 +73,8 @@
         </div>
         <div class="sidedropContent">
 
-            <a href="generalbody.php">Executive & General Body</a>
+            <a href="eve.php">Executive</a>
+            <a href="generalbody.php">General Body</a>
             <a href="SeniorManagement.php">Senior Management</a>
             <a href="founder.php">Founder</a>
 
@@ -94,6 +95,10 @@
         </div>
 
     </div>
+
+    <a href="Events.php">Events</a>
+    <a href="social.php">Social</a>
+    <a href="Contact.php">Contact & Locations</a>
 
 
 

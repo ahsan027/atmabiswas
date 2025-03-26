@@ -2,17 +2,6 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
   document.querySelector(".bottom-row").classList.toggle("active");
 });
 
-document
-  .getElementById("login-btn")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    document.getElementById("login-popup").classList.add("active");
-  });
-
-document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("login-popup").classList.remove("active");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const counters = [
     { id: "number1", end: 100, duration: 5000 },
@@ -38,16 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     window.requestAnimationFrame(step);
   });
-});
-
-const moreid = document.getElementById("moreidbtn");
-
-moreid.addEventListener("click", () => {
-  console.log("Clicked");
-  const btns = document.querySelector(".secbtns");
-  if (btns.classList.contains("moreactive")) {
-    btns.classList.remove("moreactive");
-  } else {
-    btns.classList.add("moreactive");
-  }
 });
