@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - ATMABISWAS</title>
+    <title>Career - ATMABISWAS</title>
     <link rel="stylesheet" href="career.css">
+    <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <ul class="menu">
                 <li><a href="/frontend/index.php">Home</a></li>
                 <li><a href="#">Available Jobs</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="../backend/login/login.php">Login</a></li>
             </ul>
         </div>
     </header>

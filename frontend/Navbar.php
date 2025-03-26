@@ -45,11 +45,11 @@
             </div>
 
             <div class="dropdown-content">
-                <a target="_blank" href="Green_Energy.php">Green Energy</a>
-                <a target="_blank" href="enterprice.php">Enterprise Development</a>
-                <a target="_blank" href="Agritural.php">Food & Agriculture</a>
-                <a target="_blank" href="readytoeat.php">Ready To Eat</a>
-                <a target="_blank" href="health.php">Health & Nutrition</a>
+                <a href="Green_Energy.php">Green Energy</a>
+                <a href="enterprice.php">Enterprise Development</a>
+                <a href="Agritural.php">Food & Agriculture</a>
+                <a href="readytoeat.php">Ready To Eat</a>
+                <a href="health.php">Health & Nutrition</a>
             </div>
         </div>
 
@@ -95,10 +95,22 @@
         </div>
 
     </div>
+    <div class="sidedrop">
+        <div class="mainsidedrop">
+            <a href="#">Activities <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+        </div>
+        <div class="sidedropContent">
+            <a href="career.php">Career</a>
+            <a href="notice.php">Notice</a>
+            <a href="press.php">Press</a>
+            <a href="aboutus.php">About Us</a>
+        </div>
+
+    </div>
 
     <a href="Events.php">Events</a>
     <a href="social.php">Social</a>
-    <a href="Contact.php">Contact & Locations</a>
+    <a href="Contact.php">Contacts</a>
 
 
 
