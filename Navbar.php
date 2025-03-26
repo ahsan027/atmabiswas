@@ -8,7 +8,7 @@
 <div class="navbar">
     <div class="top-row">
 
-        <div class="logo"><a href="/dashboard/atmabiswas/"><img src="logoBg.png" alt=""></a></div>
+        <div class="logo"><a href="/"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
