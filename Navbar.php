@@ -13,7 +13,7 @@
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
             <a href="press.php">Press</a>
-            <a target="_blank" href="aboutus.php">About Us</a>
+            <a href="aboutus.php">About Us</a>
         </div>
 
         <div class="menu-toggle" id="menu-toggleId">
