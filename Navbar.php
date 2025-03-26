@@ -95,9 +95,6 @@
 
     </div>
 
-    <a href="Events.php">Events</a>
-    <a href="Contact.php">Contact & Locations</a>
-    <a class="loginbtn" href="">Login</a>
 
 
 </div>
