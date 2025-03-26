@@ -15,10 +15,17 @@ document.getElementById("close-popup").addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const counters = [
+<<<<<<< HEAD
     { id: "number1", end: 100, duration: 5000 },
     { id: "number2", end: 200, duration: 5500 },
     { id: "number3", end: 50, duration: 4000 },
     { id: "number4", end: 300, duration: 4500 },
+=======
+    { id: "number1", end: 33, duration: 3000 },
+    { id: "number2", end: 40, duration: 3000 },
+    { id: "number3", end: 2000000, duration: 7500 },
+    { id: "number4", end: 145, duration: 7000 },
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
   ];
 
   counters.forEach((counter) => {

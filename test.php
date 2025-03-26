@@ -8,7 +8,11 @@
         </div>
     </div>
     <div class="card">
+<<<<<<< HEAD
         <img src="fish&redy/15.jpg" alt="Card Image">
+=======
+        <img src="fishredy/15.jpg" alt="Card Image">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <div class="card-content">
             <h3>Card Title </h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
@@ -29,7 +33,11 @@
         </div>
     </div>
     <div class="card">
+<<<<<<< HEAD
         <img src="fish/fish_pic1.jpeg" alt="Card Image">
+=======
+        <img src="FISH/fish_pic1.jpeg" alt="Card Image">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <div class="card-content">
             <h3>Health and Nutrition Faire</h3>
             <p class="card-text">More details about the content displayed on hover effect.</p>
@@ -48,20 +56,33 @@
 <style>
     .card-container {
         display: grid;
+<<<<<<< HEAD
         grid-template-columns: repeat(3, minmax(400px, 1fr));
+=======
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         gap: 20px;
         justify-content: center;
         align-items: center;
         place-items: center;
+<<<<<<< HEAD
         max-width: 1200px;
+=======
+        width: 100%;
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         margin: auto;
         padding: 20px;
     }
 
     .card {
         position: relative;
+<<<<<<< HEAD
         width: 100%;
         max-width: 500px;
+=======
+        width: 80%;
+
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,7 +97,11 @@
 
     .card img {
         width: 100%;
+<<<<<<< HEAD
         height: auto;
+=======
+        height: 10rem;
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         border-radius: 10px;
     }
 

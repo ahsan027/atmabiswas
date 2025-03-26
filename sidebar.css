@@ -78,7 +78,11 @@
 
     transition: background-color 0.3s ease, color 0.3s ease;
 
+<<<<<<< HEAD
     border-bottom: 1px solid #ffffff;
+=======
+   
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
     padding-bottom: 0.5rem;
 
@@ -88,17 +92,29 @@
 
 .sidenav .sidedrop .sidedropContent a {
     width: 12rem;
+<<<<<<< HEAD
     /* background-color: #ffffff; */
     background-color: rgba(7, 85, 255, 0.5);
     border: 1px solid white;
+=======
+    color: #ffffff;
+    border-bottom: #ffffff 1px solid;
+   
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
 }
 
 .sidenav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
     /* Hover color for a tags */
     color: #ffffff;
     /* Text color on hover */
+=======
+    
+    color: #ffffff;
+
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 }
 
 .sidedropContent {
@@ -109,6 +125,10 @@
     flex-direction: column;
     gap: 1rem;
     transition: max-height 0.5s ease, opacity 0.5s ease;
+<<<<<<< HEAD
+=======
+    /* background-color: rgb(13, 154, 255); */
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
     max-height: 0;
     overflow: hidden;
     opacity: 0;

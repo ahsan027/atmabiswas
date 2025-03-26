@@ -1,23 +1,42 @@
+<<<<<<< HEAD
 <?php 
+=======
+<?php
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Page - ATMABISWAS </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+<<<<<<< HEAD
         *{
+=======
+        * {
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+<<<<<<< HEAD
         body {
         background-color: #e6f2ff;
         overflow-x:hidden ; 
+=======
+
+        body {
+            background-color: #e6f2ff;
+            overflow-x: hidden;
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         }
 
 
@@ -80,12 +99,20 @@
             color: #555;
             font-size: 0.9rem;
         }
+<<<<<<< HEAD
 
 
     </style>
 </head>
 <body>
 <?php include 'Navbar.php'?>
+=======
+    </style>
+</head>
+
+<body>
+    <?php include 'Navbar.php' ?>
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
 
     <div class="container">
         <!-- Scholarship Segment -->
@@ -119,7 +146,11 @@
                         <h3>Scholarship </h3>
                         <p>Providing opportunities for bright minds.</p>
                     </div>
+<<<<<<< HEAD
                 </div>                                
+=======
+                </div>
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                 <!-- <div class="card">
                     <img src="https://www.aisct.org/wp-content/uploads/2023/06/1418_0I9A0942_1920px.jpg" alt="Scholarship Event">
                     <div class="card-content">
@@ -130,7 +161,11 @@
             </div>
         </div>
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <!-- Women Rights Segment -->
         <div class="segment">
             <h2>Women Rights Events </h2>
@@ -171,7 +206,11 @@
                     </div>
                 </div> -->
 
+<<<<<<< HEAD
             <!-- <div class="card">
+=======
+                <!-- <div class="card">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <img src="https://images.theconversation.com/files/209024/original/file-20180306-146671-haxeo6.jpg" alt="Women Rights Event">
                     <div class="card-content">
                         <h3>Rights Awareness</h3>
@@ -183,7 +222,11 @@
 
 
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
         <!-- Employee Conference Segment -->
         <div class="segment">
             <h2>Employee Conference </h2>
@@ -214,8 +257,13 @@
             </div>
         </div>
 
+<<<<<<< HEAD
        <!-- Winterfest Segment -->
        <div class="segment">
+=======
+        <!-- Winterfest Segment -->
+        <div class="segment">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
             <h2>Winter Fest Events </h2>
             <div class="card-grid">
                 <div class="card">
@@ -289,7 +337,11 @@
                         <h3>Fire Safety Awareness for Students</h3>
                         <p>Know the steps to stay safe when fire strikes, stay calm, exit quickly and call for help.</p>
                     </div>
+<<<<<<< HEAD
                 </div>                              
+=======
+                </div>
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                 <div class="card">
                     <img src="awarness/awarness_pic4.jpeg" alt="Awareness Event">
                     <div class="card-content">
@@ -326,7 +378,11 @@
                     </div>
                 </div>
                 <div class="card">
+<<<<<<< HEAD
                     <img src="Fish/fish_pic2.jpeg" alt="Winterfest Event">
+=======
+                    <img src="FISH/fish_pic2.jpeg" alt="Winterfest Event">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Field Day Celebration to Support Farmers</h3>
                         <p>We celebrated Field Day to educate farmers about sustainable fish farming, crop management, and agricultural best practices.</p>
@@ -334,7 +390,11 @@
                 </div>
 
                 <div class="card">
+<<<<<<< HEAD
                     <img src="Fish/fish_pic1.jpeg" alt="Winterfest Event">
+=======
+                    <img src="FISH/fish_pic1.jpeg" alt="Winterfest Event">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Celebrating Nutrition Day with Village Communities</h3>
                         <p>We are celebrating Nutrition Day with the village community, promoting healthy eating and well being for all.</p>
@@ -349,9 +409,19 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
         </div>        
     </div>
 
 <?php include 'footer.php'?>
 </body>
 </html>
+=======
+        </div>
+    </div>
+
+    <?php include 'footer.php' ?>
+</body>
+
+</html>
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513

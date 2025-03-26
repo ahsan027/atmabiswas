@@ -259,7 +259,11 @@
 
             <div class="card-grid">
                 <div class="card">
+<<<<<<< HEAD
                     <img src="fish&redy/ABS_7.JPG" alt="Training">
+=======
+                    <img src="fishredy/ABS_7.jpg" alt="Training">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Training for Fishermen</h3>
                         <p>Our program begins with comprehensive training sessions designed to enhance the skills and knowledge of fishermen.</p>
@@ -273,7 +277,11 @@
                     </div>
                 </div>
                 <div class="card">
+<<<<<<< HEAD
                     <img src="fish&redy/ABS_01.jpg" alt="Entrepreneurs">
+=======
+                    <img src="fish&redy/ABS_01.JPG" alt="Entrepreneurs">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
                     <div class="card-content">
                         <h3>Nurturing New Entrepreneurs</h3>
                         <p>We support aspiring entrepreneurs in processing fish products, providing essential resources, mentorship, and business development strategies.</p>

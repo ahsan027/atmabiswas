@@ -415,10 +415,17 @@
             <div class="gallery">
                 <img src="rmpt/rmpt_pic1.jpeg" alt="Gallery Image 1">
                 <img src="Health/helath_pic7.jpeg" alt="Gallery Image 2">
+<<<<<<< HEAD
                 <img src="wash/wash_pic1.jpeg" alt="Gallery Image 3">
                 <img src="toilet/toiletpic2.jpeg" alt="Gallery Image 4">
                 <img src="toilet/toiletpic3.jpeg" alt="Gallery Image 5">
                 <img src="awarness/awarness_pic6.jpeg" alt="Gallery Image 6">
+=======
+                <img src="Wash/wash_pic1.jpeg" alt="Gallery Image 3">
+                <img src="toilet/toiletpic2.jpeg" alt="Gallery Image 4">
+                <img src="toilet/toiletpic3.jpeg" alt="Gallery Image 5">
+                <img src="Awarness/awarness_pic6.jpeg" alt="Gallery Image 6">
+>>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
             </div>
         </div>
     </div>
