@@ -126,6 +126,8 @@
     <script>
     function openApplyModal() {
         document.getElementById('applyModal').style.display = 'block';
+        document.getElementById('applyModal').style.overflowY = 'auto';
+
     }
 
     function closeApplyModal() {
