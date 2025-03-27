@@ -1,4 +1,68 @@
 <?php
+    $nameErr = "";
+    $nameflag = false;
+
+
+    $passErr= "";
+
+    $passresult = [];
+    $passflag = false;
+
+
+    function validatePassword($password) {
+    $errors = [];
+    
+
+    if (strlen($password) < 8) {
+        $errors[] = "Password must be at least 8 characters long.";
+    }
+
+    if (!preg_match('/[A-Z]/', $password)) {
+        $errors[] = "Password must contain at least one uppercase letter.";
+    }
+    if (!preg_match('/[a-z]/', $password)) {
+        $errors[] = "Password must contain at least one lowercase letter.";
+    }
+    if (!preg_match('/[0-9]/', $password)) {
+        $errors[] = "Password must contain at least one digit.";
+    }
+    if (!preg_match('/[\W]/', $password)) {
+        $errors[] = "Password must contain at least one special character (e.g., @, #, $, etc.).";
+    }
+    return $errors;
+    
+}
+    
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    
+    $username= filter_input(INPUT_POST,"username",FILTER_SANITIZE_EMAIL);
+    
+    $password = filter_input(INPUT_POST,"password",FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $username= filter_input(INPUT_POST,"username",FILTER_VALIDATE_EMAIL);
+
+    if(empty($username)){
+        $nameflag = true;
+
+        $nameErr = "Email is Required";
+    }
+
+    if(empty($password)){
+        $passflag = true;
+        $passErr = "Password is Required";
+    }
+
+    $passresult = validatePassword($password);
+
+    if($username){
+        echo $username;
+
+    } else{
+        echo "Chut marani username koi?";
+    }
+
+    
+}
 
 ?>
 <!DOCTYPE html>
@@ -19,22 +83,33 @@
             <div class="logo">
                 <img src="../images/logo/logo.png">
                 <h2>SIGN IN</h2>
-                <form class="form" action="loginProcess.php" method="POST">
+                <form class="form" action="" method="POST">
                     <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" name="username" placeholder="User name" value="">
+                        <label>Email</label>
+                        <input type="text" name="username" placeholder="Email" value="">
+                        <?php
+                        if($nameflag){
+                        echo "<p class='error'> $nameErr</p>";
+                        } 
+                         ?>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" name="password" placeholder="Password" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Role:</label><br />
-                        <select name="role">
-                            <option value="Admin">Admin</option>
-                            <option value="Instructor">Instructor</option>
-                            <option value="Student">Student</option>
-                        </select>
+                        <?php
+                        if(empty($passresult)){
+                            if($passflag){
+                                echo "<p class='error'>$passErr </p>";
+
+                            }
+                        }else{
+                            foreach($passresult as $err){
+                        echo "<p class='error'> $err </p>";
+
+                            }     
+                        }
+                         ?>
+
                     </div><br />
                     <div class="form-group">
                         <button type="submit">Login</button>
