@@ -3,45 +3,45 @@
 <div class="card-container">
 
     <div class="card">
-        <img src="pic.png" alt="Card Image">
+        <img src="cow/cow_pic3.png" alt="Card Image">
         <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
+            <h3>Cow Farming Success </h3>
+            <p class="card-text">ATMABISWAS helped this woman expand her cow farm, boosting her income and independence.</p>
         </div>
     </div>
     <div class="card">
         <img src="fish&redy/15.jpg" alt="Card Image">
         <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
+            <h3>Nourishing Aquatic Growth</h3>
+            <p class="card-text">ATMABISWAS Ensures chemical & hazards free fish foods, fertilizers and pesticides to ensure the proper growth of fish keeping a safe environment.</p>
         </div>
     </div>
     <div class="card">
         <img src="rmpt/rmpt_pic2.jpeg" alt="Card Image">
         <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
+            <h3>Supporting Fishermen's Growth</h3>
+            <p class="card-text">ATMABISWAS empowers fishermen by providing free fish food and training to boost their livelihoods</p>
         </div>
     </div>
     <div class="card">
         <img src="Health/health_pic1.jpeg" alt="Card Image">
         <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">Free health checkup for all.</p>
+            <h3>Free Health Campaign </h3>
+            <p class="card-text">At present we are arranging Free Medical Campaign and seminar for poor people without any cost, which is funded by ATMABISWAS. </p>
         </div>
     </div>
     <div class="card">
         <img src="fish/fish_pic1.jpeg" alt="Card Image">
         <div class="card-content">
-            <h3>Health and Nutrition Faire</h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
+            <h3>Health and Nutrition Fair</h3>
+            <p class="card-text">ATMABISWAS organizes a Health & Nutrition Fair with free check-ups, nutrition guidance, and wellness programs for the community.</p>
         </div>
     </div>
     <div class="card">
         <img src="enterprise_development/enterprice_pic5.jpeg" alt="Card Image">
         <div class="card-content">
-            <h3>Card Title </h3>
-            <p class="card-text">More details about the content displayed on hover effect.</p>
+            <h3>Greener Fields Ahead</h3>
+            <p class="card-text">ATMABISWAS supports farmers with free fertilizer, promoting sustainable agriculture and better harvests.</p>
         </div>
     </div>
 
@@ -78,7 +78,7 @@
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 250px;
     border-radius: 10px;
 }
 
