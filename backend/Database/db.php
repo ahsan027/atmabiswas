@@ -8,18 +8,18 @@ class Db{
     private $pdo;
 
     public function connect(){
-        $this->pdo=null;
+    $this->pdo=null;
         
-try{
-    $this->pdo = new PDO("mysql:host=$this->hostname;dbname=$this->dbname",$this->user,$this->pswd);
+        try{
+            $this->pdo = new PDO("mysql:host=$this->hostname;dbname=$this->dbname",$this->user,$this->pswd);
 
-    $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    
-}catch(PDOException $e){
-    print_r($e);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            
+        }catch(PDOException $e){
+            print_r($e);
 
-}
-return $this->pdo;
+        }
+    return $this->pdo;
     }
 }
 

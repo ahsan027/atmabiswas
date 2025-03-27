@@ -1,4 +1,6 @@
 <?php
+
+    include '../Database/db.php';
     $nameErr = "";
     $nameflag = false;
 
@@ -7,6 +9,10 @@
 
     $passresult = [];
     $passflag = false;
+
+    $database = new Db();
+    $database->connect();
+    
 
 
     function validatePassword($password) {
@@ -32,8 +38,11 @@
     return $errors;
     
 }
-    
+
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $database = new Db();
+    $connection = $database->connect();
+    
     
     $username= filter_input(INPUT_POST,"username",FILTER_SANITIZE_EMAIL);
     
@@ -43,7 +52,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     if(empty($username)){
         $nameflag = true;
-
         $nameErr = "Email is Required";
     }
 
@@ -54,12 +62,29 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     $passresult = validatePassword($password);
 
-    if($username){
-        echo $username;
+    if($username && empty($passresult)){
 
-    } else{
-        echo "Chut marani username koi?";
-    }
+        $sql = "SELECT * FROM admins WHERE username=:username AND pswd=:password";
+
+        $stmt = $connection->prepare($sql);
+
+        $stmt->bindParam(":username",$username);
+        $stmt->bindParam(":password",$password);
+
+        $stmt->execute();
+
+        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if(empty($res)){
+            echo "<p class='error'>INVALID CREDENTIALS</p>";
+
+        }else{
+            header("Location: loginProcess.php");
+        }
+
+    
+
+    } 
 
     
 }

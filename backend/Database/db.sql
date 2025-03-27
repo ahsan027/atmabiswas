@@ -97,5 +97,8 @@ END;
 
 SELECT DISTINCT dist FROM branch WHERE division = "khulna";
 
+SELECT * FROM admins;
+
+
 
 SELECT * FROM branch WHERE division = :division ORDER BY dist ASC;
