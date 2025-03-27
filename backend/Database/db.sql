@@ -102,3 +102,79 @@ SELECT * FROM admins;
 
 
 SELECT * FROM branch WHERE division = :division ORDER BY dist ASC;
+
+
+DROP TABLE jobs;
+
+
+
+CREATE TABLE jobs (
+    job_id INT AUTO_INCREMENT PRIMARY KEY,  -- Unique ID for each job
+    job_code VARCHAR(3) NOT NULL UNIQUE,    -- 3-character job code
+    job_title VARCHAR(100) NOT NULL,        -- Job title
+    job_description TEXT NOT NULL,          -- Job description
+    job_skillset TEXT NOT NULL,             -- Required skills for the job
+    job_experience VARCHAR(20) NOT NULL,    -- Required experience (e.g., '5 years')
+    job_benefits TEXT NOT NULL,             -- Benefits offered
+    company_name VARCHAR(100) NOT NULL,     -- Name of the company
+    job_location VARCHAR(100) NOT NULL,     -- Location of the job
+    salary_range VARCHAR(50) NOT NULL,      -- Salary range (e.g., '$50,000 - $70,000')
+    job_type VARCHAR(20) NOT NULL           -- Job type (e.g., Full-time, Remote)
+);
+
+INSERT INTO jobs (job_code, job_title, job_description, job_skillset, job_experience, job_benefits, company_name, job_location, salary_range, job_type)
+VALUES 
+('SE1', 
+ 'Software Engineer', 
+ 'Develop and maintain web applications, troubleshoot issues, and implement new features.',
+ 'Proficiency in PHP, JavaScript, MySQL, REST APIs, and frontend frameworks (React or Angular).',
+ '5 years experience in software development.', 
+ 'Health insurance, 401(k) matching, Paid leave, Work-from-home flexibility.', 
+ 'Atmabiswas', 
+ 'New York', 
+ '$80,000 - $100,000', 
+ 'Full-time'),
+
+('DS2', 
+ 'Data Scientist', 
+ 'Analyze large datasets, build predictive models, and help improve decision-making processes.', 
+ 'Expertise in Python, R, machine learning, and statistical analysis.', 
+ '5 years experience in data science.', 
+ 'Flexible hours, Remote work option, Stock options, Performance bonuses.', 
+ 'Atmabiswas', 
+ 'Remote', 
+ '$100,000 - $130,000', 
+ 'Full-time'),
+
+('GD3', 
+ 'Graphic Designer', 
+ 'Design creative visuals for marketing campaigns, websites, and social media.', 
+ 'Proficiency in Adobe Photoshop, Illustrator, and InDesign.', 
+ '5 years experience in graphic design.', 
+ 'Health insurance, Paid leave, Professional development opportunities.', 
+ 'Atmabiswas', 
+ 'Los Angeles', 
+ '$45,000 - $60,000', 
+ 'Full-time'),
+
+('DM4', 
+ 'Digital Marketing Specialist', 
+ 'Plan and execute online marketing strategies to boost brand visibility and engagement.', 
+ 'Experience with SEO, Google Ads, social media marketing, and email marketing.', 
+ '5 years experience in digital marketing.', 
+ 'Remote work, Professional training, Flexible hours.', 
+ 'Atmabiswas', 
+ 'Chicago', 
+ '$50,000 - $70,000', 
+ 'Full-time'),
+
+('FS5', 
+ 'Full Stack Developer', 
+ 'Develop and maintain full-stack applications using modern technologies (Node.js, React, MongoDB).', 
+ 'Proficiency in full-stack development, JavaScript frameworks, and version control (Git).', 
+ '5 years experience in full-stack development.', 
+ 'Remote work, Flexible hours, Paid leave, Stock options.', 
+ 'Atmabiswas', 
+ 'Remote', 
+ '$90,000 - $120,000', 
+ 'Full-time');
