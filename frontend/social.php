@@ -93,105 +93,77 @@
             <h2>ATMABISWAS Daycare</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Scholarship Event">
+                    <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
-                        <h3>Scholarship Event </h3>
+                        <h3>ATMABISWAS Daycare </h3>
                         <p>PKSF was a partner in providing the scholarship.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Scholarship Event">
+                    <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
-                        <h3>Scholarship Event</h3>
+                        <h3>ATMABISWAS Daycare</h3>
                         <p>Empowering students through education.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Scholarship Event">
+                    <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
-                        <h3>Scholarship </h3>
+                        <h3>ATMABISWAS Daycare</h3>
                         <p>Providing opportunities for bright minds.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Scholarship Event">
+                    <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
-                        <h3>Scholarship </h3>
+                        <h3>ATMABISWAS Daycare</h3>
                         <p>Providing opportunities for bright minds.</p>
                     </div>
                 </div>                                
-                <!-- <div class="card">
-                    <img src="https://www.aisct.org/wp-content/uploads/2023/06/1418_0I9A0942_1920px.jpg" alt="Scholarship Event">
-                    <div class="card-content">
-                        <h3>Education Empowerment</h3>
-                        <p>Making dreams come true through education.</p>
-                    </div>
-                </div> -->
+
             </div>
         </div>
 
  
-        <!-- Women Rights Segment -->
+        <!-- ATMABISWAS Pathshala -->
         <div class="segment">
             <h2>ATMABISWAS Pathshala </h2>
             <div class="card-grid">
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
-                        <h3>Celebrate Women's Day!</h3>
+                        <h3>ATMABISWAS Pathshala </h3>
                         <p>Advocating for equal rights.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
-                        <h3>Equality Campaign</h3>
+                        <h3>ATMABISWAS Pathshala </h3>
                         <p>We are campaigning in the village for gender equality between women and men.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
-                        <h3>Equality Campaign</h3>
+                        <h3>ATMABISWAS Pathshala </h3>
                         <p>We are campaigning in the city to promote gender equality between women and men.</p>
                     </div>
                 </div>
-                <!-- <div class="card">
-                    <img src="women/women_pic4.jpeg" alt="Women Rights Event">
-                    <div class="card-content">
-                        <h3>Equal Rights</h3>
-                        <p>We are campaigning in the village to promote gender equality between men and women.</p>
-                    </div>
-                </div>                                -->
-                <!-- <div class="card">
-                    <img src="https://images.theconversation.com/files/209024/original/file-20180306-146671-haxeo6.jpg" alt="Women Rights Event">
-                    <div class="card-content">
-                        <h3>Rights Awareness</h3>
-                        <p>Championing women's causes.</p>
-                    </div>
-                </div> -->
-
-            <!-- <div class="card">
-                    <img src="https://images.theconversation.com/files/209024/original/file-20180306-146671-haxeo6.jpg" alt="Women Rights Event">
-                    <div class="card-content">
-                        <h3>Rights Awareness</h3>
-                        <p>Championing women's causes.</p>
-                    </div>
-                </div> -->
             </div>
         </div>
 
 
 
  
-        <!-- Employee Conference Segment -->
+        <!-- Empowering Women -->
         <div class="segment">
             <h2>Empowering Women </h2>
             <div class="card-grid">
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
                     <div class="card-content">
-                        <h3>Best Employee Award</h3>
+                        <h3>Empowering Women </h3>
                         <p>We are proud to present the Best Employee Award, recognizing outstanding performance and dedication to excellence.</p>
                     </div>
                 </div>
@@ -199,7 +171,7 @@
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
                     <div class="card-content">
-                        <h3>Bi-Monthly Meetings with Managers for Guidance and Improvement</h3>
+                        <h3>Empowering Women </h3>
                         <p>We hold bi-monthly meetings with one or two managers to provide guidance on how we can support their branches and discuss strategies for improving their areas.</p>
                     </div>
                 </div>
@@ -207,28 +179,28 @@
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
                     <div class="card-content">
-                        <h3>Annual Conference with Managers at Head Office</h3>
+                        <h3>Empowering Women </h3>
                         <p>Our team conducts an annual conference at the head office, where we meet with each manager to gather feedback on the past year’s progress.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-       <!-- Winterfest Segment -->
+       <!-- Compassionate Care & Support  -->
        <div class="segment">
             <h2>Compassionate Care & Support </h2>
             <div class="card-grid">
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Supporting Disabilitie</h3>
+                        <h3>Compassionate Care & Support </h3>
                         <p>Enjoying the spirit of winter together.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
+                        <h3>Compassionate Care & Support </h3>
                         <p>Festive fun and togetherness.</p>
                     </div>
                 </div>
@@ -236,14 +208,14 @@
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winter-fest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
+                        <h3>Compassionate Care & Support </h3>
                         <p>Festive fun and togetherness.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
+                        <h3>Compassionate Care & Support </h3>
                         <p>Festive fun and togetherness.</p>
                     </div>
                 </div>
@@ -251,7 +223,7 @@
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Seasonal Celebration</h3>
+                        <h3>Compassionate Care & Support </h3>
                         <p>Making winter memories.</p>
                     </div>
                 </div>

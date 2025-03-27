@@ -216,42 +216,42 @@
 
         <!-- Winterfest Segment -->
         <div class="segment">
-            <h2>Winter Fest Events </h2>
+            <h2>Winter Events </h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="winter/winter_pic1.jpeg" alt="Winterfest Event">
+                    <img src="winter/winter_pic1.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winterfest Celebration</h3>
+                        <h3>Winter Fest Celebration</h3>
                         <p>Enjoying the spirit of winter together.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
+                    <img src="winter/winter_pic2.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
-                        <p>Festive fun and togetherness.</p>
+                        <h3>Winter Fest Celebration</h3>
+                        <p>Enjoying the spirit of winter together.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Winter-fest Event">
+                    <img src="winter/winter_pic3.png" alt="Winter-fest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
+                        <h3>Winter Clothes Distribution Program</h3>
                         <p>Festive fun and togetherness.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
+                    <img src="winter/winter_pic6.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
-                        <p>Festive fun and togetherness.</p>
+                        <h3>Winter Clothes Distribution Program</h3>
+                        <p>Celebration winter together.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
+                    <img src="winter/winter_pic5.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Seasonal Celebration</h3>
+                        <h3>Winter Clothes Distribution Program</h3>
                         <p>Making winter memories.</p>
                     </div>
                 </div>

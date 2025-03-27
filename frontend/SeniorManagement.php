@@ -168,7 +168,7 @@
     <section class="executive-section">
       <div class="mdsir">
         <div class="executive-card">
-          <img src="photos/A.jpg" alt="Akramul Haque Biswas">
+          <img src="photos/Ed_sir.jpg" alt="Akramul Haque Biswas">
           <h2>Akramul Haque Biswas</h2>
           <p><strong>Executive Director, ATMABISWAS</strong></p>
           <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
@@ -179,10 +179,10 @@
 
       <div class="oth">
         <div class="executive-card">
-          <img src="photos/c.jpg" alt="Akramul Haque Biswas">
+          <img src="generalbody/malaka.png" alt="Malaka Parvin">
           <h2>Malaka Parvin </h2>
           <p><strong>Executive Director, ATMABISWAS</strong></p>
-          <p>The founder and Executive Director of ATMABISWAS, Akramul Haque Biswas has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
+          <p>The founder and Executive Director of ATMABISWAS, Malaka Parvin has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
         </div>
 
         <div class="executive-card">
