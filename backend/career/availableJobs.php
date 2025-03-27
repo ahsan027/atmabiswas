@@ -1,3 +1,18 @@
+<?php 
+    include '../Database/db.php';
+    
+    $database = new Db();
+
+    $connection = $database->connect();
+
+    $sql = "SELECT * FROM jobs";
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+
+    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,25 +41,29 @@
             </select>
             <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
         </div>
+        <?php 
 
-        <div class="jobs-container" id="jobsContainer">
-            <!-- Job listings will be here -->
-            <div class="job-card">
-                <a href="jobdes.php?id=1" class="job-title">Senior Frontend Developer</a>
-                <p class="company">Tech Corp Inc.</p>
-                <p class="location">New York</p>
-                <p class="salary">$120,000 - $150,000</p>
-                <div class="tags">
-                    <span class="tag">Full-time</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Senior</span>
-                </div>
-                <button class="apply-btn">Apply Now</button>
-            </div>
+foreach($res as $r){
 
-            <!-- Add more job cards here -->
-            <!-- You can duplicate the job-card div and modify the content -->
-        </div>
+    
+echo "<div class='jobs-container' id='jobsContainer'>";
+echo "    <!-- Job listings will be here -->";
+echo "    <div class='job-card'>";
+echo "        <a href='jobdes.php?id=".$r['job_id']."' class='job-title'>".$r['job_title']."</a>";
+echo "        <p class='company'>".$r['company_name']."</p>";
+echo "        <p class='location'>".$r['job_location']."</p>";
+echo "        <p class='salary'>".$r['salary_range']."</p>";
+echo "        <div class='tags'>";
+echo "            <span class='tag'>Full-time</span>";
+echo "            <span class='tag'>React</span>";
+echo "            <span class='tag'>Senior</span>";
+echo "        </div>";
+echo "        <button class='apply-btn'>Apply Now</button>";
+echo "    </div>";
+echo "</div>";
+
+}
+?>
     </div>
 
     <script>
