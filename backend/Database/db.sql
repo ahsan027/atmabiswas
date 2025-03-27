@@ -102,3 +102,135 @@ SELECT * FROM admins;
 
 
 SELECT * FROM branch WHERE division = :division ORDER BY dist ASC;
+
+
+DROP TABLE jobs;
+
+
+
+CREATE TABLE jobs (
+    job_id INT AUTO_INCREMENT PRIMARY KEY,  -- Unique ID for each job
+    job_code VARCHAR(3) NOT NULL UNIQUE,    -- 3-character job code
+    job_title VARCHAR(100) NOT NULL,        -- Job title
+    job_description TEXT NOT NULL,          -- Job description
+    job_skillset TEXT NOT NULL,             -- Required skills for the job
+    job_experience VARCHAR(20) NOT NULL,    -- Required experience (e.g., '5 years')
+    job_benefits TEXT NOT NULL,             -- Benefits offered
+    company_name VARCHAR(100) NOT NULL,     -- Name of the company
+    job_location VARCHAR(100) NOT NULL,     -- Location of the job
+    salary_range VARCHAR(50) NOT NULL,      -- Salary range (e.g., '$50,000 - $70,000')
+    job_type VARCHAR(20) NOT NULL           -- Job type (e.g., Full-time, Remote)
+);
+
+
+INSERT INTO jobs (job_code, job_title, job_description, job_skillset, job_experience, job_benefits, company_name, job_location, salary_range, job_type)
+VALUES 
+('SE1', 
+ 'Software Engineer', 
+ 'Develop and maintain web applications, troubleshoot issues, and implement new features.',
+ 'Proficiency in PHP, JavaScript, MySQL, REST APIs, and frontend frameworks (React or Angular).',
+ '5 years experience in software development.', 
+ 'Health insurance, 401(k) matching, Paid leave, Work-from-home flexibility.', 
+ 'Tech Solutions Inc.', 
+ 'New York', 
+ '$80,000 - $100,000', 
+ 'Full-time'),
+
+('DS2', 
+ 'Data Scientist', 
+ 'Analyze large datasets, build predictive models, and help improve decision-making processes.', 
+ 'Expertise in Python, R, machine learning, and statistical analysis.', 
+ '5 years experience in data science.', 
+ 'Flexible hours, Remote work option, Stock options, Performance bonuses.', 
+ 'Innovate AI Corp.', 
+ 'Remote', 
+ '$100,000 - $130,000', 
+ 'Full-time'),
+
+('GD3', 
+ 'Graphic Designer', 
+ 'Design creative visuals for marketing campaigns, websites, and social media.', 
+ 'Proficiency in Adobe Photoshop, Illustrator, and InDesign.', 
+ '5 years experience in graphic design.', 
+ 'Health insurance, Paid leave, Professional development opportunities.', 
+ 'CreativeHub', 
+ 'Los Angeles', 
+ '$45,000 - $60,000', 
+ 'Contract'),
+
+('DM4', 
+ 'Digital Marketing Specialist', 
+ 'Plan and execute online marketing strategies to boost brand visibility and engagement.', 
+ 'Experience with SEO, Google Ads, social media marketing, and email marketing.', 
+ '5 years experience in digital marketing.', 
+ 'Remote work, Professional training, Flexible hours.', 
+ 'MarketPro Digital', 
+ 'Chicago', 
+ '$50,000 - $70,000', 
+ 'Part-time'),
+
+('FS5', 
+ 'Full Stack Developer', 
+ 'Develop and maintain full-stack applications using modern technologies (Node.js, React, MongoDB).', 
+ 'Proficiency in full-stack development, JavaScript frameworks, and version control (Git).', 
+ '5 years experience in full-stack development.', 
+ 'Remote work, Flexible hours, Paid leave, Stock options.', 
+ 'CodeWave Solutions', 
+ 'Remote', 
+ '$90,000 - $120,000', 
+ 'Remote'),
+
+('CW6', 
+ 'Content Writer', 
+ 'Write, edit, and publish engaging content for blogs, websites, and social media.', 
+ 'Strong writing skills, experience with SEO, and content management systems like WordPress.', 
+ '5 years experience in content writing.', 
+ 'Health insurance, Work-from-home flexibility, Professional development.', 
+ 'WriteWell Media', 
+ 'Boston', 
+ '$40,000 - $55,000', 
+ 'Full-time'),
+
+('PM7', 
+ 'Project Manager', 
+ 'Manage project timelines, coordinate with teams, and ensure project delivery within scope and budget.', 
+ 'Knowledge of Agile methodologies, project management software (Jira, Trello).', 
+ '5 years experience in project management.', 
+ 'Paid leave, Health insurance, Remote work options, Performance bonuses.', 
+ 'Agility Solutions', 
+ 'San Francisco', 
+ '$110,000 - $140,000', 
+ 'Full-time'),
+
+('CA8', 
+ 'Cybersecurity Analyst', 
+ 'Monitor security systems, identify vulnerabilities, and protect against cyber threats.', 
+ 'Proficiency in network security, threat analysis, and risk assessment.', 
+ '5 years experience in cybersecurity.', 
+ 'Health insurance, 401(k) matching, Stock options, Remote work.', 
+ 'SecureTech LLC', 
+ 'Austin', 
+ '$85,000 - $110,000', 
+ 'Full-time'),
+
+('HR9', 
+ 'HR Manager', 
+ 'Oversee recruitment, employee relations, and implement HR policies to foster a positive workplace culture.', 
+ 'Bachelor\'s degree in Human Resources or related field.', 
+ '5 years experience in human resource management.', 
+ 'Health insurance, Paid leave, Wellness programs, Employee discounts.', 
+ 'PeopleFirst HR Solutions', 
+ 'Seattle', 
+ '$75,000 - $95,000', 
+ 'Full-time'),
+
+('UX0', 
+ 'UX/UI Designer', 
+ 'Design user-friendly interfaces and improve user experience for web and mobile applications.', 
+ 'Proficiency in Figma, Sketch, and wireframing tools.', 
+ '5 years experience in UX/UI design.', 
+ 'Remote work, Paid leave, Professional training, Flexible hours.', 
+ 'DesignHive', 
+ 'Remote', 
+ '$65,000 - $85,000', 
+ 'Remote');
