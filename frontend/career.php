@@ -17,7 +17,7 @@
             </div>
             <ul class="menu">
                 <li><a href="/frontend/index.php">Home</a></li>
-                <li><a href="#">Available Jobs</a></li>
+                <li><a href="../backend/career/availableJobs.php">Available Jobs</a></li>
                 <li><a href="../backend/login/login.php">Login</a></li>
             </ul>
         </div>

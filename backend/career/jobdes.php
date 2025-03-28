@@ -1,3 +1,18 @@
+<?php 
+    include '../Database/db.php';
+    $database = new Db();
+    $connection = $database->connect();
+
+    $jobId = $_GET['id'];
+
+    $sql = "SELECT * FROM jobs WHERE job_id =:job_id";
+
+    $stmt = $connection->prepare($sql);
+    $stmt->bindParam(":job_id",$jobId);
+    $stmt->execute();
+    $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // print_r($jobDes[0]['job_title']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +26,18 @@
 <body>
     <div class="container">
         <div class="job-header">
-            <h1 class="job-title">Senior Software Engineer</h1>
+            <h1 class="job-title"><?= $jobDes[0]['job_title']?></h1>
             <div class="company-info">
-                <img src="https://via.placeholder.com/80" alt="Company Logo" class="company-logo">
+                <img src="../images/logo/logo.png" alt="Company Logo" class="company-logo">
                 <div>
-                    <h3>Tech Innovators Ltd.</h3>
-                    <p>Information Technology</p>
+                    <h3><?= $jobDes[0]['company_name']?>.</h3>
+                    <p>A non-profitable Organisation</p>
                 </div>
             </div>
             <div class="job-meta">
                 <div class="meta-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Dhaka, Bangladesh</span>
+                    <span><?= $jobDes[0]['job_location']?>, Bangladesh</span>
                 </div>
                 <div class="meta-item">
                     <i class="fas fa-clock"></i>
