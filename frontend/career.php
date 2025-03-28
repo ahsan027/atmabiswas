@@ -43,9 +43,8 @@
 
                     <img src="../backend/career/picture/picture_3.jpg" alt="Slide 2" style="display: none;">
 
-                    <img src="../backend/career/picture/picture_5.jpg"alt="Slide 3" style="display: none;">
-                    <img src="../backend/career/picture/picture_6.jpg"
-                        alt="Slide 4" style="display: none;">
+                    <img src="../backend/career/picture/picture_5.jpg" alt="Slide 3" style="display: none;">
+                    <img src="../backend/career/picture/picture_6.jpg" alt="Slide 4" style="display: none;">
                 </div>
                 <div class="overlay">
                     <div class="leftside">
@@ -82,23 +81,16 @@
                     $newdb = new Db();
                     $newRes = $newdb->connect();
 
-                    $sql = "SELECT * FROM jobs GROUP BY job_dept";
+                    $sql = "SELECT job_dept, COUNT(*) AS job_count FROM jobs GROUP BY job_dept";
                     $stm = $newRes->prepare($sql);
                     $stm->execute();
                     $finres = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-                    echo "<a>Senior Officer, Telecommunication
-                    <span>1</span></a>";
+                    foreach($finres as $f){
+                        echo "<a>".$f['job_dept']."<span>".$f['job_count']."</span></a>";
+                    }
 
                 ?>
-
-                <a>Assistant Officer,
-                    Technical, Telecommunication <span>1</span></a>
-                <a>Field Office <span>1</span></a>
-                <a>Manager, Procurement, Head
-                    Office<span>1</span></a>
-                <a>Human Resources <span>1</span></a>2
-                <a>Area Sales Manager <span>1</span></a>
             </div>
         </section>
 
