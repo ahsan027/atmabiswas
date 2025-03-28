@@ -45,7 +45,6 @@
 
 foreach($res as $r){
 
-    
 echo "<div class='jobs-container' id='jobsContainer'>";
 echo "    <!-- Job listings will be here -->";
 echo "    <div class='job-card'>";
@@ -55,10 +54,17 @@ echo "        <p class='location'>".$r['job_location']."</p>";
 echo "        <p class='salary'>".$r['salary_range']."</p>";
 echo "        <div class='tags'>";
 echo "            <span class='tag'>Full-time</span>";
-echo "            <span class='tag'>React</span>";
-echo "            <span class='tag'>Senior</span>";
+$skills = explode(",",$r['job_skillset']);
+foreach($skills as $skill){
+echo " <span class='tag'>".$skill."</span>";
+
+}
+
 echo "        </div>";
-echo "        <button class='apply-btn'>Apply Now</button>";
+echo '<a class="apply-btn-a" href="jobdes.php?id='.$r['job_id'].'">
+        View Details
+      </a>';
+
 echo "    </div>";
 echo "</div>";
 
@@ -113,15 +119,6 @@ echo "</div>";
     // Event listeners
     document.getElementById('searchInput').addEventListener('input', filterJobs);
     document.getElementById('locationFilter').addEventListener('change', filterJobs);
-
-    // Add click event to all apply buttons
-    document.querySelectorAll('.apply-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const jobTitle = this.parentElement.querySelector('.job-title').textContent;
-            alert(`Applying for: ${jobTitle}`);
-            // You can add your actual application logic here
-        });
-    });
     </script>
 </body>
 
