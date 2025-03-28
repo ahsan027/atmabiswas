@@ -39,12 +39,12 @@
         <main>
             <section class="hero">
                 <div class="slider">
-                    <img src="../backend/career/picture/photo_1.jpg" alt="Slide 1">
-                    <img src="https://t3.ftcdn.net/jpg/05/71/06/76/360_F_571067620_JS5T5TkDtu3gf8Wqm78KoJRF1vobPvo6.jpg"
-                        alt="Slide 2" style="display: none;">
-                    <img src="https://t3.ftcdn.net/jpg/08/07/28/18/360_F_807281855_tf1GkaRzrFBnfFILz0q2GfU9cV5UiC8A.jpg"
-                        alt="Slide 3" style="display: none;">
-                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20230516/pngtree-wolfs-full-hd-wallpaper-art-wallpaper-1920x1080-1080p-image_2571308.jpg"
+                    <img src="../backend/career/picture/picture_7.jpg" alt="Slide 1">
+
+                    <img src="../backend/career/picture/picture_3.jpg" alt="Slide 2" style="display: none;">
+
+                    <img src="../backend/career/picture/picture_5.jpg"alt="Slide 3" style="display: none;">
+                    <img src="../backend/career/picture/picture_6.jpg"
                         alt="Slide 4" style="display: none;">
                 </div>
                 <div class="overlay">
