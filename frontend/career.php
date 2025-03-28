@@ -27,8 +27,7 @@
         <main>
             <section class="hero">
                 <div class="slider">
-                    <img src="https://img.freepik.com/free-photo/beautiful-view-sunset-sea_23-2148019892.jpg?size=626&ext=jpg"
-                        alt="Slide 1">
+                    <img src="../backend/career/picture/photo_1.jpg" alt="Slide 1">
                     <img src="https://t3.ftcdn.net/jpg/05/71/06/76/360_F_571067620_JS5T5TkDtu3gf8Wqm78KoJRF1vobPvo6.jpg"
                         alt="Slide 2" style="display: none;">
                     <img src="https://t3.ftcdn.net/jpg/08/07/28/18/360_F_807281855_tf1GkaRzrFBnfFILz0q2GfU9cV5UiC8A.jpg"
