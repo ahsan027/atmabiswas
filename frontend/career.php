@@ -1,3 +1,15 @@
+<?php 
+    include '../backend/Database/db.php';
+    $database = new Db();
+    $connection = $database->connect();
+    
+    $sql = "SELECT * FROM jobs";
+
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +49,7 @@
                 </div>
                 <div class="overlay">
                     <div class="leftside">
-                        <h1 class="num">14</h1>
+                        <h1 class="num"><?php echo count($res) ?></h1>
                         <h1>Available Jobs</h1>
                     </div>
                     <div class="rightSide">
@@ -66,63 +78,56 @@
         <section class="Sector">
             <h2>Sector wise Jobs</h2>
             <div class="Sector-list">
-                <button onclick="alert('Senior Officer, Telecommunication jobs')">Senior Officer, Telecommunication
-                    <span>1</span></button>
-                <button onclick="alert('Assistant Officer, Technical, Telecommunication jobs')">Assistant Officer,
-                    Technical, Telecommunication <span>1</span></button>
-                <button onclick="alert('Field Office jobs')">Field Office <span>1</span></button>
-                <button onclick="alert('Manager, Procurementjobs')">Manager, Procurement, Head
-                    Office<span>1</span></button>
-                <button onclick="alert('Human Resources jobs')">Human Resources <span>1</span></button>
-                <button onclick="alert('Area Sales Manager jobs')">Area Sales Manager <span>1</span></button>
+                <?php
+                    $newdb = new Db();
+                    $newRes = $newdb->connect();
+
+                    $sql = "SELECT * FROM jobs GROUP BY job_dept";
+                    $stm = $newRes->prepare($sql);
+                    $stm->execute();
+                    $finres = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+                    echo "<a>Senior Officer, Telecommunication
+                    <span>1</span></a>";
+
+                ?>
+
+                <a>Assistant Officer,
+                    Technical, Telecommunication <span>1</span></a>
+                <a>Field Office <span>1</span></a>
+                <a>Manager, Procurement, Head
+                    Office<span>1</span></a>
+                <a>Human Resources <span>1</span></a>2
+                <a>Area Sales Manager <span>1</span></a>
             </div>
         </section>
 
         <section class="available-jobs">
             <h2>Available Jobs</h2>
             <div class="job-list">
-                <div class="job-card">
-                    <h3>Research Assistant</h3>
-                    <p>Department: Mathematics</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: Fresher</p>
-                    <span>1 Day Remaining</span>
-                </div>
-                <div class="job-card">
-                    <h3>Teaching Assistant</h3>
-                    <p>Department: Mathematics</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: Fresher</p>
-                    <span>1 Day Remaining</span>
-                </div>
-                <div class="job-card">
-                    <h3>Multiple Open Ranked</h3>
-                    <p>Department: BSRM School of Engineering</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: Fresher</p>
-                    <span>16 Days Remaining</span>
-                </div>
-                <div class="job-card">
-                    <h3>Project Manager</h3>
-                    <p>Department: Human Resources</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: 3+ Years</p>
-                    <span>10 Days Remaining</span>
-                </div>
-                <div class="job-card">
-                    <h3>Software Engineer</h3>
-                    <p>Department: IT</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: 2+ Years</p>
-                    <span>5 Days Remaining</span>
-                </div>
-                <div class="job-card">
-                    <h3>Marketing Specialist</h3>
-                    <p>Department: Marketing</p>
-                    <p>Salary: Negotiable</p>
-                    <p>Experience: 1+ Year</p>
-                    <span>7 Days Remaining</span>
-                </div>
+                <?php
+                    foreach($res as $r){
+                        $endDate = new DateTime($r['deadline']);
+                        $currentDate = new DateTime();
+
+                        $interval = $currentDate->diff($endDate);
+
+                        $remainingDates = $interval->days;
+                echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
+                    <h3>".$r['job_title']."</h3>
+                    <p>Department: ".$r['job_dept']."</p>
+                    <p>Salary: ".$r['salary_range']."</p>
+                    <p>Experience: ".$r['job_experience']."</p>";
+                    if($endDate>$currentDate){
+                    
+                        echo "<span>".$remainingDates." Day Remaining"."</span>";
+                    }else{
+                        echo "<span>Application Time ended</span>";
+                    }
+                    echo "</div></a>";
+                    } 
+                ?>
+
             </div>
         </section>
     </main>

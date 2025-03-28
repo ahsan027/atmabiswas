@@ -202,3 +202,13 @@ ADD deadline DATE;
 
 
 SELECT * FROM jobs WHERE job_code="SE1";
+
+
+ALTER TABLE jobs ADD job_dept VARCHAR(255) DEFAULT 'Manager';
+
+
+
+INSERT INTO `jobs` (`job_id`, `job_code`, `job_title`, `job_description`, `job_skillset`, `job_experience`, `job_benefits`, `company_name`, `job_location`, `salary_range`, `job_type`, `job_req`, `PostDate`, `deadline`, `job_dept`) VALUES
+(6, 'MF1', 'Microfinance Officer', 'Manage microfinance programs, assess loan applications, and oversee repayments.', 'Financial analysis, Loan management, Risk assessment, Customer service.', '3 years', 'Health insurance, Performance bonus, Training programs.', 'ATMABISWAS', 'Khulna', 'BDT 40,000 - BDT 60,000', 'Full-time', 'Bachelor\'s degree in Finance, Economics, or related field. Experience in microfinance or banking sector.', '2025-03-28', '2025-04-05', 'Micro Finance Department'),
+
+(7, 'PM1', 'Project Manager', 'Plan, execute, and oversee NGO projects, ensuring timely completion and resource allocation.', 'Project management, Team leadership, Budgeting, Stakeholder communication.', '4 years', 'Health insurance, Annual bonuses, Flexible work schedule.', 'ATMABISWAS', 'Dhaka', 'BDT 60,000 - BDT 80,000', 'Full-time', 'Bachelor\'s degree in Business Administration, Project Management, or related field. PMP certification is a plus.', '2025-03-28', '2025-04-07', 'Project Management Department');
