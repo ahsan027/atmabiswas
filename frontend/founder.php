@@ -116,7 +116,7 @@
             <img src="photos/ED_sir.jpg" alt="Akramul Haque Biswas">
             <div class="founder-details">
                 <h2>Akramul Haque Biswas</h2>
-                <p>Founder & President</p>
+                <p>Founder & Executive Director</p>
                 <br>
                 <p>Akramul Haque Biswas is the founder and Executive Director of ATMABISWAS. He has been actively working to address poverty, inequality and environmental sustainability, focusing on solutions that create long-term impact. His efforts center around sustainable development, gender justice and green energy, ensuring that communities have the resources and opportunities to grow while maintaining ecological balance.
                 

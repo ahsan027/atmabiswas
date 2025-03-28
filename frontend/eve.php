@@ -270,14 +270,14 @@
 
             <div class="oth">
                 <div class="executive-card">
-                    <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
+                    <img src="photos/afrozabegum.png" alt="Mst. Afroza Begum">
                     <h2>Mst. Afroza Begum</h2>
                     <p><strong>Vice President</strong></p>
                     <p>Bringing extensive experience in social work to support strategic growth since 1991.</p>
                 </div>
 
                 <div class="executive-card">
-                    <img src="photos/Ed_sir.jpg" alt="Md. Akramul Haque Biswas">
+                    <img src="photos/edsir.png" alt="Md. Akramul Haque Biswas">
                     <h2>Md. Akramul Haque Biswas</h2>
                     <p><strong>Secretary / Executive Director</strong></p>
                     <p>Ensuring effective project implementation and leadership at ATMABISWAS.</p>

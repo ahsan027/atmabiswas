@@ -277,7 +277,7 @@
                 </div>
 
                 <div class="executive-card">
-                    <img src="photos/Ed_sir.jpg" alt="Md. Akramul Haque Biswas">
+                    <img src="photos/edsir.png" alt="Md. Akramul Haque Biswas">
                     <h2>Md. Akramul Haque Biswas</h2>
                     <p><strong>Secretary / Executive Director</strong></p>
                     <p>Ensuring effective project implementation and leadership at ATMABISWAS.</p>
