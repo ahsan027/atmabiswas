@@ -2,8 +2,11 @@
     include '../Database/db.php';
     $database = new Db();
     $connection = $database->connect();
+    $connection1 = $database->connect();
+
 
     $jobId = $_GET['id'];
+    $jobCode = $_GET['deptCode'];
 
     $sql = "SELECT * FROM jobs WHERE job_id =:job_id";
 
@@ -12,6 +15,14 @@
     $stmt->execute();
     $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // print_r($jobDes[0]['job_title']);
+
+    //Query of Job for the same Department Code
+    
+    $sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
+    $stmt1 = $connection1->prepare($sql1);
+    $stmt1->bindParam(":job_code",$jobCode);
+    $stmt1->execute();
+    $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +56,13 @@
                 </div>
                 <div class="meta-item">
                     <i class="fas fa-calendar-times"></i>
-                    <span class="deadline">Application Deadline: 30 August 2024</span>
+                    <span>DeptCode: <?= $jobCode ?></span>
                 </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar-times"></i>
+                    <span class="deadline">Application Deadline: <?= $jobDes[0]['deadline'] ?></span>
+                </div>
+
             </div>
         </div>
 
@@ -54,32 +70,46 @@
             <div class="main-content">
                 <div class="section">
                     <h2>Job Description</h2>
-                    <p>We are looking for a skilled Senior Software Engineer to join our growing team...</p>
+                    <p>We are looking for a skilled <strong
+                            style="color:#3498db;"><?= $jobDes[0]['job_title'] ?></strong>
+                        who has expertise in
+                        <strong><?= $jobDes[0]['job_skillset'] ?></strong> To join our growing team...
+                    </p>
+                    <br>
                     <ul>
-                        <li>Develop and maintain high-quality software solutions</li>
-                        <li>Collaborate with cross-functional teams</li>
-                        <li>Participate in code reviews</li>
-                        <li>Mentor junior developers</li>
+                        <?php
+                            $des = explode(",",$jobDes[0]['job_description']);
+                            foreach($des as $d){
+                    echo '<li>'.$d.'</li>';
+                            }
+                        
+                        ?>
+
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2>Requirements</h2>
                     <ul>
-                        <li>Bachelor's degree in Computer Science</li>
-                        <li>5+ years of experience in software development</li>
-                        <li>Proficiency in JavaScript/Python</li>
-                        <li>Experience with cloud platforms</li>
+                        <?php
+                            $req = explode(".",$jobDes[0]['job_req']);
+                            foreach($req as $re){
+                                echo "<li>".$re."</li>";
+                            }
+                         ?>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2>Benefits</h2>
                     <ul>
-                        <li>Competitive salary</li>
-                        <li>Health insurance</li>
-                        <li>Flexible working hours</li>
-                        <li>Professional development budget</li>
+                        <?php
+                            $ben = explode(",",$jobDes[0]['job_benefits']);
+                            foreach($ben as $b){
+                        
+                                echo "<li>".$b."</li>";
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -89,15 +119,17 @@
                     <h2>Job Overview</h2>
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-calendar"></i>
-                        <span>Posted: 1 August 2024</span>
+                        <span>Posted: <?= $jobDes[0]['PostDate']; ?></span>
                     </div>
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-users"></i>
-                        <span>Vacancy: 2</span>
+                        <span>Vacancy: <?php
+                echo $deptCode[0]['vacency'];
+                        ?> </span>
                     </div>
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-money-bill-wave"></i>
-                        <span>Salary: BDT 150,000 - 200,000</span>
+                        <span>Salary: <?= $jobDes[0]['salary_range'];?></span>
                     </div>
                 </div>
 

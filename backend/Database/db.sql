@@ -178,3 +178,27 @@ VALUES
  'Remote', 
  '$90,000 - $120,000', 
  'Full-time');
+
+
+ALTER TABLE jobs ADD job_req VARCHAR(255);
+
+
+    ("Bachelor's or Master's degree in Computer Science, Software Engineering, or a related field. 5+ years of professional software development experience. Proficiency in programming languages such as Java, Python, C++, or JavaScript. Strong understanding of software architecture, design patterns, and data structures. Experience with Agile methodologies, CI/CD pipelines, and version control (e.g., Git)."),
+
+    ("Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or related field. Strong proficiency in Python, R, SQL, and data visualization tools (e.g., Tableau, Power BI). Experience in machine learning, deep learning, and statistical modeling. Solid understanding of data wrangling, preprocessing, and feature engineering. Excellent problem-solving skills and the ability to communicate complex data insights clearly."),
+
+    ("Bachelor's degree in Graphic Design, Visual Arts, or a related field. Proficiency in design software such as Adobe Photoshop, Illustrator, and InDesign. Strong portfolio showcasing creativity, visual design, and branding projects. Knowledge of typography, color theory, and layout design principles. Ability to meet deadlines, collaborate with teams, and adapt to client feedback."),
+
+    ("Bachelor's degree in Marketing, Communications, or Business Administration. 3+ years of experience in digital marketing, SEO, SEM, and social media marketing. Proficiency in Google Analytics, Google Ads, and marketing automation tools. Strong content creation, email marketing, and campaign management skills. Excellent analytical skills to track and optimize digital marketing performance."),
+
+    ("Bachelor's degree in Computer Science, Information Technology, or a related field. Proficiency in front-end technologies (HTML, CSS, JavaScript, React) and back-end (Node.js, PHP, or Python). Experience working with relational databases (e.g., MySQL, PostgreSQL) and NoSQL databases. Strong understanding of RESTful APIs, authentication, and deployment on cloud platforms (e.g., AWS, Azure). Knowledge of version control systems (e.g., Git) and Agile development practices.");
+
+
+ALTER TABLE jobs MODIFY job_req VARCHAR(255) DEFAULT 'No job requirements specified';
+
+ALTER TABLE jobs
+ADD PostDate DATE NOT NULL DEFAULT (CURRENT_DATE),
+ADD deadline DATE;
+
+
+SELECT * FROM jobs WHERE job_code="SE1";

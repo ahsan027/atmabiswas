@@ -25,8 +25,16 @@
 
 <body>
     <header>
-        <h1>Available Jobs</h1>
-        <p>Find your next career opportunity</p>
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="../../frontend/career.php">Home</a></li>
+                <li><a href="availableJobs.php">Available Jobs</a></li>
+                <li><a href="../login/login.php">Login</a></li>
+            </ul>
+        </div>
     </header>
 
     <div class="container">
@@ -48,7 +56,7 @@ foreach($res as $r){
 echo "<div class='jobs-container' id='jobsContainer'>";
 echo "    <!-- Job listings will be here -->";
 echo "    <div class='job-card'>";
-echo "        <a href='jobdes.php?id=".$r['job_id']."' class='job-title'>".$r['job_title']."</a>";
+echo "<a href='jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='job-title'>" . htmlspecialchars($r['job_title']) . "</a>";
 echo "        <p class='company'>".$r['company_name']."</p>";
 echo "        <p class='location'>".$r['job_location']."</p>";
 echo "        <p class='salary'>".$r['salary_range']."</p>";
