@@ -88,6 +88,35 @@
 <?php include 'Navbar.php'?>
 
     <div class="container">
+                <!-- Empowering Women -->
+                <div class="segment">
+            <h2>Empowering Women </h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Cow/cow_pic1.jpg" alt="Conference Event">
+                    <div class="card-content">
+                        <h3>Empowering Women </h3>
+                        <p>ATMABISWAS supports women by providing livestock for sustainable livelihoods.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="fish&redy/ABS_04.JPG" alt="Conference Event">
+                    <div class="card-content">
+                        <h3>Empowering Women </h3>
+                        <p>Women receive culinary training to enhance their skills and achieve financial independence.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="women_empowerment/women.jpeg" alt="Conference Event">
+                    <div class="card-content">
+                        <h3>Empowering Women </h3>
+                        <p>ATMABISWAS empowers female farmers with free fertilizer and resources for better agricultural productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Scholarship Segment -->
         <div class="segment">
             <h2>ATMABISWAS Daycare</h2>
@@ -148,39 +177,6 @@
                     <div class="card-content">
                         <h3>ATMABISWAS Pathshala </h3>
                         <p>We are campaigning in the city to promote gender equality between women and men.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
- 
-        <!-- Empowering Women -->
-        <div class="segment">
-            <h2>Empowering Women </h2>
-            <div class="card-grid">
-                <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
-                    <div class="card-content">
-                        <h3>Empowering Women </h3>
-                        <p>We are proud to present the Best Employee Award, recognizing outstanding performance and dedication to excellence.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
-                    <div class="card-content">
-                        <h3>Empowering Women </h3>
-                        <p>We hold bi-monthly meetings with one or two managers to provide guidance on how we can support their branches and discuss strategies for improving their areas.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="LOGO/NGO_logo_monogram.png" alt="Conference Event">
-                    <div class="card-content">
-                        <h3>Empowering Women </h3>
-                        <p>Our team conducts an annual conference at the head office, where we meet with each manager to gather feedback on the past year’s progress.</p>
                     </div>
                 </div>
             </div>
