@@ -54,9 +54,10 @@
                     <div class="rightSide">
                         <h2>ATMABISWAS Career</h2>
                         <h2><span>Inspiring Excellence</span></h2>
-                        <form class="search">
-                            <input type="text" placeholder="Job Title, Keyword(S)">
-                            <button>Search</button>
+                        <form method="GET" action="../backend/career/searchJobs.php" class="search">
+                            <input type="text" name="searchItem" placeholder="Job Title, Keyword(S)"
+                                value="<?php echo isset($_GET['searchItem'])? htmlspecialchars($_GET['searchItem']):''; ?>">
+                            <button type="submit">Search</button>
                         </form>
                     </div>
 

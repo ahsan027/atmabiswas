@@ -217,3 +217,7 @@ INSERT INTO `jobs` (`job_id`, `job_code`, `job_title`, `job_description`, `job_s
 SELECT job_dept, COUNT(*) AS job_count 
 FROM jobs 
 GROUP BY job_dept;
+
+
+
+SELECT * FROM jobs WHERE job_dept = "field and operations";
