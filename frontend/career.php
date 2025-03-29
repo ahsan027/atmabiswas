@@ -87,7 +87,7 @@
                     $finres = $stm->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach($finres as $f){
-                        echo "<a>".$f['job_dept']."<span>".$f['job_count']."</span></a>";
+                        echo "<a href='../backend/career/sectorWise.php?dept=".$f['job_dept']."'>".$f['job_dept']."<span>".$f['job_count']."</span></a>";
                     }
 
                 ?>
