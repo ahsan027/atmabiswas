@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career - ATMABISWAS</title>
     <link rel="stylesheet" href="career.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
 </head>
 
@@ -55,6 +56,7 @@
                         <h2>ATMABISWAS Career</h2>
                         <h2><span>Inspiring Excellence</span></h2>
                         <form method="GET" action="../backend/career/searchJobs.php" class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" name="searchItem" placeholder="Job Title, Keyword(S)"
                                 value="<?php echo isset($_GET['searchItem'])? htmlspecialchars($_GET['searchItem']):''; ?>">
                             <button type="submit">Search</button>
