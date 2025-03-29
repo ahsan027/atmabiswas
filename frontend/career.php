@@ -56,9 +56,6 @@
                         <h2><span>Inspiring Excellence</span></h2>
                         <form class="search">
                             <input type="text" placeholder="Job Title, Keyword(S)">
-                            <select>
-                                <option value="">Sector</option>
-                            </select>
                             <button>Search</button>
                         </form>
                     </div>

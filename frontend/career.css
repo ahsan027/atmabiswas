@@ -101,6 +101,15 @@ body {
     align-items: end;
 }
 
+.hero .overlay .rightSide .search, button, input {
+    border-radius: 15px;
+    border: none;
+}
+
+.hero .overlay .rightSide .search input {
+    margin-right: 10px;
+}
+
 .hero .overlay .leftside .num {
     color: rgb(93, 93, 255);
 }
