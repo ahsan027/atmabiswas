@@ -15,7 +15,7 @@
         <?php include 'sidebar.php' ?>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="flex-1 flex flex-col overflow-hidden overflow-x-hidden">
             <!-- Top Navbar -->
 
             <?php include 'navbar.inc.php';?>
@@ -259,7 +259,7 @@
             </main>
         </div>
     </div>
-    <script src="dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

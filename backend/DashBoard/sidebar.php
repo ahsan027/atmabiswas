@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="css/dashboard.css">
 <div class="w-64 bg-primary-800 text-white hidden md:block">
     <div class="p-4 flex items-center space-x-2">
         <i class="fas fa-shapes text-2xl"></i>
