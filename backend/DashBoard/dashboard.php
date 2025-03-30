@@ -12,13 +12,13 @@
 <body class="bg-gray-100">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <?php require 'components/sidebar.php' ?>
+        <?php include 'sidebar.php' ?>
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden">
             <!-- Top Navbar -->
 
-            <?php include 'components/navbar.inc.php';?>
+            <?php include 'navbar.inc.php';?>
 
             <!-- Content Area -->
             <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
