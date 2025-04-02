@@ -1,6 +1,13 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
 .container {
     overflow-y: auto;
     position: relative;
@@ -9,6 +16,9 @@
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+
 }
 
 .container header {
@@ -16,6 +26,7 @@
     font-size: 20px;
     font-weight: 600;
     color: #333;
+    overflow: hidden;
 }
 
 .container header::before {
@@ -32,9 +43,14 @@
 .container form {
     position: relative;
     margin-top: 16px;
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
-    overflow: hidden;
+
+}
+
+.formfirst {
+
+    height: 100%;
 }
 
 .container form .form {
@@ -105,7 +121,7 @@ form .fields .input-field {
 
 form .fields .spinput-field {
     display: flex;
-    width: calc(100% / 3 - 15px);
+    width: 49%;
     flex-direction: column;
     margin: 4px 0;
 }
@@ -154,7 +170,7 @@ form .fields .spinput-field {
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
-    height: 80px;
+    height: 100px;
     margin: 8px 0;
 }
 

@@ -78,7 +78,7 @@
                     <br>
                     <ul>
                         <?php
-                            $des = explode(",",$jobDes[0]['job_description']);
+                            $des = explode(".",$jobDes[0]['job_description']);
                             foreach($des as $d){
                     echo '<li>'.$d.'</li>';
                             }
@@ -104,7 +104,7 @@
                     <h2>Benefits</h2>
                     <ul>
                         <?php
-                            $ben = explode(",",$jobDes[0]['job_benefits']);
+                            $ben = explode(".",$jobDes[0]['job_benefits']);
                             foreach($ben as $b){
                         
                                 echo "<li>".$b."</li>";

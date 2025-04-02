@@ -39,9 +39,9 @@
 
             <!-- Content Area -->
             <div class="container">
-                <header>Create Job Post</header>
                 <form action="#">
-                    <div class="form first">
+                    <div class="formfirst">
+                        <header>Create Job Post</header>
                         <div class="details personal">
                             <span class="title">Job Details</span>
                             <div class="fields">
@@ -58,7 +58,8 @@
 
                                 <div class="input-field">
                                     <label>Application Deadline</label>
-                                    <input name="deadline" type="date" placeholder="Enter birth date" required>
+                                    <input name="deadline" type="date" placeholder="Enter Application Deadline"
+                                        required>
                                 </div>
 
                                 <div class="input-field">
@@ -104,12 +105,22 @@
                                 </div>
                                 <div class="fields">
                                     <div class="spinput-field">
-                                        <label>Issued Authority</label>
-                                        <textarea placeholder="Enter issued state" required></textarea>
+                                        <label>Job Description</label>
+                                        <textarea name="job_description"
+                                            placeholder="Use fullstop(.) and the end of a description."
+                                            required></textarea>
                                     </div>
                                     <div class="spinput-field">
-                                        <label>Issued State</label>
-                                        <textarea placeholder="Enter issued state" required></textarea>
+                                        <label>Job Requirements</label>
+                                        <textarea name="job_req"
+                                            placeholder="Use fullstop(.) and the end of a Requirement."
+                                            required></textarea>
+                                    </div>
+                                    <div class="spinput-field">
+                                        <label>Job Benefits</label>
+                                        <textarea name="job_benefits"
+                                            placeholder="Use fullstop(.) and the end of a Beneifit."
+                                            required></textarea>
                                     </div>
                                 </div>
 
