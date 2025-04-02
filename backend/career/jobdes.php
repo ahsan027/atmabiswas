@@ -14,9 +14,6 @@
     $stmt->bindParam(":job_id",$jobId);
     $stmt->execute();
     $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($jobDes[0]['job_title']);
-
-    //Query of Job for the same Department Code
     
     $sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
     $stmt1 = $connection1->prepare($sql1);

@@ -30,9 +30,9 @@
             <?php include 'sidebar.php' ?>
 
         </div>
-        <div class="flex">
+        <div class="flex w-screen overflow-y-auto">
 
-            <section class="available-jobs overflow-y-auto">
+            <section class="available-jobs">
                 <div class="job-list">
                     <?php
 foreach($res as $r){
@@ -45,7 +45,7 @@ foreach($res as $r){
     
     // Main content link
     if($endDate > $currentDate){
-        echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
+        echo "<a href='../career/jobdes.php?id=".htmlspecialchars($r['job_id'])."&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
         echo "<h3 >".$r['job_title']."</h3>";
     } else {
         echo "<a href='#' style='color: gray;'>";
@@ -65,8 +65,8 @@ foreach($res as $r){
     }
     echo "</a>"; 
     echo "<div class='admin-buttons'>
-        <a href='update_job.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='update-btn'>Update</a>
-        <a href='delete_job.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='delete-btn'>Delete</a>
+        <a href='updatejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='update-btn'>Update</a>
+        <a href='deletejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='delete-btn'>Delete</a>
     </div>";
 
     echo "</div>"; 

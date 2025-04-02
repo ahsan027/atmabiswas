@@ -3,14 +3,20 @@
     
     $db = new Db();
     $connection = $db->connect();
+    $job_id = $_GET['id'];
 
-    $sql = "SELECT * FROM sectors";
 
+    $sql = "SELECT * FROM jobs WHERE job_id = :job_id";
     $stmt = $connection->prepare($sql);
+
+    $stmt->bindParam(":job_id",$job_id);
 
     $stmt->execute();
 
     $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    print_r($res);
+
    
 ?>
 
@@ -41,7 +47,7 @@
             <div class="container">
                 <form method="POST" action="Actions/jobreq.php">
                     <div class="formfirst">
-                        <header>Create Job Post</header>
+                        <header>Update Job Post(Job id:)</header>
                         <div class="details personal">
                             <span class="title">Job Details</span>
                             <div class="fields">
@@ -139,7 +145,7 @@
 
         </div>
     </div>
-    <script src="../js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 
 
 </body>
