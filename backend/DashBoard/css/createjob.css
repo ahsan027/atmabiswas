@@ -4,6 +4,7 @@
 .container {
     overflow-y: auto;
     position: relative;
+    height: 100vh;
     border-radius: 6px;
     padding: 30px;
     background-color: #fff;
@@ -31,7 +32,7 @@
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 490px;
+    height: 100vh;
     background-color: #fff;
     overflow: hidden;
 }
@@ -42,23 +43,8 @@
     transition: 0.3s ease;
 }
 
-.container form .form.second {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(100%);
-}
 
-form.secActive .form.second {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
-}
 
-form.secActive .form.first {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-100%);
-}
 
 .container form .title {
     display: block;
@@ -115,10 +101,22 @@ form .fields .input-field {
     color: #333;
 }
 
+/* Job details */
 
-/* TextArea */
+form .fields .spinput-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
 
-.input-field textarea {
+.spinput-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.spinput-field input {
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -130,16 +128,46 @@ form .fields .input-field {
     margin: 8px 0;
 }
 
-.input-field textarea :focus {
+.spinput-field select:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.spinput-field input[type="date"] {
+    color: #707070;
+}
+
+.spinput-field input[type="date"]:valid {
+    color: #333;
+}
+
+
+
+
+
+/* TextArea */
+
+.spinput-field textarea {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 80px;
+    margin: 8px 0;
+}
+
+.spinput-field textarea :focus {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
 
 
-.input-field textarea[type="date"] {
+.spinput-field textarea[type="date"] {
     color: #707070;
 }
 
-.input-field textarea[type="date"]:valid {
+.spinput-field textarea[type="date"]:valid {
     color: #333;
 }
 

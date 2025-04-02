@@ -90,12 +90,12 @@
                             <span class="title">Job Details</span>
                             <div>
                                 <div class="fields">
-                                    <div class="input-field">
+                                    <div class="spinput-field">
                                         <label>Required Job Experience</label>
                                         <input name="job_experience" type="text" placeholder="Enter required Experience"
                                             required>
                                     </div>
-                                    <div class="input-field">
+                                    <div class="spinput-field">
                                         <label>Job Skillset</label>
                                         <input name="job_skillset" type="text"
                                             placeholder="eg: PHP, JavaScript, MySQL, REST APIs, Frontend frameworks (React or Angular)."
@@ -103,11 +103,11 @@
                                     </div>
                                 </div>
                                 <div class="fields">
-                                    <div class="input-field">
+                                    <div class="spinput-field">
                                         <label>Issued Authority</label>
                                         <textarea placeholder="Enter issued state" required></textarea>
                                     </div>
-                                    <div class="input-field">
+                                    <div class="spinput-field">
                                         <label>Issued State</label>
                                         <textarea placeholder="Enter issued state" required></textarea>
                                     </div>
