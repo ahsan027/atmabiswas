@@ -29,7 +29,7 @@
                 <img src="https://atmabiswas.org/wp-content/uploads/2024/10/cropped-Monogram-web.webp" alt="Logo">
             </div>
             <ul class="menu">
-                <li><a href="/frontend/index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="../backend/career/availableJobs.php">Available Jobs</a></li>
                 <li><a href="../backend/login/login.php">Login</a></li>
             </ul>
@@ -105,15 +105,23 @@
                         $interval = $currentDate->diff($endDate);
 
                         $remainingDates = $interval->days;
-                echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
+
+                    if($endDate>$currentDate){
+                    echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
                     <h3>".$r['job_title']."</h3>
+                    <p>Job id:".$r["job_id"]."</p>
                     <p>Department: ".$r['job_dept']."</p>
                     <p>Salary: ".$r['salary_range']."</p>
                     <p>Experience: ".$r['job_experience']."</p>";
-                    if($endDate>$currentDate){
                     
                         echo "<span>".$remainingDates." Day Remaining"."</span>";
                     }else{
+                    echo "<a href='#' style=color: gray;><div class='job-card'>
+                    <h3>".$r['job_title']."</h3>
+                    <p>Job id:".$r["job_id"]."</p>
+                    <p>Department: ".$r['job_dept']."</p>
+                    <p>Salary: ".$r['salary_range']."</p>
+                    <p>Experience: ".$r['job_experience']."</p>";
                         echo "<span>Application Time ended</span>";
                     }
                     echo "</div></a>";
