@@ -39,7 +39,7 @@
 
             <!-- Content Area -->
             <div class="container">
-                <form action="#">
+                <form method="POST" action="Actions/jobreq.php">
                     <div class="formfirst">
                         <header>Create Job Post</header>
                         <div class="details personal">
