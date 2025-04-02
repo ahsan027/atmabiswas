@@ -109,7 +109,7 @@
                     if($endDate>$currentDate){
                     echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
                     <h3>".$r['job_title']."</h3>
-                    <p>Job id:".$r["job_id"]."</p>
+                    <p>Job id: ".$r["job_id"]."</p>
                     <p>Department: ".$r['job_dept']."</p>
                     <p>Salary: ".$r['salary_range']."</p>
                     <p>Experience: ".$r['job_experience']."</p>";
@@ -118,7 +118,7 @@
                     }else{
                     echo "<a href='#' style=color: gray;><div class='job-card'>
                     <h3>".$r['job_title']."</h3>
-                    <p>Job id:".$r["job_id"]."</p>
+                    <p>Job id: ".$r["job_id"]."</p>
                     <p>Department: ".$r['job_dept']."</p>
                     <p>Salary: ".$r['salary_range']."</p>
                     <p>Experience: ".$r['job_experience']."</p>";
