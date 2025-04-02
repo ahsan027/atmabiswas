@@ -1,3 +1,19 @@
+<?php
+    include '../Database/db.php';
+    
+    $db = new Db();
+    $connection = $db->connect();
+
+    $sql = "SELECT * FROM sectors";
+
+    $stmt = $connection->prepare($sql);
+
+    $stmt->execute();
+
+    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,9 +65,13 @@
                                     <label>Job Sector</label>
                                     <select name="job_dept" required>
                                         <option disabled selected>Select Sector</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
+                                        <?php
+                                            foreach($res as $r){
+                                    echo "<option value=".$r["sector_name"].">".$r["sector_name"]."</option>";
+                                            } 
+                                        ?>
+
+
                                     </select>
                                 </div>
 

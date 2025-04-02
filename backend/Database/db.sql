@@ -227,3 +227,14 @@ ALTER TABLE jobs DROP company_name;
 
 
 SELECT * FROM jobs;
+
+
+
+CREATE TABLE sectors(
+    sector_id INT PRIMARY KEY AUTO_INCREMENT,
+    sector_name VARCHAR(255) NOT NULL 
+
+);
+
+
+INSERT INTO sectors (sector_id,sector_name) VALUES (1,"Information Technology(IT)"),(2,"Human Resource(HR)"),(3,"Accounts Management"),(4,"Field and Operations"),(5,"Micro Finance"),(6,"Project Management");
