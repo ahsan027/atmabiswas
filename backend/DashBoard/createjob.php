@@ -107,20 +107,19 @@
                                     <div class="spinput-field">
                                         <label>Job Description</label>
                                         <textarea name="job_description"
-                                            placeholder="Use fullstop(.) and the end of a description."
+                                            placeholder="Use fullstop(.) at the end of a description."
                                             required></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Requirements</label>
                                         <textarea name="job_req"
-                                            placeholder="Use fullstop(.) and the end of a Requirement."
+                                            placeholder="Use fullstop(.) at the end of a Requirement."
                                             required></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Benefits</label>
                                         <textarea name="job_benefits"
-                                            placeholder="Use fullstop(.) and the end of a Beneifit."
-                                            required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Beneifit." required></textarea>
                                     </div>
                                 </div>
 
