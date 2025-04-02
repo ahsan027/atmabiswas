@@ -78,7 +78,7 @@
 
                                 <div class="input-field">
                                     <label>Job Location</label>
-                                    <input name="job_location" type="number" placeholder="Enter Job Location" required>
+                                    <input name="job_location" type="text" placeholder="Enter Job Location" required>
                                 </div>
 
                                 <div class="input-field">
