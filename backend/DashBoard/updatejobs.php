@@ -35,35 +35,41 @@
             <section class="available-jobs overflow-y-auto">
                 <div class="job-list">
                     <?php
-                    foreach($res as $r){
-                        $endDate = new DateTime($r['deadline']);
-                        $currentDate = new DateTime();
+foreach($res as $r){
+    $endDate = new DateTime($r['deadline']);
+    $currentDate = new DateTime();
+    $interval = $currentDate->diff($endDate);
+    $remainingDates = $interval->days;
 
-                        $interval = $currentDate->diff($endDate);
+    echo "<div class='job-card'>";
+    
+    // Main content link
+    if($endDate > $currentDate){
+        echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
+    } else {
+        echo "<a href='#' style='color: gray;'>";
+    }
+    
+    echo "<h3>".$r['job_title']."</h3>
+        <p>Job id: ".$r["job_id"]."</p>
+        <p>Department: ".$r['job_dept']."</p>
+        <p>Salary: ".$r['salary_range']."</p>
+        <p>Experience: ".$r['job_experience']."</p>";
+    
+    if($endDate > $currentDate){
+        echo "<span>".$remainingDates." Day Remaining</span>";
+    } else {
+        echo "<span>Application Time ended</span>";
+    }
+    echo "</a>"; 
+    echo "<div class='admin-buttons'>
+        <a href='update_job.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='update-btn'>Update</a>
+        <a href='delete_job.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='delete-btn'>Delete</a>
+    </div>";
 
-                        $remainingDates = $interval->days;
-
-                    if($endDate>$currentDate){
-                    echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
-                    <h3>".$r['job_title']."</h3>
-                    <p>Job id: ".$r["job_id"]."</p>
-                    <p>Department: ".$r['job_dept']."</p>
-                    <p>Salary: ".$r['salary_range']."</p>
-                    <p>Experience: ".$r['job_experience']."</p>";
-                    
-                        echo "<span>".$remainingDates." Day Remaining"."</span>";
-                    }else{
-                    echo "<a href='#' style=color: gray;><div class='job-card'>
-                    <h3>".$r['job_title']."</h3>
-                    <p>Job id: ".$r["job_id"]."</p>
-                    <p>Department: ".$r['job_dept']."</p>
-                    <p>Salary: ".$r['salary_range']."</p>
-                    <p>Experience: ".$r['job_experience']."</p>";
-                        echo "<span>Application Time ended</span>";
-                    }
-                    echo "</div></a>";
-                    } 
-                ?>
+    echo "</div>"; 
+}
+?>
 
                 </div>
             </section>
