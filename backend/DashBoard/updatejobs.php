@@ -46,12 +46,14 @@ foreach($res as $r){
     // Main content link
     if($endDate > $currentDate){
         echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
+        echo "<h3 >".$r['job_title']."</h3>";
     } else {
         echo "<a href='#' style='color: gray;'>";
+                echo "<h3 style=color:gray;>".$r['job_title']."</h3>";
     }
     
-    echo "<h3>".$r['job_title']."</h3>
-        <p>Job id: ".$r["job_id"]."</p>
+    
+        echo "<p>Job id: ".$r["job_id"]."</p>
         <p>Department: ".$r['job_dept']."</p>
         <p>Salary: ".$r['salary_range']."</p>
         <p>Experience: ".$r['job_experience']."</p>";
