@@ -221,3 +221,9 @@ GROUP BY job_dept;
 
 
 SELECT * FROM jobs WHERE job_dept = "field and operations";
+
+
+ALTER TABLE jobs DROP company_name;
+
+
+SELECT * FROM jobs;

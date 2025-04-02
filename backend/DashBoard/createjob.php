@@ -23,40 +23,46 @@
 
             <!-- Content Area -->
             <div class="container">
-                <header>Registration</header>
+                <header>Create Job Post</header>
                 <form action="#">
                     <div class="form first">
                         <div class="details personal">
-                            <span class="title">Personal Details</span>
+                            <span class="title">Job Details</span>
                             <div class="fields">
+
                                 <div class="input-field">
-                                    <label>Full Name</label>
-                                    <input type="text" placeholder="Enter your name" required>
+                                    <label>Job Code</label>
+                                    <input name="job_code" type="text" placeholder="Enter Job Code" required>
                                 </div>
+
                                 <div class="input-field">
-                                    <label>Date of Birth</label>
-                                    <input type="date" placeholder="Enter birth date" required>
+                                    <label>Job Title</label>
+                                    <input name="job_title" type="text" placeholder="Enter Job Title" required>
                                 </div>
+
                                 <div class="input-field">
-                                    <label>Email</label>
-                                    <input type="text" placeholder="Enter your email" required>
+                                    <label>Application Deadline</label>
+                                    <input name="deadline" type="date" placeholder="Enter birth date" required>
                                 </div>
+
                                 <div class="input-field">
-                                    <label>Mobile Number</label>
-                                    <input type="number" placeholder="Enter mobile number" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Gender</label>
-                                    <select required>
-                                        <option disabled selected>Select gender</option>
+                                    <label>Job Sector</label>
+                                    <select name="job_dept" required>
+                                        <option disabled selected>Select Sector</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>Others</option>
                                     </select>
                                 </div>
+
                                 <div class="input-field">
-                                    <label>Occupation</label>
-                                    <input type="text" placeholder="Enter your ccupation" required>
+                                    <label>Job Location</label>
+                                    <input name="job_location" type="number" placeholder="Enter Job Location" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Salary Range</label>
+                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999" required>
                                 </div>
                             </div>
                         </div>
