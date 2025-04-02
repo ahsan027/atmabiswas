@@ -57,7 +57,7 @@ echo "<div class='jobs-container' id='jobsContainer'>";
 echo "    <!-- Job listings will be here -->";
 echo "    <div class='job-card'>";
 echo "<a href='jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='job-title'>" . htmlspecialchars($r['job_title']) . "</a>";
-echo "        <p class='company'>".$r['company_name']."</p>";
+echo "        <p class='company'>ATMABISWAS</p>";
 echo "        <p class='location'>".$r['job_location']."</p>";
 echo "        <p class='salary'>".$r['salary_range']."</p>";
 echo "        <div class='tags'>";
@@ -81,25 +81,6 @@ echo "</div>";
     </div>
 
     <script>
-    // Sample job data (you can add more)
-    const jobs = [{
-            title: "Web Developer",
-            company: "Digital Solutions",
-            location: "Remote",
-            salary: "$80,000 - $100,000",
-            tags: ["Remote", "JavaScript", "Mid-level"]
-        },
-        {
-            title: "UX Designer",
-            company: "Creative Studio",
-            location: "London",
-            salary: "£50,000 - £65,000",
-            tags: ["Design", "Full-time", "Senior"]
-        }
-        // Add more job objects here
-    ];
-
-    // Filter jobs based on search input and location
     function filterJobs() {
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
         const locationFilter = document.getElementById('locationFilter').value;
