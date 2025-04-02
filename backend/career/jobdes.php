@@ -41,7 +41,7 @@
             <div class="company-info">
                 <img src="../images/logo/logo.png" alt="Company Logo" class="company-logo">
                 <div>
-                    <h3><?= $jobDes[0]['company_name']?>.</h3>
+                    <h3>ATMABISWAS.</h3>
                     <p>A non-profitable Organisation</p>
                 </div>
             </div>
