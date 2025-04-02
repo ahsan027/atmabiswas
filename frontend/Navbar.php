@@ -8,7 +8,7 @@
 <div class="navbar">
     <div class="top-row">
 
-        <div class="logo"><a href="/frontend/index.php"><img src="logoBg.png" alt=""></a></div>
+        <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="bottom-row">
-        <a href="/frontend/index.php">Who we are</a>
+        <a href="index.php">Who we are</a>
 
         <div class="dropdown">
             <div class="maindrop">

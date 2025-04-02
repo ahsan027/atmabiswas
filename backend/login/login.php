@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             echo "<p class='error'>INVALID CREDENTIALS</p>";
 
         }else{
-            header("Location: loginProcess.php");
+            header("Location: ../DashBoard/dashboard.php");
         }
 
     

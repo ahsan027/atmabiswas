@@ -1,4 +1,4 @@
-<div class="w-64 bg-primary-800 text-white hidden md:block">
+<div class="w-64 h-screen bg-primary-800 text-white hidden md:block">
     <div class="p-4 flex items-center space-x-2">
         <i class="fas fa-shapes text-2xl"></i>
         <h1 class="text-xl font-bold">DashPanel</h1>
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </a>
-        <a class="hyperlinks" href="">
+        <a class="hyperlinks" href="updatejobs.php">
             <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-shopping-cart"></i>
@@ -71,10 +71,10 @@
     </a>
     <div class="absolute bottom-0 p-4 w-64">
         <div class="flex items-center space-x-2">
-            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=75&fm=jpg&w=64&w=64&fit=max"
-                alt="User" class="rounded-full" />
+            <a href="../../frontend/index.php"><img class="h-[70px] w-[70px]" src="../images/logo/logo.png" alt="User"
+                    class="rounded-full" /></a>
             <div>
-                <div class="font-semibold">John Doe</div>
+                <div style="cursor: pointer;" class="font-semibold">ATMABISWAS</div>
                 <div class="text-sm text-gray-300">Administrator</div>
             </div>
         </div>
