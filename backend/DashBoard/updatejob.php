@@ -37,7 +37,7 @@
         $newstring[] = "$field"."=".":$field";
 
     }
-    print_r($newstring);
+
 
     $sqli = "UPDATE jobs SET ".implode(", ",$newstring)." WHERE job_id = $job_id";
 
