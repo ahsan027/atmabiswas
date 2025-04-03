@@ -46,7 +46,7 @@
                             <i class="bi bi-file-pdf fs-1 text-danger"></i>
                             <h4 class="my-3">Upload PDF</h4>
                             <p class="text-muted">Max file size: 10MB</p>
-                            <label for="pdfUpload" class="btn btn-danger px-4">
+                            <label for="pdfUpload" class="btn mt-2 btn-danger px-2">
                                 Choose PDF
                                 <input type="file" id="pdfUpload" name="pdf_file" class="file-input"
                                     accept="application/pdf" required>
