@@ -42,8 +42,14 @@
     $sqli = "UPDATE jobs SET ".implode(", ",$newstring)." WHERE job_id = $job_id";
 
     $stmt1 = $connection1->prepare($sqli);
+    $stmt1->execute($updatedValue); 
+    if($stmt1->rowCount()>0){
+    header("Location: updatejobs.php");
+        
+    }else{
+        echo "<p>Update Failed</p>";
 
-    $stmt1->execute($updatedValue);
+    }
 
     
 
