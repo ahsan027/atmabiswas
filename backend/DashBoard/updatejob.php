@@ -46,9 +46,6 @@
     if($stmt1->rowCount()>0){
     header("Location: updatejobs.php");
         
-    }else{
-        echo "<p>Update Failed</p>";
-
     }
 
     

@@ -5,7 +5,7 @@
     </div>
     <div class="mt-6">
         <a class="hyperlinks" href="dashboard.php">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-tachometer-alt"></i>
                     <span>Dashboard</span>
@@ -13,7 +13,7 @@
             </div>
         </a>
         <a class="hyperlinks" href="createjob.php">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-users"></i>
                     <span>Create New Job Post</span>
@@ -21,7 +21,7 @@
             </div>
         </a>
         <a class="hyperlinks" href="updatejobs.php">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-shopping-cart"></i>
                     <span>Update Job Posts</span>
@@ -29,7 +29,7 @@
             </div>
         </a>
         <a href="">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-chart-bar"></i>
                     <span>Publish Latest News</span>
@@ -37,15 +37,15 @@
             </div>
         </a>
         <a href="">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-file-invoice-dollar"></i>
                     <span>Add New Admins</span>
                 </div>
             </div>
         </a>
-        <a href="">
-            <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+        <a href="uploadimg.php">
+            <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-cog"></i>
                     <span>Manage Image Gallery</span>
@@ -54,7 +54,7 @@
         </a>
     </div>
     <a href="">
-        <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+        <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-cog"></i>
                 <span>Upload Notice</span>
@@ -62,7 +62,7 @@
         </div>
     </a>
     <a href="">
-        <div class="px-4 py-2 hover:bg-primary-700 cursor-pointer">
+        <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-cog"></i>
                 <span>Logout</span>
