@@ -3,6 +3,7 @@
     
     $db = new Db();
     $connection = $db->connect();
+    $connection1 = $db->connect();
     $job_id = $_GET['id'];
 
 
@@ -13,11 +14,39 @@
 
     $stmt->execute();
 
-    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $existing = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    print_r($res);
 
-   
+    $updatedValue = [
+    ':job_title'      => (isset($_POST['job_title']) && $_POST['job_title']) ? $_POST['job_title'] : $existing[0]['job_title'],
+    ':deadline'       => (isset($_POST['deadline']) && $_POST['deadline']) ? $_POST['deadline'] : $existing[0]['deadline'],
+    ':job_dept'       => (isset($_POST['job_dept']) && $_POST['job_dept']) ? $_POST['job_dept'] : $existing[0]['job_dept'],
+    ':job_location'   => (isset($_POST['job_location']) && $_POST['job_location']) ? $_POST['job_location'] : $existing[0]['job_location'],
+    ':salary_range'   => (isset($_POST['salary_range']) && $_POST['salary_range']) ? $_POST['salary_range'] : $existing[0]['salary_range'],
+    ':job_experience' => (isset($_POST['job_experience']) && $_POST['job_experience']) ? $_POST['job_experience'] : $existing[0]['job_experience'],
+    ':job_skillset'   => (isset($_POST['job_skillset']) && $_POST['job_skillset']) ? $_POST['job_skillset'] : $existing[0]['job_skillset'],
+    ':job_description'=> (isset($_POST['job_description']) && $_POST['job_description']) ? $_POST['job_description'] : $existing[0]['job_description'],
+    ':job_req'        => (isset($_POST['job_req']) && $_POST['job_req']) ? $_POST['job_req'] : $existing[0]['job_req'],
+    ':job_benefits'   => (isset($_POST['job_benefits']) && $_POST['job_benefits']) ? $_POST['job_benefits'] : $existing[0]['job_benefits']
+]
+;
+
+    $newstring = [];
+    foreach($updatedValue as $key => $value){
+        $field = str_replace(":",'',$key);
+        $newstring[] = "$field"."=".":$field";
+
+    }
+    print_r($newstring);
+
+    $sqli = "UPDATE jobs SET ".implode(", ",$newstring)." WHERE job_id = $job_id";
+
+    $stmt1 = $connection1->prepare($sqli);
+
+    $stmt1->execute($updatedValue);
+
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +74,7 @@
 
             <!-- Content Area -->
             <div class="container">
-                <form method="POST" action="Actions/jobreq.php">
+                <form method="POST" action="">
                     <div class="formfirst">
                         <header>Update Job Post(Job id:)</header>
                         <div class="details personal">
@@ -54,26 +83,37 @@
 
                                 <div class="input-field">
                                     <label>Job Code</label>
-                                    <input name="job_code" type="text" placeholder="Enter Job Code" required>
+                                    <input name="job_code" type="text" placeholder="Enter Job Code">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Job Title</label>
-                                    <input name="job_title" type="text" placeholder="Enter Job Title" required>
+                                    <input name="job_title" type="text" placeholder="Enter Job Title">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Application Deadline</label>
-                                    <input name="deadline" type="date" placeholder="Enter Application Deadline"
-                                        required>
+                                    <input name="deadline" type="date" placeholder="Enter Application Deadline">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Job Sector</label>
-                                    <select name="job_dept" required>
+                                    <select name="job_dept">
                                         <option disabled selected>Select Sector</option>
                                         <?php
-                                            foreach($res as $r){
+                                        $newdb = new Db();
+                                        
+                                        $newconn = $newdb->connect();
+
+                                        $sql = "SELECT * FROM sectors";
+                                        
+                                        $stmt = $newconn->prepare($sql);
+
+                                        $stmt->execute();
+
+                                        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                        foreach($res as $r){
                                     echo "<option value=".$r["sector_name"].">".$r["sector_name"]."</option>";
                                             } 
                                         ?>
@@ -84,12 +124,12 @@
 
                                 <div class="input-field">
                                     <label>Job Location</label>
-                                    <input name="job_location" type="text" placeholder="Enter Job Location" required>
+                                    <input name="job_location" type="text" placeholder="Enter Job Location">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Salary Range</label>
-                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999" required>
+                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999">
                                 </div>
                             </div>
                         </div>
@@ -98,34 +138,30 @@
                             <div>
                                 <div class="fields">
                                     <div class="spinput-field">
-                                        <label>Required Job Experience</label>
-                                        <input name="job_experience" type="text" placeholder="Enter required Experience"
-                                            required>
+                                        <label> Job Experience</label>
+                                        <input name="job_experience" type="text" placeholder="Enter  Experience">
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Skillset</label>
                                         <input name="job_skillset" type="text"
-                                            placeholder="eg: PHP, JavaScript, MySQL, REST APIs, Frontend frameworks (React or Angular)."
-                                            required>
+                                            placeholder="eg: PHP, JavaScript, MySQL, REST APIs, Frontend frameworks (React or Angular).">
                                     </div>
                                 </div>
                                 <div class="fields">
                                     <div class="spinput-field">
                                         <label>Job Description</label>
                                         <textarea name="job_description"
-                                            placeholder="Use fullstop(.) at the end of a description."
-                                            required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a description."></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Requirements</label>
                                         <textarea name="job_req"
-                                            placeholder="Use fullstop(.) at the end of a Requirement."
-                                            required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Requirement."></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Benefits</label>
                                         <textarea name="job_benefits"
-                                            placeholder="Use fullstop(.) at the end of a Beneifit." required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Beneifit."></textarea>
                                     </div>
                                 </div>
 
