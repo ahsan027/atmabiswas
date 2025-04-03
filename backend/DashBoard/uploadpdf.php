@@ -41,30 +41,27 @@
             <div class="upload-container overflow-y-hidden w-screen h-screen">
                 <form action="upload.php" method="POST" enctype="multipart/form-data">
 
-                    <div class="upload-section image-upload">
+                    <div class="upload-section pdf-upload">
                         <div class="mb-3">
-                            <i class="bi bi-image fs-1 text-primary"></i>
-                            <h4 class="my-3">Upload Image</h4>
-                            <p class="text-muted">Supported formats: JPG, JPEG
-                                (Max 1MB)</p>
-                            <label for="imageUpload" class="btn mt-2 btn-primary px-2">
-                                Choose Image
-                                <input type="file" id="imageUpload" name="image_file" class="file-input"
-                                    accept=".jpg, .jpeg" required>
+                            <i class="bi bi-file-pdf fs-1 text-danger"></i>
+                            <h4 class="my-3">Upload PDF</h4>
+                            <p class="text-muted">Max file size: 10MB</p>
+                            <label for="pdfUpload" class="btn btn-danger px-4">
+                                Choose PDF
+                                <input type="file" id="pdfUpload" name="pdf_file" class="file-input"
+                                    accept="application/pdf" required>
                             </label>
-                            <div class="preview-container" id="imagePreview">
-                                <img src="#" class="img-thumbnail mt-2" alt="Image preview" style="max-height: 200px;">
+                            <div class="preview-container pdf-preview" id="pdfPreview">
+                                <i class="bi bi-file-pdf fs-2"></i>
+                                <p class="filename mb-0"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Image Title</label>
-                        <input class="form-control" id="description" name="description"
-                            placeholder="Add Image Title..." />
 
-                        <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"
-                            placeholder="Add file description..."></textarea>
+                    <div class="mb-3">
+                        <label class="form-label">Pdf Title</label>
+                        <input class="form-control" id="description" name="description"
+                            placeholder="Add pdf Title..." />
                     </div>
 
 
@@ -81,19 +78,13 @@
 
 
     <script>
-    document.getElementById('imageUpload').addEventListener('change', function(e) {
-        const preview = document.getElementById('imagePreview');
+    document.getElementById('pdfUpload').addEventListener('change', function(e) {
+        const preview = document.getElementById('pdfPreview');
         const file = e.target.files[0];
 
         if (file) {
             preview.style.display = 'block';
-            const reader = new FileReader();
-
-            reader.onload = function(event) {
-                preview.querySelector('img').src = event.target.result;
-            }
-
-            reader.readAsDataURL(file);
+            preview.querySelector('.filename').textContent = file.name;
         }
     });
 
