@@ -7,9 +7,9 @@
 
     if(isset($_GET['id']) && isset($_GET['deptCode'])){
         try{
-            $job_id = htmlspecialchars($_GET['job_id']);
+            $job_id = htmlspecialchars($_GET['id']);
 
-            $sql ="DELETE * FROM jobs WHERE job_id = :job_id";
+            $sql ="DELETE FROM jobs WHERE job_id = :job_id";
 
             $stmt = $connection->prepare($sql);
 
@@ -17,7 +17,10 @@
 
             $stmt->execute();
 
+            header("Location: updatejobs.php");
+
         }catch(PDOException $err){
+            
             echo $err;
         }
 
