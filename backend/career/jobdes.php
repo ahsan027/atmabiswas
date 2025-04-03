@@ -5,8 +5,8 @@
     $connection1 = $database->connect();
 
 
-    $jobId = $_GET['id'];
-    $jobCode = $_GET['deptCode'];
+    $jobId = htmlspecialchars($_GET['id']);
+    $jobCode = htmlspecialchars($_GET['deptCode']);
 
     $sql = "SELECT * FROM jobs WHERE job_id =:job_id";
 
