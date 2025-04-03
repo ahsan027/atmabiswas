@@ -1,6 +1,7 @@
 <?php
-
     include '../Database/db.php';
+    session_start();
+
     $nameErr = "";
     $nameflag = false;
 
@@ -79,6 +80,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             echo "<p class='error'>INVALID CREDENTIALS</p>";
 
         }else{
+            $_SESSION['username'] = $username;
             header("Location: ../DashBoard/dashboard.php");
         }
 

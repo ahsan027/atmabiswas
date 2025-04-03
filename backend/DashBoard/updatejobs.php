@@ -1,13 +1,22 @@
 <?php 
+    session_start();
     include '../Database/db.php';
-    $database = new Db();
-    $connection = $database->connect();
-    
-    $sql = "SELECT * FROM jobs";
 
-    $stmt = $connection->prepare($sql);
-    $stmt->execute();
-    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if(isset($_SESSION['username'])){
+        $database = new Db();
+        $connection = $database->connect();
+
+        $sql = "SELECT * FROM jobs";
+
+        $stmt = $connection->prepare($sql);
+        $stmt->execute();
+        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }else{
+        header("Location: ../login/login.php");
+    }
+    
+    
 
 ?>
 <!DOCTYPE html>
