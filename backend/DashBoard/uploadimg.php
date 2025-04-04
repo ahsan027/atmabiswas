@@ -36,9 +36,9 @@
             <?php include 'sidebar.php' ?>
         </div>
         <!-- Main Content -->
-        <div class="flex justify-center h-screen overflow-y-hidden">
+        <div class="flex justify-center h-screen">
             <!-- Content Area -->
-            <div class="upload-container overflow-y-hidden w-screen h-screen">
+            <div class="upload-container w-screen h-screen">
                 <form action="upload.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section image-upload">
@@ -46,11 +46,11 @@
                             <i class="bi bi-image fs-1 text-primary"></i>
                             <h4 class="my-3">Upload Image</h4>
                             <p class="text-muted">Supported formats: JPG, JPEG
-                                (Max 1MB)</p>
+                                (Max 2MB)</p>
                             <label for="imageUpload" class="btn mt-2 btn-primary px-2">
                                 Choose Image
                                 <input type="file" id="imageUpload" name="image_file" class="file-input"
-                                    accept=".jpg, .jpeg" required>
+                                    accept=".jpg, .jpeg, .png" required>
                             </label>
                             <div class="preview-container" id="imagePreview">
                                 <img src="#" class="img-thumbnail mt-2" alt="Image preview" style="max-height: 200px;">

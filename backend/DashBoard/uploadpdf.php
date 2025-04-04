@@ -32,13 +32,13 @@
 
 <body class="bg-gray-100 w-screen h-screen overflow-x-hidden">
     <div class="flex h-screen">
-        <div class="flex h-screen overflow-y-hidden">
+        <div class="flex h-screen ">
             <?php include 'sidebar.php' ?>
         </div>
         <!-- Main Content -->
-        <div class="flex justify-center h-screen overflow-y-hidden">
+        <div class="flex justify-center h-screen">
             <!-- Content Area -->
-            <div class="upload-container overflow-y-hidden w-screen h-screen">
+            <div class="upload-container w-screen h-screen">
                 <form action="upload.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section pdf-upload">
