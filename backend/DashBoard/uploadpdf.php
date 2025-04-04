@@ -32,7 +32,7 @@
 
 <body class="bg-gray-100 w-screen h-screen overflow-x-hidden">
     <div class="flex h-screen">
-        <div class="flex h-screen ">
+        <div class="flex">
             <?php include 'sidebar.php' ?>
         </div>
         <!-- Main Content -->

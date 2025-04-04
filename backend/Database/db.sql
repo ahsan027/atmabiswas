@@ -247,10 +247,10 @@ ALTER TABLE jobs DROP job_code;
 ALTER TABLE jobs ADD job_code VARCHAR(255);
 
 
-CREATE TABLE uploads (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    files_name VARCHAR(255) NOT NULL,
-    files_type VARCHAR(50) NOT NULL,
-    files_size INT NOT NULL,
+CREATE TABLE img_upload (
+    img_id INT AUTO_INCREMENT PRIMARY KEY,
+    img_title VARCHAR(255) NOT NULL,
+    img_description TEXT,
+    img_path INT NOT NULL,
     uploaded_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

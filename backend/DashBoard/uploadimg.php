@@ -30,16 +30,16 @@
 
 </head>
 
-<body class="bg-gray-100 w-screen h-screen overflow-x-hidden">
+<body class="bg-gray-100 overflow-x-hidden">
     <div class="flex h-screen">
-        <div class="flex h-screen overflow-y-hidden">
+        <div class="flex overflow-y-hidden">
             <?php include 'sidebar.php' ?>
         </div>
         <!-- Main Content -->
         <div class="flex justify-center h-screen">
             <!-- Content Area -->
             <div class="upload-container w-screen h-screen">
-                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <form action="uploadimg_process.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section image-upload">
                         <div class="mb-3">
@@ -59,11 +59,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Image Title</label>
-                        <input class="form-control" id="description" name="description"
+                        <input class="form-control" id="description" name="img_title"
                             placeholder="Add Image Title..." />
 
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"
+                        <textarea class="form-control" id="description" name="img_description" rows="3"
                             placeholder="Add file description..."></textarea>
                     </div>
 
