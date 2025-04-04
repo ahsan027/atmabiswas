@@ -1,23 +1,22 @@
 <?php
 
-    include '../Database/db.php';
+    include 'Database/db.php';
 
     $db = new Db();
 
     $connection = $db->connect();
 
-    $uploadDir = "../../uploads/images/";
+    $uploadDir = "../uploads/images/";
 
     $allowedTypes = ['image/jpg','image/jpeg','image/png'];
-
     $imageSize = 2 *1024*1024;
 
     if(!file_exists($uploadDir)){
 
         mkdir($uploadDir,0755,true);
-        
-    }
 
+
+    }
 
     function processFile($imageFile,$allowedTypes,$imageSize,$uploadDir){
             
@@ -42,10 +41,8 @@
             }
 
             $ext = pathinfo($imageFile['name'],PATHINFO_EXTENSION);
-
-            $newname = str_replace(" ","_",$_POST['img_title']);
-
-            $new = $newname.".".$ext;
+            $date = date("Y-m-d");
+            $new = "PHOTO_".$date."_.".$ext;
 
             $target = $uploadDir.$new;
 
