@@ -1,14 +1,14 @@
 <?php
-    include '../Database/db.php';
-    session_start();
-    if(!isset($_SESSION['username'])){
-        
-        header("Location: ../login/login.php");
-        exit();
-    }
+include '../Database/db.php';
+session_start();
+if (!isset($_SESSION['username'])) {
 
-    $db = new Db();
-    $connection = $db->connect();
+    header("Location: ../login/login.php");
+    exit();
+}
+
+$db = new Db();
+$connection = $db->connect();
 
 ?>
 
@@ -45,7 +45,7 @@
                         <div class="mb-3">
                             <i class="bi bi-image fs-1 text-primary"></i>
                             <h4 class="my-3">Upload Image</h4>
-                            <p class="text-muted">Supported formats: JPG, JPEG
+                            <p class="text-muted">Supported formats: JPG, JPEG, PNG
                                 (Max 2MB)</p>
                             <label for="imageUpload" class="btn mt-2 btn-primary px-2">
                                 Choose Image
@@ -81,38 +81,38 @@
 
 
     <script>
-    document.getElementById('imageUpload').addEventListener('change', function(e) {
-        const preview = document.getElementById('imagePreview');
-        const file = e.target.files[0];
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const preview = document.getElementById('imagePreview');
+            const file = e.target.files[0];
 
-        if (file) {
-            preview.style.display = 'block';
-            const reader = new FileReader();
+            if (file) {
+                preview.style.display = 'block';
+                const reader = new FileReader();
 
-            reader.onload = function(event) {
-                preview.querySelector('img').src = event.target.result;
+                reader.onload = function(event) {
+                    preview.querySelector('img').src = event.target.result;
+                }
+
+                reader.readAsDataURL(file);
             }
-
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // Drag and drop highlight
-    document.querySelectorAll('.upload-section').forEach(section => {
-        section.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            section.classList.add('dragover');
         });
 
-        section.addEventListener('dragleave', () => {
-            section.classList.remove('dragover');
-        });
+        // Drag and drop highlight
+        document.querySelectorAll('.upload-section').forEach(section => {
+            section.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                section.classList.add('dragover');
+            });
 
-        section.addEventListener('drop', (e) => {
-            e.preventDefault();
-            section.classList.remove('dragover');
+            section.addEventListener('dragleave', () => {
+                section.classList.remove('dragover');
+            });
+
+            section.addEventListener('drop', (e) => {
+                e.preventDefault();
+                section.classList.remove('dragover');
+            });
         });
-    });
     </script>
 
 </body>
