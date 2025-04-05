@@ -39,7 +39,7 @@
         <div class="flex justify-center h-screen">
             <!-- Content Area -->
             <div class="upload-container w-screen h-screen">
-                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <form action="../uploadpdf_process.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section pdf-upload">
                         <div class="mb-3">
@@ -60,8 +60,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Pdf Title</label>
-                        <input class="form-control" id="description" name="description"
-                            placeholder="Add pdf Title..." />
+                        <input class="form-control" id="description" name="pdf_title" placeholder="Add pdf Title..." />
                     </div>
 
 

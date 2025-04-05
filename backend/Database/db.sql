@@ -254,3 +254,12 @@ CREATE TABLE img_upload (
     img_path INT NOT NULL,
     uploaded_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+
+CREATE TABLE pdsFiles(
+    pdf_id INT AUTO_INCREMENT PRIMARY KEY,
+    pdf_title VARCHAR(255) NOT NULL,
+    pdf_path VARCHAR(255) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
