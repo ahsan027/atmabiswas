@@ -59,10 +59,10 @@
           <button type="button" onclick="formatText('strong')">
             <i class="fas fa-bold"></i>
           </button>
-          <button type="button" onclick="formatText('italic')">
+          <button type="button" onclick="formatText('em')">
             <i class="fas fa-italic"></i>
           </button>
-          <button type="button" onclick="formatText('underline')">
+          <button type="button" onclick="formatText('u')">
             <i class="fas fa-underline"></i>
           </button>
 
