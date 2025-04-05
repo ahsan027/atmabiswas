@@ -19,7 +19,7 @@
   <div class="container">
     <div class="card editor-section">
       <h1>ATMABISWAS Blog Editor</h1>
-      <form action="">
+      <form action="../blogUpload_process.php" method="POST">
         <input type="text" id="blogTitle" placeholder="Blog Title" />
         <select id="blogCategory">
           <option value="">Select Category</option>
