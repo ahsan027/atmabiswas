@@ -36,6 +36,11 @@
 
         $target = $uploadDir.$newFileName ;
 
+        if(!move_uploaded_file($pdfFile["tmp_name"],$target)){
+            echo "<p>Error Occurd While Uploading</p>";
+            exit();
+        }
+
         return $target;
     }
 
@@ -55,10 +60,12 @@
                 mkdir($uploadDir,0755,true);
             }
 
-            $sql = "INSERT INTO pdfFiles (pdf_title,pdf_path) VALUES (:pdf_title,:pdf_path)";
+            $sql = "INSERT INTO pdsFiles (pdf_title,pdf_path) VALUES (:pdf_title,:pdf_path)";
             $stmt = $conn->prepare($sql);
 
             $stmt->bindParam(":pdf_title",$pdf_title);
+            $stmt->bindParam(":pdf_path",$pdfPath);
+
 
             $stmt->execute();
 
