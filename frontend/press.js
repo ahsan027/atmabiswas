@@ -18,7 +18,6 @@ document.querySelectorAll(".read-more-btn").forEach((button) => {
   });
 });
 
-// Close modal when clicking the close button or outside the modal content
 modalClose.addEventListener("click", () => {
   modal.style.display = "none";
   document.body.style.overflow = "auto";

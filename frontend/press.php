@@ -94,7 +94,7 @@
     </div>
 
     <?php include 'footer.php'; ?>
-
+    <script src="press.js"></script>
 </body>
 
 </html>
