@@ -1,30 +1,25 @@
 <?php
-    include '../Database/db.php';
-    
-    $db= new Db();
+include '../Database/db.php';
 
-    $connection = $db->connect();
+$db = new Db();
 
-    if(isset($_GET['id']) && isset($_GET['deptCode'])){
-        try{
-            $job_id = htmlspecialchars($_GET['id']);
+$connection = $db->connect();
 
-            $sql ="DELETE FROM jobs WHERE job_id = :job_id";
+if (isset($_GET['id']) && isset($_GET['deptCode'])) {
+    try {
+        $job_id = htmlspecialchars($_GET['id']);
 
-            $stmt = $connection->prepare($sql);
+        $sql = "DELETE FROM jobs WHERE job_id = :job_id";
 
-            $stmt->bindParam(":job_id",$job_id);
+        $stmt = $connection->prepare($sql);
 
-            $stmt->execute();
+        $stmt->bindParam(":job_id", $job_id);
 
-            header("Location: updatejobs.php");
+        $stmt->execute();
 
-        }catch(PDOException $err){
-            
-            echo $err;
-        }
+        header("Location: updatejobs.php");
+    } catch (PDOException $err) {
 
-
+        echo $err;
     }
-
-?>
+}

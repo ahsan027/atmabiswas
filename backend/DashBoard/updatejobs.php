@@ -1,22 +1,21 @@
-<?php 
-    session_start();
-    include '../Database/db.php';
+<?php
+session_start();
+include '../Database/db.php';
 
-    if(isset($_SESSION['username'])){
-        $database = new Db();
-        $connection = $database->connect();
+if (isset($_SESSION['username'])) {
+    $database = new Db();
+    $connection = $database->connect();
 
-        $sql = "SELECT * FROM jobs";
+    $sql = "SELECT * FROM jobs";
 
-        $stmt = $connection->prepare($sql);
-        $stmt->execute();
-        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    header("Location: ../login/login.php");
+}
 
-    }else{
-        header("Location: ../login/login.php");
-    }
-    
-    
+
 
 ?>
 <!DOCTYPE html>
@@ -44,43 +43,44 @@
             <section class="available-jobs">
                 <div class="job-list">
                     <?php
-foreach($res as $r){
-    $endDate = new DateTime($r['deadline']);
-    $currentDate = new DateTime();
-    $interval = $currentDate->diff($endDate);
-    $remainingDates = $interval->days;
+                    foreach ($res as $r) {
+                        $endDate = new DateTime($r['deadline']);
+                        $currentDate = new DateTime();
+                        $interval = $currentDate->diff($endDate);
+                        $remainingDates = $interval->days;
 
-    echo "<div class='job-card'>";
-    
-    // Main content link
-    if($endDate > $currentDate){
-        echo "<a href='../career/jobdes.php?id=".htmlspecialchars($r['job_id'])."&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
-        echo "<h3 >".$r['job_title']."</h3>";
-    } else {
-        echo "<a href='#' style='color: gray;'>";
-                echo "<h3 style=color:gray;>".$r['job_title']."</h3>";
-    }
-    
-    
-        echo "<p>Job id: ".$r["job_id"]."</p>
-        <p>Department: ".$r['job_dept']."</p>
-        <p>Salary: ".$r['salary_range']."</p>
-        <p>Experience: ".$r['job_experience']."</p>";
-    
-    if($endDate > $currentDate){
-        echo "<span>".$remainingDates." Day Remaining</span>";
-    } else {
-        echo "<span>Application Time ended</span>";
-    }
-    echo "</a>"; 
-    echo "<div class='admin-buttons'>
-        <a href='updatejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='update-btn'>Update</a>
-        <a href='deletejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='delete-btn'>Delete</a>
-    </div>";
+                        echo "<div class='job-card'>";
 
-    echo "</div>"; 
-}
-?>
+                        // Main content link
+                        if ($endDate > $currentDate) {
+                            echo "<a href='../career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'>";
+                            echo "<h3 >" . $r['job_title'] . "</h3>";
+                        } else {
+                            echo "<a href='#' style='color: gray;'>";
+                            echo "<h3 style=color:gray;>" . $r['job_title'] . "</h3>";
+                        }
+
+
+                        echo "<p>Job id: " . $r["job_id"] . "</p>
+        <p>Department: " . $r['job_dept'] . "</p>
+        <p>Salary: " . $r['salary_range'] . "</p>
+        <p>Experience: " . $r['job_experience'] . "</p>";
+
+                        if ($endDate > $currentDate) {
+                            echo "<span>" . $remainingDates . " Day Remaining</span>";
+                        } else {
+                            echo "<span>Application Time ended</span>";
+                        }
+                        echo "</a>";
+                        echo "<div class='admin-buttons'>
+                            <a href='updatejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='update-btn'>Update</a>
+                            <a href='deletejob.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' 
+                               onclick=\"return confirm('Are you sure you want to delete the job?')\" 
+                               class='delete-btn'>Delete</a>
+                        </div>";
+                        echo "</div>";
+                    }
+                    ?>
 
                 </div>
             </section>
