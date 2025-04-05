@@ -162,7 +162,7 @@
 
         if (result.status === 'success') {
           alert('Blog published successfully! Post ID: ' + result.post_id);
-          window.location.href = '/blog/' + result.post_id;
+          window.location.href = '../DashBoard/blog_image.php?id=' + result.post_id;
         } else {
           throw new Error(result.message);
         }

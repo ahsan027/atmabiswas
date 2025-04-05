@@ -3,7 +3,6 @@
 include 'Database/db.php';
 
 $db = new Db();
-
 $connection = $db->connect();
 
 $uploadDir = "../uploads/blogs/";
@@ -54,26 +53,25 @@ function processFile($imageFile, $allowedTypes, $imageSize, $uploadDir)
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   try {
-    $img_title =  htmlspecialchars($_POST["img_title"]) ?? "ATMA BISWAS";
-    $img_description =  htmlspecialchars($_POST["img_description"]);
+    $coverid = htmlspecialchars($_GET['id']);
+
 
 
     $imageFile = $_FILES["image_file"];
     $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
 
 
-    $sql = "INSERT INTO img_upload (img_title,img_description,img_path) VALUES (:img_title,:img_description,:img_path)";
+    $sql = "UPDATE blogs SET cover_img=:img_path WHERE blog_id=$coverid";
 
     $stmt = $connection->prepare($sql);
 
-    $stmt->bindParam(":img_title", $img_title);
-    $stmt->bindParam(":img_description", $img_description);
     $stmt->bindParam(":img_path", $image_path);
 
     $stmt->execute();
 
     header("Location: DashBoard/success.php?type=upload");
   } catch (Exception $e) {
-    header("Location: DashBoard/error.php?type=upload");
+    echo $e;
+    // header("Location: DashBoard/error.php?type=upload");
   }
 }

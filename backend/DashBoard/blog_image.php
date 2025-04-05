@@ -10,6 +10,8 @@ if (!isset($_SESSION['username'])) {
 $db = new Db();
 $connection = $db->connect();
 
+$coverid = htmlspecialchars($_GET['id']);
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +41,7 @@ $connection = $db->connect();
     <div class="flex justify-center h-screen">
       <!-- Content Area -->
       <div class="upload-container w-screen h-screen">
-        <form action="../blogimg_process.php" method="POST" enctype="multipart/form-data">
+        <form action="../blogimg_process.php?id=<?= $coverid ?>" method="POST" enctype="multipart/form-data">
 
           <div class="upload-section image-upload">
             <div class="mb-3">
@@ -91,23 +93,6 @@ $connection = $db->connect();
 
         reader.readAsDataURL(file);
       }
-    });
-
-    // Drag and drop highlight
-    document.querySelectorAll('.upload-section').forEach(section => {
-      section.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        section.classList.add('dragover');
-      });
-
-      section.addEventListener('dragleave', () => {
-        section.classList.remove('dragover');
-      });
-
-      section.addEventListener('drop', (e) => {
-        e.preventDefault();
-        section.classList.remove('dragover');
-      });
     });
   </script>
 
