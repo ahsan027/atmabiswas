@@ -121,7 +121,8 @@
           ondragover="handleDragOver(event)"
           ondrop="handleDrop(event)"
           ondragleave="handleDragLeave(event)"
-          placeholder="Start writing your post..."></div>
+          placeholder="Start writing your post...">
+        </div>
 
         <!-- Publish Button -->
         <button type="submit" class="publish-btn" onclick="savePost()">
