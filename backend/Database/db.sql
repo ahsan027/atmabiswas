@@ -263,3 +263,13 @@ CREATE TABLE pdsFiles(
     pdf_path VARCHAR(255) NOT NULL,
     upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE blogs(
+    blog_id int(11) AUTO_INCREMENT PRIMARY KEY,
+    blog_title VARCHAR(255) NOT NULL,
+    blog_content TEXT NOT NULL,
+    blog_author VARCHAR(255) DEFAULT "ATMABISWAS",
+    cover_img VARCHAR(255),
+    upload_date TIMESTAMP  DEFAULT CURRENT_TIMESTAMP
+);
