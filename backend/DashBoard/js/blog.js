@@ -1,6 +1,24 @@
-function formatText(command) {
-  document.execCommand(command, false, null);
-  document.getElementById("editor").focus();
+function formatText(tag) {
+  const editor = document.getElementById("editor");
+  const selection = window.getSelection();
+
+  if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+
+    if (editor.contains(range.commonAncestorContainer)) {
+      const selectedText = range.extractContents();
+      const wrapper = document.createElement(tag);
+      wrapper.appendChild(selectedText);
+      range.insertNode(wrapper);
+
+      range.setStartAfter(wrapper);
+      range.setEndAfter(wrapper);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
+
+  editor.focus();
 }
 
 function changeColor(color) {

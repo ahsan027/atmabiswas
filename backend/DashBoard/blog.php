@@ -56,7 +56,7 @@
           </select>
 
           <!-- Formatting buttons -->
-          <button type="button" onclick="formatText('bold')">
+          <button type="button" onclick="formatText('strong')">
             <i class="fas fa-bold"></i>
           </button>
           <button type="button" onclick="formatText('italic')">
@@ -121,8 +121,6 @@
       </form>
     </div>
 
-    <!-- Posts Preview Grid -->
-    <div class="preview-grid" id="postPreview"></div>
   </div>
 
   <script>
