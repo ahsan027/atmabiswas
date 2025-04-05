@@ -19,18 +19,19 @@
   <div class="container">
     <div class="card editor-section">
       <h1>ATMABISWAS Blog Editor</h1>
-      <form action="../blogUpload_process.php" method="POST">
-        <input name="blod_title" type="text" id="blogTitle" placeholder="Blog Title" />
-        <select id="blogCategory">
+      <form action="../blogUpload_process.php" method="POST" onsubmit="return handleFormSubmit(event)">
+        <!-- Blog Metadata -->
+        <input name="blog_title" type="text" id="blogTitle" placeholder="Blog Title" required>
+        <select id="blogCategory" name="blog_category" required>
           <option value="">Select Category</option>
           <option value="tech">Technology</option>
           <option value="life">Lifestyle</option>
           <option value="travel">Travel</option>
         </select>
 
-        <!-- Advanced Toolbar -->
+        <!-- Rich Text Toolbar -->
         <div class="toolbar">
-          <!-- Paragraph/Heading Dropdown -->
+          <!-- Keep all text formatting controls but remove file upload -->
           <select onchange="changeBlockFormat(this.value)">
             <option value="p">📝 Normal Text</option>
             <option value="h1">Heading 1</option>
@@ -39,7 +40,6 @@
             <option value="blockquote">Quote</option>
           </select>
 
-          <!-- Font Family Dropdown -->
           <select onchange="changeFont(this.value)">
             <option value="Arial">Arial</option>
             <option value="Times New Roman">Times New Roman</option>
@@ -48,7 +48,6 @@
             <option value="Verdana">Verdana</option>
           </select>
 
-          <!-- Font Size Dropdown -->
           <select onchange="changeFontSize(this.value)">
             <option value="1">Small</option>
             <option value="2">Medium</option>
@@ -56,76 +55,67 @@
             <option value="4">Extra Large</option>
           </select>
 
-          <!-- Bold, Italic, Underline -->
-          <button onclick="formatText('bold')">
+          <!-- Formatting buttons -->
+          <button type="button" onclick="formatText('bold')">
             <i class="fas fa-bold"></i>
           </button>
-          <button onclick="formatText('italic')">
+          <button type="button" onclick="formatText('italic')">
             <i class="fas fa-italic"></i>
           </button>
-          <button onclick="formatText('underline')">
+          <button type="button" onclick="formatText('underline')">
             <i class="fas fa-underline"></i>
           </button>
 
-          <!-- Text Color -->
-          <input
-            type="color"
-            onchange="changeColor(this.value)"
-            title="Text Color" />
+          <input type="color" onchange="changeColor(this.value)" title="Text Color">
 
-          <!-- Text Alignment -->
-          <button onclick="formatText('justifyLeft')">
+          <!-- Alignment -->
+          <button type="button" onclick="formatText('justifyLeft')">
             <i class="fas fa-align-left"></i>
           </button>
-          <button onclick="formatText('justifyCenter')">
+          <button type="button" onclick="formatText('justifyCenter')">
             <i class="fas fa-align-center"></i>
           </button>
-          <button onclick="formatText('justifyRight')">
+          <button type="button" onclick="formatText('justifyRight')">
             <i class="fas fa-align-right"></i>
           </button>
-          <button onclick="formatText('justifyFull')">
+          <button type="button" onclick="formatText('justifyFull')">
             <i class="fas fa-align-justify"></i>
           </button>
 
-
           <!-- Lists -->
-          <button onclick="formatText('insertUnorderedList')">
+          <button type="button" onclick="formatText('insertUnorderedList')">
             <i class="fas fa-list-ul"></i>
           </button>
-          <button onclick="formatText('insertOrderedList')">
+          <button type="button" onclick="formatText('insertOrderedList')">
             <i class="fas fa-list-ol"></i>
           </button>
 
-          <!-- Indent/Outdent -->
-          <button onclick="formatText('indent')">
+          <!-- Indentation -->
+          <button type="button" onclick="formatText('indent')">
             <i class="fas fa-indent"></i>
           </button>
-          <button onclick="formatText('outdent')">
+          <button type="button" onclick="formatText('outdent')">
             <i class="fas fa-outdent"></i>
           </button>
 
           <!-- Link -->
-          <button onclick="createLink()"><i class="fas fa-link"></i></button>
-
-          <!-- Upload Image -->
-          <button onclick="triggerUpload()">
-            <i class="fas fa-image"></i>
+          <button type="button" onclick="createLink()">
+            <i class="fas fa-link"></i>
           </button>
-          <input type="file" id="imageUpload" hidden accept="image/*" />
         </div>
 
-        <!-- Editor Area -->
+        <!-- Editor Content -->
         <div
           id="editor"
           contenteditable="true"
-          ondragover="handleDragOver(event)"
-          ondrop="handleDrop(event)"
-          ondragleave="handleDragLeave(event)"
-          placeholder="Start writing your post...">
-        </div>
+          placeholder="Start writing your post..."
+          class="editor-content"></div>
+
+        <!-- Hidden input for sanitized content -->
+        <input type="hidden" id="sanitizedContent" name="blog_content">
 
         <!-- Publish Button -->
-        <button type="submit" class="publish-btn" onclick="savePost()">
+        <button type="submit" class="publish-btn">
           <i class="fas fa-paper-plane"></i> Publish Post
         </button>
       </form>
@@ -134,6 +124,58 @@
     <!-- Posts Preview Grid -->
     <div class="preview-grid" id="postPreview"></div>
   </div>
+
+  <script>
+    // Form Submission Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      // Get and sanitize content
+      const editor = document.getElementById('editor');
+      const sanitized = sanitizeHTML(editor.innerHTML);
+
+      // Set hidden input value
+      document.getElementById('sanitizedContent').value = sanitized;
+
+      // Submit form
+      e.target.submit();
+    }
+
+    // Basic HTML Sanitizer
+    function sanitizeHTML(html) {
+      const temp = document.createElement('div');
+      temp.textContent = html;
+      return temp.innerHTML;
+    }
+
+    // Text Formatting Functions
+    function formatText(command, value = null) {
+      document.execCommand(command, false, value);
+      document.getElementById('editor').focus();
+    }
+
+    function changeBlockFormat(format) {
+      document.execCommand('formatBlock', false, format);
+    }
+
+    function changeFont(font) {
+      document.execCommand('fontName', false, font);
+    }
+
+    function changeFontSize(size) {
+      document.execCommand('fontSize', false, size);
+    }
+
+    function changeColor(color) {
+      document.execCommand('foreColor', false, color);
+    }
+
+    // Link Creation
+    function createLink() {
+      const url = prompt('Enter URL:');
+      if (url) document.execCommand('createLink', false, url);
+    }
+  </script>
 
   <script src="js/blog.js">
 
