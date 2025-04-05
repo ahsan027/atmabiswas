@@ -29,7 +29,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="blog.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-chart-bar"></i>

@@ -126,54 +126,52 @@
   </div>
 
   <script>
-    // Form Submission Handler
     function handleFormSubmit(e) {
       e.preventDefault();
 
-      // Get and sanitize content
+
       const editor = document.getElementById('editor');
       const sanitized = sanitizeHTML(editor.innerHTML);
 
-      // Set hidden input value
+
       document.getElementById('sanitizedContent').value = sanitized;
 
-      // Submit form
+
       e.target.submit();
     }
 
-    // Basic HTML Sanitizer
+
     function sanitizeHTML(html) {
       const temp = document.createElement('div');
       temp.textContent = html;
       return temp.innerHTML;
     }
 
-    // Text Formatting Functions
-    function formatText(command, value = null) {
-      document.execCommand(command, false, value);
-      document.getElementById('editor').focus();
-    }
 
-    function changeBlockFormat(format) {
-      document.execCommand('formatBlock', false, format);
-    }
+    async function handleFormSubmit(e) {
+      e.preventDefault();
 
-    function changeFont(font) {
-      document.execCommand('fontName', false, font);
-    }
+      const formData = new FormData(e.target);
+      const editorContent = document.getElementById('editor').innerHTML;
+      formData.append('blog_content', editorContent);
 
-    function changeFontSize(size) {
-      document.execCommand('fontSize', false, size);
-    }
+      try {
+        const response = await fetch(e.target.action, {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
 
-    function changeColor(color) {
-      document.execCommand('foreColor', false, color);
-    }
-
-    // Link Creation
-    function createLink() {
-      const url = prompt('Enter URL:');
-      if (url) document.execCommand('createLink', false, url);
+        if (result.status === 'success') {
+          alert('Blog published successfully! Post ID: ' + result.post_id);
+          window.location.href = '/blog/' + result.post_id;
+        } else {
+          throw new Error(result.message);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error publishing post: ' + error.message);
+      }
     }
   </script>
 
