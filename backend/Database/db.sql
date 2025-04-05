@@ -221,3 +221,45 @@ GROUP BY job_dept;
 
 
 SELECT * FROM jobs WHERE job_dept = "field and operations";
+
+
+ALTER TABLE jobs DROP company_name;
+
+
+SELECT * FROM jobs;
+
+
+
+CREATE TABLE sectors(
+    sector_id INT PRIMARY KEY AUTO_INCREMENT,
+    sector_name VARCHAR(255) NOT NULL 
+
+);
+
+
+INSERT INTO sectors (sector_id,sector_name) VALUES (1,"Information Technology(IT)"),(2,"Human Resource(HR)"),(3,"Accounts Management"),(4,"Field and Operations"),(5,"Micro Finance"),(6,"Project Management");
+
+
+
+ALTER TABLE jobs DROP job_code;
+
+
+ALTER TABLE jobs ADD job_code VARCHAR(255);
+
+
+CREATE TABLE img_upload (
+    img_id INT AUTO_INCREMENT PRIMARY KEY,
+    img_title VARCHAR(255) NOT NULL,
+    img_description TEXT,
+    img_path INT NOT NULL,
+    uploaded_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE pdsFiles(
+    pdf_id INT AUTO_INCREMENT PRIMARY KEY,
+    pdf_title VARCHAR(255) NOT NULL,
+    pdf_path VARCHAR(255) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

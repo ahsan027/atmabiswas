@@ -64,7 +64,7 @@ echo "<div class='jobs-container' id='jobsContainer'>";
 echo "    <!-- Job listings will be here -->";
 echo "    <div class='job-card'>";
 echo "<a href='jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='job-title'>" . htmlspecialchars($r['job_title']) . "</a>";
-echo "        <p class='company'>".$r['company_name']."</p>";
+echo "        <p class='company'>ATMABISWAS</p>";
 echo "        <p class='location'>".$r['job_location']."</p>";
 echo "        <p class='salary'>".$r['salary_range']."</p>";
 echo "        <div class='tags'>";

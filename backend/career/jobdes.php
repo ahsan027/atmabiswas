@@ -5,8 +5,8 @@
     $connection1 = $database->connect();
 
 
-    $jobId = $_GET['id'];
-    $jobCode = $_GET['deptCode'];
+    $jobId = htmlspecialchars($_GET['id']);
+    $jobCode = htmlspecialchars($_GET['deptCode']);
 
     $sql = "SELECT * FROM jobs WHERE job_id =:job_id";
 
@@ -14,9 +14,6 @@
     $stmt->bindParam(":job_id",$jobId);
     $stmt->execute();
     $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($jobDes[0]['job_title']);
-
-    //Query of Job for the same Department Code
     
     $sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
     $stmt1 = $connection1->prepare($sql1);
@@ -41,7 +38,7 @@
             <div class="company-info">
                 <img src="../images/logo/logo.png" alt="Company Logo" class="company-logo">
                 <div>
-                    <h3><?= $jobDes[0]['company_name']?>.</h3>
+                    <h3>ATMABISWAS.</h3>
                     <p>A non-profitable Organisation</p>
                 </div>
             </div>
@@ -78,7 +75,7 @@
                     <br>
                     <ul>
                         <?php
-                            $des = explode(",",$jobDes[0]['job_description']);
+                            $des = explode(".",$jobDes[0]['job_description']);
                             foreach($des as $d){
                     echo '<li>'.$d.'</li>';
                             }
@@ -104,7 +101,7 @@
                     <h2>Benefits</h2>
                     <ul>
                         <?php
-                            $ben = explode(",",$jobDes[0]['job_benefits']);
+                            $ben = explode(".",$jobDes[0]['job_benefits']);
                             foreach($ben as $b){
                         
                                 echo "<li>".$b."</li>";
