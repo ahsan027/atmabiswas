@@ -25,8 +25,24 @@ function changeColor(color) {
   document.execCommand("foreColor", false, color);
 }
 
-function changeBlockFormat(tag) {
-  document.execCommand("formatBlock", false, tag);
+function alignText(alignType) {
+  const editor = document.getElementById("editor");
+  const selection = window.getSelection();
+
+  if (selection.rangeCount > 0 && editor.contains(selection.anchorNode)) {
+    const range = selection.getRangeAt(0);
+    let container = range.startContainer;
+
+    // Go up to the nearest block element
+    while (container && container !== editor && container.nodeType === 3) {
+      container = container.parentNode;
+    }
+
+    if (container && container !== editor) {
+      container.style.textAlign = alignType;
+    }
+  }
+  editor.focus();
 }
 
 function changeFont(font) {

@@ -69,16 +69,16 @@
           <input type="color" onchange="changeColor(this.value)" title="Text Color">
 
           <!-- Alignment -->
-          <button type="button" onclick="formatText('justifyLeft')">
+          <button type="button" onclick="alignText('left')">
             <i class="fas fa-align-left"></i>
           </button>
-          <button type="button" onclick="formatText('justifyCenter')">
+          <button type="button" onclick="alignText('center')">
             <i class="fas fa-align-center"></i>
           </button>
-          <button type="button" onclick="formatText('justifyRight')">
+          <button type="button" onclick="alignText('right')">
             <i class="fas fa-align-right"></i>
           </button>
-          <button type="button" onclick="formatText('justifyFull')">
+          <button type="button" onclick="alignText('justify')">
             <i class="fas fa-align-justify"></i>
           </button>
 
