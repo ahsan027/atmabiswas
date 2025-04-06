@@ -34,7 +34,7 @@ if (isset($_SESSION['username'])) {
 
 <body class="bg-gray-100 overflow-x-hidden">
     <div class="flex h-screen">
-        <div class="flex">
+        <div class="flex h-screen">
             <?php include 'sidebar.php' ?>
 
         </div>

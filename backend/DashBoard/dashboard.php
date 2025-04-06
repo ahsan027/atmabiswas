@@ -1,9 +1,31 @@
 <?php
 session_start();
+include '../Database/db.php';
+
 if (!isset($_SESSION['username'])) {
     header("Location: ../login/login.php");
     exit();
 }
+
+
+$db = new Db();
+
+$conn = $db->connect();
+
+try {
+
+    $sql = "SELECT * FROM blogs";
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->execute();
+
+    $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
+
+
 
 ?>
 
@@ -116,7 +138,81 @@ if (!isset($_SESSION['username'])) {
 
 
 
-                <!-- Recent Orders Table -->
+                <!-- blogs Table -->
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Published Blogs Lists</h3>
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            View All
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Blog ID
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Blog Title
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Blog Author
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Blog Content
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Published Date
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                function concatStrings($blog)
+                                {
+                                    $maximumLength = 80;
+
+                                    $display = (strlen($blog) > $maximumLength) ? substr($blog, 0, $maximumLength) . "...." : $blog;
+
+                                    return $display;
+                                }
+
+                                foreach ($blogs as $blog) {
+
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $blog['blog_id'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_title']) . '</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-2 text-xs text-white bg-blue-500 rounded">' . $blog['blog_author'] . '</span>
+                                    </td>
+                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
+                                    <td class="py-3 px-4">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
+                                      Delete
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <!-- images Table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Recent Orders</h3>
@@ -203,95 +299,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
 
 
-
-                <!-- Recent Orders Table -->
-                <div class="bg-white rounded-lg shadow mb-6">
-                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Recent Orders</h3>
-                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All
-                        </button>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead>
-                                <tr class="bg-gray-50">
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Order ID
-                                    </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Customer
-                                    </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Status
-                                    </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Date
-                                    </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Total
-                                    </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Actions
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1001</td>
-                                    <td class="py-3 px-4 text-gray-700">Alice Johnson</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-green-500 rounded">Completed</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 12, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$320.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1002</td>
-                                    <td class="py-3 px-4 text-gray-700">Michael Smith</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-yellow-500 rounded">Pending</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 11, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$150.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1003</td>
-                                    <td class="py-3 px-4 text-gray-700">Sophia Brown</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-red-500 rounded">Cancelled</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 10, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$75.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-
-                <!-- Recent Orders Table -->
+                <!-- images Table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Recent Orders</h3>
