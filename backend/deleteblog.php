@@ -18,7 +18,6 @@ try {
 
   $uploadDir =  $res[0]['cover_img'];
 
-  print_r($uploadDir);
   if (file_exists($uploadDir)) {
 
     chmod($uploadDir, 0644);
