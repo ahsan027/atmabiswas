@@ -53,6 +53,7 @@ body {
         border-bottom: 2px solid #ddd;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        border: none;
     }
 
     .sectionalparts h1 {
@@ -67,11 +68,7 @@ body {
         line-height: 1.6;
     }
 
-    .sectionalparts:hover {
-        transform: scale(1.02);
-        background-color: #ffffff;
-        border-bottom: #0073e6 2px solid;
-    }
+  
 
     
 
