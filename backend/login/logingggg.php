@@ -27,10 +27,11 @@
             border-radius: 20px;
             width: 700px;
             padding: 30px;
-            background-color: rgba(0, 0, 0, .4);
-            box-shadow: 1px 1px 2px #ffc400ef;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 10);
             display: flex;
             flex-direction: column;
+            backdrop-filter: blur(3px);
         }
 
         .box h1 {
@@ -93,7 +94,7 @@
             display: block;
             margin: 20px auto;
             text-align: center;
-            border: 3px solid #0367fd;
+            border: none;
             padding: 14px 35px;
             outline: none;
             font-size: 18px;
@@ -102,10 +103,17 @@
             border-radius: 20px;
             transition: all .2s ease-in-out;
             cursor: pointer;
+            background-color: #0367fd;
         }
 
         #btn:hover {
-            background-color: #0367fd;
+            background-color: #025edc;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 0px auto;
+            display: block;
         }
     </style>
 </head>
@@ -113,6 +121,7 @@
     <div class="wrapper">
         <div class="box">
             <form action="">
+            <img src="../images/logo/logo.png">
                 <h1>Login</h1>
                 <div class="username">
                     <input type="text" placeholder="Enter Email Address" id="username" autocomplete="off" required>
@@ -123,6 +132,7 @@
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 <button id="btn" type="submit">Login</button>
+
             </form>
         </div>
     </div>
