@@ -1,0 +1,41 @@
+<?php
+include 'Database/db.php';
+
+$db = new Db();
+$conn = $db->connect();
+
+try {
+
+  $sql = "SELECT * FROM pdsfiles WHERE pdf_id=:pdf_id";
+
+  $stmt = $conn->prepare($sql);
+
+  $stmt->bindParam(":pdf_id", $_GET['pdf_id']);
+
+  $stmt->execute();
+
+  $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $uploadDir =  $res[0]['pdf_path'];
+
+  if (file_exists($uploadDir)) {
+
+    chmod($uploadDir, 0644);
+    unlink($uploadDir);
+  } else {
+    echo "Missing File";
+    exit();
+  }
+
+  $delsQL = "DELETE FROM pdsfiles WHERE pdf_id=:pdf_id";
+
+  $detStmt = $conn->prepare($delsQL);
+
+  $detStmt->bindParam(":pdf_id", $_GET['pdf_id']);
+
+  $detStmt->execute();
+
+  header("Location: DashBoard/dashboard.php");
+} catch (PDOException $e) {
+  echo $e;
+}

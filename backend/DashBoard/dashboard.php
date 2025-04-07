@@ -11,7 +11,15 @@ if (!isset($_SESSION['username'])) {
 $db = new Db();
 
 $conn = $db->connect();
+function concatStrings($blog): string
+{
+    $display = "";
+    $maximumLength = 80;
 
+    $display = (strlen($blog) > $maximumLength) ? substr($blog, 0, $maximumLength) . "...." : $blog;
+
+    return $display;
+}
 try {
 
     $sql = "SELECT * FROM blogs";
@@ -25,6 +33,29 @@ try {
     echo $e;
 }
 
+try {
+    $imgSql = "SELECT * FROM img_upload";
+
+    $imgStmt = $conn->prepare($imgSql);
+
+    $imgStmt->execute();
+
+    $images = $imgStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
+
+try {
+    $pdfSql = "SELECT * FROM pdsfiles";
+
+    $pdfStmt = $conn->prepare($pdfSql);
+
+    $pdfStmt->execute();
+
+    $pdfS = $pdfStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
 
 
 ?>
@@ -178,14 +209,7 @@ try {
                             </thead>
                             <tbody>
                                 <?php
-                                function concatStrings($blog)
-                                {
-                                    $maximumLength = 80;
 
-                                    $display = (strlen($blog) > $maximumLength) ? substr($blog, 0, $maximumLength) . "...." : $blog;
-
-                                    return $display;
-                                }
 
                                 foreach ($blogs as $blog) {
 
@@ -198,7 +222,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
@@ -238,11 +262,11 @@ try {
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Date
+                                        Image Path
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Total
+                                        Upload Date
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
@@ -251,58 +275,38 @@ try {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1001</td>
-                                    <td class="py-3 px-4 text-gray-700">Alice Johnson</td>
+                                <?php
+                                foreach ($images as $image) {
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $image['img_id'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $image['img_title'] . '</td>
                                     <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-green-500 rounded">Completed</span>
+                                        <span class="text-gray-700 ">' . concatStrings($image['img_description']) . '</span>
                                     </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 12, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$320.00</td>
+                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($image['img_path']) . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $image['uploaded_on'] . '</td>
                                     <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
+                                  <a onclick="return confirm(\'Are you sure you want to delete this image?\')" href="../deleteimage.php?img_id=' . $image['img_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                        Delete
+                                    </a>
                                     </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1002</td>
-                                    <td class="py-3 px-4 text-gray-700">Michael Smith</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-yellow-500 rounded">Pending</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 11, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$150.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1003</td>
-                                    <td class="py-3 px-4 text-gray-700">Sophia Brown</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-red-500 rounded">Cancelled</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 10, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$75.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
+                                </tr>';
+                                }
+
+                                ?>
+
+
+
                             </tbody>
                         </table>
                     </div>
                 </div>
 
 
-                <!-- images Table -->
+                <!-- pdf Table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Recent Orders</h3>
+                        <h3 class="font-semibold text-lg">Uploaded pdf files...</h3>
                         <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All
                         </button>
@@ -313,24 +317,21 @@ try {
                                 <tr class="bg-gray-50">
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Order ID
+                                        PDF ID
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Customer
+                                        PDF Title
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Status
+                                        PDF path
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Date
+                                        Upload Date
                                     </th>
-                                    <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Total
-                                    </th>
+
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Actions
@@ -338,48 +339,24 @@ try {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1001</td>
-                                    <td class="py-3 px-4 text-gray-700">Alice Johnson</td>
+                                <?php
+                                foreach ($pdfS as $pdf) {
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $pdf['pdf_id'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $pdf['pdf_title'] . '</td>
                                     <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-green-500 rounded">Completed</span>
+                                        <span class="px-2 py-1 text-gray-700 ">' . $pdf['pdf_path'] . '</span>
                                     </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 12, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$320.00</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $pdf['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
+                                  <a onclick="return confirm(\'Are you sure you want to delete this pdf?\')" href="../deletepdf.php?pdf_id=' . $pdf['pdf_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                        Delete
+                                    </a>
                                     </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1002</td>
-                                    <td class="py-3 px-4 text-gray-700">Michael Smith</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-yellow-500 rounded">Pending</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 11, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$150.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4 text-gray-700">#1003</td>
-                                    <td class="py-3 px-4 text-gray-700">Sophia Brown</td>
-                                    <td class="py-3 px-4">
-                                        <span class="px-2 py-1 text-xs text-white bg-red-500 rounded">Cancelled</span>
-                                    </td>
-                                    <td class="py-3 px-4 text-gray-700">Mar 10, 2025</td>
-                                    <td class="py-3 px-4 text-gray-700">$75.00</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-blue-500 hover:underline">
-                                            View
-                                        </button>
-                                    </td>
-                                </tr>
+                                </tr>';
+                                }
+                                ?>
+
                             </tbody>
                         </table>
                     </div>
