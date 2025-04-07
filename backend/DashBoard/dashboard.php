@@ -198,7 +198,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
                                       Delete
                                     </td>
                                 </tr>';
