@@ -198,7 +198,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="px-2 py-2 text-xs text-white bg-red-500 rounded">
                                       Delete
                                     </td>
                                 </tr>';
@@ -215,7 +215,7 @@ try {
                 <!-- images Table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Recent Orders</h3>
+                        <h3 class="font-semibold text-lg">Recently Uploaded Images</h3>
                         <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All
                         </button>
@@ -226,15 +226,15 @@ try {
                                 <tr class="bg-gray-50">
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Order ID
+                                        Image ID
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Customer
+                                        Image Title
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Status
+                                        Description
                                     </th>
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
