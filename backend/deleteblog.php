@@ -12,7 +12,9 @@ try {
 
   $stmt->bindParam(":blog_id", $_GET['blog_id']);
 
-  $stmt->execute();
+  $stmt->execute();  
+
+  
 
   $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
