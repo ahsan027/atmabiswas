@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   const toggleBtn = document.getElementById("toggle-btn");
-  const contactCard = document.getElementById("contact-card");
+  const contactCard = document.getElementById("contactCard");
 
   const filterbtn = document.getElementById("filterbutton");
   const filterField = document.getElementById("filterbars");
@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
           filterField.style.transform = "translateY(0)";
         }, 0);
       }
-      toggle - btn;
     });
   }
 
