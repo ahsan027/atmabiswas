@@ -88,69 +88,77 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 
 <body>
     <div class="container">
+
         <?php if ($current_article): ?>
-        <!-- Single Article View -->
-        <a href="?" class="back-button">
-            <i class="fas fa-arrow-left"></i> Back to Press Coverage
-        </a>
+            <!-- Single Article View -->
+            <header>
+                <h1>Press & Media – ATMABISWAS in Focus</h1>
+                <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
+                    that inspire social transformation.
+                </p>
+            </header>
+            <a href="?" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Press Coverage
+            </a>
 
-        <div class="article-container">
-            <div class="article-header">
-                <h1 class="article-title"><?php echo $current_article['title']; ?></h1>
-                <div class="article-meta">
-                    <span><?php echo date('F j, Y', strtotime($current_article['date'])); ?></span>
-                    <span>|</span>
-                    <span><i class="fas fa-newspaper"></i> <?php echo $current_article['source']; ?></span>
-                </div>
-            </div>
-
-            <div class="article-content">
-                <?php echo $current_article['content']; ?>
-            </div>
-        </div>
-        <?php else: ?>
-        <?php include 'Navbar.php' ?>
-        <header>
-            <h1>Press & Media – ATMABISWAS in Focus</h1>
-            <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories that inspire social transformation.
-            </p>
-        </header>
-
-        <!-- Press Coverage Grid View -->
-
-
-
-        <div class="filters">
-            <button class="filter-btn active" data-year="all">All Coverage</button>
-            <button class="filter-btn" data-year="2025">2025</button>
-            <button class="filter-btn" data-year="2024">2024</button>
-            <button class="filter-btn" data-year="2023">2023</button>
-        </div>
-
-        <div class="press-grid">
-            <?php if (empty($press_items)): ?>
-            <div class="empty-state">
-                <i class="far fa-newspaper"></i>
-                <h3>No press coverage yet</h3>
-                <p>Check back later for updates on our media appearances.</p>
-            </div>
-            <?php else: ?>
-            <?php foreach ($press_items as $id => $item): ?>
-            <div class="press-card" data-year="<?php echo $item['year']; ?>">
-                <div class="card-image">
-                    <img src="<?php echo $item['thumbnail']; ?>" alt="<?php echo $item['title']; ?>">
-                </div>
-                <div class="card-content">
-                    <span class="press-date"><?php echo date('F j, Y', strtotime($item['date'])); ?></span>
-                    <h3 class="press-title"><?php echo $item['title']; ?></h3>
-                    <div class="press-source">
-                        <i class="fas fa-newspaper"></i>
-                        <span><?php echo $item['source']; ?></span>
+            <div class="article-container">
+                <div class="article-header">
+                    <h1 class="article-title"><?php echo $current_article['title']; ?></h1>
+                    <div class="article-meta">
+                        <span><?php echo date('F j, Y', strtotime($current_article['date'])); ?></span>
+                        <span>|</span>
+                        <span><i class="fas fa-newspaper"></i> <?php echo $current_article['source']; ?></span>
                     </div>
-                    <p class="press-summary"><?php echo $item['summary']; ?></p>
-                    <div class="press-actions">
-                        <span class="press-type">
-                            <?php
+                </div>
+
+                <div class="article-content">
+                    <?php echo $current_article['content']; ?>
+                </div>
+            </div>
+        <?php else: ?>
+            <?php include 'Navbar.php' ?>
+            <header>
+                <h1>Press & Media – ATMABISWAS in Focus</h1>
+                <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
+                    that inspire social transformation.
+                </p>
+            </header>
+
+            <!-- Press Coverage Grid View -->
+
+
+
+            <div class="filters">
+                <button class="filter-btn active" data-year="all">All Coverage</button>
+                <button class="filter-btn" data-year="2025">2025</button>
+                <button class="filter-btn" data-year="2024">2024</button>
+                <button class="filter-btn" data-year="2023">2023</button>
+            </div>
+
+            <div class="press-grid">
+                <?php if (empty($press_items)): ?>
+                    <div class="empty-state">
+                        <i class="far fa-newspaper"></i>
+                        <h3>No press coverage yet</h3>
+                        <p>Check back later for updates on our media appearances.</p>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($press_items as $id => $item): ?>
+                        <div class="press-card" data-year="<?php echo $item['year']; ?>">
+                            <div class="card-image">
+                                <img src="<?php echo $item['thumbnail']; ?>" alt="<?php echo $item['title']; ?>">
+                            </div>
+                            <div class="card-content">
+                                <span class="press-date"><?php echo date('F j, Y', strtotime($item['date'])); ?></span>
+                                <h3 class="press-title"><?php echo $item['title']; ?></h3>
+                                <div class="press-source">
+                                    <i class="fas fa-newspaper"></i>
+                                    <span><?php echo $item['source']; ?></span>
+                                </div>
+                                <p class="press-summary"><?php echo $item['summary']; ?></p>
+                                <div class="press-actions">
+                                    <span class="press-type">
+                                        <?php
                                         switch ($item['type']) {
                                             case 'video':
                                                 echo '<i class="fas fa-play-circle"></i> Video';
@@ -162,9 +170,9 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                                                 echo '<i class="fas fa-newspaper"></i> Article';
                                         }
                                         ?>
-                        </span>
-                        <a href="?article=<?php echo $id; ?>" class="press-link">
-                            <?php
+                                    </span>
+                                    <a href="?article=<?php echo $id; ?>" class="press-link">
+                                        <?php
                                         switch ($item['type']) {
                                             case 'video':
                                                 echo 'Watch';
@@ -176,60 +184,60 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                                                 echo 'Read More';
                                         }
                                         ?>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
         <?php endif; ?>
     </div>
     <?php include 'footer.php' ?>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        <?php if (!$current_article): ?>
-        // Filter functionality only on grid view
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const pressCards = document.querySelectorAll('.press-card');
+        document.addEventListener('DOMContentLoaded', () => {
+            <?php if (!$current_article): ?>
+                // Filter functionality only on grid view
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const pressCards = document.querySelectorAll('.press-card');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Update active button
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
 
-                const year = button.dataset.year;
+                        const year = button.dataset.year;
 
-                // Filter cards
-                pressCards.forEach(card => {
-                    if (year === 'all' || card.dataset.year === year) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                        // Filter cards
+                        pressCards.forEach(card => {
+                            if (year === 'all' || card.dataset.year === year) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
                 });
-            });
-        });
 
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+                // Intersection Observer for animations
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
 
-        document.querySelectorAll('.press-card').forEach(card => {
-            observer.observe(card);
+                document.querySelectorAll('.press-card').forEach(card => {
+                    observer.observe(card);
+                });
+            <?php endif; ?>
         });
-        <?php endif; ?>
-    });
     </script>
 
 

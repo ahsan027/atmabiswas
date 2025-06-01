@@ -87,8 +87,10 @@ header p {
 .press-grid {
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 1.5rem;
+  width: 80rem;
+  height: 60rem;
 }
 
 .press-card {
@@ -228,6 +230,7 @@ header p {
   box-shadow: var(--shadow-md);
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .article-header {
@@ -290,6 +293,8 @@ header p {
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
   transition: var(--transition);
 }
 
