@@ -45,6 +45,32 @@ $conn = $db->connect();
         <button class="toggle-btn" id="toggle-btn">ATMABISWAS HQ</button>
 
         <!-- Contact Card -->
+        <div class="contact-card" id="contactCard">
+            <div class="contact-info">
+                <div class="cinfos">
+                    <h2>ATMABISWAS Head Office </h2>
+                    <p><strong>Branch:</strong> ATMABISWAS, Main Office</p>
+                    <p><strong>Address:</strong> Asma Palace,Court Para,Chuadanga-7200 </p>
+                    <p><strong>Phone:</strong> +8801713302930</p>
+                    <p><strong>Email:</strong> contact@atmabiswas.org</p>
+                </div>
+                <div class="btn">
+                    <a href="loc.html"><button id="">Other ATMABISWAS Branchs</button></a>
+                </div>
+
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.990205551057!2d88.84420999999999!3d23.640521800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fecc6a98f15555%3A0x7237da8c2d53a42d!2sAtmabiswas!5e0!3m2!1sen!2sbd!4v1737729888492!5m2!1sen!2sbd"
+                    loading="lazy" allowfullscreen loading="lazy"></iframe>
+
+            </div>
+        </div>
+
+        <button class="toggle-btn" id="liaison">ATMABISWAS LIAISON OFFICE</button>
+
+        <!-- Contact Card -->
         <div class="contact-card" id="contact-card">
             <div class="contact-info">
                 <div class="cinfos">
@@ -67,7 +93,9 @@ $conn = $db->connect();
 
             </div>
         </div>
-        <button class="toggle-btn" id="newcard">ATMABISWAS Regional Offices</button>
+
+
+        <button class="toggle-btn" id="newcard">ATMABISWAS REGIONAL OFFICES</button>
 
         <div id="reg" class="regbranch">
             <div class="table">
@@ -90,7 +118,7 @@ $conn = $db->connect();
 
 
 
-        <button class="toggle-btn" id="filterbutton">ATMABISWAS Branches</button>
+        <button class="toggle-btn" id="filterbutton">ATMABISWAS BRANCHES</button>
         <div class="filterbars" id="filterbars">
 
             <select name="division" id="divisionSelect">
@@ -135,7 +163,7 @@ $conn = $db->connect();
     <?php include 'footer.php' ?>
     <script src="locations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
 

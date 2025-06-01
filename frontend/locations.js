@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
           filterField.style.transform = "translateY(0)";
         }, 0);
       }
+      toggle - btn;
     });
   }
 
