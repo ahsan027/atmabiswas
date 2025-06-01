@@ -19,17 +19,17 @@ $conn = $db->connect();
 
 
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        background-color: #e6f2ff;
-        overflow-x: hidden;
-        height: auto;
-    }
+        body {
+            background-color: #e6f2ff;
+            overflow-x: hidden;
+            height: auto;
+        }
     </style>
 
 
@@ -70,7 +70,7 @@ $conn = $db->connect();
 
             </div>
 
-            <div>
+            <div class="oldnewdiv">
                 <div class="contact-info">
                     <div class="cinfos">
                         <h2>ATMABISWAS Liaison Office </h2>

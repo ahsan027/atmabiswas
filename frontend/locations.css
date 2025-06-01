@@ -39,7 +39,10 @@
   opacity: 1;
   transform: translateY(0);
 }
-
+.newnewdiv,
+.oldnewdiv {
+  width: 50%;
+}
 .filterbars {
   display: none;
   opacity: 0;
