@@ -50,7 +50,7 @@
     </div>
 
 
-    <div class="sectionalparts">
+    <div class="sectionalpartsnew">
         <h1>Latest</h1>
         <p><strong>Find the latest news of ATMABISWAS here.</strong></p>
     </div>
