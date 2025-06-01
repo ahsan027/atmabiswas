@@ -111,9 +111,8 @@ if ($article_id !== null && isset($press_items[$article_id])) {
     <?php else: ?>
       <?php include 'Navbar.php' ?>
       <header>
-        <h1>Advancing Green Energy for a Sustainable Future</h1>
-        <p>ATMABISWAS promotes renewable energy solutions to reduce carbon footprints and ensure energy
-          accessibility.
+        <h1>Notices from ATMABISWAS</h1>
+        <p>Guiding communities with timely updates, policy changes, and critical information that support our mission and empower action.
         </p>
       </header>
 

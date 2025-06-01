@@ -111,9 +111,8 @@ if ($article_id !== null && isset($press_items[$article_id])) {
         <?php else: ?>
         <?php include 'Navbar.php' ?>
         <header>
-            <h1>ABCD Advancing Green Energy for a Sustainable Future</h1>
-            <p>ABCD ATMABISWAS promotes renewable energy solutions to reduce carbon footprints and ensure energy
-                accessibility.
+            <h1>Press & Media – ATMABISWAS in Focus</h1>
+            <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories that inspire social transformation.
             </p>
         </header>
 
