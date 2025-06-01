@@ -12,7 +12,7 @@ $conn = $db->connect();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar with Active Page</title>
+    <title>ATMABISWAS - Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="locations.css">
@@ -46,7 +46,7 @@ $conn = $db->connect();
 
         <!-- Contact Card -->
         <div class="contact-card" id="contactCard">
-            <div>
+            <div class="newnewdiv">
                 <div class="contact-info">
                     <div class="cinfos">
                         <h2>ATMABISWAS Head Office </h2>
@@ -128,9 +128,9 @@ $conn = $db->connect();
                 <?php
 
                 $stmt = $pdo->prepare("SELECT DISTINCT division FROM divisions");
-                $stmt->execute();   
+                $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                
+
                 foreach ($result as $r) {
                     echo "<option value=" . "$r[division]" . ">" . $r['division'] . "</option>";
                 }

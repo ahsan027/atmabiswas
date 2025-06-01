@@ -16,7 +16,9 @@
   background-color: rgb(230, 230, 230);
   color: #005bb5;
 }
-
+.newnewdiv {
+  border-right: #0073e6 5px solid;
+}
 /* Contact card styles */
 .contact-card {
   display: none;
