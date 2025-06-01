@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
           const obj = JSON.parse(xhr.responseText);
           tablebody.innerHTML = "";
 
+          if (obj.length === 0) {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td colspan="4" style="text-align:center;">In Progress</td>`;
+            tablebody.appendChild(row);
+            return;
+          }
+
           obj.forEach((element, idx) => {
             const row = document.createElement("tr");
 

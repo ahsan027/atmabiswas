@@ -1,6 +1,5 @@
 <?php
 
-// print_r($_POST['division']);
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
     header("Content-Type: application/json");
     $division = $_POST['division'];
@@ -23,6 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
         echo json_encode($result);
 
     } else {
-        echo "<p>No results found for the selected division.</p>";
+        echo json_encode($result);
     }
 }

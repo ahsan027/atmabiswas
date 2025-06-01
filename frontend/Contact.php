@@ -19,17 +19,17 @@ $conn = $db->connect();
 
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            background-color: #e6f2ff;
-            overflow-x: hidden;
-            height: auto;
-        }
+    body {
+        background-color: #e6f2ff;
+        overflow-x: hidden;
+        height: auto;
+    }
     </style>
 
 
@@ -97,10 +97,10 @@ $conn = $db->connect();
                 <option value="">Select Division</option>
                 <?php
 
-                $stmt = $pdo->prepare("SELECT DISTINCT division FROM branch");
-                $stmt->execute();
+                $stmt = $pdo->prepare("SELECT DISTINCT division FROM divisions");
+                $stmt->execute();   
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                // var_dump($result);
+                
                 foreach ($result as $r) {
                     echo "<option value=" . "$r[division]" . ">" . $r['division'] . "</option>";
                 }
@@ -128,12 +128,6 @@ $conn = $db->connect();
 
             </div>
         </div>
-
-
-
-
-
-
     </div>
 
 
