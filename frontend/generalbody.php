@@ -62,11 +62,28 @@
         gap: 20px;
         justify-content: center;
         margin-bottom: 30px;
+        max-width: 1200px;
+        margin: 0 auto 30px auto;
     }
 
     .oth {
         display: flex;
         gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .oth .executive-card {
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 500px;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
 
     .executive-card {
@@ -142,10 +159,11 @@
 
     .othermembers {
         display: grid;
-        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         justify-content: center;
-        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .card {
@@ -153,7 +171,6 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
         overflow: hidden;
-        width: 320px;
         transition: transform 0.3s, box-shadow 0.3s;
     }
 
@@ -270,7 +287,7 @@
 
             <div class="oth">
                 <div class="executive-card">
-                    <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum">
+                    <img src="photos/AfrozaBegum.png" alt="Mst. Afroza Begum" style="object-position: top;">
                     <h2>Mst. Afroza Begum</h2>
                     <p><strong>Vice President</strong></p>
                     <p>Bringing extensive experience in social work to support strategic growth since 1991.</p>
@@ -294,7 +311,6 @@
                 <div class="card-body">
                     <h2>Md. Iktiar Uddin</h2>
                     <h3>Treasurer</h3>
-                    <p>Overseeing financial management with transparency and accountability.</p>
                 </div>
             </div>
 
@@ -303,7 +319,6 @@
                 <div class="card-body">
                     <h2>Nazma Shaheen</h2>
                     <h3>Executive Member</h3>
-                    <p>Advancing social welfare and supporting community empowerment.</p>
                 </div>
             </div>
 
@@ -312,7 +327,7 @@
                 <div class="card-body">
                     <h2>Mst. Shahana Pervin</h2>
                     <h3>Executive Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                    
                 </div>
             </div>
 
@@ -321,7 +336,7 @@
                 <div class="card-body">
                     <h2>Md. Nazrul Islam Alo</h2>
                     <h3>Executive Member</h3>
-                    <p>Strengthening social advocacy and expanding ATMABISWAS’s reach.</p>
+                    
                 </div>
             </div>
             <div class="card">
@@ -329,7 +344,7 @@
                 <div class="card-body">
                     <h2>Md. Asadul Haque Biswas</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
             <div class="card">
@@ -337,7 +352,6 @@
                 <div class="card-body">
                     <h2>Mst. Malaka Parvin</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>
             <div class="card">
@@ -345,7 +359,6 @@
                 <div class="card-body">
                     <h2>Obaidul Haque Bhola</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div> 
             <div class="card">
@@ -353,7 +366,6 @@
                 <div class="card-body">
                     <h2>Salahuddin Mohammad Mortaza</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>
             <div class="card">
@@ -361,7 +373,6 @@
                 <div class="card-body">
                     <h2>Md. Zahurul Islam Joarddarn</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>
             <div class="card">
@@ -369,7 +380,6 @@
                 <div class="card-body">
                     <h2>Md. Humayun Kabir Malik</h2>
                     <h3> Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>
             <div class="card">
@@ -377,7 +387,6 @@
                 <div class="card-body">
                     <h2>Md. Aman Ullah</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>
             <div class="card">
@@ -385,7 +394,6 @@
                 <div class="card-body">
                     <h2>Advocate Md. Belal Hossain</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
                 </div>
             </div>     
 
@@ -394,7 +402,7 @@
                 <div class="card-body">
                     <h2>Md. Amirul Haque Rasel</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
 
@@ -403,7 +411,7 @@
                 <div class="card-body">
                     <h2>Salauddin Biswas Mona</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
 
@@ -412,7 +420,7 @@
                 <div class="card-body">
                     <h2>Md. Rizik Biswas</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
             <div class="card">
@@ -420,7 +428,7 @@
                 <div class="card-body">
                     <h2>Md. Tipu Sultan Biswas</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
             <div class="card">
@@ -428,7 +436,7 @@
                 <div class="card-body">
                     <h2>Md. Milton Biswas</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
 
@@ -437,7 +445,7 @@
                 <div class="card-body">
                     <h2>Md. Shahin Biswas</h2>
                     <h3>Member</h3>
-                    <p>Implementing impactful projects that uplift communities.</p>
+                   
                 </div>
             </div>
 

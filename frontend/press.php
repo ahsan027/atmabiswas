@@ -144,51 +144,53 @@ if ($article_id !== null && isset($press_items[$article_id])) {
             </div>
             <?php else: ?>
             <?php foreach ($press_items as $id => $item): ?>
-            <div class="press-card" data-year="<?php echo $item['year']; ?>">
-                <div class="card-image">
-                    <img src="<?php echo $item['thumbnail']; ?>" alt="<?php echo $item['title']; ?>">
-                </div>
-                <div class="card-content">
-                    <span class="press-date"><?php echo date('F j, Y', strtotime($item['date'])); ?></span>
-                    <h3 class="press-title"><?php echo $item['title']; ?></h3>
-                    <div class="press-source">
-                        <i class="fas fa-newspaper"></i>
-                        <span><?php echo $item['source']; ?></span>
+            <a href="?article=<?php echo $id; ?>" class="press-card-link">
+                <div class="press-card" data-year="<?php echo $item['year']; ?>">
+                    <div class="card-image">
+                        <img src="<?php echo $item['thumbnail']; ?>" alt="<?php echo $item['title']; ?>">
                     </div>
-                    <p class="press-summary"><?php echo $item['summary']; ?></p>
-                    <div class="press-actions">
-                        <span class="press-type">
-                            <?php
-                                        switch ($item['type']) {
-                                            case 'video':
-                                                echo '<i class="fas fa-play-circle"></i> Video';
-                                                break;
-                                            case 'pdf':
-                                                echo '<i class="fas fa-file-pdf"></i> PDF';
-                                                break;
-                                            default:
-                                                echo '<i class="fas fa-newspaper"></i> Article';
-                                        }
-                                        ?>
-                        </span>
-                        <a href="?article=<?php echo $id; ?>" class="press-link">
-                            <?php
-                                        switch ($item['type']) {
-                                            case 'video':
-                                                echo 'Watch';
-                                                break;
-                                            case 'pdf':
-                                                echo 'View PDF';
-                                                break;
-                                            default:
-                                                echo 'Read More';
-                                        }
-                                        ?>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <div class="card-content">
+                        <span class="press-date"><?php echo date('F j, Y', strtotime($item['date'])); ?></span>
+                        <h3 class="press-title"><?php echo $item['title']; ?></h3>
+                        <div class="press-source">
+                            <i class="fas fa-newspaper"></i>
+                            <span><?php echo $item['source']; ?></span>
+                        </div>
+                        <p class="press-summary"><?php echo $item['summary']; ?></p>
+                        <div class="press-actions">
+                            <span class="press-type">
+                                <?php
+                                switch ($item['type']) {
+                                    case 'video':
+                                        echo '<i class="fas fa-play-circle"></i> Video';
+                                        break;
+                                    case 'pdf':
+                                        echo '<i class="fas fa-file-pdf"></i> PDF';
+                                        break;
+                                    default:
+                                        echo '<i class="fas fa-newspaper"></i> Article';
+                                }
+                                ?>
+                            </span>
+                            <span class="press-link">
+                                <?php
+                                switch ($item['type']) {
+                                    case 'video':
+                                        echo 'Watch';
+                                        break;
+                                    case 'pdf':
+                                        echo 'View PDF';
+                                        break;
+                                    default:
+                                        echo 'Read More';
+                                }
+                                ?>
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
