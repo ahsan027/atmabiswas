@@ -16,7 +16,7 @@
   position: fixed;
   top: 0;
   left: -280px; /* Initially hidden */
-  transition: left 0.5s ease;
+  transition: left 0.5s ease, margin-left 0.5s ease; /* Add transition for margin */
   padding: 20px 0;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
   border-top-right-radius: 20px; /* More rounded corners */
@@ -127,6 +127,11 @@
   .sidenav {
     display: flex; /* Show side navbar on mobile */
   }
+  /* Add margin to main content when sidebar is active */
+  .sidenav.active ~ .main-content {
+    margin-left: 280px; /* Same width as the sidenav */
+    transition: margin-left 0.5s ease; /* Match sidenav transition */
+  }
 }
 
 /* Desktop: Show top navbar, hide side navbar toggle, mobile header, and side navbar */
@@ -142,5 +147,9 @@
   }
   .sidenav {
     display: none !important; /* Hide side navbar on desktop */
+  }
+  /* Ensure no margin on main content on desktop */
+  .main-content {
+    margin-left: 0;
   }
 }
