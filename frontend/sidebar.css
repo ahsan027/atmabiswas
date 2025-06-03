@@ -1,171 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 .sidenav {
+  z-index: 100;
+  overflow-y: auto;
+  font-family: "Montserrat", Arial, sans-serif;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #0073e6;
 
-    z-index: 100;
-    overflow-y: auto;
-    font-family: 'Montserrat', Arial, sans-serif;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #0073e6;
+  backdrop-filter: blur(5px);
+  width: 56vw;
+  height: 100%;
+  /* Ensure the sidenav takes up the full viewport height */
+  position: fixed;
+  top: 0;
+  left: -60vw;
+  justify-content: start;
+  align-items: flex-start;
 
-    backdrop-filter: blur(5px);
-    width: 56vw;
-    height: 100%;
-    /* Ensure the sidenav takes up the full viewport height */
-    position: fixed;
-    top: 0;
-    left: -60vw;
-    justify-content: start;
-    align-items: flex-start;
+  transition: left 0.5s ease;
+  filter: drop-shadow(5px);
+  border-right: rgba(39, 107, 255, 0.7);
 
-    transition: left 0.5s ease;
-    filter: drop-shadow(5px);
-    border-right: rgba(39, 107, 255, 0.7);
-
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .sidenav.active {
-
-    left: 0;
-    backdrop-filter: blur(5px);
+  left: 0;
+  backdrop-filter: blur(5px);
 }
 
 .sidenav .sidelogo {
-    padding: 0.5rem;
-    margin-top: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidelogo i {
-    color: #ffffff;
-    margin-right: 1.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.5s ease;
+  color: #ffffff;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .sidelogo i.rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .sidenav .sidelogo img {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .sidenav .loginbtn {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .sidenav a {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
 
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  width: 80%;
+  padding: 0.5rem;
 
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.4rem;
-    margin-left: 1rem;
-    width: 80%;
-    padding: 0.5rem;
+  border-radius: 0.3rem;
 
-    border-radius: 0.3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
-    transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid #ffffff;
 
-<<<<<<< HEAD
-    border-bottom: 1px solid #ffffff;
-=======
-   
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
+  padding-bottom: 0.5rem;
 
-    padding-bottom: 0.5rem;
-
-    margin-bottom: 0.5rem;
-
+  margin-bottom: 0.5rem;
 }
 
 .sidenav .sidedrop .sidedropContent a {
-    width: 12rem;
-<<<<<<< HEAD
-    /* background-color: #ffffff; */
-    background-color: rgba(7, 85, 255, 0.5);
-    border: 1px solid white;
-=======
-    color: #ffffff;
-    border-bottom: #ffffff 1px solid;
-   
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
-
+  width: 12rem;
+  /* background-color: #ffffff; */
+  background-color: rgba(7, 85, 255, 0.5);
+  border: 1px solid white;
 }
 
 .sidenav a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
-    /* Hover color for a tags */
-    color: #ffffff;
-    /* Text color on hover */
-=======
-    
-    color: #ffffff;
-
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Hover color for a tags */
+  color: #ffffff;
+  /* Text color on hover */
 }
 
 .sidedropContent {
-    margin-top: 1rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-<<<<<<< HEAD
-=======
-    /* background-color: rgb(13, 154, 255); */
->>>>>>> d3142c1382bf0d36da4107189e65d5170eb32513
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
+  margin-top: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .sidedrop.active .sidedropContent {
-    display: flex;
-    max-height: 500px;
-    opacity: 1;
+  display: flex;
+  max-height: 500px;
+  opacity: 1;
 
-    width: auto;
+  width: auto;
 }
 
 .sidenav .mainsidedrop {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidenav .mainsidedrop a {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 body.blur {
-    filter: blur(5px);
-    transition: filter 0.5s ease;
+  filter: blur(5px);
+  transition: filter 0.5s ease;
 }
 
-@media (min-width:768px) {
-    .sidenav {
-        display: none;
-    }
-
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
 }
