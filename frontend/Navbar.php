@@ -49,7 +49,7 @@
 
 <!-- Mobile Header -->
 <div class="mobile-header mobile-only">
-    <div class="logo"><a href="/index.php"><img src="LOGO/Monogram for web.jpg" alt=""></a></div>
+    <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
     <div class="menu-toggle" id="menu-toggleId">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -66,7 +66,8 @@
     <a href="/"><i class="fa-solid fa-house-user"></i> Who we are</a>
     <div class="sidedrop">
         <div class="mainsidedrop">
-            <a href="#"><i class="fa-solid fa-people-group"></i> Our Team <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+            <a href="#"><i class="fa-solid fa-people-group"></i> Our Team <i id="arrow"
+                    class="fa-solid fa-caret-down"></i></a>
         </div>
         <div class="sidedropContent">
             <a href="eve.php"><i class="fa-solid fa-user-tie"></i> Executive</a>
@@ -77,7 +78,8 @@
     </div>
     <div class="sidedrop">
         <div class="mainsidedrop">
-            <a href="#"><i class="fa-solid fa-clipboard-list"></i> What we do <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+            <a href="#"><i class="fa-solid fa-clipboard-list"></i> What we do <i id="arrow"
+                    class="fa-solid fa-caret-down"></i></a>
         </div>
         <div class="sidedropContent">
             <a href="Green_Energy.php"><i class="fa-solid fa-leaf"></i> Green Energy</a>
@@ -89,7 +91,8 @@
     </div>
     <div class="sidedrop">
         <div class="mainsidedrop">
-            <a href="#"><i class="fa-solid fa-chart-line"></i> Activities <i id="arrow" class="fa-solid fa-caret-down"></i></a>
+            <a href="#"><i class="fa-solid fa-chart-line"></i> Activities <i id="arrow"
+                    class="fa-solid fa-caret-down"></i></a>
         </div>
         <div class="sidedropContent">
             <a href="career.php"><i class="fa-solid fa-briefcase"></i> Career</a>
