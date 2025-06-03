@@ -99,3 +99,15 @@ SELECT DISTINCT dist FROM branch WHERE division = "khulna";
 
 
 SELECT * FROM branch WHERE division = :division ORDER BY dist ASC;
+
+
+INSERT INTO blogs (blog_title, blog_author, blog_content)
+VALUES
+('The Rise of AI in Education', 'Alice Johnson', 'Artificial Intelligence is transforming the education sector by personalizing learning experiences.'),
+('Top 10 Web Development Trends in 2025', 'Brian Smith', 'From serverless architecture to AI-driven design, explore what’s shaping the web development world.'),
+('Mental Health for Entrepreneurs', 'Chloe Adams', 'Starting a business is stressful. Here are some tips to maintain your mental well-being.'),
+('Sustainable Fashion Practices', 'Dana Lee', 'Learn how sustainable fashion can reduce your environmental footprint and support ethical production.'),
+('The Future of Remote Work', 'Ethan Parker', 'Remote work is here to stay. Discover trends and tools to make it work for your team.');
+
+
+ALTER TABLE blogs CHANGE published_date upload_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
