@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="card editor-section">
-            <h1>ATMABISWAS Blog Editor</h1>
+            <h1>ATMABISWAS Press Editor</h1>
             <form action="../blogUpload_process.php" method="POST" onsubmit="return handleFormSubmit(event)">
                 <!-- Blog Metadata -->
                 <input name="blog_title" type="text" id="blogTitle" placeholder="Blog Title" required>
