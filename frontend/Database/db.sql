@@ -108,3 +108,6 @@ VALUES
 ('Mental Health for Entrepreneurs', 'Chloe Adams', 'Starting a business is stressful. Here are some tips to maintain your mental well-being.'),
 ('Sustainable Fashion Practices', 'Dana Lee', 'Learn how sustainable fashion can reduce your environmental footprint and support ethical production.'),
 ('The Future of Remote Work', 'Ethan Parker', 'Remote work is here to stay. Discover trends and tools to make it work for your team.');
+
+
+ALTER TABLE blogs CHANGE published_date upload_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;

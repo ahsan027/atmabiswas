@@ -70,7 +70,7 @@ try {
     <title>Admin Dashboard-ATMABISWAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="">
+
     <link rel="icon" type="image/png" href="../images/logo/logo.png">
 </head>
 
@@ -190,11 +190,11 @@ try {
                                         Blog Title
                                     </th>
                                     <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
                                         Blog Author
                                     </th>
                                     <th
-                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        class=" py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Blog Content
                                     </th>
                                     <th
