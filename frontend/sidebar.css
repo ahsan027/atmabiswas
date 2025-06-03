@@ -127,6 +127,10 @@
   .sidenav {
     display: flex; /* Show side navbar on mobile */
   }
+  /* Add padding to the body when the sidenav is open */
+  body.sidenav-open {
+    padding-top: 80px; /* Increased padding for the mobile header */
+  }
   /* Add margin to main content when sidebar is active */
   .sidenav.active ~ .main-content {
     margin-left: 280px; /* Same width as the sidenav */
@@ -148,8 +152,9 @@
   .sidenav {
     display: none !important; /* Hide side navbar on desktop */
   }
-  /* Ensure no margin on main content on desktop */
+  /* Ensure no margin/padding on main content on desktop */
   .main-content {
     margin-left: 0;
+    padding-top: 0;
   }
 }
