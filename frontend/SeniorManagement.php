@@ -181,8 +181,8 @@
         <div class="executive-card">
           <img src="generalbody/malaka.png" alt="Malaka Parvin">
           <h2>Malaka Parvin </h2>
-          <p><strong>Executive Director, ATMABISWAS</strong></p>
-          <p>The founder and Executive Director of ATMABISWAS, Malaka Parvin has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
+          <p><strong>Deputy Executive Director, ATMABISWAS</strong></p>
+          <p>The founder and Deputy Executive Director of ATMABISWAS, Malaka Parvin has dedicated his life to creating a world where justice, equality, and environmental harmony are realities for all. His leadership and vision continue to inspire and empower communities through sustainable development and advocacy.</p>
         </div>
 
         <div class="executive-card">

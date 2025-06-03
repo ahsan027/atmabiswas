@@ -147,31 +147,88 @@
 
 /* Responsive Styles for Dropdown */
 @media (max-width: 768px) {
-  .navbar .top-row .logo a img {
-    margin-left: -1rem;
-    height: 40px;
-    width: 160px;
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px 20px; /* Adjusted padding */
   }
 
   .navbar .top-row {
-    justify-content: space-between;
+    width: 100%; /* Make top row full width */
+    justify-content: space-between; /* Space out logo and toggle */
+    align-items: center;
   }
 
-  .navbar .top-row .menu-toggle {
-    display: flex;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #0073e6;
-    margin-right: 1rem;
+  .navbar .top-row .logo a img {
+    height: 50px; /* Adjusted logo height */
+    width: auto; /* Allow width to adjust */
+    margin-left: 0; /* Removed margin */
   }
 
   .navbar .top-row .bars a {
-    display: none;
+    display: none; /* Hide standard top-row links */
+  }
+
+  .navbar .top-row .menu-toggle {
+    display: flex; /* Show menu toggle */
+    cursor: pointer;
+    font-size: 2rem; /* Adjusted size */
+    color: #0073e6;
+    margin-right: 0; /* Removed margin */
   }
 
   .navbar .bottom-row {
-    display: none;
+    display: none; /* Hide bottom row by default */
     flex-direction: column;
+    width: 100%; /* Make menu full width when shown */
+    text-align: center; /* Center text */
+  }
+
+  .navbar .bottom-row.active {
+    display: flex; /* Show bottom row when active */
+  }
+
+  .navbar .bottom-row a {
+    padding: 12px 0; /* Adjusted padding */
+    border-bottom: 1px solid #eee; /* Add border between links */
+    width: 100%; /* Make links full width */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .navbar .bottom-row a:last-child {
+    border-bottom: none; /* Remove border for last link */
+  }
+
+  /* Dropdown specific styles for mobile */
+  .dropdown {
+    width: 100%; /* Full width for dropdown in mobile */
+  }
+
+  .maindrop {
+    width: 100%; /* Full width for maindrop */
+    justify-content: center; /* Center maindrop text */
+    padding: 12px 0; /* Adjusted padding */
+    border-bottom: 1px solid #eee; /* Add border */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .dropdown-content {
+    position: static; /* Change position to static */
+    box-shadow: none; /* Remove box shadow */
+    min-width: auto; /* Remove min-width */
+    width: 100%; /* Full width */
+    background-color: #f9f9f9; /* Slightly different background */
+    border-radius: 0; /* Remove border radius */
+    padding-left: 10px; /* Add some indentation */
+  }
+
+  .dropdown-content a {
+    padding: 10px 0 10px 20px; /* Adjusted padding for indentation */
+    border-bottom: 1px solid #eee; /* Add border */
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none; /* Remove border for last link */
   }
 }
 
