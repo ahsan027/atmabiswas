@@ -23,6 +23,7 @@ window.addEventListener("resize", setBodyPadding);
 menuToggle.addEventListener("click", () => {
   sideNav.classList.toggle("active");
   menuToggle.classList.toggle("active");
+  document.body.classList.toggle("sidenav-open");
 });
 
 // Close sidenav when close button is clicked
