@@ -74,16 +74,16 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 
         <div class="article-container">
             <div class="article-header">
-                <h1 class="article-title"><?php echo $current_article['title']; ?></h1>
+                <h1 class="article-title"><?php echo $current_article['blog_title']; ?></h1>
                 <div class="article-meta">
-                    <span><?php echo date('F j, Y', strtotime($current_article['date'])); ?></span>
+                    <span><?php echo $current_article["upload_date"]; ?></span>
                     <span>|</span>
-                    <span><i class="fas fa-newspaper"></i> <?php echo $current_article['source']; ?></span>
+                    <span><i class="fas fa-newspaper"></i> <?php echo $current_article['blog_author']; ?></span>
                 </div>
             </div>
 
             <div class="article-content">
-                <?php echo $current_article['content']; ?>
+                <?php echo $current_article['blog_content']; ?>
             </div>
         </div>
         <?php else: ?>
@@ -118,14 +118,14 @@ if ($article_id !== null && isset($press_items[$article_id])) {
             <a href="?article=<?php echo $id; ?>" class="press-card-link">
                 <div class="press-card" data-year="<?php echo $item['year']; ?>">
                     <div class="card-image">
-                        <img src="<?php echo $item['thumbnail']; ?>" alt="<?php echo $item['title']; ?>">
+                        <img src="<?php echo $item['cover_img']; ?>" alt="<?php echo $item['title']; ?>">
                     </div>
                     <div class="card-content">
-                        <span class="press-date"><?php echo date('F j, Y', strtotime($item['date'])); ?></span>
-                        <h3 class="press-title"><?php echo $item['title']; ?></h3>
+                        <span class="press-date"><?php echo $item["upload_date"]; ?></span>
+                        <h3 class="press-title"><?php echo $item['blog_title']; ?></h3>
                         <div class="press-source">
                             <i class="fas fa-newspaper"></i>
-                            <span><?php echo $item['source']; ?></span>
+                            <span><?php echo $item['blog_author']; ?></span>
                         </div>
                         <p class="press-summary"><?php echo $item['summary']; ?></p>
                         <div class="press-actions">
