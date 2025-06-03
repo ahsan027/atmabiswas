@@ -92,7 +92,7 @@
                 <!-- Editor Content -->
 
                 <!-- Summary of Blog -->
-                <h1 style="font-size: 1.2rem;">Write atleast <strong>100 words</strong> Summary for this blog </h1>
+                <h1 style="font-size: 1.2rem;">Write atleast <strong>100 words</strong> Summary for this News </h1>
 
                 <div id="summary_editor" contenteditable="true" placeholder="Start writing your post..."
                     class="editor-content">
@@ -100,7 +100,7 @@
 
                 <!-- Main Blog Content -->
 
-                <h1 style="font-size: 1.2rem;">Start writing Blog from here. </h1>
+                <h1 style="font-size: 1.2rem;">Start writing News from here. </h1>
 
                 <div id="editor" contenteditable="true" placeholder="Start writing your post..." class="editor-content">
                 </div>
