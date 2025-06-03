@@ -57,15 +57,9 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
   text-decoration: none;
-<<<<<<< HEAD
   color: #ffffff; /* White text for all links */
   font-size: 1rem;
   padding: 12px 20px; /* Consistent padding for main links */
-=======
-  color: #ffffff; /* White text for links */
-  font-size: 1.5rem;
-  padding: 12px 20px; /* Increased padding */
->>>>>>> 29e0becc779c3c2e70e914abfa3768bc52bb48c8
   display: flex;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -115,7 +109,6 @@
 }
 
 .sidedropContent a {
-<<<<<<< HEAD
   font-family: "Montserrat", Arial, sans-serif; /* Ensure same font */
   font-weight: 400; /* Ensure same font weight */
   color: #ffffff; /* White text for dropdown links */
@@ -140,10 +133,6 @@
     0.2
   ); /* Slightly more opaque hover background */
   color: #ffffff; /* White text on hover */
-=======
-  padding: 8px 20px 8px 40px; /* Indent dropdown items */
-  font-size: 1.2rem;
->>>>>>> 29e0becc779c3c2e70e914abfa3768bc52bb48c8
 }
 
 .sidedrop.active .sidedropContent {
