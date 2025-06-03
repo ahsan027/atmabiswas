@@ -260,6 +260,7 @@
   top: 0;
   left: 0;
   z-index: 99;
+  margin-bottom: 15px; /* Added bottom margin for spacing */
 }
 
 .mobile-header .logo img {
