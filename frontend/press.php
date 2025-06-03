@@ -2,22 +2,7 @@
 
 include '../backend/Database/db.php';
 
-$press_items = [
-
-    [
-        'date' => '2024-11-20',
-        'title' => 'E-Waste Initiative in National Daily',
-        'source' => 'The Daily Star',
-        'summary' => 'Our campaign to reduce electronic waste was featured in the daily paper.',
-
-        'url' => 'sample-article.pdf',
-        'year' => 2024,
-        'thumbnail' => 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-        'content' => '<p>This is the full article from The Daily Star about our e-waste initiative. You can include the complete text here, along with any images or supporting materials.</p>
-        <p>The article highlights our efforts to reduce electronic waste through community programs and partnerships with local businesses.</p>
-        <p><a href="sample-article.pdf" class="download-pdf" download>Download PDF Version</a></p>'
-    ]
-];
+$press_items = [];
 
 $database = new Db();
 $conn = $database->connect();
