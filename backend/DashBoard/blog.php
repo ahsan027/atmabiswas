@@ -20,12 +20,7 @@
             <form action="../blogUpload_process.php" method="POST" onsubmit="return handleFormSubmit(event)">
                 <!-- Blog Metadata -->
                 <input name="blog_title" type="text" id="blogTitle" placeholder="Blog Title" required>
-                <select id="blogCategory" name="blog_category" required>
-                    <option value="">Select Category</option>
-                    <option value="tech">Technology</option>
-                    <option value="life">Lifestyle</option>
-                    <option value="travel">Travel</option>
-                </select>
+
 
                 <!-- Rich Text Toolbar -->
                 <div class="toolbar">
