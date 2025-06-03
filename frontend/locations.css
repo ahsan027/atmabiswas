@@ -301,3 +301,19 @@ tbody tr:hover {
     overflow-x: scroll;
   }
 }
+@media (max-width: 768px) {
+  .contact-card {
+    gap: 10rem;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .newnewdiv,
+  .oldnewdiv {
+    width: 100%;
+  }
+  .newnewdiv {
+    border-bottom: #0073e6 5px solid;
+    border-right: none;
+  }
+}
