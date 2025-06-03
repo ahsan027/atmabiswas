@@ -141,7 +141,19 @@ select {
   outline: none;
   transition: border-color 0.3s;
 }
-
+#summary_editor {
+  min-height: 20px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--background);
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#summary_editor:focus {
+  border-color: var(--secondary);
+}
 #editor:focus {
   border-color: var(--secondary);
 }

@@ -52,7 +52,6 @@
       </div>
     </div>
 
-
   <h3 class="gtext">Gallery</h3>
  
     <div class="gallery">
