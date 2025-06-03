@@ -2,6 +2,9 @@ const menuToggle = document.getElementById("menu-toggleId");
 const sideNav = document.querySelector(".sidenav");
 const closeBtn = document.getElementById("close-btn");
 const sideDropdowns = document.querySelectorAll(".sidenav .sidedrop");
+const sideNavLinks = document.querySelectorAll(
+  ".sidenav a:not(.mainsidedrop a)"
+);
 const body = document.body;
 const mobileHeader = document.querySelector(".mobile-header");
 
@@ -56,20 +59,16 @@ sideDropdowns.forEach((dropdown) => {
   const mainDropdown = dropdown.querySelector(".mainsidedrop");
 
   mainDropdown.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent link navigation
+    event.preventDefault();
+    event.stopPropagation();
     dropdown.classList.toggle("active");
   });
 });
 
 // Close sidenav only for normal nav links (not dropdowns)
-sideNav.querySelectorAll("a").forEach((link) => {
+sideNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    const isDropdownToggle = link.classList.contains("mainsidedrop");
-    const isInsideDropdown = link.closest(".sidedrop");
-
-    if (!isDropdownToggle && !isInsideDropdown) {
-      sideNav.classList.remove("active");
-      menuToggle.classList.remove("active");
-    }
+    sideNav.classList.remove("active");
+    menuToggle.classList.remove("active");
   });
 });

@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="sidedrop">
-        <div class="mainsidedrop">
+        <div class="mainsidedrop activities-main">
             <a href="#"><i class="fa-solid fa-chart-line"></i> Activities <i id="arrow"
                     class="fa-solid fa-caret-down"></i></a>
         </div>
@@ -102,7 +102,7 @@
         </div>
     </div>
     <a href="Events.php"><i class="fa-solid fa-calendar-check"></i> Events</a>
-    <a href="social.php"><i class="fa-solid fa-share-nodes"></i> Social</a>
+    <a href="social.php"><i class="fa-solid fa-handshake"></i> Social Work</a>
     <a href="Contact.php"><i class="fa-solid fa-envelope-open-text"></i> Contacts</a>
 </div>
 
