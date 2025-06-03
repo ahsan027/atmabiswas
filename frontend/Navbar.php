@@ -49,7 +49,7 @@
 
 <!-- Mobile Header -->
 <div class="mobile-header mobile-only">
-    <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
+    <div class="logo"><a href="/frontend/index.php"><img src="logoBg.png" alt=""></a></div>
     <div class="menu-toggle" id="menu-toggleId">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -63,7 +63,7 @@
         <img src="LOGO/Monogram for web only.png" alt="Logo" class="profile-img">
         <i id="close-btn" class="fa-solid fa-times"></i>
     </div>
-    <a href="/"><i class="fa-solid fa-house-user"></i> Who we are</a>
+    <a href="/frontend/index.php"><i class="fa-solid fa-house-user"></i> Who we are</a>
     <div class="sidedrop">
         <div class="mainsidedrop">
             <a href="#"><i class="fa-solid fa-people-group"></i> Our Team <i id="arrow"
