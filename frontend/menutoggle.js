@@ -36,21 +36,6 @@ sideNav.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-// Close sidenav when clicking outside of it
-document.addEventListener("click", (event) => {
-  const isClickInsideSidenav = sideNav.contains(event.target);
-  const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-  if (
-    !isClickInsideSidenav &&
-    !isClickOnMenuToggle &&
-    sideNav.classList.contains("active")
-  ) {
-    sideNav.classList.remove("active");
-    menuToggle.classList.remove("active");
-  }
-});
-
 // Toggle dropdown menus in sidenav
 sideDropdowns.forEach((dropdown) => {
   const mainDropdown = dropdown.querySelector(".mainsidedrop");
