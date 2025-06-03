@@ -24,14 +24,6 @@
 
                 <!-- Rich Text Toolbar -->
                 <div class="toolbar">
-                    <!-- Keep all text formatting controls but remove file upload -->
-                    <select onchange="changeBlockFormat(this.value)">
-                        <option value="p">📝 Normal Text</option>
-                        <option value="h1">Heading 1</option>
-                        <option value="h2">Heading 2</option>
-                        <option value="h3">Heading 3</option>
-                        <option value="blockquote">Quote</option>
-                    </select>
 
                     <select onchange="changeFont(this.value)">
                         <option value="Arial">Arial</option>
