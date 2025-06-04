@@ -8,7 +8,14 @@ $conn = $db->connect();
 
 $pdf_title = htmlspecialchars($_POST["pdf_title"]);
 
+$uploadDir = "../uploads/pdfs/";
 
+$maxSize = 10 * 1024 * 1024;
+
+if (!file_exists($uploadDir)) {
+
+    mkdir($uploadDir, 0755, true);
+}
 
 function processPdf($pdfFile, $maxSize, $allowedTypes, $uploadDir)
 {
@@ -52,7 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $allowedTypes = ["application/pdf"];
         $uploadDir = "../uploads/pdfs/";
 
-        print_r($_FILES["pdf_file"]);
         $pdfFile = $_FILES["pdf_file"];
 
         $pdfPath = processPdf($pdfFile, $maxSize, $allowedTypes, $uploadDir);
