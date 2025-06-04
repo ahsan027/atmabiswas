@@ -93,36 +93,12 @@
 
             <!-- Card 3 -->
             <a href="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf" target="_blank" class="card-link">
-                <iframe class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></iframe>
+                <embed class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></embed>
                 <div class="card-footer">
                     <h2>Document 3</h2>
                 </div>
             </a>
 
-            <a href="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf" target="_blank" class="card-link">
-                <iframe class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></iframe>
-                <div class="card-footer">
-                    <h2>Document 3</h2>
-                </div>
-            </a>
-            <a href="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf" target="_blank" class="card-link">
-                <iframe class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></iframe>
-                <div class="card-footer">
-                    <h2>Document 3</h2>
-                </div>
-            </a>
-            <a href="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf" target="_blank" class="card-link">
-                <iframe class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></iframe>
-                <div class="card-footer">
-                    <h2>Document 3</h2>
-                </div>
-            </a>
-            <a href="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf" target="_blank" class="card-link">
-                <iframe class="card-embed" src="../uploads/pdfs/Notice_Dhonnn_2025-06-04_3.pdf"></iframe>
-                <div class="card-footer">
-                    <h2>Document 3</h2>
-                </div>
-            </a>
 
         </div>
     </div>
