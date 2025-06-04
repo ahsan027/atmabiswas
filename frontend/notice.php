@@ -34,18 +34,32 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </header>
 
     <div class="container">
-        <div class="grid">
-            <?php foreach ($pdfs as $pdf):; ?>
+        <?php if (count($pdfs) === 0): ?>
+            <div class="empty-state">
+                <i class="far fa-newspaper"></i>
+                <h3>No press coverage yet</h3>
+                <p>Check back later for updates on our media appearances.</p>
+            </div>
+        <?php else: ?>
 
-                <a href="<?php echo $pdf["pdf_path"]; ?>" target="_blank" class="card-link">
-                    <embed class="card-embed" src="<?php echo $pdf["pdf_path"]; ?>"></embed>
-                    <div class="card-footer">
-                        <h2>Document 3</h2>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+            <div class="grid">
+                <?php foreach ($pdfs as $pdf):; ?>
 
-        </div>
+                    <a href="<?php echo $pdf["pdf_path"]; ?>" target="_blank" class="card-link">
+                        <embed class="card-embed" src="<?php echo $pdf["pdf_path"]; ?>"></embed>
+                        <div class="card-footer">
+                            <h2><?php echo $pdf["pdf_title"] ?></h2>
+                            <p style="padding: 0.5rem; background-color: #0073e6; color: white; border-radius: 15px;">
+                                <?php echo "Uploaded: " . $pdf["upload_date"] ?>
+                            </p>
+
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+
+            </div>
+        <?php endif; ?>
+
     </div>
     <?php include 'footer.php' ?>
 
