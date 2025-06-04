@@ -26,6 +26,12 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
     <?php include 'Navbar.php' ?>
+    <header>
+        <h1>Notice Board – ATMABISWAS</h1>
+        <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
+            that inspire social transformation.
+        </p>
+    </header>
 
     <div class="container">
         <div class="grid">
