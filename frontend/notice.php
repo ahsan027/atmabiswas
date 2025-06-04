@@ -28,17 +28,19 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php include 'Navbar.php' ?>
     <header>
         <h1>Notice Board – ATMABISWAS</h1>
-        <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
-            that inspire social transformation.
+        <p>
+            At Atma Biswas, we highlight our journey and impact through national and regional media—sharing stories of
+            resilience, initiatives that empower communities, and efforts that drive meaningful social change.
         </p>
+
     </header>
 
     <div class="container">
         <?php if (count($pdfs) === 0): ?>
             <div class="empty-state">
                 <i class="far fa-newspaper"></i>
-                <h3>No press coverage yet</h3>
-                <p>Check back later for updates on our media appearances.</p>
+                <h3>No Notice coverage yet</h3>
+                <p>Check back later for updates on our Notice page.</p>
             </div>
         <?php else: ?>
 
