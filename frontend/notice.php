@@ -29,7 +29,7 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <header>
         <h1>Notice Board – ATMABISWAS</h1>
         <p>
-            At Atma Biswas, we highlight our journey and impact through national and regional media—sharing stories of
+            At ATMABISWAS, we highlight our journey and impact through national and regional media—sharing stories of
             resilience, initiatives that empower communities, and efforts that drive meaningful social change.
         </p>
 
