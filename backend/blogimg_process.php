@@ -5,7 +5,7 @@ include 'Database/db.php';
 $db = new Db();
 $connection = $db->connect();
 
-$uploadDir = "../uploads/blogs/";
+$uploadDir = "../uploads/blog_imgs/";
 
 $allowedTypes = ['image/jpg', 'image/jpeg', 'image/png'];
 $imageSize = 2 * 1024 * 1024;
