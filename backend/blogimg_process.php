@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     header("Location: DashBoard/success.php?type=upload");
   } catch (Exception $e) {
-    echo $e;
-    // header("Location: DashBoard/error.php?type=upload");
+
+    header("Location: DashBoard/error.php?type=upload");
   }
 }
