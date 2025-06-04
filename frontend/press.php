@@ -69,15 +69,11 @@ if ($article_id !== null && isset($press_items[$article_id])) {
         <?php else: ?>
             <?php include 'Navbar.php' ?>
             <header>
-                <h1>Press & Media – ATMABISWAS in Focus</h1>
+                <h1>Press & Media – ATMABISWAS</h1>
                 <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
                     that inspire social transformation.
                 </p>
             </header>
-
-            <!-- Press Coverage Grid View -->
-
-
 
             <div class="filters">
                 <button class="filter-btn active" data-year="all">All Coverage</button>

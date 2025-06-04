@@ -24,6 +24,7 @@ header {
   background: linear-gradient(90deg, #0a58ca, #176cc6);
   color: white;
   padding: 40px 20px;
+  width: 100%;
 }
 
 header h1 {
