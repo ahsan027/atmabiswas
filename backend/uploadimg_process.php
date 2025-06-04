@@ -57,18 +57,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $img_title =  htmlspecialchars($_POST["img_title"]) ?? "ATMA BISWAS";
         $img_description =  htmlspecialchars($_POST["img_description"]);
 
+        $img_type = $_POST["imagetype"];
+
 
         $imageFile = $_FILES["image_file"];
+
         $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
 
 
-        $sql = "INSERT INTO img_upload (img_title,img_description,img_path) VALUES (:img_title,:img_description,:img_path)";
+        $sql = "INSERT INTO img_upload (img_title,img_description,img_path,img_type) VALUES (:img_title,:img_description,:img_path,:img_type)";
 
         $stmt = $connection->prepare($sql);
 
         $stmt->bindParam(":img_title", $img_title);
+
         $stmt->bindParam(":img_description", $img_description);
+
         $stmt->bindParam(":img_path", $image_path);
+
+        $stmt->bindParam(":img_type", $img_type);
+
 
         $stmt->execute();
 

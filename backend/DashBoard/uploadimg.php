@@ -39,6 +39,7 @@ $connection = $db->connect();
         <div class="flex justify-center h-screen">
             <!-- Content Area -->
             <div class="upload-container w-screen h-screen">
+
                 <form action="../uploadimg_process.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section image-upload">
@@ -64,8 +65,11 @@ $connection = $db->connect();
                             </label>
                             <select name="imagetype" id="imagetype"
                                 class="block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-gray-700">
-                                <option value="img_slider">Image Slider</option>
+
+                                <option selected value="img_slider">Image Slider</option>
+
                                 <option value="latest_news">Latest News</option>
+
                             </select>
                         </div>
 
@@ -97,38 +101,38 @@ $connection = $db->connect();
 
 
     <script>
-    document.getElementById('imageUpload').addEventListener('change', function(e) {
-        const preview = document.getElementById('imagePreview');
-        const file = e.target.files[0];
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const preview = document.getElementById('imagePreview');
+            const file = e.target.files[0];
 
-        if (file) {
-            preview.style.display = 'block';
-            const reader = new FileReader();
+            if (file) {
+                preview.style.display = 'block';
+                const reader = new FileReader();
 
-            reader.onload = function(event) {
-                preview.querySelector('img').src = event.target.result;
+                reader.onload = function(event) {
+                    preview.querySelector('img').src = event.target.result;
+                }
+
+                reader.readAsDataURL(file);
             }
-
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // Drag and drop highlight
-    document.querySelectorAll('.upload-section').forEach(section => {
-        section.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            section.classList.add('dragover');
         });
 
-        section.addEventListener('dragleave', () => {
-            section.classList.remove('dragover');
-        });
+        // Drag and drop highlight
+        document.querySelectorAll('.upload-section').forEach(section => {
+            section.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                section.classList.add('dragover');
+            });
 
-        section.addEventListener('drop', (e) => {
-            e.preventDefault();
-            section.classList.remove('dragover');
+            section.addEventListener('dragleave', () => {
+                section.classList.remove('dragover');
+            });
+
+            section.addEventListener('drop', (e) => {
+                e.preventDefault();
+                section.classList.remove('dragover');
+            });
         });
-    });
     </script>
 
 </body>
