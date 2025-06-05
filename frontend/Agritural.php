@@ -56,17 +56,14 @@
  
     <div class="gallery">
    
-    <img src="Cow/cow_pic1.jpg" alt="Picture 1" />
+   
       <img src="ag/ag_pic1.jpeg" alt="Picture 2" />
-      <img src="ag/ag_pic2.jpeg" alt="Picture 3" />
       <img src="FISH/fish_pic3.jpeg" alt="Picture 4" />
       <img src="FISH/fish_pic6.jpg" alt="Picture 5" />
       <img src="FISH/fish_pic5.gif" alt="Picture 6" />
       <img src="ag/ag_pic3.jpeg" alt="Picture 7" />
       <img src="FISH/fish_pic4.jpg" alt="Picture 8" />
     </div>
-
-
   </div>
   <?php include 'footer.php'?>
 </body>
