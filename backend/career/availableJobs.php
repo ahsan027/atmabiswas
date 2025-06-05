@@ -1,16 +1,16 @@
-<?php 
-    include '../Database/db.php';
-    
-    $database = new Db();
+<?php
+include '../Database/db.php';
 
-    $connection = $database->connect();
+$database = new Db();
 
-    $sql = "SELECT * FROM jobs";
-    $stmt = $connection->prepare($sql);
-    $stmt->execute();
+$connection = $database->connect();
 
-    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+$sql = "SELECT * FROM jobs";
+$stmt = $connection->prepare($sql);
+$stmt->execute();
+
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -49,35 +49,31 @@
             </select>
             <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
         </div>
-        <?php 
+        <?php
 
-foreach($res as $r){
+        foreach ($res as $r) {
 
-echo "<div class='jobs-container' id='jobsContainer'>";
-echo "    <!-- Job listings will be here -->";
-echo "    <div class='job-card'>";
-echo "<a href='jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='job-title'>" . htmlspecialchars($r['job_title']) . "</a>";
-echo "        <p class='company'>ATMABISWAS</p>";
-echo "        <p class='location'>".$r['job_location']."</p>";
-echo "        <p class='salary'>".$r['salary_range']."</p>";
-echo "        <div class='tags'>";
-echo "            <span class='tag'>Full-time</span>";
-$skills = explode(",",$r['job_skillset']);
-foreach($skills as $skill){
-echo " <span class='tag'>".$skill."</span>";
+            echo "<div class='jobs-container' id='jobsContainer'>";
+            echo "    <!-- Job listings will be here -->";
+            echo "    <div class='job-card'>";
+            echo "<a href='jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "' class='job-title'>" . htmlspecialchars($r['job_title']) . "</a>";
+            echo "        <p class='company'>ATMABISWAS</p>";
+            echo "        <p class='location'>" . $r['job_location'] . "</p>";
+            echo "        <p class='salary'>" . $r['salary_range'] . "</p>";
+            echo "        <div class='tags'>";
+            echo "            <span class='tag'>Full-time</span>";
+            $skills = explode(",", $r['job_skillset']);
+            foreach ($skills as $skill) {
+                echo " <span class='tag'>" . $skill . "</span>";
+            }
 
-}
+            echo "        </div>";
+            echo '<a class="apply-btn-a" href="jobdes.php?id=' . htmlspecialchars($r['job_id']) . '&deptCode=' . htmlspecialchars($r['job_code']) . '">View Details</a>';
 
-echo "        </div>";
-echo '<a class="apply-btn-a" href="jobdes.php?id='.$r['job_id'].'">
-        View Details
-      </a>';
-
-echo "    </div>";
-echo "</div>";
-
-}
-?>
+            echo "    </div>";
+            echo "</div>";
+        }
+        ?>
     </div>
 
     <script>
