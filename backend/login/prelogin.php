@@ -35,8 +35,8 @@
                 <!-- Submit Button -->
                 <div class="btn-tab">
 
-                    <a class="btn-submit">NEXT</a>
-                    <a class="btn-submit">NEXT</a>
+                    <a class="btn-submit">ATMABISWAS - EMPLOYEE</a>
+                    <a class="btn-submit">ATMABISWAS - ADMIN</a>
 
                 </div>
 
