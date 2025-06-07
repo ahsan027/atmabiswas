@@ -1,25 +1,25 @@
-<?php 
-    include '../Database/db.php';
-    $database = new Db();
-    $connection = $database->connect();
-    $connection1 = $database->connect();
+<?php
+include '../Database/db.php';
+$database = new Db();
+$connection = $database->connect();
+$connection1 = $database->connect();
 
 
-    $jobId = htmlspecialchars($_GET['id']);
-    $jobCode = htmlspecialchars($_GET['deptCode']);
+$jobId = htmlspecialchars($_GET['id']);
+$jobCode = htmlspecialchars($_GET['deptCode']);
 
-    $sql = "SELECT * FROM jobs WHERE job_id =:job_id";
+$sql = "SELECT * FROM jobs WHERE job_id =:job_id";
 
-    $stmt = $connection->prepare($sql);
-    $stmt->bindParam(":job_id",$jobId);
-    $stmt->execute();
-    $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    $sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
-    $stmt1 = $connection1->prepare($sql1);
-    $stmt1->bindParam(":job_code",$jobCode);
-    $stmt1->execute();
-    $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $connection->prepare($sql);
+$stmt->bindParam(":job_id", $jobId);
+$stmt->execute();
+$jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
+$stmt1 = $connection1->prepare($sql1);
+$stmt1->bindParam(":job_code", $jobCode);
+$stmt1->execute();
+$deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
 <body>
     <div class="container">
         <div class="job-header">
-            <h1 class="job-title"><?= $jobDes[0]['job_title']?></h1>
+            <h1 class="job-title"><?= $jobDes[0]['job_title'] ?></h1>
             <div class="company-info">
                 <img src="../images/logo/logo.png" alt="Company Logo" class="company-logo">
                 <div>
@@ -45,7 +45,7 @@
             <div class="job-meta">
                 <div class="meta-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span><?= $jobDes[0]['job_location']?>, Bangladesh</span>
+                    <span><?= $jobDes[0]['job_location'] ?>, Bangladesh</span>
                 </div>
                 <div class="meta-item">
                     <i class="fas fa-clock"></i>
@@ -75,11 +75,11 @@
                     <br>
                     <ul>
                         <?php
-                            $des = explode(".",$jobDes[0]['job_description']);
-                            foreach($des as $d){
-                    echo '<li>'.$d.'</li>';
-                            }
-                        
+                        $des = explode(".", $jobDes[0]['job_description']);
+                        foreach ($des as $d) {
+                            echo '<li>' . $d . '</li>';
+                        }
+
                         ?>
 
                     </ul>
@@ -89,11 +89,11 @@
                     <h2>Requirements</h2>
                     <ul>
                         <?php
-                            $req = explode(".",$jobDes[0]['job_req']);
-                            foreach($req as $re){
-                                echo "<li>".$re."</li>";
-                            }
-                         ?>
+                        $req = explode(".", $jobDes[0]['job_req']);
+                        foreach ($req as $re) {
+                            echo "<li>" . $re . "</li>";
+                        }
+                        ?>
                     </ul>
                 </div>
 
@@ -101,11 +101,11 @@
                     <h2>Benefits</h2>
                     <ul>
                         <?php
-                            $ben = explode(".",$jobDes[0]['job_benefits']);
-                            foreach($ben as $b){
-                        
-                                echo "<li>".$b."</li>";
-                            }
+                        $ben = explode(".", $jobDes[0]['job_benefits']);
+                        foreach ($ben as $b) {
+
+                            echo "<li>" . $b . "</li>";
+                        }
                         ?>
                     </ul>
                 </div>
@@ -121,12 +121,12 @@
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-users"></i>
                         <span>Vacancy: <?php
-                echo $deptCode[0]['vacency'];
-                        ?> </span>
+                                        echo $deptCode[0]['vacency'];
+                                        ?> </span>
                     </div>
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-money-bill-wave"></i>
-                        <span>Salary: <?= $jobDes[0]['salary_range'];?></span>
+                        <span>Salary: <?= $jobDes[0]['salary_range']; ?></span>
                     </div>
                 </div>
 
