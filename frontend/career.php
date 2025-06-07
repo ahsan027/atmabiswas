@@ -114,7 +114,7 @@
                     <p>Salary: ".$r['salary_range']."</p>
                     <p>Experience: ".$r['job_experience']."</p>";
                     
-                        echo "<span>".$remainingDates." Day Remaining"."</span>";
+                        echo "<span class='job-status-text'>".$remainingDates." Day Remaining"."</span>";
                     }else{
                     echo "<a href='#' style=color: gray;><div class='job-card'>
                     <h3>".$r['job_title']."</h3>
@@ -122,7 +122,7 @@
                     <p>Department: ".$r['job_dept']."</p>
                     <p>Salary: ".$r['salary_range']."</p>
                     <p>Experience: ".$r['job_experience']."</p>";
-                        echo "<span>Application Time ended</span>";
+                        echo "<span class='job-status-text'>Application Time ended</span>";
                     }
                     echo "</div></a>";
                     } 
