@@ -35,8 +35,9 @@
                 <!-- Submit Button -->
                 <div class="btn-tab">
 
-                    <a class="btn-submit">ATMABISWAS - EMPLOYEE</a>
-                    <a class="btn-submit">ATMABISWAS - ADMIN</a>
+                    <a href="https://mfnext2.microfin360.com/atmabiswas/#/login" target="_blank"
+                        class="btn-submit">ATMABISWAS - EMPLOYEE</a>
+                    <a href="" target="_blank" class="btn-submit">ATMABISWAS - ADMIN</a>
 
                 </div>
 
