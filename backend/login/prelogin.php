@@ -1,9 +1,5 @@
 <?php
-// If you need PHP logic (e.g., role checking, redirection), place it here.
-// For example:
-// if ($_SERVER["REQUEST_METHOD"] === "POST") {
-//   // Handle login or role selection...
-// }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +7,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Night Scene Login</title>
+    <title>ATMABISWAS - Login</title>
     <link rel="stylesheet" href="css/prelogin.css">
 </head>
 
@@ -35,9 +31,10 @@
                 <!-- Submit Button -->
                 <div class="btn-tab">
 
-                    <a href="https://mfnext2.microfin360.com/atmabiswas/#/login" target="_blank"
-                        class="btn-submit">ATMABISWAS - EMPLOYEE</a>
-                    <a href="" target="_blank" class="btn-submit">ATMABISWAS - ADMIN</a>
+                    <a style="text-decoration: none;" href="https://mfnext2.microfin360.com/atmabiswas/#/login"
+                        target="_blank" class="btn-submit">ATMABISWAS - EMPLOYEE</a>
+                    <a style="text-decoration: none;" href="loging.php" target="_blank" class="btn-submit">ATMABISWAS -
+                        ADMIN</a>
 
                 </div>
 
