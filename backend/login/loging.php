@@ -118,6 +118,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="password">
                     <input type="password" name="password" placeholder="Password" value="">
                     <i class="fa-solid fa-lock"></i>
+                    <?php
+                    if (empty($passresult)) {
+                        if ($passflag) {
+                            echo "<p class='error'>$passErr </p>";
+                        }
+                    } else {
+                        foreach ($passresult as $err) {
+                            echo "<p class='error'> $err </p>";
+                        }
+                    }
+                    ?>
                 </div>
                 <button id="btn" type="submit">Login</button>
 
