@@ -15,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $jobCode = $_POST["job_code"];
 
+    $jobTitle = $_POST["job-title"];
+
     $fullName = htmlspecialchars(trim($_POST["fullname"]));
 
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -32,27 +34,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     print_r($cvFile);
 
+
+
     if (!empty($jobId) || !empty($jobCode) || !empty($fullName) || !empty($email) || !empty($phone) || !empty($mailBody) || !empty($cvFile)) {
 
         $mail = new PHPMailer(true);
 
         try {
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com'; // e.g., Gmail SMTP
+            $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'your-email@gmail.com'; // your email
-            $mail->Password   = 'your-app-password';    // Gmail App Password
+            $mail->Username   = 'arafat.haque.biswas@g.bracu.ac.bd';
+            $mail->Password   = 'hyfzqivhgrzjnztc';    // Gmail App Password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
-            // Recipients
-            $mail->setFrom($email, $name);
-            $mail->addAddress('your-email@gmail.com', 'Atma Biswas'); // your email again
+            $mail->setFrom($email, $fullName);
+
+            $mail->addAddress('arafatbiswas.edu01@gmail.com', 'Atma Biswas');
 
             // Content
             $mail->isHTML(false);
-            $mail->Subject = 'New Message from Atma Biswas Website';
-            $mail->Body    = "Name: $name\nEmail: $email\nMessage:\n$message";
+
+            $mail->Subject = `Application for Position : {$jobTitle} - Job Id : {$jobId} - From {$fullName}`;
+
+            $mail->Body = "Name: $fullName\nEmail: $email\nPhone: +880{$phone}\nApplicant's message: \n$mailBody";
 
             $mail->send();
             echo 'Message has been sent successfully.';

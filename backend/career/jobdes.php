@@ -147,6 +147,8 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
                     <input type="hidden" name="job_code" value="<?php echo $jobCode ?>">
 
+                    <input type="hidden" value="<?= $jobDes[0]['job_title'] ?>" name="job-title">
+
 
                     <label>Full Name</label>
                     <input name="fullname" type="text" required>
