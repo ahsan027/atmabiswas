@@ -2,12 +2,11 @@
 
 include 'Database/db.php';
 
-$db = new Db();
-$conn = $db->connect();
-
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+$db = new Db();
+$conn = $db->connect();
 
 require '../vendor/phpmailer/phpmailer/src/Exception.php';
 
