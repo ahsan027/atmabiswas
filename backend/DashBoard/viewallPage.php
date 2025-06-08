@@ -69,6 +69,19 @@ try {
     echo $e;
 }
 
+
+try {
+    $cvSql = "SELECT * FROM cv_applications LIMIT 5";
+
+    $cvStmt = $conn->prepare($cvSql);
+
+    $cvStmt->execute();
+
+    $cvs = $cvStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
+
 ?>
 
 
@@ -138,6 +151,90 @@ try {
                                     <td class="py-3 px-4">
                                         <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
                                     </td>
+                    
+                        
+                                    <td class="py-3 px-4">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      Delete
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Pending Job Request</h3>
+                        <button onclick="handleButton()"
+                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Application ID
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Job ID
+                                    </th>
+
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Job Title
+                                    </th>
+
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Full Name
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Email
+                                    </th>
+
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Applied At
+                                    </th>
+
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+
+                                foreach ($cvs as $cv) {
+
+                                    echo '<tr class="border-b">
+                                    <td class="text-center py-3 px-4 text-gray-700">' . $cv['applicationId'] . '</td>
+                                    <td class="text-center py-3 px-4 text-gray-700">' . $cv['jobId'] . '</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-center text-gray-700">' . $cv['job_title'] . '</span>
+                                    </td>
+
+                                        <td class="text-gray-700 py-3 px-4">' . $cv['fullname'] . '
+                                    </td>
+
+                                           <td class="text-gray-700 py-3 px-4">' . $cv['email'] . '
+                                    </td>
+
+                                              <td class="text-gray-700 py-3 px-4">' . $cv['appliedAt'] . '
+                                    </td>
+                    
                     
                         
                                     <td class="py-3 px-4">
