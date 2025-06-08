@@ -106,14 +106,12 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
         });
     }
 
-    // Clear all filters
     function clearFilters() {
         document.getElementById('searchInput').value = '';
         document.getElementById('locationFilter').value = '';
         filterJobs();
     }
 
-    // Event listeners
     document.getElementById('searchInput').addEventListener('input', filterJobs);
     document.getElementById('locationFilter').addEventListener('change', filterJobs);
     </script>

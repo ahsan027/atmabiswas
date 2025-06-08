@@ -57,6 +57,17 @@ try {
     echo $e;
 }
 
+try {
+    $jobSql = "SELECT * FROM jobcodes";
+
+    $jobStmt = $conn->prepare($jobSql);
+
+    $jobStmt->execute();
+
+    $jobs = $jobStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
 
 ?>
 
@@ -164,6 +175,66 @@ try {
                             </span>
                             <span class="text-gray-500 ml-2">from last week</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Jobs table -->
+
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Available Jobs and Distinct Job code Listing</h3>
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            View All
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Job ID
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Job Position
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Job Code
+                                    </th>
+
+
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+
+                                foreach ($jobs as $job) {
+
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $job['jobid'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($job['JobTitle']) . '</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold">' . $job['JobCode'] . '</span>
+                                    </td>
+                    
+                        
+                                    <td class="py-3 px-4">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      Delete
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
