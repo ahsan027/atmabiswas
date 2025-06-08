@@ -82,7 +82,6 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo '<a class="apply-btn-a" href="jobdes.php?id=' . htmlspecialchars($r['job_id']) . '&deptCode=' . htmlspecialchars($r['job_code']) . '">
         View Details
       </a>';
-
             echo "    </div>";
             echo "</div>";
         }
