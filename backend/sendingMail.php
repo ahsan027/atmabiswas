@@ -122,9 +122,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAttachment($cvFile);
 
             $mail->send();
-            echo 'Message has been sent successfully.';
+
+            header("Location: DashBoard/success.php?type=Upload");
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            header("Location: DashBoard/error.php?type=Upload");
         }
     } else {
         echo "Please fill in all fields.";
