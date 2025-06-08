@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     var_dump($jobId, $jobCode, $fullName, $email, $phone, $mailBody, $cvFile);
 
+    print_r($cvFile);
 
     // if (!empty($name) && !empty($email) && !empty($message)) {
     //     $mail = new PHPMailer(true);
