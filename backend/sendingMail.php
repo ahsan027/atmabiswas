@@ -84,10 +84,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $sql = "INSERT INTO cv_applications (jobId,fileDir) VALUES (:job_id,:fileDir)";
+    $sql = "INSERT INTO cv_applications (jobId,fullname,email,phone_no,fileDir) VALUES (:job_id,:fullname,:email,:phone_no,:fileDir)";
+
     $stmt = $conn->prepare($sql);
 
     $stmt->bindParam(":job_id", $jobId);
+    $stmt->bindParam(":fullname", $fullName);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":phone_no", $phone);
     $stmt->bindParam(":fileDir", $cvFile);
 
     $stmt->execute();
@@ -107,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->setFrom($email, $fullName);
 
-            $mail->addAddress('arafatbiswas.edu01@gmail.com', 'Atma Biswas');
+            $mail->addAddress('ahsanauddry.ndc@gmail.com', 'Ahsan Auddry'); // Set the recivers email address here.
 
             // Content
             $mail->isHTML(false);

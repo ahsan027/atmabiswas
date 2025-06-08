@@ -133,3 +133,9 @@ CREATE TABLE cv_applications(
     fileDir VARCHAR(255) NOT NULL,
     appliedAt DATETIME DEFAULT CURRENT_TIMESTAMP
 )
+
+ALTER TABLE cv_applications ADD COLUMN fullname VARCHAR(255) NOT NULL;
+
+ALTER TABLE cv_applications ADD COLUMN email VARCHAR(255) NOT NULL;
+
+ALTER TABLE cv_applications ADD COLUMN phone_no VARCHAR(255) NOT NULL;
