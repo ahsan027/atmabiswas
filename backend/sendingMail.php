@@ -1,5 +1,11 @@
 <?php
 
+include 'Database/db.php';
+
+$db = new Db();
+$conn = $db->connect();
+
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -8,6 +14,51 @@ require '../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+
+
+$uploadDir = "../uploads/application_cvs/";
+
+
+if (!file_exists($uploadDir)) {
+
+    mkdir($uploadDir, 0755, true);
+}
+
+function processPdf($pdfFile, $maxSize, $allowedTypes, $uploadDir)
+{
+
+    $fileInfo = new finfo(FILEINFO_MIME_TYPE);
+    $mimetype = $fileInfo->file($pdfFile["tmp_name"]);
+
+    if ($pdfFile["error"] !== UPLOAD_ERR_OK) {
+        echo "<p>An Error Occurd!</p>";
+        exit();
+    }
+
+    if (!in_array($mimetype, $allowedTypes)) {
+        echo "<p>Invalid File Type</p>";
+        exit();
+    }
+
+    if ($pdfFile['size'] > $maxSize) {
+        echo "<p>File size is too Large</p>";
+        exit();
+    }
+
+    $ext = pathinfo($pdfFile["name"], PATHINFO_EXTENSION);
+
+    $newFileName = "CvApplication_" . $_POST['fullname'] . "_" . date("Y-m-d") . "_" . random_int(0, 100) . "." . $ext;
+
+    $target = $uploadDir . $newFileName;
+
+    if (!move_uploaded_file($pdfFile["tmp_name"], $target)) {
+        echo "<p>Error Occurd While Uploading</p>";
+        exit();
+    }
+
+    return $target;
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -26,13 +77,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mailBody = htmlspecialchars(trim($_POST["mailbody"]));
 
+    $allowedTypes = ["application/pdf"];
+    $maxSize = 5 * 1024 * 1024;
+    $uploadDir = "../uploads/application_cvs/";
 
-    $cvFile = $_POST["cvfile"];
+    $cvFile = processPdf($_FILES["cvfile"], $maxSize, $allowedTypes, $uploadDir);
 
 
-    var_dump($jobId, $jobCode, $fullName, $email, $phone, $mailBody, $cvFile);
 
-    print_r($cvFile);
+    $sql = "INSERT INTO cv_applications (jobId,fileDir) VALUES (:job_id,:fileDir)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(":job_id", $jobId);
+    $stmt->bindParam(":fileDir", $cvFile);
+
+    $stmt->execute();
 
 
 
@@ -56,9 +115,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Content
             $mail->isHTML(false);
 
-            $mail->Subject = `Application for Position : {$jobTitle} - Job Id : {$jobId} - From {$fullName}`;
+            $mail->Subject = "Application for Position : {$jobTitle} - Job Id : {$jobId} - From {$fullName}";
 
             $mail->Body = "Name: $fullName\nEmail: $email\nPhone: +880{$phone}\nApplicant's message: \n$mailBody";
+
+            $mail->addAttachment($cvFile);
 
             $mail->send();
             echo 'Message has been sent successfully.';

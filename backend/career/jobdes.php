@@ -139,7 +139,7 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     <div class="modal" id="applyModal">
         <div class="modal-content">
             <h2>Apply for Senior Software Engineer</h2>
-            <form method="POST" id="applicationForm" action="../sendingMail.php">
+            <form method="POST" id="applicationForm" action="../sendingMail.php" enctype="multipart/form-data">
                 <div class="form-group">
 
                     <!-- Hidden input fields to send values -->

@@ -124,3 +124,12 @@ ALTER TABLE img_upload
 ADD COLUMN img_type VARCHAR(255) NOT NULL DEFAULT 'img_slider'; 
 
 ALTER TABLE img_upload MODIFY COLUMN img_path VARCHAR(255) NOT NULL;
+
+
+
+CREATE TABLE cv_applications(
+    applicationId INT AUTO_INCREMENT PRIMARY KEY,
+    jobId INT NOT NUll,
+    fileDir VARCHAR(255) NOT NULL,
+    appliedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+)
