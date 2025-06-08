@@ -139,3 +139,18 @@ ALTER TABLE cv_applications ADD COLUMN fullname VARCHAR(255) NOT NULL;
 ALTER TABLE cv_applications ADD COLUMN email VARCHAR(255) NOT NULL;
 
 ALTER TABLE cv_applications ADD COLUMN phone_no VARCHAR(255) NOT NULL;
+
+
+CREATE TABLE jobCodes (
+    jobid INT(10) AUTO_INCREMENT PRIMARY KEY,
+    JobTitle VARCHAR(255) NOT NULL,
+    JobCode VARCHAR(255) NOT NULL
+);
+
+INSERT INTO jobCodes (jobTitle, jobCode)
+VALUES
+('Accounts Management', 'DMS1'),
+('Full Stack Developer', 'FSD1'),
+('Hello Hi Bye Bye', 'MO1'),
+('Project Manager', 'PM1'),
+('Senior Software Engineer', 'SE1');
