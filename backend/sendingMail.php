@@ -3,6 +3,11 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -27,33 +32,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     print_r($cvFile);
 
-    // if (!empty($name) && !empty($email) && !empty($message)) {
-    //     $mail = new PHPMailer(true);
+    if (!empty($jobId) || !empty($jobCode) || !empty($fullName) || !empty($email) || !empty($phone) || !empty($mailBody) || !empty($cvFile)) {
 
-    //     try {
-    //         $mail->isSMTP();
-    //         $mail->Host       = 'smtp.gmail.com'; // e.g., Gmail SMTP
-    //         $mail->SMTPAuth   = true;
-    //         $mail->Username   = 'your-email@gmail.com'; // your email
-    //         $mail->Password   = 'your-app-password';    // Gmail App Password
-    //         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    //         $mail->Port       = 587;
+        $mail = new PHPMailer(true);
 
-    //         // Recipients
-    //         $mail->setFrom($email, $name);
-    //         $mail->addAddress('your-email@gmail.com', 'Atma Biswas'); // your email again
+        try {
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com'; // e.g., Gmail SMTP
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'your-email@gmail.com'; // your email
+            $mail->Password   = 'your-app-password';    // Gmail App Password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = 587;
 
-    //         // Content
-    //         $mail->isHTML(false);
-    //         $mail->Subject = 'New Message from Atma Biswas Website';
-    //         $mail->Body    = "Name: $name\nEmail: $email\nMessage:\n$message";
+            // Recipients
+            $mail->setFrom($email, $name);
+            $mail->addAddress('your-email@gmail.com', 'Atma Biswas'); // your email again
 
-    //         $mail->send();
-    //         echo 'Message has been sent successfully.';
-    //     } catch (Exception $e) {
-    //         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    //     }
-    // } else {
-    //     echo "Please fill in all fields.";
-    // }
+            // Content
+            $mail->isHTML(false);
+            $mail->Subject = 'New Message from Atma Biswas Website';
+            $mail->Body    = "Name: $name\nEmail: $email\nMessage:\n$message";
+
+            $mail->send();
+            echo 'Message has been sent successfully.';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    } else {
+        echo "Please fill in all fields.";
+    }
 }
