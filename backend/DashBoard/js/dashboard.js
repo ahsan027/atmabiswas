@@ -18,3 +18,7 @@ tailwind.config = {
     },
   },
 };
+
+function handleButton() {
+  window.location.href = "viewallPage.php";
+}

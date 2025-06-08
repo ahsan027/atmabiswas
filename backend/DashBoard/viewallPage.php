@@ -22,7 +22,7 @@ function concatStrings($blog): string
 }
 try {
 
-    $sql = "SELECT * FROM blogs LIMIT 5";
+    $sql = "SELECT * FROM blogs";
 
     $stmt = $conn->prepare($sql);
 
@@ -34,7 +34,7 @@ try {
 }
 
 try {
-    $imgSql = "SELECT * FROM img_upload LIMIT 5";
+    $imgSql = "SELECT * FROM img_upload";
 
     $imgStmt = $conn->prepare($imgSql);
 
@@ -46,7 +46,7 @@ try {
 }
 
 try {
-    $pdfSql = "SELECT * FROM pdsfiles LIMIT 5";
+    $pdfSql = "SELECT * FROM pdsfiles";
 
     $pdfStmt = $conn->prepare($pdfSql);
 
@@ -58,7 +58,7 @@ try {
 }
 
 try {
-    $jobSql = "SELECT * FROM jobcodes LIMIT 5";
+    $jobSql = "SELECT * FROM jobcodes";
 
     $jobStmt = $conn->prepare($jobSql);
 
@@ -87,105 +87,20 @@ try {
 
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <!-- Sidebar -->
-        <?php include 'sidebar.php' ?>
 
-        <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden overflow-x-hidden">
-            <!-- Top Navbar -->
 
-            <?php include 'navbar.inc.php'; ?>
-
-            <!-- Content Area -->
             <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
-                <div class="mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800">
-                        Dashboard Overview
-                    </h2>
-                    <p class="text-gray-600">
-                        Welcome back, ATMABISWAS!
-                    </p>
-                </div>
 
-                <!-- Stats Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    <!-- Revenue Card -->
-                    <div class="bg-white rounded-lg shadow p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Revenue</div>
-                            <div class="bg-green-100 p-1 rounded">
-                                <i class="fas fa-chart-line text-green-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-2xl font-bold">$24,780</div>
-                        <div class="flex items-center text-sm">
-                            <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 12%
-                            </span>
-                            <span class="text-gray-500 ml-2">from last month</span>
-                        </div>
-                    </div>
-
-                    <!-- Orders Card -->
-                    <div class="bg-white rounded-lg shadow p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Orders</div>
-                            <div class="bg-blue-100 p-1 rounded">
-                                <i class="fas fa-shopping-bag text-blue-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-2xl font-bold">1,482</div>
-                        <div class="flex items-center text-sm">
-                            <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 8%
-                            </span>
-                            <span class="text-gray-500 ml-2">from last month</span>
-                        </div>
-                    </div>
-
-                    <!-- Customers Card -->
-                    <div class="bg-white rounded-lg shadow p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Customers</div>
-                            <div class="bg-purple-100 p-1 rounded">
-                                <i class="fas fa-users text-purple-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-2xl font-bold">928</div>
-                        <div class="flex items-center text-sm">
-                            <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 4%
-                            </span>
-                            <span class="text-gray-500 ml-2">new customers</span>
-                        </div>
-                    </div>
-
-                    <!-- Conversion Card -->
-                    <div class="bg-white rounded-lg shadow p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Conversion</div>
-                            <div class="bg-yellow-100 p-1 rounded">
-                                <i class="fas fa-percentage text-yellow-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-2xl font-bold">24.8%</div>
-                        <div class="flex items-center text-sm">
-                            <span class="text-red-600 flex items-center">
-                                <i class="fas fa-arrow-down mr-1"></i> 2%
-                            </span>
-                            <span class="text-gray-500 ml-2">from last week</span>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Jobs table -->
 
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Job Positions and Distinct Job code Listing</h3>
-                        <button onclick="handleButton()"
-                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View Albutton </button>
+                        <h3 class="font-semibold text-lg">Available Jobs and Distinct Job code Listing</h3>
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            View All
+                        </button>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
@@ -244,8 +159,7 @@ try {
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Published Blogs Lists</h3>
-                        <button onclick="handleButton()"
-                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All
                         </button>
                     </div>
@@ -312,8 +226,7 @@ try {
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Recently Uploaded Images</h3>
-                        <button onclick="handleButton()"
-                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All
                         </button>
                     </div>
@@ -380,8 +293,7 @@ try {
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Uploaded pdf files...</h3>
-                        <button onclick="handleButton()"
-                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All
                         </button>
                     </div>
