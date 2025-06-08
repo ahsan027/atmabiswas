@@ -139,30 +139,35 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     <div class="modal" id="applyModal">
         <div class="modal-content">
             <h2>Apply for Senior Software Engineer</h2>
-            <form id="applicationForm" onsubmit="handleSubmit(event)">
+            <form method="POST" id="applicationForm" action="../sendingMail.php">
                 <div class="form-group">
+
+                    <!-- Hidden input fields to send values -->
+                    <input type="hidden" name="job_id" value="<?php echo $jobId ?>">
+
+                    <input type="hidden" name="job_code" value="<?php echo $jobCode ?>">
+
+
                     <label>Full Name</label>
-                    <input type="text" required>
+                    <input name="fullname" type="text" required>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" required>
+                    <input name="email" type="email" required>
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" required>
+                    <input name="phone" type="tel" required>
                 </div>
                 <div class="form-group">
                     <label>Cover Letter</label>
-                    <textarea rows="5" required></textarea>
+                    <textarea name="mailbody" rows="5" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>Upload CV</label>
-                    <input type="file" required>
+                    <input name="cvfile" type="file" accept=".pdf" required>
                 </div>
                 <button type="submit" class="apply-button">Submit Application</button>
-                <button type="button" class="clear-filters" onclick="closeApplyModal()"
-                    style="margin-top: 10px; width: auto;">Cancel</button>
             </form>
         </div>
     </div>
@@ -176,15 +181,6 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
     function closeApplyModal() {
         document.getElementById('applyModal').style.display = 'none';
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        if (confirm('Are you sure you want to submit your application?')) {
-            alert('Application submitted successfully!');
-            closeApplyModal();
-            // Here you would typically send the form data to a server
-        }
     }
 
     // Close modal when clicking outside
