@@ -22,7 +22,7 @@ function concatStrings($blog): string
 }
 try {
 
-    $sql = "SELECT * FROM blogs";
+    $sql = "SELECT * FROM blogs LIMIT 5";
 
     $stmt = $conn->prepare($sql);
 
@@ -34,7 +34,7 @@ try {
 }
 
 try {
-    $imgSql = "SELECT * FROM img_upload";
+    $imgSql = "SELECT * FROM img_upload LIMIT 5";
 
     $imgStmt = $conn->prepare($imgSql);
 
@@ -46,7 +46,7 @@ try {
 }
 
 try {
-    $pdfSql = "SELECT * FROM pdsfiles";
+    $pdfSql = "SELECT * FROM pdsfiles LIMIT 5";
 
     $pdfStmt = $conn->prepare($pdfSql);
 
@@ -58,7 +58,7 @@ try {
 }
 
 try {
-    $jobSql = "SELECT * FROM jobcodes";
+    $jobSql = "SELECT * FROM jobcodes LIMIT 5";
 
     $jobStmt = $conn->prepare($jobSql);
 
@@ -221,7 +221,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . $job['jobid'] . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($job['JobTitle']) . '</td>
                                     <td class="py-3 px-4">
-                                        <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold">' . $job['JobCode'] . '</span>
+                                        <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
                                     </td>
                     
                         
