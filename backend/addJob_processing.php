@@ -14,5 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $jobCode = htmlspecialchars($_POST["jobcode"]);
 
-    echo $jobTitle, $jobCode;
+
+    $stmt = $conn->prepare("INSERT INTO jobcodes (JobTitle,JobCode) values (:job_title,:job_codes)");
+
+    $stmt->bindParam(":job_title", $jobTitle);
+    $stmt->bindParam(":job_codes", $jobCode);
+
+    if ($stmt->execute()) {
+        header("Location: Dashboard/dashboard.php");
+    } else {
+        echo "Failed to update values";
+    }
 }
