@@ -26,7 +26,6 @@ position.addEventListener("change", function () {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data[0]["JobCode"]);
         jobCode.value = data[0]["JobCode"];
       });
   }
