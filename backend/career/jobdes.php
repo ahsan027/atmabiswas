@@ -15,9 +15,9 @@ $stmt->bindParam(":job_id", $jobId);
 $stmt->execute();
 $jobDes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$sql1 = "SELECT count(*) as vacency FROM jobs WHERE job_code=:job_code;";
+$sql1 = "SELECT vacancy FROM jobs WHERE job_id=:job_id;";
 $stmt1 = $connection1->prepare($sql1);
-$stmt1->bindParam(":job_code", $jobCode);
+$stmt1->bindParam(":job_id", $jobId);
 $stmt1->execute();
 $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -121,7 +121,7 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-users"></i>
                         <span>Vacancy: <?php
-                                        echo $deptCode[0]['vacency'];
+                                        echo $deptCode[0]['vacancy'];
                                         ?> </span>
                     </div>
                     <div class="meta-item" style="margin-bottom: 15px;">
@@ -175,23 +175,23 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <script>
-    function openApplyModal() {
-        document.getElementById('applyModal').style.display = 'block';
-        document.getElementById('applyModal').style.overflowY = 'auto';
+        function openApplyModal() {
+            document.getElementById('applyModal').style.display = 'block';
+            document.getElementById('applyModal').style.overflowY = 'auto';
 
-    }
-
-    function closeApplyModal() {
-        document.getElementById('applyModal').style.display = 'none';
-    }
-
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-        const modal = document.getElementById('applyModal');
-        if (event.target === modal) {
-            closeApplyModal();
         }
-    }
+
+        function closeApplyModal() {
+            document.getElementById('applyModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('applyModal');
+            if (event.target === modal) {
+                closeApplyModal();
+            }
+        }
     </script>
 </body>
 

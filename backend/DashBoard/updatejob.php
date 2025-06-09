@@ -76,19 +76,25 @@ if ($stmt1->rowCount() > 0) {
             <div class="container">
                 <form method="POST" action="">
                     <div class="formfirst">
-                        <header>Update Job Post(Job id:)</header>
+                        <header>Update Job Post (Job id: <span style="color: blue;"> <?php echo $job_id; ?> </span> )
+                        </header>
                         <div class="details personal">
                             <span class="title">Job Details</span>
                             <div class="fields">
 
                                 <div class="input-field">
-                                    <label>Job Code</label>
-                                    <input name="job_code" type="text" placeholder="Enter Job Code">
+                                    <label>Job Position</label>
+                                    <select id="jobPosition" name="job_title" required>
+                                        <option value="">Select Position..</option>
+
+                                    </select>
                                 </div>
 
+                                <!-- Job code -->
+
                                 <div class="input-field">
-                                    <label>Job Title</label>
-                                    <input name="job_title" type="text" placeholder="Enter Job Title">
+                                    <label>Job Code</label>
+                                    <input type="text" id="jobcode" name="job_code" required>
                                 </div>
 
                                 <div class="input-field">
@@ -126,6 +132,12 @@ if ($stmt1->rowCount() > 0) {
                                     <label>Salary Range</label>
                                     <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999">
                                 </div>
+
+                                <div class="input-field">
+                                    <label>Vacancy</label>
+                                    <input name="vacancy" type="text" placeholder="0" required>
+                                </div>
+
                             </div>
                         </div>
                         <div class="details ID">
@@ -177,7 +189,7 @@ if ($stmt1->rowCount() > 0) {
         </div>
     </div>
     <script src="js/dashboard.js"></script>
-
+    <script src="js/jobSelection.js"></script>
 
 </body>
 

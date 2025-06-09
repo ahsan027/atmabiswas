@@ -155,6 +155,6 @@ VALUES
 ('Project Manager', 'PM1'),
 ('Senior Software Engineer', 'SE1');
 
-
+ALTER TABLE jobs ADD COLUMN vacancy INT(100) NOT NULL;
 
 ALTER TABLE cv_applications ADD COLUMN job_title VARCHAR(255) NOT NULL;

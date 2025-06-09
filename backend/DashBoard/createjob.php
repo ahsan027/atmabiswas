@@ -98,6 +98,12 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <label>Salary Range</label>
                                     <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999" required>
                                 </div>
+
+                                <div class="input-field">
+                                    <label>Vacancy</label>
+                                    <input name="vacancy" type="text" placeholder="0" required>
+                                </div>
+
                             </div>
                         </div>
                         <div class="details ID">
