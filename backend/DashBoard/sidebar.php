@@ -7,7 +7,8 @@
         <a class="hyperlinks" href="dashboard.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-chart-line"></i>
+
                     <span>Dashboard</span>
                 </div>
             </div>
@@ -15,7 +16,8 @@
         <a class="hyperlinks" href="createjob.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-briefcase-medical"></i>
+
                     <span>Create New Job Post</span>
                 </div>
             </div>
@@ -23,7 +25,8 @@
         <a class="hyperlinks" href="updatejobs.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-edit"></i>
+
 
                     <span>Update Job Posts</span>
                 </div>
@@ -32,7 +35,8 @@
         <a href="blog.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-chart-bar"></i>
+                    <i class="fas fa-newspaper"></i>
+
                     <span>Publish Latest News</span>
                 </div>
             </div>
@@ -41,7 +45,8 @@
         <a href="uploadimg.php">
             <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-images"></i>
+                    <i class="fas fa-photo-video"></i>
+
                     <span>Upload Image Gallery</span>
                 </div>
             </div>
@@ -50,9 +55,20 @@
     <a href="uploadpdf.php">
         <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-file-pdf"></i>
+                <i class="fas fa-bell"></i>
+
 
                 <span>Upload Notice</span>
+            </div>
+        </div>
+    </a>
+    <a href="addJobPosition.php">
+        <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-user-plus"></i>
+
+
+                <span>Add a new Job Position</span>
             </div>
         </div>
     </a>
@@ -60,6 +76,7 @@
         <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-sign-out-alt"></i>
+
                 <span>Logout</span>
             </div>
         </div>
