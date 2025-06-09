@@ -289,6 +289,11 @@ try {
 
                                     <th
                                         class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
+                                        Phone
+                                    </th>
+
+                                    <th
+                                        class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
                                         Applied At
                                     </th>
 
@@ -315,6 +320,9 @@ try {
                                     </td>
 
                                            <td class="text-gray-700 py-3 px-4">' . $cv['email'] . '
+                                    </td>
+
+                                      <td class="text-gray-700 py-3 px-4">' . '+88' . $cv['phone_no'] . '
                                     </td>
 
                                               <td class="text-gray-700 py-3 px-4">' . $cv['appliedAt'] . '
