@@ -66,9 +66,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 <div class="input-field">
                                     <label>Job Code</label>
-                                    <select name="job_code" required>
-
-                                    </select>
+                                    <input type="text" id="jobcode" name="job_code" required>
                                 </div>
 
 
