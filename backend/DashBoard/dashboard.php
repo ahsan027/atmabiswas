@@ -3,7 +3,7 @@ session_start();
 include '../Database/db.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location: ../login/login.php");
+    header("Location: ../login/loging.php");
     exit();
 }
 
@@ -234,7 +234,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . $job['jobid'] . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($job['JobTitle']) . '</td>
                                     <td class="py-3 px-4">
-                                        <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
+                                        <span class="text-center inline-block w-[70px] px-1 py-1 text-[1rem] text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
                                     </td>
                     
                         
@@ -323,7 +323,7 @@ try {
                     
                         
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this Job Request?\');" href="../deletePendingJobs.php?applicationId=' . $cv['applicationId'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
