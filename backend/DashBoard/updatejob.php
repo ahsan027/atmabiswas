@@ -1,23 +1,23 @@
 <?php
-    include '../Database/db.php';
-    
-    $db = new Db();
-    $connection = $db->connect();
-    $connection1 = $db->connect();
-    $job_id = $_GET['id'];
+include '../Database/db.php';
+
+$db = new Db();
+$connection = $db->connect();
+$connection1 = $db->connect();
+$job_id = $_GET['id'];
 
 
-    $sql = "SELECT * FROM jobs WHERE job_id = :job_id";
-    $stmt = $connection->prepare($sql);
+$sql = "SELECT * FROM jobs WHERE job_id = :job_id";
+$stmt = $connection->prepare($sql);
 
-    $stmt->bindParam(":job_id",$job_id);
+$stmt->bindParam(":job_id", $job_id);
 
-    $stmt->execute();
+$stmt->execute();
 
-    $existing = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$existing = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-    $updatedValue = [
+$updatedValue = [
     ':job_title'      => (isset($_POST['job_title']) && $_POST['job_title']) ? $_POST['job_title'] : $existing[0]['job_title'],
     ':deadline'       => (isset($_POST['deadline']) && $_POST['deadline']) ? $_POST['deadline'] : $existing[0]['deadline'],
     ':job_dept'       => (isset($_POST['job_dept']) && $_POST['job_dept']) ? $_POST['job_dept'] : $existing[0]['job_dept'],
@@ -25,30 +25,27 @@
     ':salary_range'   => (isset($_POST['salary_range']) && $_POST['salary_range']) ? $_POST['salary_range'] : $existing[0]['salary_range'],
     ':job_experience' => (isset($_POST['job_experience']) && $_POST['job_experience']) ? $_POST['job_experience'] : $existing[0]['job_experience'],
     ':job_skillset'   => (isset($_POST['job_skillset']) && $_POST['job_skillset']) ? $_POST['job_skillset'] : $existing[0]['job_skillset'],
-    ':job_description'=> (isset($_POST['job_description']) && $_POST['job_description']) ? $_POST['job_description'] : $existing[0]['job_description'],
+    ':job_description' => (isset($_POST['job_description']) && $_POST['job_description']) ? $_POST['job_description'] : $existing[0]['job_description'],
     ':job_req'        => (isset($_POST['job_req']) && $_POST['job_req']) ? $_POST['job_req'] : $existing[0]['job_req'],
     ':job_benefits'   => (isset($_POST['job_benefits']) && $_POST['job_benefits']) ? $_POST['job_benefits'] : $existing[0]['job_benefits']
-]
-;
+];
 
-    $newstring = [];
-    foreach($updatedValue as $key => $value){
-        $field = str_replace(":",'',$key);
-        $newstring[] = "$field"."=".":$field";
-
-    }
+$newstring = [];
+foreach ($updatedValue as $key => $value) {
+    $field = str_replace(":", '', $key);
+    $newstring[] = "$field" . "=" . ":$field";
+}
 
 
-    $sqli = "UPDATE jobs SET ".implode(", ",$newstring)." WHERE job_id = $job_id";
+$sqli = "UPDATE jobs SET " . implode(", ", $newstring) . " WHERE job_id = $job_id";
 
-    $stmt1 = $connection1->prepare($sqli);
-    $stmt1->execute($updatedValue); 
-    if($stmt1->rowCount()>0){
+$stmt1 = $connection1->prepare($sqli);
+$stmt1->execute($updatedValue);
+if ($stmt1->rowCount() > 0) {
     header("Location: updatejobs.php");
-        
-    }
+}
 
-    
+
 
 ?>
 
@@ -101,29 +98,24 @@
 
                                 <div class="input-field">
                                     <label>Job Sector</label>
-                                    <select name="job_dept">
+                                    <select name="job_dept" required>
                                         <option disabled selected>Select Sector</option>
                                         <?php
                                         $newdb = new Db();
-                                        
                                         $newconn = $newdb->connect();
 
                                         $sql = "SELECT * FROM sectors";
-                                        
                                         $stmt = $newconn->prepare($sql);
-
                                         $stmt->execute();
-
                                         $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                        foreach($res as $r){
-                                    echo "<option value=".$r["sector_name"].">".$r["sector_name"]."</option>";
-                                            } 
+                                        foreach ($res as $r) {
+                                            echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
+                                        }
                                         ?>
-
-
                                     </select>
                                 </div>
+
 
                                 <div class="input-field">
                                     <label>Job Location</label>

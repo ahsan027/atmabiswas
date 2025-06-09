@@ -82,13 +82,12 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <option disabled selected>Select Sector</option>
                                         <?php
                                         foreach ($res as $r) {
-                                            echo "<option value=" . $r["sector_name"] . ">" . $r["sector_name"] . "</option>";
+                                            echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
                                         }
                                         ?>
-
-
                                     </select>
                                 </div>
+
 
                                 <div class="input-field">
                                     <label>Job Location</label>

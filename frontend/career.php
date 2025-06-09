@@ -1,13 +1,13 @@
-<?php 
-    include '../backend/Database/db.php';
-    $database = new Db();
-    $connection = $database->connect();
-    
-    $sql = "SELECT * FROM jobs";
+<?php
+include '../backend/Database/db.php';
+$database = new Db();
+$connection = $database->connect();
 
-    $stmt = $connection->prepare($sql);
-    $stmt->execute();
-    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$sql = "SELECT * FROM jobs";
+
+$stmt = $connection->prepare($sql);
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
             <ul class="menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="../backend/career/availableJobs.php">Available Jobs</a></li>
-                <li><a href="../backend/login/login.php">Login</a></li>
+                <li><a href="../backend/login/loging.php">Login</a></li>
             </ul>
         </div>
     </header>
@@ -58,7 +58,7 @@
                         <form method="GET" action="../backend/career/searchJobs.php" class="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" name="searchItem" placeholder="Job Title, Keyword(S)"
-                                value="<?php echo isset($_GET['searchItem'])? htmlspecialchars($_GET['searchItem']):''; ?>">
+                                value="<?php echo isset($_GET['searchItem']) ? htmlspecialchars($_GET['searchItem']) : ''; ?>">
                             <button type="submit">Search</button>
                         </form>
                     </div>
@@ -78,17 +78,17 @@
             <h2>Sector wise Jobs</h2>
             <div class="Sector-list">
                 <?php
-                    $newdb = new Db();
-                    $newRes = $newdb->connect();
+                $newdb = new Db();
+                $newRes = $newdb->connect();
 
-                    $sql = "SELECT job_dept, COUNT(*) AS job_count FROM jobs GROUP BY job_dept";
-                    $stm = $newRes->prepare($sql);
-                    $stm->execute();
-                    $finres = $stm->fetchAll(PDO::FETCH_ASSOC);
+                $sql = "SELECT job_dept, COUNT(*) AS job_count FROM jobs GROUP BY job_dept";
+                $stm = $newRes->prepare($sql);
+                $stm->execute();
+                $finres = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-                    foreach($finres as $f){
-                        echo "<a href='../backend/career/sectorWise.php?dept=".$f['job_dept']."'>".$f['job_dept']."<span>".$f['job_count']."</span></a>";
-                    }
+                foreach ($finres as $f) {
+                    echo "<a href='../backend/career/sectorWise.php?dept=" . $f['job_dept'] . "'>" . $f['job_dept'] . "<span>" . $f['job_count'] . "</span></a>";
+                }
 
                 ?>
             </div>
@@ -98,34 +98,34 @@
             <h2>Available Jobs</h2>
             <div class="job-list">
                 <?php
-                    foreach($res as $r){
-                        $endDate = new DateTime($r['deadline']);
-                        $currentDate = new DateTime();
+                foreach ($res as $r) {
+                    $endDate = new DateTime($r['deadline']);
+                    $currentDate = new DateTime();
 
-                        $interval = $currentDate->diff($endDate);
+                    $interval = $currentDate->diff($endDate);
 
-                        $remainingDates = $interval->days;
+                    $remainingDates = $interval->days;
 
-                    if($endDate>$currentDate){
-                    echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
-                    <h3>".$r['job_title']."</h3>
-                    <p>Job id: ".$r["job_id"]."</p>
-                    <p>Department: ".$r['job_dept']."</p>
-                    <p>Salary: ".$r['salary_range']."</p>
-                    <p>Experience: ".$r['job_experience']."</p>";
-                    
-                        echo "<span class='job-status-text'>".$remainingDates." Day Remaining"."</span>";
-                    }else{
-                    echo "<a href='#' style=color: gray;><div class='job-card'>
-                    <h3>".$r['job_title']."</h3>
-                    <p>Job id: ".$r["job_id"]."</p>
-                    <p>Department: ".$r['job_dept']."</p>
-                    <p>Salary: ".$r['salary_range']."</p>
-                    <p>Experience: ".$r['job_experience']."</p>";
+                    if ($endDate > $currentDate) {
+                        echo "<a href='../backend/career/jobdes.php?id=" . htmlspecialchars($r['job_id']) . "&deptCode=" . htmlspecialchars($r['job_code']) . "'><div class='job-card'>
+                    <h3>" . $r['job_title'] . "</h3>
+                    <p>Job id: " . $r["job_id"] . "</p>
+                    <p>Department: " . $r['job_dept'] . "</p>
+                    <p>Salary: " . $r['salary_range'] . "</p>
+                    <p>Experience: " . $r['job_experience'] . "</p>";
+
+                        echo "<span class='job-status-text'>" . $remainingDates . " Day Remaining" . "</span>";
+                    } else {
+                        echo "<a href='#' style=color: gray;><div class='job-card'>
+                    <h3>" . $r['job_title'] . "</h3>
+                    <p>Job id: " . $r["job_id"] . "</p>
+                    <p>Department: " . $r['job_dept'] . "</p>
+                    <p>Salary: " . $r['salary_range'] . "</p>
+                    <p>Experience: " . $r['job_experience'] . "</p>";
                         echo "<span class='job-status-text'>Application Time ended</span>";
                     }
                     echo "</div></a>";
-                    } 
+                }
                 ?>
 
             </div>
@@ -133,31 +133,31 @@
     </main>
 
     <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slider img');
-    const indicators = document.querySelectorAll('.slider-indicators button');
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const indicators = document.querySelectorAll('.slider-indicators button');
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
         });
 
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === index);
-        });
-    }
-
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            currentSlide = index;
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
-        });
-    });
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }, 5000);
+        }, 5000);
     </script>
 </body>
 
