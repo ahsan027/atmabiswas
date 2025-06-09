@@ -1,23 +1,23 @@
 <?php
-    include '../Database/db.php';
-    session_start();
-    if(!isset($_SESSION['username'])){
-        
-        header("Location: ../login/login.php");
-        exit();
-    }
+include '../Database/db.php';
+session_start();
+if (!isset($_SESSION['username'])) {
 
-    $db = new Db();
-    $connection = $db->connect();
+    header("Location: ../login/login.php");
+    exit();
+}
 
-    $sql = "SELECT * FROM sectors";
+$db = new Db();
+$connection = $db->connect();
 
-    $stmt = $connection->prepare($sql);
+$sql = "SELECT * FROM sectors";
 
-    $stmt->execute();
+$stmt = $connection->prepare($sql);
 
-    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   
+$stmt->execute();
+
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -51,16 +51,26 @@
                         <div class="details personal">
                             <span class="title">Job Details</span>
                             <div class="fields">
+                                <!-- Job title -->
+
+                                <div class="input-field">
+                                    <label>Job Position</label>
+                                    <select id="jobPosition" name="job_title" required>
+                                        <option value="">Select Position..</option>
+
+                                    </select>
+                                </div>
+
+
+                                <!-- Job code -->
 
                                 <div class="input-field">
                                     <label>Job Code</label>
-                                    <input name="job_code" type="text" placeholder="Enter Job Code" required>
+                                    <select name="job_code" required>
+
+                                    </select>
                                 </div>
 
-                                <div class="input-field">
-                                    <label>Job Title</label>
-                                    <input name="job_title" type="text" placeholder="Enter Job Title" required>
-                                </div>
 
                                 <div class="input-field">
                                     <label>Application Deadline</label>
@@ -73,9 +83,9 @@
                                     <select name="job_dept" required>
                                         <option disabled selected>Select Sector</option>
                                         <?php
-                                            foreach($res as $r){
-                                    echo "<option value=".$r["sector_name"].">".$r["sector_name"]."</option>";
-                                            } 
+                                        foreach ($res as $r) {
+                                            echo "<option value=" . $r["sector_name"] . ">" . $r["sector_name"] . "</option>";
+                                        }
                                         ?>
 
 
@@ -147,6 +157,7 @@
     </div>
     <script src="js/dashboard.js"></script>
     <script src="js/createjob.js"></script>
+    <script src="js/jobSelection.js"></script>
 
 </body>
 
