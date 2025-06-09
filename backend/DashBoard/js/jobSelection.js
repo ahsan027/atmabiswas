@@ -18,7 +18,7 @@ const position = document.getElementById("jobPosition");
 position.addEventListener("change", function () {
   const currentPosition = this.value;
   const jobCode = document.getElementById("jobcode");
-  console.log(currentPosition);
+  jobCode.value = "No Job position Selected yet...";
 
   if (currentPosition) {
     fetch(
@@ -29,7 +29,5 @@ position.addEventListener("change", function () {
         console.log(data[0]["JobCode"]);
         jobCode.value = data[0]["JobCode"];
       });
-  } else {
-    jobCode.value = "No Job position Selected yet...";
   }
 });
