@@ -84,11 +84,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $sql = "INSERT INTO cv_applications (jobId,fullname,email,phone_no,fileDir) VALUES (:job_id,:fullname,:email,:phone_no,:fileDir)";
+    $sql = "INSERT INTO cv_applications (jobId,job_title,fullname,email,phone_no,fileDir) VALUES (:job_id,:job_title,:fullname,:email,:phone_no,:fileDir)";
 
     $stmt = $conn->prepare($sql);
 
     $stmt->bindParam(":job_id", $jobId);
+    $stmt->bindParam(":job_title", $jobTitle);
     $stmt->bindParam(":fullname", $fullName);
     $stmt->bindParam(":email", $email);
     $stmt->bindParam(":phone_no", $phone);
@@ -114,11 +115,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAddress('ahsanauddry.ndc@gmail.com', 'Ahsan Auddry'); // Set the recivers email address here.
 
             // Content
-            $mail->isHTML(false);
+            $mail->isHTML(true);
 
             $mail->Subject = "Application for Position : {$jobTitle} - Job Id : {$jobId} - From {$fullName}";
 
-            $mail->Body = "Name: $fullName\nEmail: $email\nPhone: +880{$phone}\nApplicant's message: \n$mailBody";
+            $mail->Body = "
+            <strong>Name:</strong> {$fullName}<br>
+            <strong>Email:</strong> <span style='color:blue; font-weight:bold;'>{$email}</span><br>
+            <strong>Phone:</strong> <span style='color:green; font-weight:bold;'>+88{$phone}</span><br>
+            <strong>Applicant's message:</strong><br>
+            <p>{$mailBody}</p>
+        ";
+
 
             $mail->addAttachment($cvFile);
 

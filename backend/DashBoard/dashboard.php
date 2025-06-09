@@ -239,7 +239,7 @@ try {
                     
                         
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteJobPositions.php?job_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
