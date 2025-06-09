@@ -18,10 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $job_description = $_POST["job_description"];
         $job_req = $_POST["job_req"];
         $job_benefits = $_POST["job_benefits"];
+
+        $vacancy = htmlspecialchars($_POST["vacancy"]);
         echo $job_dept;
 
-        $sql = "INSERT INTO jobs (job_code, job_title, deadline, job_dept, job_location, salary_range, job_experience, job_skillset, job_description, job_req,job_benefits) 
-                VALUES (:job_code, :job_title, :deadline, :job_dept, :job_location, :salary_range, :job_experience, :job_skillset, :job_description, :job_req,:job_benefits)";
+        $sql = "INSERT INTO jobs (job_code, job_title, deadline, job_dept, job_location, salary_range, job_experience, job_skillset, job_description, job_req,job_benefits,vacancy) 
+                VALUES (:job_code, :job_title, :deadline, :job_dept, :job_location, :salary_range, :job_experience, :job_skillset, :job_description, :job_req,:job_benefits,:vacancy)";
 
 
         $stmt = $connection->prepare($sql);
@@ -37,6 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(':job_description', $job_description);
         $stmt->bindParam(':job_req', $job_req);
         $stmt->bindParam(":job_benefits", $job_benefits);
+
+        $stmt->bindParam(":vacancy", $vacancy);
 
         $stmt->execute();
     } catch (PDOException $err) {

@@ -101,7 +101,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 <div class="input-field">
                                     <label>Vacancy</label>
-                                    <input name="vacancy" type="text" placeholder="0" required>
+                                    <input name="vacancy" type="text" placeholder="1" required>
                                 </div>
 
                             </div>
