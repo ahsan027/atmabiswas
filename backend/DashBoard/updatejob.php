@@ -177,7 +177,7 @@ if ($stmt1->rowCount() > 0) {
                         </div>
 
                         <button type="submit" class="nextBtn">
-                            <span class="btnText">Next</span>
+                            <span class="btnText">Update Job</span>
                         </button>
                     </div>
 

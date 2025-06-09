@@ -147,7 +147,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
 
                         <button type="submit" class="nextBtn">
-                            <span class="btnText">Next</span>
+                            <span class="btnText">Create Job</span>
                         </button>
                     </div>
 
