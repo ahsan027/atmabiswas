@@ -110,10 +110,10 @@ try {
 
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Available Jobs and Distinct Job code Listing</h3>
-                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All
-                        </button>
+                        <h3 class="font-semibold text-lg">Job Positions and Distinct Job code Listing</h3>
+                        <button onclick="handleButton()"
+                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            Back To DashBoard</button>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
@@ -149,12 +149,12 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . $job['jobid'] . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($job['JobTitle']) . '</td>
                                     <td class="py-3 px-4">
-                                        <span class="text-center inline-block w-[70px] px-2 py-2 text-xs text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
+                                        <span class="text-center inline-block w-[70px] px-1 py-1 text-[1rem] text-white bg-blue-500 rounded text-wrap font-bold tracking-wider">' . $job['JobCode'] . '</span>
                                     </td>
                     
                         
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteJobPositions.php?job_id=' . $job['jobid'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
@@ -167,13 +167,13 @@ try {
                 </div>
 
 
-
+                <!-- Pending jobs table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Pending Job Request</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All</button>
+                            Back To DashBoard</button>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
@@ -257,7 +257,7 @@ try {
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Published Blogs Lists</h3>
                         <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All
+                            Back To DashBoard
                         </button>
                     </div>
                     <div class="overflow-x-auto">
@@ -324,7 +324,7 @@ try {
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Recently Uploaded Images</h3>
                         <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All
+                            Back To DashBoard
                         </button>
                     </div>
                     <div class="overflow-x-auto">
@@ -391,7 +391,7 @@ try {
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Uploaded pdf files...</h3>
                         <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            View All
+                            Back To DashBoard
                         </button>
                     </div>
                     <div class="overflow-x-auto">
@@ -448,7 +448,7 @@ try {
             </main>
         </div>
     </div>
-    <script src="js/dashboard.js"></script>
+    <script src="js/viewall.js"></script>
 </body>
 
 </html>
