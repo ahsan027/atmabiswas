@@ -19,15 +19,28 @@ $existing = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $updatedValue = [
     ':job_title'      => (isset($_POST['job_title']) && $_POST['job_title']) ? $_POST['job_title'] : $existing[0]['job_title'],
+
     ':deadline'       => (isset($_POST['deadline']) && $_POST['deadline']) ? $_POST['deadline'] : $existing[0]['deadline'],
+
     ':job_dept'       => (isset($_POST['job_dept']) && $_POST['job_dept']) ? $_POST['job_dept'] : $existing[0]['job_dept'],
+
     ':job_location'   => (isset($_POST['job_location']) && $_POST['job_location']) ? $_POST['job_location'] : $existing[0]['job_location'],
+
     ':salary_range'   => (isset($_POST['salary_range']) && $_POST['salary_range']) ? $_POST['salary_range'] : $existing[0]['salary_range'],
+
     ':job_experience' => (isset($_POST['job_experience']) && $_POST['job_experience']) ? $_POST['job_experience'] : $existing[0]['job_experience'],
+
     ':job_skillset'   => (isset($_POST['job_skillset']) && $_POST['job_skillset']) ? $_POST['job_skillset'] : $existing[0]['job_skillset'],
+
     ':job_description' => (isset($_POST['job_description']) && $_POST['job_description']) ? $_POST['job_description'] : $existing[0]['job_description'],
+
     ':job_req'        => (isset($_POST['job_req']) && $_POST['job_req']) ? $_POST['job_req'] : $existing[0]['job_req'],
-    ':job_benefits'   => (isset($_POST['job_benefits']) && $_POST['job_benefits']) ? $_POST['job_benefits'] : $existing[0]['job_benefits']
+
+    ':job_benefits'   => (isset($_POST['job_benefits']) && $_POST['job_benefits']) ? $_POST['job_benefits'] : $existing[0]['job_benefits'],
+
+    ':vacancy' => (isset($_POST['vacancy']) && $_POST['vacancy']) ? $_POST['vacancy'] : $existing[0]['vacancy']
+
+
 ];
 
 $newstring = [];
@@ -84,7 +97,7 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Position</label>
-                                    <select id="jobPosition" name="job_title" required>
+                                    <select id="jobPosition" name="job_title">
                                         <option value="">Select Position..</option>
 
                                     </select>
@@ -94,7 +107,7 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Code</label>
-                                    <input type="text" id="jobcode" name="job_code" required>
+                                    <input type="text" id="jobcode" name="job_code">
                                 </div>
 
                                 <div class="input-field">
@@ -104,7 +117,7 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Sector</label>
-                                    <select name="job_dept" required>
+                                    <select name="job_dept">
                                         <option disabled selected>Select Sector</option>
                                         <?php
                                         $newdb = new Db();
@@ -135,7 +148,7 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Vacancy</label>
-                                    <input name="vacancy" type="text" placeholder="0" required>
+                                    <input name="vacancy" type="text" placeholder="0">
                                 </div>
 
                             </div>

@@ -2,68 +2,57 @@
 include '../Database/db.php';
 session_start();
 
-$nameErr = "";
-$nameflag = false;
-
-
-$passErr = "";
-
-$passresult = [];
-$passflag = false;
-
 $database = new Db();
-$database->connect();
+$connection = $database->connect();
 
 
+// function validatePassword($password)
+// {
+//     $errors = [];
 
-function validatePassword($password)
-{
-    $errors = [];
 
+//     if (strlen($password) < 8) {
+//         $errors[] = "Password must be at least 8 characters long.";
+//     }
 
-    if (strlen($password) < 8) {
-        $errors[] = "Password must be at least 8 characters long.";
-    }
+//     if (!preg_match('/[A-Z]/', $password)) {
+//         $errors[] = "Password must contain at least one uppercase letter.";
+//     }
+//     if (!preg_match('/[a-z]/', $password)) {
+//         $errors[] = "Password must contain at least one lowercase letter.";
+//     }
+//     if (!preg_match('/[0-9]/', $password)) {
+//         $errors[] = "Password must contain at least one digit.";
+//     }
+//     if (!preg_match('/[\W]/', $password)) {
+//         $errors[] = "Password must contain at least one special character (e.g., @, #, $, etc.).";
+//     }
+//     return $errors;
+// }
 
-    if (!preg_match('/[A-Z]/', $password)) {
-        $errors[] = "Password must contain at least one uppercase letter.";
-    }
-    if (!preg_match('/[a-z]/', $password)) {
-        $errors[] = "Password must contain at least one lowercase letter.";
-    }
-    if (!preg_match('/[0-9]/', $password)) {
-        $errors[] = "Password must contain at least one digit.";
-    }
-    if (!preg_match('/[\W]/', $password)) {
-        $errors[] = "Password must contain at least one special character (e.g., @, #, $, etc.).";
-    }
-    return $errors;
-}
+$usernameErr = "";
+$passErr = "";
+$invalid = "";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $database = new Db();
-    $connection = $database->connect();
 
 
     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
 
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-    $username = filter_input(INPUT_POST, "username", FILTER_VALIDATE_EMAIL);
 
     if (empty($username)) {
-        $nameflag = true;
-        $nameErr = "Email is Required";
+
+        $usernameErr = "Email is Required";
     }
 
     if (empty($password)) {
-        $passflag = true;
         $passErr = "Password is Required";
     }
 
-    $passresult = validatePassword($password);
-
-    if ($username && empty($passresult)) {
+    if ($username && $password) {
 
         $sql = "SELECT * FROM admins WHERE username=:username AND pswd=:password";
 
@@ -77,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (empty($res)) {
-            echo "<p class='error'>INVALID CREDENTIALS</p>";
+            $invalid = "Invalid Credentails";
         } else {
             $_SESSION['username'] = $username;
             header("Location: ../DashBoard/dashboard.php");
@@ -110,8 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <i class="fa-regular fa-envelope"></i>
                     <?php
-                    if ($nameflag) {
-                        echo "<p class='error'> $nameErr</p>";
+                    if (strlen($usernameErr) !== 0) {
+                        echo "<p class='error'> $usernameErr</p>";
                     }
                     ?>
                 </div>
@@ -119,17 +108,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" name="password" placeholder="Password" value="">
                     <i class="fa-solid fa-lock"></i>
                     <?php
-                    if (empty($passresult)) {
-                        if ($passflag) {
-                            echo "<p class='error'>$passErr </p>";
-                        }
-                    } else {
-                        foreach ($passresult as $err) {
-                            echo "<p class='error'> $err </p>";
-                        }
+                    if (strlen($passErr) !== 0) {
+                        echo "<p class='error'> $passErr</p>";
                     }
                     ?>
                 </div>
+                <?php
+                if (strlen($invalid) !== 0) {
+                    echo "<p class='error'>{$invalid}</p>";
+                }
+                ?>
+
                 <button id="btn" type="submit">Login</button>
 
             </form>
