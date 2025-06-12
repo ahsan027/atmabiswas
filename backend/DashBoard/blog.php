@@ -122,48 +122,48 @@
     </div>
 
     <script>
-    function sanitizeHTML(html) {
-        const temp = document.createElement('div');
-        temp.textContent = html;
-        return temp.innerHTML;
-    }
-
-    async function handleFormSubmit(e) {
-        e.preventDefault();
-
-        const formData = new FormData(e.target);
-
-        // Get and sanitize blog content
-        const blogEditor = document.getElementById('editor');
-        const blogContent = blogEditor ? blogEditor.innerHTML : '';
-        const sanitizedBlogContent = sanitizeHTML(blogContent);
-        formData.append('blog_content', sanitizedBlogContent);
-
-        // Get and sanitize summary content
-        const summaryEditor = document.getElementById('summary_editor');
-        const summaryContent = summaryEditor ? summaryEditor.innerHTML : '';
-        const sanitizedSummaryContent = sanitizeHTML(summaryContent);
-        formData.append('summary_content', sanitizedSummaryContent);
-
-        try {
-            const response = await fetch(e.target.action, {
-                method: 'POST',
-                body: formData
-            });
-
-            const result = await response.json();
-
-            if (result.status === 'success') {
-                alert('Blog published successfully! Post ID: ' + result.post_id);
-                window.location.href = '../DashBoard/blog_image.php?id=' + result.post_id;
-            } else {
-                throw new Error(result.message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error publishing post: ' + error.message);
+        function sanitizeHTML(html) {
+            const temp = document.createElement('div');
+            temp.textContent = html;
+            return temp.innerHTML;
         }
-    }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+
+            // Get and sanitize blog content
+            const blogEditor = document.getElementById('editor');
+            const blogContent = blogEditor ? blogEditor.innerHTML : '';
+            const sanitizedBlogContent = sanitizeHTML(blogContent);
+            formData.append('blog_content', sanitizedBlogContent);
+
+            // Get and sanitize summary content
+            const summaryEditor = document.getElementById('summary_editor');
+            const summaryContent = summaryEditor ? summaryEditor.innerHTML : '';
+            const sanitizedSummaryContent = sanitizeHTML(summaryContent);
+            formData.append('summary_content', sanitizedSummaryContent);
+
+            try {
+                const response = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    alert('Blog published successfully! Post ID: ' + result.post_id);
+                    window.location.href = '../DashBoard/blog_image.php?id=' + result.post_id;
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error publishing post: ' + error.message);
+            }
+        }
     </script>
 
 
