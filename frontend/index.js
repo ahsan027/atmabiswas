@@ -3,11 +3,12 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const currentYear = new Date().getFullYear();
   const counters = [
-    { id: "number1", end: 100, duration: 5000 },
-    { id: "number2", end: 200, duration: 5500 },
-    { id: "number3", end: 50, duration: 4000 },
-    { id: "number4", end: 300, duration: 4500 },
+    { id: "number1", end: 1500, duration: 5000 },
+    { id: "number2", end: "100", duration: 5500 },
+    { id: "number3", end: 44, duration: 4000 },
+    { id: "number4", end: currentYear - 1994, duration: 2000 },
   ];
 
   counters.forEach((counter) => {

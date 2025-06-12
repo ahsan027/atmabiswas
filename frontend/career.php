@@ -31,7 +31,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <ul class="menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="../backend/career/availableJobs.php">Available Jobs</a></li>
-                <li><a href="../backend/login/loging.php">Login</a></li>
+                <li><a href="../backend/login/prelogin.php">Login</a></li>
             </ul>
         </div>
     </header>

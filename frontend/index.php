@@ -24,19 +24,22 @@
         <div class="numbers">
             <div class="number-card">
                 <h2 id="number1">0</h2>
-                <p>Projects Completed</p>
+                <p>Employee</p>
             </div>
             <div class="number-card">
-                <h2 id="number2">0</h2>
-                <p>Happy Clients</p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1px;" class="newDivDiv">
+                    <h2 id="number2">0</h2><span style="margin-bottom: 10px; color:black; font-size: 2rem;">K</span>
+                </div>
+
+                <p>Served Clients</p>
             </div>
             <div class="number-card">
                 <h2 id="number3">0</h2>
-                <p>Awards Won</p>
+                <p>Branchs</p>
             </div>
             <div class="number-card">
                 <h2 id="number4">0</h2>
-                <p>Cups of Coffee</p>
+                <p>Years of Foundation</p>
             </div>
         </div>
     </div>
