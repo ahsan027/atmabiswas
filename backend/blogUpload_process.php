@@ -17,14 +17,11 @@ try {
   );
 
   $title   = filter_input(INPUT_POST, 'blog_title', FILTER_SANITIZE_STRING);
-  $content = $_POST['blog_content']    ?? '';
-  $summary = $_POST['summary_content'] ?? '';
 
-  $allowedTags = '<p><h1><h2><h3><blockquote><strong><em><u>'
-    . '<a><ul><ol><li><span><font>';
+  $content   = $_POST["blog_content"];
 
-  $cleanContent = strip_tags($content, $allowedTags);
-  $cleanSummary = strip_tags($summary, $allowedTags);
+  $summary = $_POST["summary_content"];
+
 
   $stmt = $pdo->prepare("
         INSERT INTO blogs (blog_title, blog_content, summary)
@@ -32,8 +29,8 @@ try {
     ");
 
   $stmt->bindParam(':title',   $title,        PDO::PARAM_STR);
-  $stmt->bindParam(':content', $cleanContent, PDO::PARAM_STR);
-  $stmt->bindParam(':summary', $cleanSummary, PDO::PARAM_STR);
+  $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+  $stmt->bindParam(':summary', $summary, PDO::PARAM_STR);
 
   if ($stmt->execute()) {
     echo json_encode([
