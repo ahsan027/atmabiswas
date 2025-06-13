@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $stmtSec->execute();
     } else {
-        echo "Both the Fields are empty";
+        echo "Both of the Fields are empty";
         exit();
     }
 
