@@ -82,6 +82,18 @@ try {
     echo $e;
 }
 
+try {
+    $secSql = "SELECT * FROM sectors";
+
+    $secStmt = $conn->prepare($secSql);
+
+    $secStmt->execute();
+
+    $sectors = $secStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
+
 ?>
 
 
@@ -252,6 +264,60 @@ try {
                         </table>
                     </div>
                 </div>
+
+                <!-- Job Sectors -->
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Job Sector Listing</h3>
+                        <button onclick="handleButton()"
+                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Sector ID
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Sector Name
+                                    </th>
+
+
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+
+                                foreach ($sectors as $sec) {
+
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $sec['sector_id'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $sec['sector_name'] . '</td>
+                                    
+                        
+                                    <td class="py-3 px-4">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this Sector?\');" href="../deleteSector.php?sec_id=' . $sec['sector_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      Delete
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
 
                 <!-- Pending Application -->
 
