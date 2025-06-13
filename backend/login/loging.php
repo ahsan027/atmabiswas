@@ -24,23 +24,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($username && $password) {
-        $sql = "SELECT * FROM admins WHERE username=:username AND pswd=:password";
+
+        $sql = "SELECT * FROM admins WHERE email = :username";
         $stmt = $connection->prepare($sql);
         $stmt->bindParam(":username", $username);
-        $stmt->bindParam(":password", $password);
         $stmt->execute();
 
-        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if (empty($res)) {
+        if (!$user || !password_verify($password, $user['pswd'])) {
+
             $invalid = "Invalid Credentials";
         } else {
-            $_SESSION['username'] = $username;
+
+            $_SESSION['username'] = $user['fullname'];
             header("Location: ../DashBoard/dashboard.php");
+            exit();
         }
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,34 +57,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="../Assets/css/login-signup.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
     <style>
-    .error {
-        color: #fff;
-        background-color: rgba(255, 0, 0, 0.8);
-        width: 40%;
-        font-size: 16px;
-        margin-top: 5px;
-        padding: 10px;
-        border-radius: 4px;
-        text-align: center;
-        font-weight: bold;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .error {
+            color: #fff;
+            background-color: rgba(255, 0, 0, 0.8);
+            width: 40%;
+            font-size: 16px;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-        /* Add transition for smooth movement */
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+            /* Add transition for smooth movement */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-    /* On hover (for desktop) */
-    .error:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
+        /* On hover (for desktop) */
+        .error:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-    /* On active/touch (mobile-friendly) */
-    .error:active {
-        transform: scale(0.95);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    }
+        /* On active/touch (mobile-friendly) */
+        .error:active {
+            transform: scale(0.95);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -100,13 +107,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     ?>
                 </div>
                 <div class="password">
-                    <input type="password" name="password" placeholder="Password" value="">
+                    <input id="password" type="password" name="password" placeholder="Password" value="">
                     <i class="fa-solid fa-lock"></i>
                     <?php
                     if (strlen($passErr) !== 0) {
                         echo "<p class='error'>$passErr</p>";
                     }
                     ?>
+                    <span id="togglePassword" style="
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;">
+                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                    </span>
                 </div>
                 <?php
                 if (strlen($invalid) !== 0) {
@@ -115,9 +130,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
 
                 <button id="btn" type="submit">Login</button>
+
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+    </script>
+
 </body>
 
 </html>

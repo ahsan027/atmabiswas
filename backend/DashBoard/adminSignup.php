@@ -172,10 +172,10 @@
 
     <div class="signup-card">
         <h3 class="text-center mb-4">Admin Registration</h3>
-        <form action="signup.php" method="post" id="signupForm">
+        <form action="signup.php" method="POST" id="signupForm">
             <div class="mb-3">
                 <label class="form-label">Full name</label>
-                <input type="text" name="username" class="form-control" required>
+                <input type="text" name="fullname" class="form-control" required>
             </div>
 
             <div class="mb-3">

@@ -192,3 +192,10 @@ ADD COLUMN job_code VARCHAR(10) DEFAULT 'ABN1';
 
 
 ALTER TABLE jobs MODIFY COLUMN vacancy int(100) DEFAULT 1;
+
+
+
+ALTER TABLE admins CHANGE username email VARCHAR(255);
+
+ALTER TABLE admins ADD COLUMN fullname VARCHAR(255);
+    
