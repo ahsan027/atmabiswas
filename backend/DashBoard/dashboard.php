@@ -117,6 +117,8 @@ try {
                     </h2>
                     <p class="text-gray-600">
                         Welcome back, ATMABISWAS!
+                        <a style="text-decoration: underline; color: blue;" href="adminSignup.php">Create a new
+                            Admin?</a>
                     </p>
                 </div>
 
@@ -370,10 +372,7 @@ try {
                                         class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
                                         Blog Author
                                     </th>
-                                    <th
-                                        class=" py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Blog Content
-                                    </th>
+
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Published Date
@@ -396,7 +395,7 @@ try {
                                     <td class="py-3 px-4">
                                         <span class="px-2 py-2 text-xs text-white bg-blue-500 rounded">' . $blog['blog_author'] . '</span>
                                     </td>
-                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
+                           
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
                                       <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">

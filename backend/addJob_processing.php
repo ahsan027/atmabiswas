@@ -12,17 +12,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $jobTitle = htmlspecialchars($_POST["jobtitle"]);
 
-    $jobCode = htmlspecialchars($_POST["jobcode"]);
+    $jobSec = htmlspecialchars($_POST["jobsector"]);
+
+    if (!empty($jobTitle) && !empty($jobSec)) {
 
 
-    $stmt = $conn->prepare("INSERT INTO jobcodes (JobTitle,JobCode) values (:job_title,:job_codes)");
+        $stmt = $conn->prepare("INSERT INTO jobcodes (JobTitle) VALUES (:job_title)");
 
-    $stmt->bindParam(":job_title", $jobTitle);
-    $stmt->bindParam(":job_codes", $jobCode);
+        $stmtSec = $conn->prepare("INSERT INTO sectors (sector_name) VALUES (:sector)");
 
-    if ($stmt->execute()) {
-        header("Location: Dashboard/dashboard.php");
+
+        $stmt->bindParam(":job_title", $jobTitle);
+        $stmtSec->bindParam(":sector", $jobSec);
+
+        $stmt->execute();
+
+        $stmtSec->execute();
+    } elseif (!empty($jobTitle) && empty($jobSec)) {
+
+        $stmt = $conn->prepare("INSERT INTO jobcodes (JobTitle) VALUES (:job_title)");
+
+        $stmt->bindParam(":job_title", $jobTitle);
+
+        $stmt->execute();
+    } elseif (empty($jobTitle) && !empty($jobSec)) {
+
+        $stmtSec = $conn->prepare("INSERT INTO sectors (sector_name) VALUES (:sector)");
+
+
+        $stmtSec->bindParam(":sector", $jobSec);
+
+        $stmtSec->execute();
     } else {
-        echo "Failed to update values";
+        echo "Both the Fields are empty";
+        exit();
     }
+
+
+
+
+
+    header("Location: Dashboard/dashboard.php");
 }

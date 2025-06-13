@@ -73,41 +73,66 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
                         <strong><?= $jobDes[0]['job_skillset'] ?></strong> To join our growing team...
                     </p>
                     <br>
-                    <ul>
+                    <ul class="job-description-list">
                         <?php
-                        $des = explode(".", $jobDes[0]['job_description']);
-                        foreach ($des as $d) {
-                            echo '<li>' . $d . '</li>';
-                        }
+                        $description = $jobDes[0]['job_description'];
 
+                        // Example enhancement (adjust keywords as needed)
+                        $description = htmlspecialchars($description);
+                        $description = str_replace("Responsibilities", "<span class='highlight-blue'><strong>Responsibilities</strong></span>", $description);
+                        $description = str_replace("Requirements", "<span class='highlight-blue'><strong>Requirements</strong></span>", $description);
+                        $description = str_replace("•", "<li>", $description); // convert bullets to list items
+                        $description = nl2br($description); // convert newlines to <br>
+
+                        // Close open <li> tags after each line break
+                        $description = preg_replace('/<li>(.*?)<br\s*\/?>/i', '<li>$1</li>', $description);
+
+                        echo $description;
                         ?>
-
                     </ul>
+
                 </div>
 
                 <div class="section">
                     <h2>Requirements</h2>
-                    <ul>
+                    <ul class="job-req-list">
                         <?php
-                        $req = explode(".", $jobDes[0]['job_req']);
-                        foreach ($req as $re) {
-                            echo "<li>" . $re . "</li>";
-                        }
+                        $requirements = htmlspecialchars($jobDes[0]['job_req']);
+
+                        // Highlight keywords (add more if needed)
+                        $requirements = str_replace("Qualifications", "<span class='highlight-blue'><strong>Qualifications</strong></span>", $requirements);
+                        $requirements = str_replace("Experience", "<span class='highlight-blue'><strong>Experience</strong></span>", $requirements);
+                        $requirements = str_replace("•", "<li>", $requirements); // Convert bullet points to <li>
+                        $requirements = nl2br($requirements); // Convert newlines to <br>
+
+                        // Properly close each <li> tag
+                        $requirements = preg_replace('/<li>(.*?)<br\s*\/?>/i', '<li>$1</li>', $requirements);
+
+                        echo $requirements;
                         ?>
                     </ul>
+
                 </div>
 
                 <div class="section">
                     <h2>Benefits</h2>
-                    <ul>
+                    <ul class="job-benefits-list">
                         <?php
-                        $ben = explode(".", $jobDes[0]['job_benefits']);
-                        foreach ($ben as $b) {
+                        $benefits = htmlspecialchars($jobDes[0]['job_benefits']);
 
-                            echo "<li>" . $b . "</li>";
-                        }
+                        // Highlight keywords
+                        $benefits = str_replace("Benefits", "<span class='highlight-blue'><strong>Benefits</strong></span>", $benefits);
+                        $benefits = str_replace("Perks", "<span class='highlight-blue'><strong>Perks</strong></span>", $benefits);
+                        $benefits = str_replace("•", "<li>", $benefits); // Convert bullets to list items
+                        $benefits = nl2br($benefits); // Convert newlines to <br>
+
+                        // Close each <li> after <br>
+                        $benefits = preg_replace('/<li>(.*?)<br\s*\/?>/i', '<li>$1</li>', $benefits);
+
+                        echo $benefits;
                         ?>
                     </ul>
+
                 </div>
             </div>
 
@@ -175,23 +200,23 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <script>
-        function openApplyModal() {
-            document.getElementById('applyModal').style.display = 'block';
-            document.getElementById('applyModal').style.overflowY = 'auto';
+    function openApplyModal() {
+        document.getElementById('applyModal').style.display = 'block';
+        document.getElementById('applyModal').style.overflowY = 'auto';
 
-        }
+    }
 
-        function closeApplyModal() {
-            document.getElementById('applyModal').style.display = 'none';
-        }
+    function closeApplyModal() {
+        document.getElementById('applyModal').style.display = 'none';
+    }
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('applyModal');
-            if (event.target === modal) {
-                closeApplyModal();
-            }
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('applyModal');
+        if (event.target === modal) {
+            closeApplyModal();
         }
+    }
     </script>
 </body>
 

@@ -51,10 +51,10 @@ $connection = $db->connect();
                             class="form-control block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-gray-700 mb-3"
                             id="description" name="jobtitle" placeholder="Add a Job position title..." />
 
-                        <label for="description" class="form-label ">Job Code</label>
+                        <label for="description" class="form-label ">Job Sector</label>
                         <input
                             class="form-control block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-gray-700"
-                            id="description" name="jobcode" rows="3" placeholder="Add an Unique Job Code..."></input>
+                            id="description" name="jobsector" rows="3" placeholder="Add an Job Sector..."></input>
                     </div>
 
 

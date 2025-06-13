@@ -5,10 +5,10 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
   const counters = [
-    { id: "number1", end: 1500, duration: 5000 },
+    { id: "number1", end: 1500, duration: 7000 },
     { id: "number2", end: "100", duration: 5500 },
     { id: "number3", end: 44, duration: 4000 },
-    { id: "number4", end: currentYear - 1994, duration: 2000 },
+    { id: "number4", end: currentYear - 1994, duration: 4000 },
   ];
 
   counters.forEach((counter) => {

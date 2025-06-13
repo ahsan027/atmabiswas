@@ -24,7 +24,7 @@
         <div class="numbers">
             <div class="number-card">
                 <h2 id="number1">0</h2>
-                <p>Employee</p>
+                <p>Employee's</p>
             </div>
             <div class="number-card">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 1px;" class="newDivDiv">

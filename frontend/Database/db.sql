@@ -162,3 +162,23 @@ ALTER TABLE cv_applications ADD COLUMN job_title VARCHAR(255) NOT NULL;
 ALTER TABLE jobs MODIFY COLUMN vacancy INT NOT NULL DEFAULT 1;
 
 
+ALTER TABLE jobs 
+MODIFY COLUMN job_description VARCHAR(500) DEFAULT 'Will be disclosed in the Interview - (ATMABISWAS)';
+
+
+ALTER TABLE jobs 
+MODIFY COLUMN job_skillset VARCHAR(500) DEFAULT 'Will be disclosed in the Interview - (ATMABISWAS)';
+
+ALTER TABLE jobs 
+MODIFY COLUMN job_benefits VARCHAR(500) DEFAULT 'Will be disclosed in the Interview - (ATMABISWAS)';
+
+ALTER TABLE jobs 
+MODIFY COLUMN job_req VARCHAR(500) DEFAULT 'Will be disclosed in the Interview - (ATMABISWAS)';
+
+
+
+ALTER TABLE jobcodes DROP COLUMN JobCode;
+
+
+ALTER TABLE jobcodes 
+ADD COLUMN JobCode VARCHAR(10) DEFAULT 'ABN1';

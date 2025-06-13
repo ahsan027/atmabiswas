@@ -1,5 +1,5 @@
 <!-- ok -->
- 
+
 <?php
 include '../Database/db.php';
 session_start();
@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,39 +53,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="../Assets/css/login-signup.css">
 
-    <!-- Optional: Add the error style directly here -->
     <style>
-.error {
-    color: #fff;
-    background-color: rgba(255, 0, 0, 0.8);
-    width: 40%;
-    font-size: 16px;
-    margin-top: 5px;
-    padding: 10px;
-    border-radius: 4px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .error {
+        color: #fff;
+        background-color: rgba(255, 0, 0, 0.8);
+        width: 40%;
+        font-size: 16px;
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-    /* Add transition for smooth movement */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+        /* Add transition for smooth movement */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-/* On hover (for desktop) */
-.error:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+    /* On hover (for desktop) */
+    .error:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-/* On active/touch (mobile-friendly) */
-.error:active {
-    transform: scale(0.95);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-
+    /* On active/touch (mobile-friendly) */
+    .error:active {
+        transform: scale(0.95);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="box">
@@ -120,4 +119,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
+
 </html>

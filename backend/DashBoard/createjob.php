@@ -64,10 +64,9 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 <!-- Job code -->
 
-                                <div class="input-field">
-                                    <label>Job Code</label>
-                                    <input type="text" id="jobcode" name="job_code" required>
-                                </div>
+
+                                <input type="hidden" id="jobcode" name="job_code" required>
+
 
 
                                 <div class="input-field">
