@@ -94,40 +94,35 @@ if ($stmt1->rowCount() > 0) {
                         <div class="details personal">
                             <span class="title">Job Details</span>
                             <div class="fields">
+                                <!-- Job title -->
 
                                 <div class="input-field">
                                     <label>Job Position</label>
-                                    <select id="jobPosition" name="job_title">
+                                    <select id="jobPosition" name="job_title" required>
                                         <option value="">Select Position..</option>
 
                                     </select>
                                 </div>
 
+
                                 <!-- Job code -->
 
-                                <div class="input-field">
-                                    <label>Job Code</label>
-                                    <input type="text" id="jobcode" name="job_code">
-                                </div>
+
+                                <input type="hidden" id="jobcode" name="job_code" required>
+
+
 
                                 <div class="input-field">
                                     <label>Application Deadline</label>
-                                    <input name="deadline" type="date" placeholder="Enter Application Deadline">
+                                    <input name="deadline" type="date" placeholder="Enter Application Deadline"
+                                        required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Job Sector</label>
-                                    <select name="job_dept">
+                                    <select name="job_dept" required>
                                         <option disabled selected>Select Sector</option>
                                         <?php
-                                        $newdb = new Db();
-                                        $newconn = $newdb->connect();
-
-                                        $sql = "SELECT * FROM sectors";
-                                        $stmt = $newconn->prepare($sql);
-                                        $stmt->execute();
-                                        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
                                         foreach ($res as $r) {
                                             echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
                                         }
@@ -138,17 +133,17 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Location</label>
-                                    <input name="job_location" type="text" placeholder="Enter Job Location">
+                                    <input name="job_location" type="text" placeholder="Enter Job Location" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Salary Range</label>
-                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999">
+                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Vacancy</label>
-                                    <input name="vacancy" type="text" placeholder="0">
+                                    <input name="vacancy" type="text" placeholder="1" required>
                                 </div>
 
                             </div>
@@ -158,8 +153,9 @@ if ($stmt1->rowCount() > 0) {
                             <div>
                                 <div class="fields">
                                     <div class="spinput-field">
-                                        <label> Job Experience</label>
-                                        <input name="job_experience" type="text" placeholder="Enter  Experience">
+                                        <label>Required Job Experience</label>
+                                        <input name="job_experience" type="text"
+                                            placeholder="Enter required Experience">
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Skillset</label>
@@ -176,7 +172,8 @@ if ($stmt1->rowCount() > 0) {
                                     <div class="spinput-field">
                                         <label>Job Requirements</label>
                                         <textarea name="job_req"
-                                            placeholder="Use fullstop(.) at the end of a Requirement."></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Requirement."
+                                            required></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Benefits</label>
@@ -193,9 +190,6 @@ if ($stmt1->rowCount() > 0) {
                             <span class="btnText">Update Job</span>
                         </button>
                     </div>
-
-
-
                 </form>
             </div>
 

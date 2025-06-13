@@ -83,7 +83,7 @@ try {
 }
 
 try {
-    $secSql = "SELECT * FROM sectors";
+    $secSql = "SELECT * FROM sectors LIMIT 5";
 
     $secStmt = $conn->prepare($secSql);
 

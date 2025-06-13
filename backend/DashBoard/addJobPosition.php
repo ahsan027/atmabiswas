@@ -29,6 +29,28 @@ $connection = $db->connect();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
+<style>
+    /* Notification style */
+    .notification {
+        position: fixed;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f87171;
+        /* red-400 */
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        font-weight: 500;
+        z-index: 9999;
+        transition: top 0.5s ease;
+    }
+
+    .notification.show {
+        top: 20px;
+    }
+</style>
 
 <body class="bg-gray-100 overflow-x-hidden">
     <div class="flex h-screen">
@@ -38,6 +60,8 @@ $connection = $db->connect();
         <!-- Main Content -->
         <div class="flex items-center justify-center h-screen">
             <!-- Content Area -->
+            <div id="errorNotification" class="notification">Please fill in both fields!</div>
+
             <div class="upload-container w-screen h-screen">
 
                 <form action="../addJob_processing.php" method="POST">
@@ -68,41 +92,63 @@ $connection = $db->connect();
     </div>
     <script src="js/dashboard.js"></script>
 
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+
+            const title = document.querySelector('input[name="jobtitle"]').value.trim();
+
+            const sector = document.querySelector('input[name="jobsector"]').value.trim();
+
+            if (title === "" && sector === "") {
+                e.preventDefault();
+
+                const notif = document.getElementById('errorNotification');
+
+                notif.classList.add('show');
+
+                setTimeout(() => {
+                    notif.classList.remove('show');
+                }, 3000);
+            }
+        });
+    </script>
+
+
 
 
     <script>
-    document.getElementById('imageUpload').addEventListener('change', function(e) {
-        const preview = document.getElementById('imagePreview');
-        const file = e.target.files[0];
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const preview = document.getElementById('imagePreview');
+            const file = e.target.files[0];
 
-        if (file) {
-            preview.style.display = 'block';
-            const reader = new FileReader();
+            if (file) {
+                preview.style.display = 'block';
+                const reader = new FileReader();
 
-            reader.onload = function(event) {
-                preview.querySelector('img').src = event.target.result;
+                reader.onload = function(event) {
+                    preview.querySelector('img').src = event.target.result;
+                }
+
+                reader.readAsDataURL(file);
             }
-
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // Drag and drop highlight
-    document.querySelectorAll('.upload-section').forEach(section => {
-        section.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            section.classList.add('dragover');
         });
 
-        section.addEventListener('dragleave', () => {
-            section.classList.remove('dragover');
-        });
+        // Drag and drop highlight
+        document.querySelectorAll('.upload-section').forEach(section => {
+            section.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                section.classList.add('dragover');
+            });
 
-        section.addEventListener('drop', (e) => {
-            e.preventDefault();
-            section.classList.remove('dragover');
+            section.addEventListener('dragleave', () => {
+                section.classList.remove('dragover');
+            });
+
+            section.addEventListener('drop', (e) => {
+                e.preventDefault();
+                section.classList.remove('dragover');
+            });
         });
-    });
     </script>
 
 </body>

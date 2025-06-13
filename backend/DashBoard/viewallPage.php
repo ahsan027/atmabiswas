@@ -3,7 +3,7 @@ session_start();
 include '../Database/db.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location: ../login/login.php");
+    header("Location: ../login/loging.php");
     exit();
 }
 
@@ -71,13 +71,25 @@ try {
 
 
 try {
-    $cvSql = "SELECT * FROM cv_applications LIMIT 5";
+    $cvSql = "SELECT * FROM cv_applications";
 
     $cvStmt = $conn->prepare($cvSql);
 
     $cvStmt->execute();
 
     $cvs = $cvStmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo $e;
+}
+
+try {
+    $secSql = "SELECT * FROM sectors";
+
+    $secStmt = $conn->prepare($secSql);
+
+    $secStmt->execute();
+
+    $sectors = $secStmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo $e;
 }
@@ -91,7 +103,7 @@ try {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard-ATMABISWAS</title>
+    <title>Back to Dashboard - ATMABISWAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -100,20 +112,21 @@ try {
 
 <body class="bg-gray-100">
     <div class="flex h-screen">
+        <!-- Sidebar -->
 
+
+        <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden overflow-x-hidden">
-
             <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
 
 
-                <!-- Jobs table -->
 
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Job Positions and Distinct Job code Listing</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            Back To DashBoard</button>
+                            Back to Dashboard</button>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
@@ -166,14 +179,68 @@ try {
                     </div>
                 </div>
 
+                <!-- Job Sectors -->
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Job Sector Listing</h3>
+                        <button onclick="handleButton()"
+                            class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
+                            Back to Dashboard</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Sector ID
+                                    </th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Sector Name
+                                    </th>
 
-                <!-- Pending jobs table -->
+
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+
+                                foreach ($sectors as $sec) {
+
+                                    echo '<tr class="border-b">
+                                    <td class="py-3 px-4 text-gray-700">' . $sec['sector_id'] . '</td>
+                                    <td class="py-3 px-4 text-gray-700">' . $sec['sector_name'] . '</td>
+                                    
+                        
+                                    <td class="py-3 px-4">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this Sector?\');" href="../deleteSector.php?sec_id=' . $sec['sector_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      Delete
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <!-- Pending Application -->
+
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-semibold text-lg">Pending Job Request</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            Back To DashBoard</button>
+                            Back to Dashboard</button>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
@@ -266,7 +333,7 @@ try {
                         <h3 class="font-semibold text-lg">Published Blogs Lists</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            Back To DashBoard
+                            Back to Dashboard
                         </button>
                     </div>
                     <div class="overflow-x-auto">
@@ -285,10 +352,7 @@ try {
                                         class="py-3 px-4 min-w-[150px] max-w-[250px] text-left text-sm font-medium text-gray-500 uppercase tracking-wider break-words">
                                         Blog Author
                                     </th>
-                                    <th
-                                        class=" py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                                        Blog Content
-                                    </th>
+
                                     <th
                                         class="py-3 px-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Published Date
@@ -311,7 +375,7 @@ try {
                                     <td class="py-3 px-4">
                                         <span class="px-2 py-2 text-xs text-white bg-blue-500 rounded">' . $blog['blog_author'] . '</span>
                                     </td>
-                                    <td class="py-3 px-4 text-gray-700">' . concatStrings($blog['blog_content']) . '</td>
+                           
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
                                       <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
@@ -334,7 +398,7 @@ try {
                         <h3 class="font-semibold text-lg">Recently Uploaded Images</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            Back To DashBoard
+                            Back to Dashboard
                         </button>
                     </div>
                     <div class="overflow-x-auto">
@@ -402,7 +466,7 @@ try {
                         <h3 class="font-semibold text-lg">Uploaded pdf files...</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
-                            Back To DashBoard
+                            Back to Dashboard
                         </button>
                     </div>
                     <div class="overflow-x-auto">

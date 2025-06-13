@@ -180,5 +180,15 @@ MODIFY COLUMN job_req VARCHAR(500) DEFAULT 'Will be disclosed in the Interview -
 ALTER TABLE jobcodes DROP COLUMN JobCode;
 
 
+ALTER TABLE jobs DROP COLUMN job_code;
+
+
 ALTER TABLE jobcodes 
 ADD COLUMN JobCode VARCHAR(10) DEFAULT 'ABN1';
+
+
+ALTER TABLE jobs 
+ADD COLUMN job_code VARCHAR(10) DEFAULT 'ABN1';
+
+
+ALTER TABLE jobs MODIFY COLUMN vacancy int(100) DEFAULT 1;

@@ -111,22 +111,20 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="fields">
                                     <div class="spinput-field">
                                         <label>Required Job Experience</label>
-                                        <input name="job_experience" type="text" placeholder="Enter required Experience"
-                                            required>
+                                        <input name="job_experience" type="text"
+                                            placeholder="Enter required Experience">
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Skillset</label>
                                         <input name="job_skillset" type="text"
-                                            placeholder="eg: PHP, JavaScript, MySQL, REST APIs, Frontend frameworks (React or Angular)."
-                                            required>
+                                            placeholder="eg: PHP, JavaScript, MySQL, REST APIs, Frontend frameworks (React or Angular).">
                                     </div>
                                 </div>
                                 <div class="fields">
                                     <div class="spinput-field">
                                         <label>Job Description</label>
                                         <textarea name="job_description"
-                                            placeholder="Use fullstop(.) at the end of a description."
-                                            required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a description."></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Requirements</label>
@@ -137,7 +135,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="spinput-field">
                                         <label>Job Benefits</label>
                                         <textarea name="job_benefits"
-                                            placeholder="Use fullstop(.) at the end of a Beneifit." required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Beneifit."></textarea>
                                     </div>
                                 </div>
 
