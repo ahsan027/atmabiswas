@@ -12,7 +12,7 @@ if (isset($_SESSION['username'])) {
     $stmt->execute();
     $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } else {
-    header("Location: ../login/login.php");
+    header("Location: ../login/loging.php");
 }
 
 

@@ -104,7 +104,7 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Position</label>
-                                    <select id="jobPosition" name="job_title" required>
+                                    <select id="jobPosition" name="job_title">
                                         <option value="">Select Position..</option>
 
                                     </select>
@@ -114,21 +114,33 @@ if ($stmt1->rowCount() > 0) {
                                 <!-- Job code -->
 
 
-                                <input type="hidden" id="jobcode" name="job_code" required>
+                                <input type="hidden" id="jobcode" name="job_code">
 
 
 
                                 <div class="input-field">
                                     <label>Application Deadline</label>
-                                    <input name="deadline" type="date" placeholder="Enter Application Deadline"
-                                        required>
+                                    <input name="deadline" type="date" placeholder="Enter Application Deadline">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Job Sector</label>
-                                    <select name="job_dept" required>
+                                    <select name="job_dept">
                                         <option disabled selected>Select Sector</option>
                                         <?php
+
+                                        $sql = "SELECT sector_name FROM sectors ORDER BY sector_name ASC";
+
+                                        $stmtSql =
+
+                                            $connection->prepare($sql);
+
+                                        $stmtSql->execute();
+
+                                        $res = $stmtSql->fetchAll(PDO::FETCH_ASSOC);
+
+                                        print_r($res);
+
                                         foreach ($res as $r) {
                                             echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
                                         }
@@ -139,17 +151,17 @@ if ($stmt1->rowCount() > 0) {
 
                                 <div class="input-field">
                                     <label>Job Location</label>
-                                    <input name="job_location" type="text" placeholder="Enter Job Location" required>
+                                    <input name="job_location" type="text" placeholder="Enter Job Location">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Salary Range</label>
-                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999" required>
+                                    <input name="salary_range" type="text" placeholder="BDT 000 - BDT 999">
                                 </div>
 
                                 <div class="input-field">
                                     <label>Vacancy</label>
-                                    <input name="vacancy" type="text" placeholder="1" required>
+                                    <input name="vacancy" type="text" placeholder="1">
                                 </div>
 
                             </div>
@@ -159,9 +171,9 @@ if ($stmt1->rowCount() > 0) {
                             <div>
                                 <div class="fields">
                                     <div class="spinput-field">
-                                        <label>Required Job Experience</label>
+                                        <label> Job Experience</label>
                                         <input name="job_experience" type="text"
-                                            placeholder="Enter required Experience">
+                                            placeholder="Experience required: eg: 5 years">
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Skillset</label>
@@ -178,8 +190,7 @@ if ($stmt1->rowCount() > 0) {
                                     <div class="spinput-field">
                                         <label>Job Requirements</label>
                                         <textarea name="job_req"
-                                            placeholder="Use fullstop(.) at the end of a Requirement."
-                                            required></textarea>
+                                            placeholder="Use fullstop(.) at the end of a Requirement."></textarea>
                                     </div>
                                     <div class="spinput-field">
                                         <label>Job Benefits</label>
