@@ -1,5 +1,3 @@
-<!-- ok -->
-
 <?php
 include '../Database/db.php';
 session_start();
@@ -61,33 +59,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <style>
-        .error {
-            color: #fff;
-            background-color: rgba(255, 0, 0, 0.8);
-            width: 40%;
-            font-size: 16px;
-            margin-top: 5px;
-            padding: 10px;
-            border-radius: 4px;
-            text-align: center;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .error {
+        color: #fff;
+        background-color: rgba(255, 0, 0, 0.8);
+        width: 40%;
+        font-size: 16px;
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-            /* Add transition for smooth movement */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+        /* Add transition for smooth movement */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        /* On hover (for desktop) */
-        .error:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
+    /* On hover (for desktop) */
+    .error:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-        /* On active/touch (mobile-friendly) */
-        .error:active {
-            transform: scale(0.95);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-        }
+    /* On active/touch (mobile-friendly) */
+    .error:active {
+        transform: scale(0.95);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
     </style>
 </head>
 
@@ -115,11 +113,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     }
                     ?>
                     <span id="togglePassword" style="
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        cursor: pointer;">
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    cursor: pointer;">
                         <i class="fa-solid fa-eye" id="eyeIcon"></i>
                     </span>
                 </div>
@@ -130,25 +128,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
 
                 <button id="btn" type="submit">Login</button>
+                <div style="margin-top: 10px; text-align: center;">
+                    <a href="forgot_password.php" style="color: white; text-decoration: none;">
+                        <i style="color: white;" class="fa-solid fa-key"></i> Forgot Password?
+                    </a>
+                </div>
+
 
             </form>
         </div>
     </div>
     <script>
-        document.getElementById('togglePassword').addEventListener('click', function() {
-            const passwordInput = document.getElementById('password');
-            const eyeIcon = document.getElementById('eyeIcon');
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
 
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyeIcon.classList.remove('fa-eye');
-                eyeIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                eyeIcon.classList.remove('fa-eye-slash');
-                eyeIcon.classList.add('fa-eye');
-            }
-        });
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        }
+    });
     </script>
 
 </body>

@@ -73,7 +73,7 @@
         </div>
     </a>
 
-    <a href="">
+    <a href="../login/logout.php">
         <div class="px-4 py-2 hover:bg-primary-700 hover:text-white cursor-pointer">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-sign-out-alt"></i>
