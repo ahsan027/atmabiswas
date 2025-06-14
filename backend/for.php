@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $resetLink = "http://yourdomain.com/reset_password.php?token=$token";
 
-        $mail = new PHPMailer();
+        // $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = 'smtp.yourmail.com';
         $mail->SMTPAuth = true;
