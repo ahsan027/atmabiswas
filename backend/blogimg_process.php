@@ -79,13 +79,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($sourceStmt->execute()) {
 
           header("Location: DashBoard/success.php?type=upload");
+          exit();
         } else {
           header("Location: DashBoard/error.php?type=upload");
+          exit();
         }
       }
     }
   } catch (Exception $e) {
 
     header("Location: DashBoard/error.php?type=upload");
+
+    exit();
   }
 }
