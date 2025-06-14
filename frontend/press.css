@@ -272,20 +272,47 @@ header p {
   margin: 1.5rem 0;
 }
 
+.article-source {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--gray-color);
+  text-align: left;
+}
+
+.article-source a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.article-source a:hover {
+  color: var(--primary-light);
+}
+
 /* Article - image */
+
 .article-banner {
-  margin-bottom: 2rem;
-  text-align: center;
   width: 100%;
+  height: 300px; /* Desktop height */
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
 }
 
 .article-banner img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .article-banner {
+    height: 180px; /* Smaller height on phones */
+  }
 }
 
 /* Optional: add a slight zoom on hover for large screens */
@@ -296,9 +323,9 @@ header p {
 }
 
 /* Adjust margins and image size on small screens */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .article-banner {
-    margin-bottom: 1.5rem;
+    height: 180px; /* Smaller height on phones */
   }
 
   .article-title {

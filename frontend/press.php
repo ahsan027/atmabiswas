@@ -70,7 +70,18 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                 <div class="article-content">
                     <?php echo $current_article['blog_content']; ?>
                 </div>
+
+                <!-- Source Link -->
+                <?php if (!empty($current_article['source_link'])): ?>
+                    <div class="article-source">
+                        Source: <a href="<?php echo $current_article['source_link']; ?>" target="_blank"
+                            rel="noopener noreferrer">
+                            <?php echo parse_url($current_article['source_link'], PHP_URL_HOST); ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
             </div>
+
 
 
         <?php else: ?>

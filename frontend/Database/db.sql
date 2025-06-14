@@ -199,3 +199,6 @@ ALTER TABLE admins CHANGE username email VARCHAR(255);
 
 ALTER TABLE admins ADD COLUMN fullname VARCHAR(255);
     
+
+
+ALTER TABLE blogs ADD COLUMN source_link VARCHAR(255) DEFAULT "https://www.youtube.com/@ATMABISWAS01";
