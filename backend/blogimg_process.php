@@ -60,16 +60,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $imageFile = $_FILES["image_file"];
     $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
 
-
     $sql = "UPDATE blogs SET cover_img=:img_path WHERE blog_id=$coverid";
 
     $stmt = $connection->prepare($sql);
 
     $stmt->bindParam(":img_path", $image_path);
 
-    $stmt->execute();
+    if ($stmt->execute()) {
+      $source = filter_var($_POST['blog_source'], FILTER_SANITIZE_URL);
 
-    header("Location: DashBoard/success.php?type=upload");
+      if (filter_var($source, FILTER_VALIDATE_URL)) {
+
+        $sourceSql = "UPDATE blogs SET source_link=:blog_source WHERE blog_id=$coverid";
+
+
+        $sourceStmt = $connection->prepare($sourceSql);
+
+        if ($sourceStmt->execute()) {
+
+          header("Location: DashBoard/success.php?type=upload");
+        } else {
+          header("Location: DashBoard/error.php?type=upload");
+        }
+      }
+    }
   } catch (Exception $e) {
 
     header("Location: DashBoard/error.php?type=upload");

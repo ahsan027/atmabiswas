@@ -59,9 +59,16 @@ $coverid = htmlspecialchars($_GET['id']);
               </div>
             </div>
           </div>
+
           <div class="mb-3">
             <label for="description" class="form-label">Image Title</label>
             <input class="form-control" id="description" name="img_title"
+              placeholder="Add Image Title..." />
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Blog Source</label>
+            <input class="form-control" id="description" name="blog_source"
               placeholder="Add Image Title..." />
           </div>
 
