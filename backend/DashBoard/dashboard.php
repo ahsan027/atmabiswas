@@ -111,74 +111,74 @@ try {
 </head>
 
 <style>
-    .admin-welcome {
-        margin-top: 1rem;
-        padding: 16px 20px;
-        background: #f0f4f8;
-        border-left: 5px solid #3b82f6;
-        border-radius: 12px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
-        color: #374151;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        animation: fadeIn 0.8s ease-in-out;
+.admin-welcome {
+    margin-top: 1rem;
+    padding: 16px 20px;
+    background: #f0f4f8;
+    border-left: 5px solid #3b82f6;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Username styling */
+.admin-name {
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    /* off-white */
+    color: #1e3a8a;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.admin-name:hover {
+    background-color: #dbeafe;
+    /* light blue hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-name .role {
+    font-weight: normal;
+    font-size: 14px;
+    opacity: 0.7;
+    margin-left: 6px;
+}
+
+/* Link styling */
+.create-admin-link {
+    margin-left: auto;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.create-admin-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
     }
 
-    /* Username styling */
-    .admin-name {
-        font-weight: bold;
-        padding: 6px 12px;
-        background-color: #f8f9fa;
-        /* off-white */
-        color: #1e3a8a;
-        border-radius: 20px;
-        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: default;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .admin-name:hover {
-        background-color: #dbeafe;
-        /* light blue hover */
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .admin-name .role {
-        font-weight: normal;
-        font-size: 14px;
-        opacity: 0.7;
-        margin-left: 6px;
-    }
-
-    /* Link styling */
-    .create-admin-link {
-        margin-left: auto;
-        text-decoration: none;
-        color: #2563eb;
-        font-weight: 500;
-        transition: color 0.3s, text-decoration 0.3s;
-    }
-
-    .create-admin-link:hover {
-        text-decoration: underline;
-        color: #1d4ed8;
-    }
-
-    /* Entrance animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(8px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+}
 </style>
 
 <body class="bg-gray-100">
@@ -211,17 +211,30 @@ try {
                     <!-- Revenue Card -->
                     <div class="bg-white rounded-lg shadow p-4">
                         <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Revenue</div>
+                            <div class="text-gray-500">Avaiable Job Positions</div>
                             <div class="bg-green-100 p-1 rounded">
                                 <i class="fas fa-chart-line text-green-600"></i>
                             </div>
                         </div>
-                        <div class="text-2xl font-bold">$24,780</div>
+                        <div class="text-2xl font-bold"><?php
+                                                        $countJobs = "SELECT COUNT(*) AS total_jobs FROM jobcodes";
+
+
+                                                        $jobStmt = $conn->prepare($countJobs);
+
+                                                        $jobStmt->execute();
+
+                                                        $countBj = $jobStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        echo $countBj[0]['total_jobs'];
+
+
+                                                        ?></div>
                         <div class="flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 12%
+                                <i class="fas fa-arrow-up mr-1"></i> Avaiable
                             </span>
-                            <span class="text-gray-500 ml-2">from last month</span>
+                            <span class="text-gray-500 ml-2">Jobs</span>
                         </div>
                     </div>
 
