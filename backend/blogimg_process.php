@@ -58,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     $imageFile = $_FILES["image_file"];
+
     $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
 
     $sql = "UPDATE blogs SET cover_img=:img_path WHERE blog_id=$coverid";
@@ -67,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bindParam(":img_path", $image_path);
 
     if ($stmt->execute()) {
+
       $source = filter_var($_POST['blog_source'], FILTER_SANITIZE_URL);
 
       if (filter_var($source, FILTER_VALIDATE_URL)) {
