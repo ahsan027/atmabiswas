@@ -111,74 +111,74 @@ try {
 </head>
 
 <style>
-    .admin-welcome {
-        margin-top: 1rem;
-        padding: 16px 20px;
-        background: #f0f4f8;
-        border-left: 5px solid #3b82f6;
-        border-radius: 12px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
-        color: #374151;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        animation: fadeIn 0.8s ease-in-out;
+.admin-welcome {
+    margin-top: 1rem;
+    padding: 16px 20px;
+    background: #f0f4f8;
+    border-left: 5px solid #3b82f6;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Username styling */
+.admin-name {
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    /* off-white */
+    color: #1e3a8a;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.admin-name:hover {
+    background-color: #dbeafe;
+    /* light blue hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-name .role {
+    font-weight: normal;
+    font-size: 14px;
+    opacity: 0.7;
+    margin-left: 6px;
+}
+
+/* Link styling */
+.create-admin-link {
+    margin-left: auto;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.create-admin-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
     }
 
-    /* Username styling */
-    .admin-name {
-        font-weight: bold;
-        padding: 6px 12px;
-        background-color: #f8f9fa;
-        /* off-white */
-        color: #1e3a8a;
-        border-radius: 20px;
-        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: default;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .admin-name:hover {
-        background-color: #dbeafe;
-        /* light blue hover */
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .admin-name .role {
-        font-weight: normal;
-        font-size: 14px;
-        opacity: 0.7;
-        margin-left: 6px;
-    }
-
-    /* Link styling */
-    .create-admin-link {
-        margin-left: auto;
-        text-decoration: none;
-        color: #2563eb;
-        font-weight: 500;
-        transition: color 0.3s, text-decoration 0.3s;
-    }
-
-    .create-admin-link:hover {
-        text-decoration: underline;
-        color: #1d4ed8;
-    }
-
-    /* Entrance animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(8px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+}
 </style>
 
 <body class="bg-gray-100">
@@ -195,7 +195,7 @@ try {
             <!-- Content Area -->
             <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
                 <div class="mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800">
+                    <h2 class="text-3xl font-semibold text-gray-800">
                         Dashboard Overview
                     </h2>
                     <p class="admin-welcome">
@@ -217,7 +217,7 @@ try {
 
                             </div>
                         </div>
-                        <div class="text-2xl font-bold"><?php
+                        <div class="text-3xl font-bold"><?php
                                                         $countJobs = "SELECT COUNT(*) AS total_jobs FROM jobcodes";
 
 
@@ -231,7 +231,7 @@ try {
 
 
                                                         ?></div>
-                        <div class="flex items-center text-sm">
+                        <div class="mt-3 mt-3 flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
                                 <i class="fas fa-arrow-up mr-1"></i> Avaiable
                             </span>
@@ -248,7 +248,7 @@ try {
 
                             </div>
                         </div>
-                        <div class="text-2xl font-bold"><?php
+                        <div class="text-3xl font-bold"><?php
                                                         $countpen = "SELECT COUNT(*) AS total_jobs FROM cv_applications";
 
 
@@ -262,7 +262,7 @@ try {
 
 
                                                         ?></div>
-                        <div class="flex items-center text-sm">
+                        <div class="mt-3 flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
                                 <i class="fas fa-arrow-up mr-1"></i> Pending Job
                             </span>
@@ -279,7 +279,7 @@ try {
 
                             </div>
                         </div>
-                        <div class="text-2xl font-bold"><?php
+                        <div class="text-3xl font-bold"><?php
                                                         $sect = "SELECT COUNT(*) AS total_jobs FROM sectors";
 
 
@@ -293,7 +293,7 @@ try {
 
 
                                                         ?></div>
-                        <div class="flex items-center text-sm">
+                        <div class="mt-3 flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
                                 <i class="fas fa-arrow-up mr-1"></i> Total Job
                             </span>
@@ -304,31 +304,49 @@ try {
                     <!-- Conversion Card -->
                     <div class="bg-white rounded-lg shadow p-4">
                         <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Total Available Contents</div>
+                            <div class="text-gray-500">Uploaded Contents</div>
                             <div class="bg-yellow-100 p-1 rounded">
                                 <i class="fas fa-book-open text-yellow-600"></i>
 
                             </div>
                         </div>
-                        <div class="text-2xl font-bold"><?php
-                                                        $sect = "SELECT COUNT(*) AS total_jobs FROM sectors";
+                        <ul class="text-green-600 font-bold cursor-pointer hover:text-blue-600">
+                            <li><?php
+                                $sect = "SELECT COUNT(*) AS total_jobs FROM blogs";
 
 
-                                                        $newSecStmt = $conn->prepare($sect);
+                                $newSecStmt = $conn->prepare($sect);
 
-                                                        $newSecStmt->execute();
+                                $newSecStmt->execute();
 
-                                                        $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
+                                $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                                        echo $secBj[0]['total_jobs'];
+                                echo $secBj[0]['total_jobs']; ?> Blogs</li>
+                            <li><?php
+                                $sect = "SELECT COUNT(*) AS total_jobs FROM pdsfiles";
 
 
-                                                        ?></div>
-                        <div class="flex items-center text-sm">
-                            <span class="text-red-600 flex items-center">
-                                <i class="fas fa-arrow-down mr-1"></i> 2%
-                            </span>
-                            <span class="text-gray-500 ml-2">from last week</span>
+                                $newSecStmt = $conn->prepare($sect);
+
+                                $newSecStmt->execute();
+
+                                $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                echo $secBj[0]['total_jobs']; ?> Notices</li>
+                            <li><?php
+                                $sect = "SELECT COUNT(*) AS total_jobs FROM img_upload";
+
+
+                                $newSecStmt = $conn->prepare($sect);
+
+                                $newSecStmt->execute();
+
+                                $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                echo $secBj[0]['total_jobs']; ?> Images</li>
+                        </ul>
+                        <div class="mt-3 flex items-center text-sm">
+
                         </div>
                     </div>
                 </div>
