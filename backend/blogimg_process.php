@@ -55,8 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   try {
     $coverid = htmlspecialchars($_GET['id']);
 
-
-
     $imageFile = $_FILES["image_file"];
 
     $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
