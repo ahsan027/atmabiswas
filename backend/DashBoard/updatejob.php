@@ -1,6 +1,11 @@
 <?php
 include '../Database/db.php';
+session_start();
 
+if (!isset($_SESSION['username'])) {
+    header("Location: ../login/loging.php");
+    exit();
+}
 $db = new Db();
 $connection = $db->connect();
 $connection1 = $db->connect();

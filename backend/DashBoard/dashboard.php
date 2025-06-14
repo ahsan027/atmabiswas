@@ -1,12 +1,12 @@
 <?php
 session_start();
-include '../Database/db.php';
 
 if (!isset($_SESSION['username'])) {
     header("Location: ../login/loging.php");
     exit();
 }
 
+include '../Database/db.php';
 
 $db = new Db();
 
@@ -110,6 +110,77 @@ try {
     <link rel="icon" type="image/png" href="../images/logo/logo.png">
 </head>
 
+<style>
+    .admin-welcome {
+        margin-top: 1rem;
+        padding: 16px 20px;
+        background: #f0f4f8;
+        border-left: 5px solid #3b82f6;
+        border-radius: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #374151;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* Username styling */
+    .admin-name {
+        font-weight: bold;
+        padding: 6px 12px;
+        background-color: #f8f9fa;
+        /* off-white */
+        color: #1e3a8a;
+        border-radius: 20px;
+        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
+    }
+
+    .admin-name:hover {
+        background-color: #dbeafe;
+        /* light blue hover */
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-name .role {
+        font-weight: normal;
+        font-size: 14px;
+        opacity: 0.7;
+        margin-left: 6px;
+    }
+
+    /* Link styling */
+    .create-admin-link {
+        margin-left: auto;
+        text-decoration: none;
+        color: #2563eb;
+        font-weight: 500;
+        transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    .create-admin-link:hover {
+        text-decoration: underline;
+        color: #1d4ed8;
+    }
+
+    /* Entrance animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 <body class="bg-gray-100">
     <div class="flex h-screen">
         <!-- Sidebar -->
@@ -127,11 +198,12 @@ try {
                     <h2 class="text-2xl font-semibold text-gray-800">
                         Dashboard Overview
                     </h2>
-                    <p class="text-gray-600">
-                        Welcome back, ATMABISWAS!
-                        <a style="text-decoration: underline; color: blue;" href="adminSignup.php">Create a new
-                            Admin?</a>
+                    <p class="admin-welcome">
+                        Welcome back, <span class="admin-name"><?php echo $_SESSION['username']; ?>
+                            <span class="role">(ADMIN)</span></span>
+                        <a href="adminSignup.php" class="create-admin-link">Create a new Admin?</a>
                     </p>
+
                 </div>
 
                 <!-- Stats Cards -->

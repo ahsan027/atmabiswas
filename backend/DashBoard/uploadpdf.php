@@ -1,14 +1,14 @@
 <?php
-    include '../Database/db.php';
-    session_start();
-    if(!isset($_SESSION['username'])){
-        
-        header("Location: ../login/login.php");
-        exit();
-    }
+include '../Database/db.php';
+session_start();
+if (!isset($_SESSION['username'])) {
 
-    $db = new Db();
-    $connection = $db->connect();
+    header("Location: ../login/loging.php");
+    exit();
+}
+
+$db = new Db();
+$connection = $db->connect();
 
 ?>
 
@@ -77,32 +77,32 @@
 
 
     <script>
-    document.getElementById('pdfUpload').addEventListener('change', function(e) {
-        const preview = document.getElementById('pdfPreview');
-        const file = e.target.files[0];
+        document.getElementById('pdfUpload').addEventListener('change', function(e) {
+            const preview = document.getElementById('pdfPreview');
+            const file = e.target.files[0];
 
-        if (file) {
-            preview.style.display = 'block';
-            preview.querySelector('.filename').textContent = file.name;
-        }
-    });
-
-    // Drag and drop highlight
-    document.querySelectorAll('.upload-section').forEach(section => {
-        section.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            section.classList.add('dragover');
+            if (file) {
+                preview.style.display = 'block';
+                preview.querySelector('.filename').textContent = file.name;
+            }
         });
 
-        section.addEventListener('dragleave', () => {
-            section.classList.remove('dragover');
-        });
+        // Drag and drop highlight
+        document.querySelectorAll('.upload-section').forEach(section => {
+            section.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                section.classList.add('dragover');
+            });
 
-        section.addEventListener('drop', (e) => {
-            e.preventDefault();
-            section.classList.remove('dragover');
+            section.addEventListener('dragleave', () => {
+                section.classList.remove('dragover');
+            });
+
+            section.addEventListener('drop', (e) => {
+                e.preventDefault();
+                section.classList.remove('dragover');
+            });
         });
-    });
     </script>
 
 </body>
