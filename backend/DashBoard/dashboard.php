@@ -111,74 +111,74 @@ try {
 </head>
 
 <style>
-.admin-welcome {
-    margin-top: 1rem;
-    padding: 16px 20px;
-    background: #f0f4f8;
-    border-left: 5px solid #3b82f6;
-    border-radius: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    color: #374151;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Username styling */
-.admin-name {
-    font-weight: bold;
-    padding: 6px 12px;
-    background-color: #f8f9fa;
-    /* off-white */
-    color: #1e3a8a;
-    border-radius: 20px;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
-}
-
-.admin-name:hover {
-    background-color: #dbeafe;
-    /* light blue hover */
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.admin-name .role {
-    font-weight: normal;
-    font-size: 14px;
-    opacity: 0.7;
-    margin-left: 6px;
-}
-
-/* Link styling */
-.create-admin-link {
-    margin-left: auto;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 500;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-.create-admin-link:hover {
-    text-decoration: underline;
-    color: #1d4ed8;
-}
-
-/* Entrance animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
+    .admin-welcome {
+        margin-top: 1rem;
+        padding: 16px 20px;
+        background: #f0f4f8;
+        border-left: 5px solid #3b82f6;
+        border-radius: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #374151;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        animation: fadeIn 0.8s ease-in-out;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    /* Username styling */
+    .admin-name {
+        font-weight: bold;
+        padding: 6px 12px;
+        background-color: #f8f9fa;
+        /* off-white */
+        color: #1e3a8a;
+        border-radius: 20px;
+        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
     }
-}
+
+    .admin-name:hover {
+        background-color: #dbeafe;
+        /* light blue hover */
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-name .role {
+        font-weight: normal;
+        font-size: 14px;
+        opacity: 0.7;
+        margin-left: 6px;
+    }
+
+    /* Link styling */
+    .create-admin-link {
+        margin-left: auto;
+        text-decoration: none;
+        color: #2563eb;
+        font-weight: 500;
+        transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    .create-admin-link:hover {
+        text-decoration: underline;
+        color: #1d4ed8;
+    }
+
+    /* Entrance animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 <body class="bg-gray-100">
@@ -213,7 +213,8 @@ try {
                         <div class="flex items-center justify-between mb-2">
                             <div class="text-gray-500">Avaiable Job Positions</div>
                             <div class="bg-green-100 p-1 rounded">
-                                <i class="fas fa-chart-line text-green-600"></i>
+                                <i class="fas fa-briefcase text-green-600"></i>
+
                             </div>
                         </div>
                         <div class="text-2xl font-bold"><?php
@@ -241,46 +242,88 @@ try {
                     <!-- Orders Card -->
                     <div class="bg-white rounded-lg shadow p-4">
                         <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Orders</div>
+                            <div class="text-gray-500">Job Request</div>
                             <div class="bg-blue-100 p-1 rounded">
-                                <i class="fas fa-shopping-bag text-blue-600"></i>
+                                <i class="fas fa-file-alt text-blue-600"></i>
+
                             </div>
                         </div>
-                        <div class="text-2xl font-bold">1,482</div>
+                        <div class="text-2xl font-bold"><?php
+                                                        $countpen = "SELECT COUNT(*) AS total_jobs FROM cv_applications";
+
+
+                                                        $penStmt = $conn->prepare($countpen);
+
+                                                        $penStmt->execute();
+
+                                                        $penBj = $penStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        echo $penBj[0]['total_jobs'];
+
+
+                                                        ?></div>
                         <div class="flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 8%
+                                <i class="fas fa-arrow-up mr-1"></i> Pending Job
                             </span>
-                            <span class="text-gray-500 ml-2">from last month</span>
+                            <span class="text-gray-500 ml-2">Request</span>
                         </div>
                     </div>
 
                     <!-- Customers Card -->
                     <div class="bg-white rounded-lg shadow p-4">
                         <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Customers</div>
+                            <div class="text-gray-500">Total Sectors</div>
                             <div class="bg-purple-100 p-1 rounded">
-                                <i class="fas fa-users text-purple-600"></i>
+                                <i class="fas fa-th-large text-purple-600"></i>
+
                             </div>
                         </div>
-                        <div class="text-2xl font-bold">928</div>
+                        <div class="text-2xl font-bold"><?php
+                                                        $sect = "SELECT COUNT(*) AS total_jobs FROM sectors";
+
+
+                                                        $newSecStmt = $conn->prepare($sect);
+
+                                                        $newSecStmt->execute();
+
+                                                        $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        echo $secBj[0]['total_jobs'];
+
+
+                                                        ?></div>
                         <div class="flex items-center text-sm">
                             <span class="text-green-600 flex items-center">
-                                <i class="fas fa-arrow-up mr-1"></i> 4%
+                                <i class="fas fa-arrow-up mr-1"></i> Total Job
                             </span>
-                            <span class="text-gray-500 ml-2">new customers</span>
+                            <span class="text-gray-500 ml-2">Sectors</span>
                         </div>
                     </div>
 
                     <!-- Conversion Card -->
                     <div class="bg-white rounded-lg shadow p-4">
                         <div class="flex items-center justify-between mb-2">
-                            <div class="text-gray-500">Conversion</div>
+                            <div class="text-gray-500">Total Available Contents</div>
                             <div class="bg-yellow-100 p-1 rounded">
-                                <i class="fas fa-percentage text-yellow-600"></i>
+                                <i class="fas fa-book-open text-yellow-600"></i>
+
                             </div>
                         </div>
-                        <div class="text-2xl font-bold">24.8%</div>
+                        <div class="text-2xl font-bold"><?php
+                                                        $sect = "SELECT COUNT(*) AS total_jobs FROM sectors";
+
+
+                                                        $newSecStmt = $conn->prepare($sect);
+
+                                                        $newSecStmt->execute();
+
+                                                        $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        echo $secBj[0]['total_jobs'];
+
+
+                                                        ?></div>
                         <div class="flex items-center text-sm">
                             <span class="text-red-600 flex items-center">
                                 <i class="fas fa-arrow-down mr-1"></i> 2%
