@@ -272,6 +272,45 @@ header p {
   margin: 1.5rem 0;
 }
 
+/* Article - image */
+.article-banner {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.article-banner img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+/* Optional: add a slight zoom on hover for large screens */
+@media (min-width: 768px) {
+  .article-banner img:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* Adjust margins and image size on small screens */
+@media (max-width: 640px) {
+  .article-banner {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
 .article-content .video-container iframe {
   position: absolute;
   top: 0;

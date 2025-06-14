@@ -62,10 +62,17 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                     </div>
                 </div>
 
+                <!-- Responsive Banner Image -->
+                <div class="article-banner">
+                    <img src="<?php echo $current_article['cover_img']; ?>" alt="Cover Image">
+                </div>
+
                 <div class="article-content">
                     <?php echo $current_article['blog_content']; ?>
                 </div>
             </div>
+
+
         <?php else: ?>
             <?php include 'Navbar.php' ?>
             <header>
