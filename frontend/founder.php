@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Founders - ATMABISWAS </title>
+    <title>Founder - ATMABISWAS </title>
+    
+    <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
     <style>
         * {
             margin: 0;
