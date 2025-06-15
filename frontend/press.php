@@ -38,12 +38,11 @@ if ($article_id !== null && isset($press_items[$article_id])) {
     
     <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
 </head>
-
 <body>
     <div class="container">
 
         <?php if ($current_article): ?>
-            <!-- Single Article View -->
+            <!-- Single Article View -->    
             <header>
                 <h1>Press & Media – ATMABISWAS in Focus</h1>
                 <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories
@@ -124,20 +123,25 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                                         <span><?php echo $item['blog_author']; ?></span>
                                     </div>
                                     <p class="press-summary"><?php echo $item['summary']; ?></p>
-                                    <div class="press-actions">
-                                        <span class="press-type">
-                                            <?php
-                                            echo '<i class="fas fa-newspaper"></i> Article'; ?>
-                                        </span>
-                                        <span class="press-link">
-                                            <?php
+   
+                   <div class="press-actions">
 
-                                            echo 'Read More';
+                   <?php
 
-                                            ?>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </div>
+                   if(isset($_SESSION['username'])){
+                    echo '   <a class="press-button update">
+        <i style="margin-right:2px;" class="fas fa-sync-alt"></i> Update
+    </a>';
+                   }
+                   
+                   
+                   ?>
+ 
+    <button class="press-button read-more">
+        Read More <i class="fas fa-arrow-right"></i>
+    </button>
+</div>
+
                                 </div>
                             </div>
                         </a>
