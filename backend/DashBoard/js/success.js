@@ -1,3 +1,3 @@
 function goToDashboard() {
-  window.location.href = "../career/availableJobs.php";
+  window.location.href = "dashboard.php";
 }
