@@ -54,6 +54,18 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="fields">
                                 <!-- Job title -->
 
+                                            <div class="input-field">
+                                    <label>Job Sector</label>
+                                    <select name="job_dept" required>
+                                        <option disabled selected>Select Sector</option>
+                                        <?php
+                                        foreach ($res as $r) {
+                                            echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
                                 <div class="input-field">
                                     <label>Job Position</label>
                                     <select id="jobPosition" name="job_title" required>
@@ -74,18 +86,6 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <label>Application Deadline</label>
                                     <input name="deadline" type="date" placeholder="Enter Application Deadline"
                                         required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>Job Sector</label>
-                                    <select name="job_dept" required>
-                                        <option disabled selected>Select Sector</option>
-                                        <?php
-                                        foreach ($res as $r) {
-                                            echo '<option value="' . htmlspecialchars($r["sector_name"]) . '">' . htmlspecialchars($r["sector_name"]) . '</option>';
-                                        }
-                                        ?>
-                                    </select>
                                 </div>
 
 

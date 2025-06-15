@@ -22,7 +22,7 @@
         <div class="right-panel">
             <div class="form-wrapper">
                 <h1>Welcome to ATMABISWAS</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>ATMABISWAS: Empowering communities for Progress.</p>
 
 
                 <div class="create-account">

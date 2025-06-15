@@ -21,6 +21,8 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Board</title>
     <link rel="stylesheet" href="css/avjobs.css">
+    <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
+
 </head>
 
 <body>
@@ -32,7 +34,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <ul class="menu">
                 <li><a href="../../frontend/career.php">Home</a></li>
                 <li><a href="availableJobs.php">Available Jobs</a></li>
-                <li><a href="../login/login.php">Login</a></li>
+                <li><a href="../login/prelogin.php">Login</a></li>
             </ul>
         </div>
     </header>
