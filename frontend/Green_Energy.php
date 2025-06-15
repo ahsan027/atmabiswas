@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Energy - ATMABISWAS </title>
     <link rel="stylesheet" href="green.css">
+    
+    <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">            
 </head>
 
 <body>

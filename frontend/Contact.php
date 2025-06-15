@@ -15,6 +15,7 @@ $conn = $db->connect();
     <title>ATMABISWAS - Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
     <link rel="stylesheet" href="locations.css">
 
 

@@ -7,8 +7,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATMABISWAS - Login</title>
+    <title>ATMABISWAS - Login Role Type</title>
     <link rel="stylesheet" href="css/prelogin.css">
+      <link rel="icon" type="image/png" href="../images/logo/logo.png">
 </head>
 
 <body>
