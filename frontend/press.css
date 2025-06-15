@@ -54,8 +54,7 @@ header p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .filter-btn {
@@ -64,7 +63,6 @@ header p {
   border: none;
   background-color: var(--light-color);
   color: var(--gray-color);
-
   width: 6rem;
   height: 3rem;
   cursor: pointer;
@@ -82,28 +80,29 @@ header p {
   color: white;
 }
 
-
-
+/* FIXED: Two cards per row */
 .press-grid {
-  padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 20px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
 }
 
+
 .press-card {
-  background-color: var(--card-bg);
-  border-radius: var(--radius-md);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  opacity: 0;
-  transform: translateY(20px);
-  min-height: 450px;
+  transition: transform 0.3s ease;
+  /* Remove any fixed width here */
+  display: flex;
+  flex-direction: column;
 }
+
 
 .press-card.show {
   opacity: 1;
@@ -122,9 +121,8 @@ header p {
 
 .card-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
+  height: auto;
+  display: block;
 }
 
 .press-card:hover .card-image img {
@@ -176,8 +174,35 @@ header p {
 
 .press-actions {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   align-items: center;
+}
+
+.press-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.press-button.update,
+.press-button.read-more {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.press-button i {
+  margin-left: 8px;
+}
+
+.press-button:hover {
+  opacity: 0.9;
 }
 
 .press-type {
@@ -224,15 +249,14 @@ header p {
   margin-bottom: 1rem;
 }
 
-/* Article page styles */
+/* Article Page */
 .article-container {
   background-color: white;
   border-radius: var(--radius-md);
   padding: 2rem;
   box-shadow: var(--shadow-md);
   max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
 }
 
 .article-header {
@@ -274,6 +298,16 @@ header p {
   margin: 1.5rem 0;
 }
 
+.article-content .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+
 .article-source {
   margin-top: 1.5rem;
   font-size: 0.95rem;
@@ -291,11 +325,9 @@ header p {
   color: var(--primary-light);
 }
 
-/* Article - image */
-
 .article-banner {
   width: 100%;
-  height: 300px; /* Desktop height */
+  height: 300px;
   overflow: hidden;
   border-radius: var(--radius-md);
   margin-bottom: 2rem;
@@ -309,81 +341,6 @@ header p {
   transition: var(--transition);
   border-radius: var(--radius-md);
 }
-    .press-actions {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .press-button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-        font-family: sans-serif;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        transition: background 0.3s ease;
-    }
-
-    .press-button.update {
-         background-color: #f1f1f1;
-        color: #333;
-    }
-
-    .press-button.read-more {
-        background-color: #f1f1f1;
-        color: #333;
-    }
-
-    .press-button i {
-        margin-left: 8px;
-    }
-
-    .press-button:hover {
-        opacity: 0.9;
-    }
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .article-banner {
-    height: 180px; /* Smaller height on phones */
-  }
-}
-
-/* Optional: add a slight zoom on hover for large screens */
-@media (min-width: 768px) {
-  .article-banner img:hover {
-    transform: scale(1.03);
-  }
-}
-
-/* Adjust margins and image size on small screens */
-@media (max-width: 768px) {
-  .article-banner {
-    height: 180px; /* Smaller height on phones */
-  }
-
-  .article-title {
-    font-size: 1.5rem;
-  }
-
-  .article-meta {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-}
-
-.article-content .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: var(--radius-sm);
-}
 
 .back-button {
   display: inline-flex;
@@ -395,9 +352,7 @@ header p {
   border-radius: var(--radius-sm);
   text-decoration: none;
   font-weight: 500;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin: 1rem;
   transition: var(--transition);
 }
 
@@ -423,49 +378,46 @@ header p {
   transform: translateY(-2px);
 }
 
+/* Responsive: Mobile view */
 @media (max-width: 768px) {
+  .press-grid {
+    grid-template-columns: 1fr;
+  }
+
   .container {
     padding: 1.5rem;
   }
 
-  .header h1 {
-    font-size: 2rem;
-  }
-
-  .press-grid {
-    grid-template-columns: 1fr;
+  .article-banner {
+    height: 180px;
   }
 
   .article-title {
     font-size: 1.5rem;
   }
+
+  .article-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
 
-/* Animation delays for cards */
-.press-card:nth-child(1) {
-  transition-delay: 0.1s;
+/* Optional zoom effect for large screens */
+@media (min-width: 768px) {
+  .article-banner img:hover {
+    transform: scale(1.03);
+  }
 }
 
-.press-card:nth-child(2) {
-  transition-delay: 0.2s;
-}
+/* Animation delays */
+.press-card:nth-child(1) { transition-delay: 0.1s; }
+.press-card:nth-child(2) { transition-delay: 0.2s; }
+.press-card:nth-child(3) { transition-delay: 0.3s; }
+.press-card:nth-child(4) { transition-delay: 0.4s; }
+.press-card:nth-child(5) { transition-delay: 0.5s; }
+.press-card:nth-child(6) { transition-delay: 0.6s; }
 
-.press-card:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.press-card:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-.press-card:nth-child(5) {
-  transition-delay: 0.5s;
-}
-
-.press-card:nth-child(6) {
-  transition-delay: 0.6s;
-}
-
+/* Clickable card wrapper */
 .press-card-link {
   display: block;
   text-decoration: none;
