@@ -410,29 +410,54 @@ a {
   .hero .overlay {
     flex-direction: column;
     align-items: center;
+    padding: 18px 10px 10px 10px;
+    background: rgba(20, 20, 40, 0.85);
   }
   .hero .overlay .leftside,
   .hero .overlay .rightSide {
     width: 100%;
     text-align: center;
+    align-items: center;
   }
   .hero .overlay h1.num {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    color: #4f8cff;
+    margin-bottom: 0.5rem;
   }
   .hero .overlay h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
   }
   .hero .overlay h2 {
     font-size: 1.2rem;
+    color: #fff;
+    margin: 0.2rem 0;
+    background: rgba(34, 60, 120, 0.7);
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .hero .overlay .rightSide h2 {
+    margin-bottom: 10px;
+  }
+  .hero .overlay .rightSide h2 + h2 {
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+  .hero .overlay h2 span {
+    color: #4f8cff;
+    font-weight: 700;
+    background: none;
+  }
+  .slider-indicators {
+    margin-top: 18px !important;
   }
   .hero .search {
-    flex-direction: column;
-  }
-  .hero .search input,
-  .hero .search select,
-  .hero .search button {
-    width: 100%;
-    margin-bottom: 10px;
+    display: none !important;
   }
   .Sector {
     padding: 20px 10px;
@@ -460,6 +485,8 @@ a {
   }
   .job-card {
     padding: 20px;
+    border-radius: 22px !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   }
   .job-card h3 {
     font-size: 1.2rem;
