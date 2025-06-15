@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="menutoggle.css">
 <link rel="stylesheet" href="sidebar.css">
@@ -44,7 +49,15 @@
         <a href="Events.php">Events</a>
         <a href="social.php">Social</a>
         <a href="Contact.php">Contact</a>
-        <a class="" href="../backend/login/prelogin.php">Login</a>
+        <?php
+        if(isset($_SESSION['username'])){
+        echo '<a style="border:2px solid #007bff;" href="../backend/DashBoard/dashboard.php">DashBoard</a>';
+
+        } else{
+        
+            echo '<a style="border:2px solid #007bff;" href="../backend/login/prelogin.php">Login</a>';
+        }
+        ?>
 
     </div>
 </div>
