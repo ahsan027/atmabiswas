@@ -202,3 +202,8 @@ ALTER TABLE admins ADD COLUMN fullname VARCHAR(255);
 
 
 ALTER TABLE blogs ADD COLUMN source_link VARCHAR(255) DEFAULT "https://www.youtube.com/@ATMABISWAS01";
+
+
+ALTER TABLE blogs ADD COLUMN image_title VARCHAR(255);
+
+ALTER TABLE blogs MODIFY COLUMN image_title VARCHAR(255) NOT NULL DEFAULT 'Cover_image_title';

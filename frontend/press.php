@@ -82,7 +82,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                     allowfullscreen>
                 </iframe>
                 <h1>
-                    <?php echo $current_article['blog_title'] ?>
+                    <?php echo $current_article['image_title'] ?>
                 </h1>
             </div>
     <?php endif; endif; ?>
