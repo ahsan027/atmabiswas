@@ -53,6 +53,9 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <embed class="card-embed" src="<?php echo $pdf["pdf_path"]; ?>"></embed>
                         <div class="card-footer">
                             <h2><?php echo $pdf["pdf_title"] ?></h2>
+                               <p style="padding: 0.5rem; color: black; border-radius: 15px;">
+                                Uploaded at: <?php echo $pdf['upload_date']; ?>
+                            </p>
                             <p style="padding: 0.5rem; background-color: #0073e6; color: white; border-radius: 15px;">
                                 <?php echo "View Notice"; ?>
                             </p>
