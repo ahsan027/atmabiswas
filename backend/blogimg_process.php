@@ -10,15 +10,12 @@ $uploadDir = "../uploads/blog_imgs/";
 $allowedTypes = ['image/jpg', 'image/jpeg', 'image/png'];
 $imageSize = 2 * 1024 * 1024;
 
-
 if (!file_exists($uploadDir)) {
-
   mkdir($uploadDir, 0755, true);
 }
 
 function processFile($imageFile, $allowedTypes, $imageSize, $uploadDir)
 {
-
   $fileType = new finfo(FILEINFO_MIME_TYPE);
   $mimeType = $fileType->file($imageFile['tmp_name']);
 
@@ -51,33 +48,30 @@ function processFile($imageFile, $allowedTypes, $imageSize, $uploadDir)
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
   try {
     $coverid = htmlspecialchars($_GET['id']);
 
-    $imageFile = $_FILES["image_file"];
+    if (
+      isset($_FILES['image_file']) &&
+      $_FILES['image_file']['error'] === UPLOAD_ERR_OK &&
+      !empty($_POST['blog_source'])
+    ) {
+      $imageFile = $_FILES['image_file'];
+      $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
 
-    $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
-
-    $sql = "UPDATE blogs SET cover_img=:img_path WHERE blog_id=$coverid";
-
-    $stmt = $connection->prepare($sql);
-
-    $stmt->bindParam(":img_path", $image_path);
-
-    if ($stmt->execute()) {
+      $sql = "UPDATE blogs SET cover_img = :img_path WHERE blog_id = :id";
+      $stmt = $connection->prepare($sql);
+      $stmt->bindParam(":img_path", $image_path);
+      $stmt->bindParam(":id", $coverid);
+      $stmt->execute();
 
       $source = filter_var($_POST['blog_source'], FILTER_SANITIZE_URL);
-
       if (filter_var($source, FILTER_VALIDATE_URL)) {
-
-        $sourceSql = "UPDATE blogs SET source_link=:blog_source WHERE blog_id=$coverid";
-
-
+        $sourceSql = "UPDATE blogs SET source_link = :blog_source WHERE blog_id = :id";
         $sourceStmt = $connection->prepare($sourceSql);
-
+        $sourceStmt->bindParam(":blog_source", $source);
+        $sourceStmt->bindParam(":id", $coverid);
         if ($sourceStmt->execute()) {
-
           header("Location: DashBoard/success.php?type=upload");
           exit();
         } else {
@@ -85,11 +79,33 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           exit();
         }
       }
+
+    } elseif (
+      (!isset($_FILES['image_file']) || $_FILES['image_file']['error'] === UPLOAD_ERR_NO_FILE) &&
+      !empty($_POST['blog_source'])
+    ) {
+      $source = filter_var($_POST['blog_source'], FILTER_SANITIZE_URL);
+      if (filter_var($source, FILTER_VALIDATE_URL)) {
+        $sourceSql = "UPDATE blogs SET source_link = :blog_source WHERE blog_id = :id";
+        $sourceStmt = $connection->prepare($sourceSql);
+        $sourceStmt->bindParam(":blog_source", $source);
+        $sourceStmt->bindParam(":id", $coverid);
+        if ($sourceStmt->execute()) {
+          header("Location: DashBoard/success.php?type=upload");
+          exit();
+        } else {
+          header("Location: DashBoard/error.php?type=upload");
+          exit();
+        }
+      } else {
+        echo "Nothing to Update";
+        header("Location: DashBoard/error.php?type=upload");
+        exit();
+      }
     }
+
   } catch (Exception $e) {
-
     header("Location: DashBoard/error.php?type=upload");
-
     exit();
   }
 }

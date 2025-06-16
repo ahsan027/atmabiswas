@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
 $db = new Db();
 $connection = $db->connect();
 
-$coverid = htmlspecialchars($_GET['id']);
+$coverid = 28;
 
 ?>
 
@@ -52,7 +52,7 @@ $coverid = htmlspecialchars($_GET['id']);
               <label for="imageUpload" class="btn mt-2 btn-primary px-2">
                 Choose Image
                 <input type="file" id="imageUpload" name="image_file" class="file-input"
-                  accept=".jpg, .jpeg, .png" required>
+                  accept=".jpg, .jpeg, .png">
               </label>
               <div class="preview-container" id="imagePreview">
                 <img src="#" class="img-thumbnail mt-2" alt="Image preview" style="max-height: 200px;">
@@ -67,9 +67,10 @@ $coverid = htmlspecialchars($_GET['id']);
           </div>
 
           <div class="mb-3">
-            <label for="description" class="form-label">Blog Source</label>
-            <input class="form-control" id="description" name="blog_source"
-              placeholder="Add Image Title..." />
+      <label for="blog_source" class="form-label">Blog Source</label>
+        <input type="url" class="form-control" id="blog_source" name="blog_source"
+          placeholder="Enter the source URL (e.g., https://example.com)" />
+
           </div>
 
 
