@@ -321,7 +321,7 @@ try {
 
                                 $secBj = $newSecStmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                echo $secBj[0]['total_jobs']; ?> Blogs</li>
+                                echo $secBj[0]['total_jobs']; ?> Published News</li>
                             <li><?php
                                 $sect = "SELECT COUNT(*) AS total_jobs FROM pdsfiles";
 
@@ -562,7 +562,7 @@ try {
                 <!-- blogs Table -->
                 <div class="bg-white rounded-lg shadow mb-6">
                     <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                        <h3 class="font-semibold text-lg">Published Blogs Lists</h3>
+                        <h3 class="font-semibold text-lg">Published News Lists</h3>
                         <button onclick="handleButton()"
                             class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm">
                             View All

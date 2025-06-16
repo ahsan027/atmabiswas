@@ -45,7 +45,16 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
             <div class="job-meta">
                 <div class="meta-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span><?= $jobDes[0]['job_location'] ?>, Bangladesh</span>
+                    <?php 
+                    if($jobDes[0]['job_location'] ==="Negotiable"){
+echo '<span>Location: ' . htmlspecialchars($jobDes[0]["job_location"]) . '</span>';
+
+
+                    }else{
+                        echo '<span>Location: ' . htmlspecialchars($jobDes[0]["job_location"]) . ', Bangladesh</span>';
+
+                    }
+                    ?>
                 </div>
                 <div class="meta-item">
                     <i class="fas fa-clock"></i>
@@ -151,7 +160,7 @@ $deptCode = $stmt1->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <div class="meta-item" style="margin-bottom: 15px;">
                         <i class="fas fa-money-bill-wave"></i>
-                        <span>Salary: <?= $jobDes[0]['salary_range']; ?></span>
+                        <span>Salary: <?= $jobDes[0]['salary_range']; ?> (Negotiable)</span>
                     </div>
                 </div>
 

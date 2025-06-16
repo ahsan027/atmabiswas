@@ -148,8 +148,8 @@ $conn = $db->connect();
                             <tr>
                                 <th>Branch Name</th>
                                 <th>Address</th>
+                                <th>Divison</th>
                                 <th>District</th>
-                                <th>Division</th>
                             </tr>
                         </thead>
                         <tbody id="table-body">

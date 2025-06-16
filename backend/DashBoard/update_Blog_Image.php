@@ -66,13 +66,13 @@ if ($coverid === null) {
           </div>
 
           <div class="mb-3">
-            <label for="description" class="form-label">Image Title</label>
+            <label for="description" class="form-label">News Image Title</label>
             <input class="form-control" id="description" name="img_title"
               placeholder="Add Image Title..." />
           </div>
 
           <div class="mb-3">
-      <label for="blog_source" class="form-label">Blog Source</label>
+      <label for="blog_source" class="form-label">News Link</label>
         <input type="url" class="form-control" id="blog_source" name="blog_source"
           placeholder="Enter the source URL (e.g., https://example.com)" />
 

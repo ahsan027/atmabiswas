@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['division'])) {
     $division = $_POST['division'];
 
     function getResult($conn, $division) {
-        $query = "SELECT * FROM branch WHERE division = :division order by dist ASC";
+        $query = "SELECT * FROM branch WHERE division = :division order by branchName ASC";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":division", $division);
         $stmt->execute();

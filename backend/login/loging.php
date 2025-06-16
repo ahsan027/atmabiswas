@@ -91,6 +91,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <div id="notificationBar" style="
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    transition: top 0.6s ease-in-out;
+    min-width: 280px;
+    max-width: 90%;
+    text-align: center;
+">
+    <span>
+        📧 Contact <strong>ATMABISWAS IT</strong> via <a href="mailto:support@atmabiswas.org" style="color: #4da6ff; text-decoration: underline;">support@atmabiswas.org</a>
+    </span>
+    <span onclick="hideNotification()" style="cursor: pointer; margin-left: 15px; font-weight: bold;">&times;</span>
+</div>
     <div class="wrapper">
         <div class="box">
             <form action="" method="POST">
@@ -129,16 +151,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
 
                 <button id="btn" type="submit">Login</button>
-                <div style="margin-top: 10px; text-align: center;">
-                    <a href="forgot_password.php" style="color: white; text-decoration: none;">
-                        <i style="color: white;" class="fa-solid fa-key"></i> Forgot Password?
-                    </a>
-                </div>
+                <div style="margin-top: 10px; text-align: center; display: block;">
+    <a href="#" onclick="showNotification()" style="color: white; text-decoration: none; display: block; margin-bottom: 10px;">
+    <i class="fa-solid fa-key"></i> Forgot Password?
+</a>
+
+    <a href="../../frontend/index.php" style="color: white; text-decoration: none; display: block;">
+        <i class="fa-solid fa-house"></i> Back To Home
+    </a>
+</div>
+
 
 
             </form>
         </div>
     </div>
+    <script>
+  function showNotification() {
+    const bar = document.getElementById("notificationBar");
+    bar.style.top = "30px"; // Slide down
+
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      hideNotification();
+    }, 10000);
+  }
+
+  function hideNotification() {
+    const bar = document.getElementById("notificationBar");
+    bar.style.top = "-100px"; // Slide up
+  }
+</script>
     <script>
     document.getElementById('togglePassword').addEventListener('click', function() {
         const passwordInput = document.getElementById('password');

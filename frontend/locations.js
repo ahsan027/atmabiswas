@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             row.innerHTML = `<td data-label="Branch Name">${element.branchName}</td>
                 <td data-label="Branch Location">${element.branchLoc}</td>
-                <td data-label="Division">${element.division}</td>
                 <td data-label="District">${element.dist}</td>
+
+                <td data-label="Division">${element.division}</td>
                 `;
             tablebody.appendChild(row);
           });

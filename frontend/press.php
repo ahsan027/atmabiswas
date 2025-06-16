@@ -60,10 +60,19 @@ if ($article_id !== null && isset($press_items[$article_id])) {
         </div>
     </div>
 
-    <!-- Responsive Banner Image -->
-    <div class="article-banner">
-        <img src="<?php echo $current_article['cover_img']; ?>" alt="Cover Image" style="width: 100%; height: auto; object-fit: cover;">
-    </div>
+   <?php
+if (!empty($current_article['cover_img'])) {
+    echo '<div class="article-banner">
+        <img src="' . htmlspecialchars($current_article['cover_img']) . '" alt="Cover Image">
+    </div>';
+} else {
+    echo '<div style="padding: 20px; background-color: #f8f9fa; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 6px;">
+        No image has been uploaded.
+    </div>';
+}
+?>
+
+
 
     <!-- YouTube Video Embed -->
     <?php if (!empty($current_article['source_link'])): 
@@ -129,8 +138,18 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                     <?php foreach ($press_items as $id => $item): ?>
                         <a href="?article=<?php echo $id; ?>" class="press-card-link">
                             <div class="press-card" data-year="<?php echo $item['year']; ?>">
+                           
                                 <div class="card-image">
-                                    <img src="<?php echo $item['cover_img']; ?>" alt="<?php echo htmlspecialchars($item['blog_title']); ?>">
+                                    <?php
+                            if (!empty($item["cover_img"])) {
+                                echo '<img src="' . htmlspecialchars($item["cover_img"]) . '" alt="' . htmlspecialchars($item["blog_title"]) . '" style="max-width:100%; height:auto;">';
+                            } else {
+                                echo '<div style="padding: 10px; background-color: #f2f2f2; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 4px;">
+                                    No image has been uploaded for this News.
+                                </div>';
+                            }
+                            ?>
+
                                 </div>
                                 <div class="card-content">
                                     <span class="press-date"><?php echo $item["upload_date"]; ?></span>

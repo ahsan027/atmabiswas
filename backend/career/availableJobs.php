@@ -2,7 +2,6 @@
 include '../Database/db.php';
 
 $database = new Db();
-
 $connection = $database->connect();
 
 $sql = "SELECT * FROM jobs";
@@ -10,7 +9,6 @@ $stmt = $connection->prepare($sql);
 $stmt->execute();
 
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +17,9 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Board</title>
+    <title>Job Board - ATMABISWAS</title>
     <link rel="stylesheet" href="css/avjobs.css">
     <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
-
 </head>
 
 <body>
@@ -51,10 +48,26 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </select>
             <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
         </div>
+
         <?php
+        if (count($res) === 0) {
+            echo '<p style="
+                padding: 15px;
+                background-color: #f8f9fa;
+                color: #6c757d;
+                text-align: center;
+                border: 1px dashed #ccc;
+                border-radius: 6px;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 20px auto;
+                max-width: 400px;
+            ">
+                🚫 No jobs are currently available.
+            </p>';
+        }
 
         foreach ($res as $r) {
-
             echo "<div class='jobs-container' id='jobsContainer'>";
             echo "    <!-- Job listings will be here -->";
             echo "    <div class='job-card'>";
@@ -64,6 +77,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo "        <p class='salary'>" . $r['salary_range'] . "</p>";
             echo "        <div class='tags'>";
             echo "            <span class='tag'>Full-time</span>";
+
             $skills = explode(",", $r['job_skillset']);
             foreach ($skills as $skill) {
                 echo " <span class='tag'>" . $skill . "</span>";
@@ -71,7 +85,6 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             echo "        </div>";
             echo '<a class="apply-btn-a" href="jobdes.php?id=' . htmlspecialchars($r['job_id']) . '&deptCode=' . htmlspecialchars($r['job_code']) . '">View Details</a>';
-
             echo "    </div>";
             echo "</div>";
         }
