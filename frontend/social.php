@@ -128,28 +128,28 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
                         <h3>ATMABISWAS Daycare </h3>
-                        <p>PKSF was a partner in providing the scholarship.</p>
+                        <!-- <p>PKSF was a partner in providing the scholarship.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
                         <h3>ATMABISWAS Daycare</h3>
-                        <p>Empowering students through education.</p>
+                        <!-- <p>Empowering students through education.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
                         <h3>ATMABISWAS Daycare</h3>
-                        <p>Providing opportunities for bright minds.</p>
+                        <!-- <p>Providing opportunities for bright minds.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="ATMABISWAS Daycare">
                     <div class="card-content">
                         <h3>ATMABISWAS Daycare</h3>
-                        <p>Providing opportunities for bright minds.</p>
+                        <!-- <p>Providing opportunities for bright minds.</p> -->
                     </div>
                 </div>                                
 
@@ -165,21 +165,21 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
                         <h3>ATMABISWAS Pathshala </h3>
-                        <p>Advocating for equal rights.</p>
+                        <!-- <p>Advocating for equal rights.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
                         <h3>ATMABISWAS Pathshala </h3>
-                        <p>We are campaigning in the village for gender equality between women and men.</p>
+                        <!-- <p>We are campaigning in the village for gender equality between women and men.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Women Rights Event">
                     <div class="card-content">
                         <h3>ATMABISWAS Pathshala </h3>
-                        <p>We are campaigning in the city to promote gender equality between women and men.</p>
+                        <!-- <p>We are campaigning in the city to promote gender equality between women and men.</p> -->
                     </div>
                 </div>
             </div>
@@ -193,14 +193,14 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Compassionate Care & Support </h3>
-                        <p>Enjoying the spirit of winter together.</p>
+                        <!-- <p>Enjoying the spirit of winter together.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Compassionate Care & Support </h3>
-                        <p>Festive fun and togetherness.</p>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
 
@@ -208,14 +208,14 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winter-fest Event">
                     <div class="card-content">
                         <h3>Compassionate Care & Support </h3>
-                        <p>Festive fun and togetherness.</p>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Compassionate Care & Support </h3>
-                        <p>Festive fun and togetherness.</p>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
 
@@ -223,7 +223,7 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Compassionate Care & Support </h3>
-                        <p>Making winter memories.</p>
+                        <!-- <p>Making winter memories.</p> -->
                     </div>
                 </div>
             </div>
@@ -239,37 +239,37 @@
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
                         <h3>Supporting Disabilitie</h3>
-                        <p>Enjoying the spirit of winter together.</p>
+                        <!-- <p>Enjoying the spirit of winter together.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
-                        <p>Festive fun and togetherness.</p>
+                        <h3>Supporting Disabilitie</h3>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winter-fest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
-                        <p>Festive fun and togetherness.</p>
+                        <h3>Supporting Disabilitie</h3>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Winter Joy</h3>
-                        <p>Festive fun and togetherness.</p>
+                        <h3>Supporting Disabilitie</h3>
+                        <!-- <p>Festive fun and togetherness.</p> -->
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="LOGO/NGO_logo_monogram.png" alt="Winterfest Event">
                     <div class="card-content">
-                        <h3>Seasonal Celebration</h3>
-                        <p>Making winter memories.</p>
+                        <h3>Supporting Disabilitie</h3>
+                        <!-- <p>Making winter memories.</p> -->
                     </div>
                 </div>
             </div>
