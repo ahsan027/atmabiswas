@@ -81,7 +81,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
                 </iframe>
-                <h1>
+                <h1>    
                     <?php echo $current_article['image_title'] ?>
                 </h1>
             </div>
