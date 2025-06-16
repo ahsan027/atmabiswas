@@ -63,7 +63,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 <!-- YouTube Video Embed or Image Display -->
 <?php
 $videoId = '';
-
+// Okay Done
 // Check if source_link is provided
 if (!empty($current_article['source_link'])) {
     $youtubeLink = $current_article['source_link'];
