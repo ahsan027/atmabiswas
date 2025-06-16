@@ -60,45 +60,45 @@ if ($article_id !== null && isset($press_items[$article_id])) {
         </div>
     </div>
 
-    <!-- YouTube Video Embed -->
-    <?php if (!empty($current_article['source_link'])): 
-        // Handle both full YouTube links and short youtu.be links
-        $youtubeLink = $current_article['source_link'];
-        $videoId = '';
+<!-- YouTube Video Embed or Image Display -->
+<?php
+$videoId = '';
 
-        if (strpos($youtubeLink, 'youtu.be') !== false) {
-            $parts = explode('/', parse_url($youtubeLink, PHP_URL_PATH));
-            $videoId = end($parts);
-        } else {
-            parse_str(parse_url($youtubeLink, PHP_URL_QUERY), $ytParams);
-            $videoId = $ytParams['v'] ?? '';
-        }
+// Check if source_link is provided
+if (!empty($current_article['source_link'])) {
+    $youtubeLink = $current_article['source_link'];
 
-        if ($videoId): ?>
-            <div class="article-video" style="margin: 20px 0; text-align: center;">
-                <iframe width="100%" height="400" 
-                    src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId); ?>" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                <h1>    
-                    <?php echo $current_article['image_title'] ?>
-                </h1>
-            </div>
-    <?php endif; endif; ?>
-   <?php
-if (!empty($current_article['cover_img'])) {
-echo '<div class="article-banner">
-        <img src="' . htmlspecialchars($current_article['cover_img']) . '" alt="Cover Image">
-
-    </div>';
-} else {
-    echo '<div style="padding: 20px; background-color: #f8f9fa; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 6px;">
-        No image has been uploaded.
-    </div>';
+    // Extract YouTube video ID
+    if (strpos($youtubeLink, 'youtu.be') !== false) {
+        $parts = explode('/', parse_url($youtubeLink, PHP_URL_PATH));
+        $videoId = end($parts);
+    } else {
+        parse_str(parse_url($youtubeLink, PHP_URL_QUERY), $ytParams);
+        $videoId = $ytParams['v'] ?? '';
+    }
 }
-?>
 
+// If video ID is found, embed video
+if (!empty($videoId)): ?>
+    <div class="article-video" style="margin: 20px 0; text-align: center;">
+        <iframe width="100%" height="400"
+                src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId); ?>"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+        <h1><?php echo htmlspecialchars($current_article['image_title'] ?? ''); ?></h1>
+    </div>
+<?php
+// If no video ID, show image (if available)
+elseif (!empty($current_article['cover_img'])): ?>
+    <div class="article-banner">
+        <img src="<?php echo htmlspecialchars($current_article['cover_img']); ?>" alt="Cover Image">
+    </div>
+<?php else: ?>
+    <div style="padding: 20px; background-color: #f8f9fa; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 6px;">
+        No image has been uploaded.
+    </div>
+<?php endif; ?>
 
 
 
