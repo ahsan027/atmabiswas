@@ -54,7 +54,8 @@ $pdfs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="card-footer">
                             <h2><?php echo $pdf["pdf_title"] ?></h2>
                                <p style="padding: 0.5rem; color: black; border-radius: 15px;">
-                                Uploaded at: <?php echo $pdf['upload_date']; ?>
+                                Uploaded at: <?php echo explode(" ", $pdf['upload_date'])[0]; ?>
+
                             </p>
                             <p style="padding: 0.5rem; background-color: #0073e6; color: white; border-radius: 15px;">
                                 <?php echo "View Notice"; ?>
