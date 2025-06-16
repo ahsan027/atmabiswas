@@ -78,7 +78,6 @@ if (!empty($current_article['source_link'])) {
     }
 }
 
-// If video ID is found, embed video
 if (!empty($videoId)): ?>
     <div class="article-video" style="margin: 20px 0; text-align: center;">
         <iframe width="100%" height="400"
