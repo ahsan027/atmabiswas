@@ -86,7 +86,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                 </h1>
             </div>
     <?php endif; endif; ?>
-   <?php
+   <!-- <?php
 if (!empty($current_article['cover_img'])) {
 echo '<div class="article-banner">
         <img src="' . htmlspecialchars($current_article['cover_img']) . '" alt="Cover Image">
@@ -97,7 +97,7 @@ echo '<div class="article-banner">
         No image has been uploaded.
     </div>';
 }
-?>
+?> -->
 
 
 
