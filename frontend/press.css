@@ -212,7 +212,7 @@ header p {
 }
 
 .press-button.update,
-.press-button.read-more {
+.press-button.update {
   background-color: #f1f1f1;
   color: #333;
 }
@@ -492,6 +492,47 @@ header p {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.press-button.update {
+  background-color: #3867e6;
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  border-radius: 28px;
+  transition: background 0.22s, color 0.22s, box-shadow 0.22s, transform 0.16s;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em 1.7em;
+  letter-spacing: 0.01em;
+}
+
+.press-button.update * {
+  color: #fff !important;
+}
+
+.press-button.update i {
+  color: #fff !important;
+}
+
+.press-button.update:hover {
+  background-color: #3867e6;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+
+.press-button.update:active {
+  background-color: #2563eb;
+  color: #fff;
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.10);
+}
+
+
+
 .press-button.read-more {
   background-color: #3867e6;
   color: #fff !important;
@@ -505,6 +546,10 @@ header p {
   overflow: hidden;
   padding: 0.7em 1.7em;
   letter-spacing: 0.01em;
+}
+
+a {
+  text-decoration: none;
 }
 
 .press-button.read-more * {

@@ -115,7 +115,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 
                                     <div class="press-actions">
                                         <?php if (isset($_SESSION['username'])): ?>
-                                            <a href="../backend/DashBoard/update_Blog_Image.php?id=<?php echo $id; ?>" class="press-button update">
+                                            <a class="press-button update" href="../backend/DashBoard/update_Blog_Image.php?id=<?php echo $id; ?>" class="press-button update">
                                                 <i style="margin-right:2px;" class="fas fa-sync-alt"></i> Update
                                             </a>
                                         <?php endif; ?>
