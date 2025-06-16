@@ -41,80 +41,58 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 
         <?php if ($current_article): ?>
             <!-- Single Article View -->
-            <header>
-                <h1>Press & Media – ATMABISWAS in Focus</h1>
-                <p>Showcasing our work through national and regional media—covering our impact, initiatives, and stories that inspire social transformation.</p>
-            </header>
-
-            <a href="?" class="back-button">
-                <i class="fas fa-arrow-left"></i> Back to Press Coverage
-            </a>
-
-<div class="article-container">
-    <div class="article-header">
-        <h1 class="article-title"><?php echo $current_article['blog_title']; ?></h1>
-        <div class="article-meta">
-            <span><?php echo $current_article["upload_date"]; ?></span>
-            <span>|</span>
-            <span><i class="fas fa-newspaper"></i> <?php echo $current_article['blog_author']; ?></span>
-        </div>
-    </div>
-
-<!-- YouTube Video Embed or Image Display -->
-<?php
-$videoId = '';
-// Okay Done
-// Check if source_link is provided
-if (!empty($current_article['source_link'])) {
-    $youtubeLink = $current_article['source_link'];
-
-    // Extract YouTube video ID
-    if (strpos($youtubeLink, 'youtu.be') !== false) {
-        $parts = explode('/', parse_url($youtubeLink, PHP_URL_PATH));
-        $videoId = end($parts);
-    } else {
-        parse_str(parse_url($youtubeLink, PHP_URL_QUERY), $ytParams);
-        $videoId = $ytParams['v'] ?? '';
-    }
-}
-
-if (!empty($videoId)): ?>
-    <div class="article-video" style="margin: 20px 0; text-align: center;">
-        <iframe width="100%" height="400"
-                src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId); ?>"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
-        <h1><?php echo htmlspecialchars($current_article['image_title'] ?? ''); ?></h1>
-    </div>
-<?php
-// If no video ID, show image (if available)
-elseif (!empty($current_article['cover_img'])): ?>
-    <div class="article-banner">
-        <img src="<?php echo htmlspecialchars($current_article['cover_img']); ?>" alt="Cover Image">
-    </div>
-<?php else: ?>
-    <div style="padding: 20px; background-color: #f8f9fa; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 6px;">
-        No image has been uploaded.
-    </div>
-<?php endif; ?>
-
-
-
-
-    <div class="article-content">
-        <?php echo $current_article['blog_content']; ?>
-    </div>
-
-    <!-- Source Link -->
-    <?php if (!empty($current_article['source_link'])): ?>
-        <div class="article-source" style="margin-top: 20px;">
-            Source: <a href="<?php echo $current_article['source_link']; ?>" target="_blank" rel="noopener noreferrer">
-                <?php echo parse_url($current_article['source_link'], PHP_URL_HOST); ?>
-            </a>
-        </div>
-    <?php endif; ?>
-</div>
+            <div class="press-article-card">
+                <a href="?" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Press Coverage
+                </a>
+                <div class="article-header">
+                    <h1 class="article-title"><?php echo $current_article['blog_title']; ?></h1>
+                    <div class="article-meta">
+                        <span><?php echo $current_article["upload_date"]; ?></span>
+                        <span>|</span>
+                        <span><i class="fas fa-newspaper"></i> <?php echo $current_article['blog_author']; ?></span>
+                    </div>
+                </div>
+                <!-- YouTube Video Embed or Image Display -->
+                <?php
+                $videoId = '';
+                if (!empty($current_article['source_link'])) {
+                    $youtubeLink = $current_article['source_link'];
+                    if (strpos($youtubeLink, 'youtu.be') !== false) {
+                        $parts = explode('/', parse_url($youtubeLink, PHP_URL_PATH));
+                        $videoId = end($parts);
+                    } else {
+                        parse_str(parse_url($youtubeLink, PHP_URL_QUERY), $ytParams);
+                        $videoId = $ytParams['v'] ?? '';
+                    }
+                }
+                if (!empty($videoId)): ?>
+                    <div class="article-video">
+                        <iframe src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId); ?>"
+                                allowfullscreen></iframe>
+                        <h1><?php echo htmlspecialchars($current_article['image_title'] ?? ''); ?></h1>
+                    </div>
+                <?php elseif (!empty($current_article['cover_img'])): ?>
+                    <div class="article-banner">
+                        <img src="<?php echo htmlspecialchars($current_article['cover_img']); ?>" alt="Cover Image">
+                    </div>
+                <?php else: ?>
+                    <div style="padding: 20px; background-color: #f8f9fa; color: #555; border: 1px dashed #ccc; text-align: center; border-radius: 6px;">
+                        No image has been uploaded.
+                    </div>
+                <?php endif; ?>
+                <div class="article-content">
+                    <?php echo $current_article['blog_content']; ?>
+                </div>
+                <!-- Source Link -->
+                <?php if (!empty($current_article['source_link'])): ?>
+                    <div class="article-source">
+                        Source: <a href="<?php echo $current_article['source_link']; ?>" target="_blank" rel="noopener noreferrer">
+                            <?php echo parse_url($current_article['source_link'], PHP_URL_HOST); ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
+            </div>
 
 
         <?php else: ?>
