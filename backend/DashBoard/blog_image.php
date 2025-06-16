@@ -10,7 +10,13 @@ if (!isset($_SESSION['username'])) {
 $db = new Db();
 $connection = $db->connect();
 
-$coverid = 28;
+$coverid = isset($_GET['id']) && is_numeric($_GET['id']) ? (int) $_GET['id'] : null;
+
+if ($coverid === null) {
+    echo "Invalid blog ID.";
+    exit();
+}
+
 
 ?>
 

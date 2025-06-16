@@ -33,6 +33,9 @@ if ($article_id !== null && isset($press_items[$article_id])) {
     <link rel="stylesheet" href="press.css">
     <link rel="icon" type="image/png" href="LOGO/NGO_logo_monogram.png">
 </head>
+
+
+
 <body>
     <div class="container">
 
@@ -47,34 +50,59 @@ if ($article_id !== null && isset($press_items[$article_id])) {
                 <i class="fas fa-arrow-left"></i> Back to Press Coverage
             </a>
 
-            <div class="article-container">
-                <div class="article-header">
-                    <h1 class="article-title"><?php echo $current_article['blog_title']; ?></h1>
-                    <div class="article-meta">
-                        <span><?php echo $current_article["upload_date"]; ?></span>
-                        <span>|</span>
-                        <span><i class="fas fa-newspaper"></i> <?php echo $current_article['blog_author']; ?></span>
-                    </div>
-                </div>
+<div class="article-container">
+    <div class="article-header">
+        <h1 class="article-title"><?php echo $current_article['blog_title']; ?></h1>
+        <div class="article-meta">
+            <span><?php echo $current_article["upload_date"]; ?></span>
+            <span>|</span>
+            <span><i class="fas fa-newspaper"></i> <?php echo $current_article['blog_author']; ?></span>
+        </div>
+    </div>
 
-                <!-- Responsive Banner Image -->
-                <div class="article-banner">
-                    <img src="<?php echo $current_article['cover_img']; ?>" alt="Cover Image">
-                </div>
+    <!-- Responsive Banner Image -->
+    <div class="article-banner">
+        <img src="<?php echo $current_article['cover_img']; ?>" alt="Cover Image" style="width: 100%; height: auto; object-fit: cover;">
+    </div>
 
-                <div class="article-content">
-                    <?php echo $current_article['blog_content']; ?>
-                </div>
+    <!-- YouTube Video Embed -->
+    <?php if (!empty($current_article['source_link'])): 
+        // Handle both full YouTube links and short youtu.be links
+        $youtubeLink = $current_article['source_link'];
+        $videoId = '';
 
-                <!-- Source Link -->
-                <?php if (!empty($current_article['source_link'])): ?>
-                    <div class="article-source">
-                        Source: <a href="<?php echo $current_article['source_link']; ?>" target="_blank" rel="noopener noreferrer">
-                            <?php echo parse_url($current_article['source_link'], PHP_URL_HOST); ?>
-                        </a>
-                    </div>
-                <?php endif; ?>
+        if (strpos($youtubeLink, 'youtu.be') !== false) {
+            $parts = explode('/', parse_url($youtubeLink, PHP_URL_PATH));
+            $videoId = end($parts);
+        } else {
+            parse_str(parse_url($youtubeLink, PHP_URL_QUERY), $ytParams);
+            $videoId = $ytParams['v'] ?? '';
+        }
+
+        if ($videoId): ?>
+            <div class="article-video" style="margin: 20px 0; text-align: center;">
+                <iframe width="100%" height="400" 
+                    src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId); ?>" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
+    <?php endif; endif; ?>
+
+    <div class="article-content">
+        <?php echo $current_article['blog_content']; ?>
+    </div>
+
+    <!-- Source Link -->
+    <?php if (!empty($current_article['source_link'])): ?>
+        <div class="article-source" style="margin-top: 20px;">
+            Source: <a href="<?php echo $current_article['source_link']; ?>" target="_blank" rel="noopener noreferrer">
+                <?php echo parse_url($current_article['source_link'], PHP_URL_HOST); ?>
+            </a>
+        </div>
+    <?php endif; ?>
+</div>
+
 
         <?php else: ?>
             <?php include 'Navbar.php'; ?>
@@ -115,7 +143,7 @@ if ($article_id !== null && isset($press_items[$article_id])) {
 
                                     <div class="press-actions">
                                         <?php if (isset($_SESSION['username'])): ?>
-                                            <a class="press-button update" href="../backend/DashBoard/update_Blog_Image.php?id=<?php echo $id; ?>" class="press-button update">
+                                            <a class="press-button update" href="../backend/DashBoard/update_Blog_Image.php?id=<?php echo $item['blog_id']; ?>" class="press-button update">
                                                 <i style="margin-right:2px;" class="fas fa-sync-alt"></i> Update
                                             </a>
                                         <?php endif; ?>

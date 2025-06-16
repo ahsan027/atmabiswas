@@ -3,14 +3,19 @@ include '../Database/db.php';
 session_start();
 if (!isset($_SESSION['username'])) {
 
-  header("Location: ../login/login.php");
+  header("Location: ../login/loging.php");
   exit();
 }
 
 $db = new Db();
 $connection = $db->connect();
 
-$coverid = htmlspecialchars($_GET['id']);
+$coverid = isset($_GET['id']) && is_numeric($_GET['id']) ? (int) $_GET['id'] : null;
+
+if ($coverid === null) {
+    echo "Invalid blog ID.";
+    exit();
+}
 
 ?>
 
@@ -41,7 +46,7 @@ $coverid = htmlspecialchars($_GET['id']);
     <div class="flex justify-center h-screen">
       <!-- Content Area -->
       <div class="upload-container w-screen h-screen">
-        <form action="../update_blog_image_process.php?id=<?= $coverid ?>" method="POST" enctype="multipart/form-data">
+        <form action="../blogimg_process.php?id=<?= $coverid ?>" method="POST" enctype="multipart/form-data">
 
           <div class="upload-section image-upload">
             <div class="mb-3">
@@ -52,7 +57,7 @@ $coverid = htmlspecialchars($_GET['id']);
               <label for="imageUpload" class="btn mt-2 btn-primary px-2">
                 Choose Image
                 <input type="file" id="imageUpload" name="image_file" class="file-input"
-                  accept=".jpg, .jpeg, .png" required>
+                  accept=".jpg, .jpeg, .png">
               </label>
               <div class="preview-container" id="imagePreview">
                 <img src="#" class="img-thumbnail mt-2" alt="Image preview" style="max-height: 200px;">
@@ -67,9 +72,10 @@ $coverid = htmlspecialchars($_GET['id']);
           </div>
 
           <div class="mb-3">
-            <label for="description" class="form-label">Blog Source</label>
-            <input class="form-control" id="description" name="blog_source"
-              placeholder="Add Image Title..." />
+      <label for="blog_source" class="form-label">Blog Source</label>
+        <input type="url" class="form-control" id="blog_source" name="blog_source"
+          placeholder="Enter the source URL (e.g., https://example.com)" />
+
           </div>
 
 

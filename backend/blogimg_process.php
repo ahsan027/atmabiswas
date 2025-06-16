@@ -102,6 +102,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: DashBoard/error.php?type=upload");
         exit();
       }
+    }elseif((isset($_FILES['image_file']) && $_FILES['image_file']['error'] === UPLOAD_ERR_OK && empty($_POST['blog_source']))
+){
+
+      $imageFile = $_FILES['image_file'];
+      $image_path = processFile($imageFile, $allowedTypes, $imageSize, $uploadDir);
+
+      $sql = "UPDATE blogs SET cover_img = :img_path WHERE blog_id = :id";
+      $stmt = $connection->prepare($sql);
+      $stmt->bindParam(":img_path", $image_path);
+      $stmt->bindParam(":id", $coverid);
+      if($stmt->execute()){
+         header("Location: DashBoard/success.php?type=upload");
+          exit();
+
+      }else{
+        header("Location: DashBoard/error.php?type=upload");
+        exit();
+
+      }
+
     }
 
   } catch (Exception $e) {
