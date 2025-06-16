@@ -23,7 +23,15 @@ try {
     chmod($uploadDir, 0644);
     unlink($uploadDir);
   } else {
-    echo "Missing File";
+    $delsQL = "DELETE FROM pdsfiles WHERE pdf_id=:pdf_id";
+
+    $detStmt = $conn->prepare($delsQL);
+
+    $detStmt->bindParam(":pdf_id", $_GET['pdf_id']);
+
+    if($detStmt->execute()){
+       header("Location: DashBoard/dashboard.php");
+    }
     exit();
   }
 

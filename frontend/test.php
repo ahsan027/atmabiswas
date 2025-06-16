@@ -1,3 +1,11 @@
+<?php 
+    include '../backend/Database/db.php';
+
+    $database = new Db();
+
+    $conn = $database->connect();
+?>
+
 <script src='main.js'></script>
 
 <div class="card-container">

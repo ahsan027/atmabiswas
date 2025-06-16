@@ -25,7 +25,15 @@ try {
     chmod($uploadDir, 0644);
     unlink($uploadDir);
   } else {
-    echo "Missing File";
+     $delsQL = "DELETE FROM blogs WHERE blog_id=:blog_id";
+
+      $detStmt = $conn->prepare($delsQL);
+
+       $detStmt->bindParam(":blog_id", $_GET['blog_id']);
+
+       if($detStmt->execute()){
+          header("Location: DashBoard/dashboard.php");
+       }
     exit();
   }
 

@@ -23,7 +23,17 @@ try {
     chmod($uploadDir, 0644);
     unlink($uploadDir);
   } else {
-    echo "Missing File";
+      $delsQL = "DELETE FROM img_upload WHERE img_id=:img_id";
+
+  $detStmt = $conn->prepare($delsQL);
+
+  $detStmt->bindParam(":img_id", $_GET['img_id']);
+
+  if($detStmt->execute()){
+    header("Location: DashBoard/dashboard.php");
+
+
+  }
     exit();
   }
 

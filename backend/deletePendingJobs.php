@@ -36,6 +36,14 @@ if (file_exists($fileDir)) {
 
     header("Location: DashBoard/dashboard.php");
 } else {
-    echo "File is Missing OR The path is Invalid";
+    $delSql = "DELETE FROM cv_applications WHERE applicationId = :applicationId";
+
+    $delStmt = $conn->prepare($delSql);
+
+    $delStmt->bindParam(":applicationId", $applicationId);
+
+    if($delStmt->execute()){
+        header("Location: DashBoard/dashboard.php");
+    }
     exit();
 }
