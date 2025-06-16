@@ -4,54 +4,51 @@
     $database = new Db();
 
     $conn = $database->connect();
+
+    $sql = "SELECT * FROM img_upload ORDER BY uploaded_on DESC LIMIT 6";
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->execute();
+
+    $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <script src='main.js'></script>
 
 <div class="card-container">
+    <?php
+if (count($photos) > 0) {
+    foreach ($photos as $photo) {
+        
+        $imgPath = isset($photo["img_path"]) ? $photo["img_path"] : "LOGO/NGO_logo_monogram.png";
+        
+       
+        $title = htmlspecialchars($photo["img_title"]);
+        $description = htmlspecialchars($photo["img_description"]);
 
-    <div class="card">
-        <img src="cow/cow_pic3.png" alt="Card Image">
-        <div class="card-content">
-            <h3>Cow Farming Success </h3>
-            <p class="card-text">ATMABISWAS helped this woman expand her cow farm, boosting her income and independence.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="fish&redy/15.jpg" alt="Card Image">
-        <div class="card-content">
-            <h3>Nourishing Aquatic Growth</h3>
-            <p class="card-text">ATMABISWAS Ensures chemical & hazards free fish foods, fertilizers and pesticides to ensure the proper growth of fish keeping a safe environment.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="rmpt/rmpt_pic2.jpeg" alt="Card Image">
-        <div class="card-content">
-            <h3>Supporting Fishermen's Growth</h3>
-            <p class="card-text">ATMABISWAS empowers fishermen by providing free fish food and training to boost their livelihoods</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="Health/health_pic1.jpeg" alt="Card Image">
-        <div class="card-content">
-            <h3>Free Health Campaign </h3>
-            <p class="card-text">At present we are arranging Free Medical Campaign and seminar for poor people without any cost, which is funded by ATMABISWAS. </p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="fish/fish_pic1.jpeg" alt="Card Image">
-        <div class="card-content">
-            <h3>Health and Nutrition Fair</h3>
-            <p class="card-text">ATMABISWAS organizes a Health & Nutrition Fair with free check-ups, nutrition guidance, and wellness programs for the community.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="enterprise_development/enterprice_pic5.jpeg" alt="Card Image">
-        <div class="card-content">
-            <h3>Greener Fields Ahead</h3>
-            <p class="card-text">ATMABISWAS supports farmers with free fertilizer, promoting sustainable agriculture and better harvests.</p>
-        </div>
-    </div>
+        echo '
+        <div class="card">
+            <img src="' . $imgPath . '" alt="'.$title.'">
+            <div class="card-content">
+                <h3>' . $title . '</h3>
+                <p class="card-text">' . $description . '</p>
+            </div>
+        </div>';
+    }
+} else {
+   echo '<p style="text-align: center; font-size: 1.2rem; color: #666; background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+">No Latest News Currently</p>';
+
+}
+?>
 
 </div>
 
