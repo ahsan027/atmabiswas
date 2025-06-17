@@ -41,7 +41,7 @@
 
                 <!-- Create account link -->
                 <div class="create-account">
-                    <a href="../../frontend/index.php">Back to Homepage</a>
+                    <a href="../../index.php">Back to Homepage</a>
                 </div>
 
             </div>
