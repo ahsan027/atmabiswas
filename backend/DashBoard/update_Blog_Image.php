@@ -46,7 +46,7 @@ if ($coverid === null) {
     <div class="flex justify-center h-screen">
       <!-- Content Area -->
       <div class="upload-container w-screen h-screen">
-        <form action="../blogimg_process.php?id=<?= $coverid ?>" method="POST" enctype="multipart/form-data">
+        <form action="../../blogimg_process.php?id=<?= $coverid ?>" method="POST" enctype="multipart/form-data">
 
           <div class="upload-section image-upload">
             <div class="mb-3">

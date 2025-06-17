@@ -86,7 +86,7 @@
     </a>
     <div class="absolute bottom-0 p-4 w-64">
         <div class="flex items-center space-x-2">
-            <a href="../../frontend/index.php"><img class="h-[70px] w-[70px]" src="../images/logo/logo.png" alt="User"
+            <a href="../../index.php"><img class="h-[70px] w-[70px]" src="../images/logo/logo.png" alt="User"
                     class="rounded-full" /></a>
             <div>
                 <div style="cursor: pointer;" class="font-semibold">ATMABISWAS</div>

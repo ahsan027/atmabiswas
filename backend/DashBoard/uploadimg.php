@@ -42,7 +42,7 @@ $connection = $db->connect();
             <!-- Content Area -->
             <div class="upload-container w-screen h-screen">
 
-                <form action="../uploadimg_process.php" method="POST" enctype="multipart/form-data">
+                <form action="../../uploadimg_process.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section image-upload">
                         <div class="mb-3">

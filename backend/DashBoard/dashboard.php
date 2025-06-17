@@ -610,7 +610,7 @@ try {
                            
                                     <td class="py-3 px-4 text-gray-700">' . $blog['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this blog?\');" href="../../deleteblog.php?blog_id=' . $blog['blog_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
@@ -675,7 +675,7 @@ try {
                                     <td class="py-3 px-4 text-gray-700">' . concatStrings($image['img_path']) . '</td>
                                     <td class="py-3 px-4 text-gray-700">' . $image['uploaded_on'] . '</td>
                                     <td class="py-3 px-4">
-                                  <a onclick="return confirm(\'Are you sure you want to delete this image?\')" href="../deleteimage.php?img_id=' . $image['img_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                  <a onclick="return confirm(\'Are you sure you want to delete this image?\')" href="../../deleteimage.php?img_id=' . $image['img_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                         Delete
                                     </a>
                                     </td>
@@ -739,7 +739,7 @@ try {
                                     </td>
                                     <td class="py-3 px-4 text-gray-700">' . $pdf['upload_date'] . '</td>
                                     <td class="py-3 px-4">
-                                  <a onclick="return confirm(\'Are you sure you want to delete this pdf?\')" href="../deletepdf.php?pdf_id=' . $pdf['pdf_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                  <a onclick="return confirm(\'Are you sure you want to delete this pdf?\')" href="../../deletepdf.php?pdf_id=' . $pdf['pdf_id'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                         Delete
                                     </a>
                                     </td>

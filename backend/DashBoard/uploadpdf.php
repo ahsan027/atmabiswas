@@ -40,7 +40,7 @@ $connection = $db->connect();
         <div class="flex justify-center h-screen">
             <!-- Content Area -->
             <div class="upload-container w-screen h-screen">
-                <form action="../uploadpdf_process.php" method="POST" enctype="multipart/form-data">
+                <form action="../../uploadpdf_process.php" method="POST" enctype="multipart/form-data">
 
                     <div class="upload-section pdf-upload">
                         <div class="mb-3">
