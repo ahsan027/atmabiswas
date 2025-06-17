@@ -119,6 +119,17 @@ session_start();
     <a href="Events.php"><i class="fa-solid fa-calendar-check"></i> Events</a>
     <a href="social.php"><i class="fa-solid fa-handshake"></i> Social Work</a>
     <a href="Contact.php"><i class="fa-solid fa-envelope-open-text"></i> Contacts</a>
+
+    <?php 
+    if(isset($_SESSION['username'])){
+        echo '<a href="../backend/DashBoard/dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a>';
+    }else{
+        echo '<a href="../backend/login/loging.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>';
+
+
+    }
+
+    ?>
 </div>
 
 <script src="navbar.js"></script>
