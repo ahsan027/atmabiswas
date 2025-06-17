@@ -34,7 +34,7 @@ if (file_exists($fileDir)) {
 
     $delStmt->execute();
 
-    header("Location: DashBoard/dashboard.php");
+    header("Location: backend/DashBoard/dashboard.php");
 } else {
     $delSql = "DELETE FROM cv_applications WHERE applicationId = :applicationId";
 
@@ -43,7 +43,7 @@ if (file_exists($fileDir)) {
     $delStmt->bindParam(":applicationId", $applicationId);
 
     if($delStmt->execute()){
-        header("Location: DashBoard/dashboard.php");
+        header("Location: backend/DashBoard/dashboard.php");
     }
     exit();
 }

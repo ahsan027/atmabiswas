@@ -545,7 +545,7 @@ try {
                     
                         
                                     <td class="py-3 px-4">
-                                      <a onclick="return confirm(\'Are you sure you want to delete this Job Request?\');" href="../deletePendingJobs.php?applicationId=' . $cv['applicationId'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
+                                      <a onclick="return confirm(\'Are you sure you want to delete this Job Request?\');" href="../../deletePendingJobs.php?applicationId=' . $cv['applicationId'] . '" class="bg-red-500 text-white font-bold px-4 py-2 rounded cursor-pointer">
                                       Delete
                                     </td>
                                 </tr>';
