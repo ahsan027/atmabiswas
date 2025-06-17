@@ -13,7 +13,7 @@ session_start();
 <!-- Desktop Navbar -->
 <div class="navbar desktop-only">
     <div class="top-row">
-        <div class="logo"><a href="/index.php"><img src="logoBg.png" alt=""></a></div>
+        <div class="logo"><a href="index.php"><img src="logoBg.png" alt=""></a></div>
         <div class="bars">
             <a href="notice.php">Notice</a>
             <a target="_blank" href="career.php">Career</a>
