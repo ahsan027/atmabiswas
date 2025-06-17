@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="menutoggle.css">
 <link rel="stylesheet" href="sidebar.css">
@@ -46,7 +48,6 @@
         <a href="social.php">Social</a>
         <a href="Contact.php">Contact</a>
         <?php
-        session_start();
         if(isset($_SESSION['username'])){
         echo '<a style="border:2px solid #007bff;" href="/backend/DashBoard/dashboard.php">DashBoard</a>';
 

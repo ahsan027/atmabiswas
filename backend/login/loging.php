@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <i class="fa-solid fa-key"></i> Forgot Password?
 </a>
 
-    <a href="../../frontend/index.php" style="color: white; text-decoration: none; display: block;">
+    <a href="../../index.php" style="color: white; text-decoration: none; display: block;">
         <i class="fa-solid fa-house"></i> Back To Home
     </a>
 </div>
