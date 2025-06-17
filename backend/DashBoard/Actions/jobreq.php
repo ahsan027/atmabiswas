@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(":vacancy", $vacancy);
 
         $stmt->execute();
+        header("Location: ../dashboard.php");
     } catch (PDOException $err) {
         echo $err;
     }
