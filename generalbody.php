@@ -267,6 +267,7 @@
     </style>
 </head>
 
+
 <body>
     <?php include 'Navbar.php' ?>
     <header>
