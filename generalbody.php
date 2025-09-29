@@ -278,7 +278,7 @@
         <section class="executive-section">
             <div class="mdsir">
                 <div class="executive-card">
-                    <img src="photos/Salma_Asif.png" alt="Mises Salma Asif">
+                    <img src="Photos/Salma_Asif.png" alt="Mises Salma Asif">
                     <h2>Miss Salma Asif</h2>
                     <p><strong>President</strong></p>
                     <p>A visionary leader since 1991, guiding ATMABISWAS with commitment to social empowerment.</p>
